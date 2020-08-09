@@ -15,7 +15,6 @@ namespace MiPrimerProyecto.Clases
         private int id_perfil;
 
 
-
         public int Id_usuario { get => id_usuario; set => id_usuario = value; }
         public string N_usuario { get => n_usuario; set => n_usuario = value; }
         public string Password { get => password; set => password = value; }

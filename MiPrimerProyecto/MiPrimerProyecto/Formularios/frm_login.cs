@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiPrimerProyecto.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,9 @@ namespace MiPrimerProyecto
 {
     public partial class frm_login : Form
     {
-        string user = "admin";
-        string pass = "123";
+        Usuario usuario = new Usuario();
+        internal Usuario Usuario { get => usuario; set => usuario = value; }
+
         public frm_login()
         {
             InitializeComponent();
@@ -37,25 +39,17 @@ namespace MiPrimerProyecto
             }
 
             //Validar usuario y clave.
-            string msj = "";
-            if (this.txtUsuario.Text == this.user && this.txtClave.Text == this.pass)
-            {
-                msj = "Login OK. Bienvenido, " + user + ".";
-                MessageBox.Show(msj, "Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            else
-            {
-                msj = "Usuario y/o clave incorrectos.";
-                MessageBox.Show(msj, "Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                this.txtUsuario.Text = string.Empty;
-                this.txtClave.Text = string.Empty;
-                this.txtUsuario.Focus();
-            }
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frm_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
