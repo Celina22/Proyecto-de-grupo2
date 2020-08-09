@@ -21,6 +21,7 @@ namespace MiPrimerProyecto
 
         private void frm_principal_Load(object sender, EventArgs e)
         {
+            //Inicialización del formulario de login.
             frm_login flogin;
             flogin = new frm_login();
             flogin.ShowDialog();
