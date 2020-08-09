@@ -46,15 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm_login.cs">
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_login.Designer.cs">
+    <Compile Include="Formularios\frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_login.resx">
+    <EmbeddedResource Include="Formularios\frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
