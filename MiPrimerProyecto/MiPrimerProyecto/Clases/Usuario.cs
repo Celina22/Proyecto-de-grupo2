@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MiPrimerProyecto.Clases
 {
     class Usuario
-    {
+    {   //Declaración de los atributos que contiene la clase
         private int id_usuario;
         private string n_usuario;
         private string password;
