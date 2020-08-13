@@ -44,5 +44,9 @@ namespace MiPrimerProyecto.Formularios
             combo.SelectedIndex = -1;
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

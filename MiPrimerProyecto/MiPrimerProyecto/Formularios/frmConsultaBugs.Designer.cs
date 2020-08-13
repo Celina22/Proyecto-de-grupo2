@@ -53,11 +53,11 @@
             this.cboCriticidad = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnVisualizar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdBugs)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -246,7 +246,8 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(512, 98);
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.Location = new System.Drawing.Point(509, 103);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(87, 21);
             this.btnConsultar.TabIndex = 14;
@@ -278,64 +279,65 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // button2
+            // btnBuscar
             // 
-            this.button2.Location = new System.Drawing.Point(67, 375);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(172, 375);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(280, 364);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBuscar.Image = global::MiPrimerProyecto.Properties.Resources.buscar1;
+            this.btnBuscar.Location = new System.Drawing.Point(243, 356);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(56, 39);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(658, 364);
+            this.btnSalir.Image = global::MiPrimerProyecto.Properties.Resources.puerta2;
+            this.btnSalir.Location = new System.Drawing.Point(788, 356);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(56, 39);
             this.btnSalir.TabIndex = 19;
-            this.btnSalir.Text = "button1";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button1
+            // btnEditar
             // 
-            this.button1.Location = new System.Drawing.Point(454, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEditar.Image = global::MiPrimerProyecto.Properties.Resources.grabar2;
+            this.btnEditar.Location = new System.Drawing.Point(136, 356);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(56, 39);
+            this.btnEditar.TabIndex = 18;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnVisualizar
+            // 
+            this.btnVisualizar.Image = global::MiPrimerProyecto.Properties.Resources.buscar2;
+            this.btnVisualizar.Location = new System.Drawing.Point(74, 356);
+            this.btnVisualizar.Name = "btnVisualizar";
+            this.btnVisualizar.Size = new System.Drawing.Size(56, 39);
+            this.btnVisualizar.TabIndex = 17;
+            this.btnVisualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::MiPrimerProyecto.Properties.Resources.nuevo1;
+            this.btnAgregar.Location = new System.Drawing.Point(12, 356);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(56, 39);
+            this.btnAgregar.TabIndex = 16;
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // frmConsultaBugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 415);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnVisualizar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmConsultaBugs";
-            this.Text = "Form1";
+            this.Text = "Consulta Bug";
             this.Load += new System.EventHandler(this.frmConsultaBugs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdBugs)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -362,11 +364,11 @@
         private System.Windows.Forms.ComboBox cboCriticidad;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnVisualizar;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBug;
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
