@@ -26,14 +26,14 @@ namespace MiPrimerProyecto
             //if (this.txtUsuario.Text == "")
             if (this.txtUsuario.Text == string.Empty)
             {
-                MessageBox.Show("Debe ingresar un usuario.");
+                MessageBox.Show("Debe ingresar un usuario.", "Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.txtUsuario.Focus();
                 return;
             }
             //if (this.txtClave.Text == "")
             if (string.IsNullOrEmpty(this.txtClave.Text))
             {
-                MessageBox.Show("Debe ingresar una clave.");
+                MessageBox.Show("Debe ingresar una clave.","Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.txtClave.Focus();
                 return;
             }

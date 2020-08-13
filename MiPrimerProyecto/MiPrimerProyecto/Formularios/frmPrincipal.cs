@@ -22,9 +22,11 @@ namespace MiPrimerProyecto
 
         private void frm_principal_Load(object sender, EventArgs e)
         {
+
             //Inicialización del formulario de login.
             frmLogin flogin;
             flogin = new frmLogin();
+
             flogin.ShowDialog();
             this.usuarioActual = flogin.Usuario;
 
