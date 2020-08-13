@@ -16,6 +16,7 @@ namespace MiPrimerProyecto.Formularios
     public partial class frmConsultaBugs : Form
     {
         Datos oBD = new Datos();
+
         public frmConsultaBugs()
         {
             InitializeComponent();
@@ -47,6 +48,11 @@ namespace MiPrimerProyecto.Formularios
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

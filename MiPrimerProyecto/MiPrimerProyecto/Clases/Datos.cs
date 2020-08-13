@@ -12,7 +12,7 @@ namespace MiPrimerProyecto.Clases
     {
         private SqlConnection conexion = new SqlConnection();
         private SqlCommand comando = new SqlCommand();
-        private string cadenaConexion = @"Data Source=(localDB)\MSSQLLocalDB;Initial Catalog=BugsTracker;Persist Security Info=True;User ID=sa;Password=42258137Jnc";
+        private string cadenaConexion = @"Data Source=(localDB)\MSSQLLocalDB;Initial Catalog=BugsTracker;Persist Security Info=True;User ID=sa;Password=12345";
 
         public string CadenaConexion 
         { 
