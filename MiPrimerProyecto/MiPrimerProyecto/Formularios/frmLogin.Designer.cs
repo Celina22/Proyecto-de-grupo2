@@ -1,6 +1,6 @@
 ﻿namespace MiPrimerProyecto
 {
-    partial class frm_login
+    partial class frmLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -110,7 +110,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.frm_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

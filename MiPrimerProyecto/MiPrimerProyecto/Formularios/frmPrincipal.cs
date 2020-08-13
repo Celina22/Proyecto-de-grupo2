@@ -1,4 +1,5 @@
 ﻿using MiPrimerProyecto.Clases;
+using MiPrimerProyecto.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,10 +23,21 @@ namespace MiPrimerProyecto
         private void frm_principal_Load(object sender, EventArgs e)
         {
             //Inicialización del formulario de login.
-            frm_login flogin;
-            flogin = new frm_login();
+            frmLogin flogin;
+            flogin = new frmLogin();
             flogin.ShowDialog();
             this.usuarioActual = flogin.Usuario;
+
+            if (this.usuarioActual.Id_Usuario == 0)
+                this.Close();
+            else
+                this.Text = this.Text + " - Usuario " + this.usuarioActual.N_usuario;
+        }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBugs fcb = new frmConsultaBugs();
+            fcb.ShowDialog();
         }
     }
 }
