@@ -18,10 +18,10 @@ namespace MiPrimerProyecto.Clases
         private int id_prioridad;
         private int id_criticidad;
         private int id_estado;
-        private int borrado;
+        private bool borrado;
 
         public Bug(int id_bug, string titulo, string descripcion, DateTime fecha_alta, int id_usuario_responsable, int id_usuario_asignado,
-                   int id_producto, int id_prioridad, int id_criticidad, int id_estado, int borrado)
+                   int id_producto, int id_prioridad, int id_criticidad, int id_estado, bool borrado)
         {
             this.Id_bug = id_bug;
             this.Titulo = titulo;
@@ -46,6 +46,6 @@ namespace MiPrimerProyecto.Clases
         public int Id_prioridad { get => id_prioridad; set => id_prioridad = value; }
         public int Id_criticidad { get => id_criticidad; set => id_criticidad = value; }
         public int Id_estado { get => id_estado; set => id_estado = value; }
-        public int Borrado { get => borrado; set => borrado = value; }
+        public bool Borrado { get => borrado; set => borrado = value; }
     }
 }
