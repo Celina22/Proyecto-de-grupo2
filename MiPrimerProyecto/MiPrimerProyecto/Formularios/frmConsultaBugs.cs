@@ -34,11 +34,12 @@ namespace MiPrimerProyecto.Formularios
             this.cargarCombo(cboAsignadoA, "Usuarios", 2);
             this.cargarCombo(cboCriticidad, "Criticidades");
 
-            this.cargarGrilla(grdBugs, oBug.recuperarBugs());
+            this.cargarGrilla(grdBugs, oBug.recuperarTodos());
         }
 
         private void cargarGrilla(DataGridView grilla, DataTable tabla)
         {
+            grilla.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grilla.Rows.Add(tabla.Rows[i]["id_bug"], tabla.Rows[i]["titulo"], tabla.Rows[i]["Producto"], tabla.Rows[i]["fecha_alta"], tabla.Rows[i]["Estado"], tabla.Rows[i]["Asignado a"], tabla.Rows[i]["Criticidad"], tabla.Rows[i]["Prioridad"]);
@@ -61,7 +62,32 @@ namespace MiPrimerProyecto.Formularios
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            this.cargarGrilla(grdBugs, oBug.recuperarBugs());
-        }
+            string _estado, _prioridad, _producto, _asignadoA, _criticidad;
+            _estado = _prioridad = _producto = _asignadoA = _criticidad = "";
+            if (dtpFechaDesde.Value > dtpFechaHasta.Value)
+            {
+                MessageBox.Show("Los datos ingresados para las fechas no son válidos.");
+                return;
+            }
+
+            if (cboEstado.SelectedIndex != -1)
+                _estado = cboEstado.SelectedValue.ToString();
+            if (cboPrioridad.SelectedIndex != -1)
+                _estado = cboPrioridad.SelectedValue.ToString();
+            if (cboProducto.SelectedIndex != -1)
+                _estado = cboProducto.SelectedValue.ToString();
+            if (cboAsignadoA.SelectedIndex != -1)
+                _estado = cboAsignadoA.SelectedValue.ToString();
+            if (cboCriticidad.SelectedIndex != -1)
+                _estado = cboCriticidad.SelectedValue.ToString();
+
+            this.cargarGrilla(grdBugs, oBug.filtrarBugs(dtpFechaDesde.Value.ToShortDateString(), 
+                                                        dtpFechaHasta.Value.ToShortDateString(),
+                                                        _estado, 
+                                                        _prioridad, 
+                                                        _producto, 
+                                                        _asignadoA, 
+                                                        _criticidad));
+        }                                               
     }
 }

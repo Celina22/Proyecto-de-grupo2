@@ -59,6 +59,31 @@ namespace MiPrimerProyecto.Clases
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public DateTime Fecha_alta { get => fecha_alta; set => fecha_alta = value; }
         public int Id_usuario_responsable { get => id_usuario_responsable; set => id_usuario_responsable = value; }
+
+        public DataTable filtrarBugs(string fecha_desde, string fecha_hasta, string estado, string prioridad, string producto, string asignadoA, string criticidad)
+        {
+            string query = "SELECT b.id_bug, b.titulo, p.nombre Producto, b.fecha_alta, e.nombre Estado, u.usuario \"Asignado a\", c.nombre Criticidad, pr.nombre Prioridad " +
+                            "FROM Bugs b JOIN Productos p ON b.id_producto=p.id_producto " +
+                            "JOIN Estados e ON b.id_estado=e.id_estado " +
+                            "JOIN Usuarios u ON b.id_usuario_asignado=u.id_usuario " +
+                            "JOIN Criticidades c ON b.id_criticidad=c.id_criticidad " +
+                            "JOIN Prioridades pr ON b.id_prioridad=pr.id_prioridad " +
+                            "WHERE b.fecha_alta BETWEEN CONVERT(date,'" + fecha_desde + "',103) AND CONVERT(date,'" + fecha_hasta + "',103) ";
+            if (estado != "")
+                query += "AND b.id_estado=" + estado + " ";
+            if (prioridad != "")
+                query += "AND b.id_prioridad=" + prioridad + " ";
+            if (producto != "")
+                query += "AND b.id_producto=" + producto + " ";
+            if (asignadoA != "")
+                query += "AND b.id_usuario_asignado=" + asignadoA + " ";
+            if (criticidad != "")
+                query += "AND b.id_criticidad=" + criticidad + " ";
+
+            query = query + "ORDER BY b.fecha_alta DESC";
+            return oBD.consultar(query);
+        }
+
         public int Id_usuario_asignado { get => id_usuario_asignado; set => id_usuario_asignado = value; }
         public int Id_producto { get => id_producto; set => id_producto = value; }
         public int Id_prioridad { get => id_prioridad; set => id_prioridad = value; }
@@ -66,7 +91,7 @@ namespace MiPrimerProyecto.Clases
         public int Id_estado { get => id_estado; set => id_estado = value; }
         public bool Borrado { get => borrado; set => borrado = value; }
 
-        public DataTable recuperarBugs()
+        public DataTable recuperarTodos()
         {
             string query =  "SELECT b.id_bug, b.titulo, p.nombre Producto, b.fecha_alta, e.nombre Estado, u.usuario \"Asignado a\", c.nombre Criticidad, pr.nombre Prioridad " +
                             "FROM Bugs b JOIN Productos p ON b.id_producto=p.id_producto " +
@@ -77,5 +102,6 @@ namespace MiPrimerProyecto.Clases
                             "ORDER BY b.fecha_alta DESC";
             return oBD.consultar(query);
         }
+
     }
 }
