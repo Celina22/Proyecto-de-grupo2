@@ -16,6 +16,7 @@ namespace MiPrimerProyecto.Formularios
     public partial class frmConsultaBugs : Form
     {
         Datos oBD = new Datos();
+        Bug oBug = new Bug();
 
         public frmConsultaBugs()
         {
@@ -33,8 +34,16 @@ namespace MiPrimerProyecto.Formularios
             this.cargarCombo(cboAsignadoA, "Usuarios", 2);
             this.cargarCombo(cboCriticidad, "Criticidades");
 
+            this.cargarGrilla(grdBugs, oBug.recuperarBugs());
         }
 
+        private void cargarGrilla(DataGridView grilla, DataTable tabla)
+        {
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                grilla.Rows.Add(tabla.Rows[i]["id_bug"], tabla.Rows[i]["titulo"], tabla.Rows[i]["Producto"], tabla.Rows[i]["fecha_alta"], tabla.Rows[i]["Estado"], tabla.Rows[i]["Asignado a"], tabla.Rows[i]["Criticidad"], tabla.Rows[i]["Prioridad"]);
+            }
+        }
         private void cargarCombo(ComboBox combo, string nombreTabla, int n = 1)
         {
             DataTable tabla = new DataTable();
@@ -52,7 +61,7 @@ namespace MiPrimerProyecto.Formularios
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            
+            this.cargarGrilla(grdBugs, oBug.recuperarBugs());
         }
     }
 }
