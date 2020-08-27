@@ -53,7 +53,7 @@
             this.cboCriticidad = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnVisualizar = new System.Windows.Forms.Button();
@@ -147,6 +147,7 @@
             this.prioridad});
             this.grdBugs.Location = new System.Drawing.Point(21, 140);
             this.grdBugs.Name = "grdBugs";
+            this.grdBugs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdBugs.Size = new System.Drawing.Size(792, 181);
             this.grdBugs.TabIndex = 7;
             // 
@@ -280,14 +281,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // btnBuscar
+            // btnDetalle
             // 
-            this.btnBuscar.Image = global::MiPrimerProyecto.Properties.Resources.buscar1;
-            this.btnBuscar.Location = new System.Drawing.Point(243, 356);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(56, 39);
-            this.btnBuscar.TabIndex = 20;
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnDetalle.Image = global::MiPrimerProyecto.Properties.Resources.buscar1;
+            this.btnDetalle.Location = new System.Drawing.Point(243, 356);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(56, 39);
+            this.btnDetalle.TabIndex = 20;
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // btnSalir
             // 
@@ -331,7 +333,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 415);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnVisualizar);
@@ -369,7 +371,7 @@
         private System.Windows.Forms.Button btnVisualizar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBug;
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;

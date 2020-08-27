@@ -49,6 +49,12 @@
     <Compile Include="Clases\Bug.cs" />
     <Compile Include="Clases\Datos.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\frmDetalleBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmDetalleBug.Designer.cs">
+      <DependentUpon>frmDetalleBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConsultaBugs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmConsultaBugs.resx">
       <DependentUpon>frmConsultaBugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmDetalleBug.resx">
+      <DependentUpon>frmDetalleBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

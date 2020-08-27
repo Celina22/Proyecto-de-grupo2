@@ -103,5 +103,17 @@ namespace MiPrimerProyecto.Clases
             return oBD.consultar(query);
         }
 
+        public DataTable recuperarBug(int idBug)
+        {
+            string query =  "SELECT b.id_bug, b.titulo, p.nombre Producto, b.fecha_alta, b.descripcion, e.nombre Estado, u.usuario \"Asignado a\", c.nombre Criticidad, pr.nombre Prioridad " +
+                            "FROM Bugs b JOIN Productos p ON b.id_producto=p.id_producto " +
+                            "JOIN Estados e ON b.id_estado=e.id_estado " +
+                            "JOIN Usuarios u ON b.id_usuario_asignado=u.id_usuario " +
+                            "JOIN Criticidades c ON b.id_criticidad=c.id_criticidad " +
+                            "JOIN Prioridades pr ON b.id_prioridad=pr.id_prioridad " +
+                            "WHERE b.id_bug=" + idBug;
+            return oBD.consultar(query);
+        }
+
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Security.AccessControl;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -71,6 +72,7 @@ namespace MiPrimerProyecto.Formularios
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            DataTable tabla = new DataTable();
             string _estado, _prioridad, _producto, _asignadoA, _criticidad;
             _estado = _prioridad = _producto = _asignadoA = _criticidad = "";
             if (dtpFechaDesde.Value > dtpFechaHasta.Value)
@@ -90,13 +92,40 @@ namespace MiPrimerProyecto.Formularios
             if (cboCriticidad.SelectedIndex != -1)
                 _estado = cboCriticidad.SelectedValue.ToString();
 
-            this.cargarGrilla(grdBugs, oBug.filtrarBugs(dtpFechaDesde.Value.ToShortDateString(), 
+            tabla = oBug.filtrarBugs(dtpFechaDesde.Value.ToShortDateString(),
                                                         dtpFechaHasta.Value.ToShortDateString(),
-                                                        _estado, 
-                                                        _prioridad, 
-                                                        _producto, 
-                                                        _asignadoA, 
-                                                        _criticidad));
-        }                                               
+                                                        _estado,
+                                                        _prioridad,
+                                                        _producto,
+                                                        _asignadoA,
+                                                        _criticidad);
+            if (tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("No existen Bugs con esas condiciones...");
+                dtpFechaDesde.Value = DateTime.Today;
+                dtpFechaHasta.Value = DateTime.Today;
+                cboProducto.SelectedIndex = -1;
+                cboPrioridad.SelectedIndex = -1;
+                cboEstado.SelectedIndex = -1;
+                cboAsignadoA.SelectedIndex = -1;
+                cboCriticidad.SelectedIndex = -1;
+            }
+            
+            this.cargarGrilla(grdBugs, tabla);
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            if (grdBugs.SelectedRows.Count == 1)
+            {
+                frmDetalleBug fdb = new frmDetalleBug((int)grdBugs.CurrentRow.Cells[0].Value);
+                fdb.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar algún elemento de la grilla.");
+            }
+            
+        }
     }
 }
