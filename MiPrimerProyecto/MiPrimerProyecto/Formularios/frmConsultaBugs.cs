@@ -42,7 +42,16 @@ namespace MiPrimerProyecto.Formularios
             grilla.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
-                grilla.Rows.Add(tabla.Rows[i]["id_bug"], tabla.Rows[i]["titulo"], tabla.Rows[i]["Producto"], tabla.Rows[i]["fecha_alta"], tabla.Rows[i]["Estado"], tabla.Rows[i]["Asignado a"], tabla.Rows[i]["Criticidad"], tabla.Rows[i]["Prioridad"]);
+                grilla.Rows.Add(
+                    tabla.Rows[i]["id_bug"], 
+                    tabla.Rows[i]["titulo"], 
+                    tabla.Rows[i]["Producto"], 
+                    tabla.Rows[i]["fecha_alta"], 
+                    tabla.Rows[i]["Estado"], 
+                    tabla.Rows[i]["Asignado a"], 
+                    tabla.Rows[i]["Criticidad"], 
+                    tabla.Rows[i]["Prioridad"]
+                    );
             }
         }
         private void cargarCombo(ComboBox combo, string nombreTabla, int n = 1)
