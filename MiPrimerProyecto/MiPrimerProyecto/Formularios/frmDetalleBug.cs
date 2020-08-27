@@ -49,6 +49,24 @@ namespace MiPrimerProyecto.Formularios
             txtFechaCreacion.Text = tabla.Rows[0]["fecha_alta"].ToString();
             txtDescripcion.Text = tabla.Rows[0]["descripcion"].ToString();
 
+            tabla.Clear();
+            BugHistorico oBugHistorico = new BugHistorico();
+            tabla = oBugHistorico.recuperarHistorico(idBug);
+            cargarGrilla(grdHistorial, tabla);
+
+        }
+        private void cargarGrilla(DataGridView grilla, DataTable tabla)
+        {
+            grilla.Rows.Clear();
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                grilla.Rows.Add(
+                    tabla.Rows[i]["fecha_historico"],
+                    tabla.Rows[i]["Responsable"],
+                    tabla.Rows[i]["Estado"],
+                    tabla.Rows[i]["Asignado a"]
+                    );
+            }
         }
     }
 }

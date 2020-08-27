@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Bug.cs" />
+    <Compile Include="Clases\BugHistorico.cs" />
     <Compile Include="Clases\Datos.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Formularios\frmDetalleBug.cs">
