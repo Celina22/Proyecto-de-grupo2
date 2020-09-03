@@ -17,7 +17,7 @@ namespace MiPrimerProyecto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmConsultaBugs());
+            Application.Run(new frmABMUsuarios());
         }
     }
 }

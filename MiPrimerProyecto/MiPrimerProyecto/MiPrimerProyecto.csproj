@@ -50,6 +50,12 @@
     <Compile Include="Clases\BugHistorico.cs" />
     <Compile Include="Clases\Datos.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\frmABMUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMUsuarios.Designer.cs">
+      <DependentUpon>frmABMUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmDetalleBug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmABMUsuarios.resx">
+      <DependentUpon>frmABMUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsultaBugs.resx">
       <DependentUpon>frmConsultaBugs.cs</DependentUpon>
     </EmbeddedResource>
