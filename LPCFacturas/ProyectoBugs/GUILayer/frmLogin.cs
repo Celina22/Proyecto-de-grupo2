@@ -52,6 +52,8 @@ namespace LPCFacturas.GUILayer
                 UsuarioLogueado = usr.NombreUsuario;
                 msj = "Login OK. Bienvenido, " + UsuarioLogueado + ".";
                 MessageBox.Show(msj, "Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                this.Close();
+
             }
             else
             {
