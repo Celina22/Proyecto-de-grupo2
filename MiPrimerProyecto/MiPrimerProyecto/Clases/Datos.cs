@@ -44,10 +44,18 @@ namespace MiPrimerProyecto.Clases
         {
             DataTable tabla = new DataTable();
             this.conectar();
-            this.comando.CommandText = "SELECT * FROM " + nombreTabla;
+            this.comando.CommandText = "SELECT * FROM " + nombreTabla + " WHERE borrado=0";
             tabla.Load(this.comando.ExecuteReader());
             this.desconectar();
             return tabla;
+        }
+
+        public void actualizar(string consultaSQL)
+        {
+            this.conectar();
+            this.comando.CommandText = consultaSQL;
+            this.comando.ExecuteNonQuery();
+            this.desconectar();
         }
     }
 }

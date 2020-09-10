@@ -65,6 +65,7 @@ namespace MiPrimerProyecto.Formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            this.nuevo = true;
             habilitar(false);
             limpiarCampos();
 
@@ -103,7 +104,9 @@ namespace MiPrimerProyecto.Formularios
         {
             if (MessageBox.Show("¿Está seguro de que quiere eliminar al usuario " + txtNombre.Text + "?", "Borrar usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                //Borrado lógico.
+                oUsuario.Id_Usuario = Convert.ToInt32(txtId.Text);
+                oUsuario.eliminarUsuario();
+                this.cargarGrilla(grdUsuarios, oUsuario.recuperarUsuarios());
             }
     
         }
@@ -111,7 +114,39 @@ namespace MiPrimerProyecto.Formularios
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             grdUsuarios.Enabled = true;
+
+            oUsuario.N_usuario = txtNombre.Text;
+            oUsuario.Password = txtPassword.Text;
+            oUsuario.Email = txtEmail.Text;
+            oUsuario.Id_perfil = (int)cboPerfil.SelectedValue;
+            oUsuario.Estado = "S";
+            oUsuario.Borrado = 0;
+
+            bool validado = oUsuario.validarDatosUsuario();
+            if (validado)
+            {
+                if (nuevo)
+                {
+                    if (!oUsuario.existe())
+                    {
+                        oUsuario.grabarNuevoUsuario();
+                        MessageBox.Show("Usuario dado de alta correctamente.", "Nuevo usuario", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe el usuario.");
+                    }
+                }
+                else
+                {
+                    oUsuario.Id_Usuario = Convert.ToInt32(txtId.Text);
+                    oUsuario.actualizarUsuario();
+                    MessageBox.Show("Usuario actualizado correctamente.", "Actualizar usuario", MessageBoxButtons.OK);
+                }
+            }
+            this.cargarGrilla(grdUsuarios, oUsuario.recuperarUsuarios());
             habilitar(true);
+            this.nuevo = false;
         }
 
         private void grdUsuarios_SelectionChanged(object sender, EventArgs e)

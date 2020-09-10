@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Windows.Forms;
 
 namespace MiPrimerProyecto.Clases
 {
@@ -26,6 +27,7 @@ namespace MiPrimerProyecto.Clases
         public string Email { get => email; set => email = value; }
         public int Id_perfil { get => id_perfil; set => id_perfil = value; }
         public int Borrado { get => borrado; set => borrado = value; }
+        public string Estado { get => estado; set => estado = value; }
 
         public int validarUsuario(string nombre, string clave)
         {
@@ -54,6 +56,79 @@ namespace MiPrimerProyecto.Clases
         {
             string query = "SELECT * FROM Usuarios WHERE id_usuario = " + idUsuario;
             return objetoDatos.consultar(query);
+        }
+
+        public bool validarDatosUsuario()
+        {
+            if (this.N_usuario == string.Empty)
+            {
+                MessageBox.Show("El campo \"nombre\" está vacío.", "Nombre vacío", MessageBoxButtons.OK);
+                return false;
+            }
+
+            if (this.Password == string.Empty)
+            {
+                MessageBox.Show("El campo \"Password\" está vacío.", "Contraseña no válida", MessageBoxButtons.OK);
+                return false;
+            }
+
+            if (this.Email == string.Empty)
+            {
+                MessageBox.Show("El campo \"Email\" está vacío.", "Email vacío", MessageBoxButtons.OK);
+                return false;
+            }
+
+            if (this.Id_perfil == null)
+            {
+                MessageBox.Show("El campo \"Email\" está vacío.", "Email vacío", MessageBoxButtons.OK);
+                return false;
+            }
+            return true;
+        }
+
+        public void grabarNuevoUsuario()
+        {
+            string InsertSQL = "INSERT INTO Usuarios (usuario, password, email, id_perfil, estado, borrado) " +
+                                "VALUES ('" +
+                                this.N_usuario + "','" +
+                                this.Password + "','" +
+                                this.Email + "'," +
+                                this.Id_perfil + ",'" +
+                                this.Estado + "'," +
+                                this.Borrado + ")";
+            objetoDatos.actualizar(InsertSQL);
+        }
+
+        public void actualizarUsuario()
+        {
+            string UpdateSQL = "UPDATE Usuarios SET usuario='" +
+                                this.N_usuario + "', password='" +
+                                this.Password + "', email='" +
+                                this.Email + "', id_perfil=" +
+                                this.Id_perfil + ", estado='" +
+                                this.Estado + "', borrado=" +
+                                this.Borrado + " " +
+                                "WHERE id_usuario=" +
+                                this.Id_Usuario;
+            objetoDatos.actualizar(UpdateSQL);
+        }
+
+        public void eliminarUsuario()
+        {
+            string UpdateSQL = "UPDATE Usuarios SET borrado=1" +
+                                this.Borrado + " " +
+                                "WHERE id_usuario=" +
+                                this.Id_Usuario;
+            objetoDatos.actualizar(UpdateSQL);
+        }
+        public bool existe()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoDatos.consultar("SELECT * FROM Usuarios WHERE usuario='" + this.n_usuario + "'");
+            if (tabla.Rows.Count != 0)
+                return true;
+            else
+                return false;
         }
     }
 }
