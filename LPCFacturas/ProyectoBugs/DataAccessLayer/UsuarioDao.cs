@@ -21,7 +21,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             List<Usuario> listadoBugs = new List<Usuario>();
 
-            var strSql = "SELECT id_usuario, usuario, email, estado from Usuarios  where borrado=0";
+            var strSql = "SELECT id_usuario, usuario, email, estado from Usuarios where borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 

@@ -22,7 +22,7 @@ namespace LPCFacturas.BusinessLayer
 
         public Usuario ValidarUsuario(string usuario, string password)
         {
-            var usr = oUsuarioDao.GetUser(usuario);
+            Usuario usr = oUsuarioDao.GetUser(usuario);
 
             if (usr != null)
             { 
