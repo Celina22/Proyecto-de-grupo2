@@ -19,7 +19,7 @@ namespace LPCFacturas.DataAccessLayer
     {
         public IList<Usuario> GetAll()
         {
-            List<Usuario> listadoBugs = new List<Usuario>();
+            List<Usuario> listadoUsuarios = new List<Usuario>();
 
             var strSql = "SELECT id_usuario, usuario, email, estado from Usuarios where borrado=0";
 
@@ -27,10 +27,10 @@ namespace LPCFacturas.DataAccessLayer
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoBugs.Add(MappingBug(row));
+                listadoUsuarios.Add(MappingUsuario(row));
             }
 
-            return listadoBugs;
+            return listadoUsuarios;
         }
 
         public Usuario GetUser(string pUsuario)
@@ -46,13 +46,13 @@ namespace LPCFacturas.DataAccessLayer
             // Validamos que el resultado tenga al menos una fila.
             if (resultado.Rows.Count > 0)
             {
-                return MappingBug(resultado.Rows[0]);
+                return MappingUsuario(resultado.Rows[0]);
             }
 
             return null;
         }
 
-        private Usuario MappingBug(DataRow row)
+        private Usuario MappingUsuario(DataRow row)
         {
             Usuario oUsuario = new Usuario
             {

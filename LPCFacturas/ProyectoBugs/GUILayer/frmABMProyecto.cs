@@ -1,5 +1,6 @@
-﻿using LPCFacturas.DataAccessLayer;
+﻿using LPCFacturas.BusinessLayer;
 using LPCFacturas.Entities;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoBugs.GUILayer
+namespace LPCFacturas.GUILayer
 {
     public partial class frmABMProyecto : Form
     {
-        ProyectoDao oProyecto = new ProyectoDao();
+        ProyectoService oProyectoService = new ProyectoService();
+        UsuarioService oUsuarioService = new UsuarioService();
+        ProductoService oProductoService = new ProductoService();
+        bool nuevo = false;
+
         public frmABMProyecto()
         {
             InitializeComponent();
@@ -28,9 +33,9 @@ namespace ProyectoBugs.GUILayer
         private void frmABMProyecto_Load(object sender, EventArgs e)
         {
             habilitarCampos(false);
-            cargarCombo(cboProducto, "productos");
-            cargarCombo(cboResponsable, "usuarios", 2);
-            cargarGrilla(dgvProyecto, oProyecto.GetAll());
+            cargarCombo(cboProducto, oProductoService.recuperarTodos(), "Nombre", "Id_producto");
+            cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "IdUsuario");
+            cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
 
         }
 
@@ -50,15 +55,11 @@ namespace ProyectoBugs.GUILayer
             dgvProyecto.Enabled = !x;
         }
 
-        private void cargarCombo(ComboBox combo, string nombreTabla, int n = 1)
+        private void cargarCombo(ComboBox combo, Object source , string display, string value)
         {
-            var strSql = "SELECT * FROM " + nombreTabla;
-
-            var tabla = DBHelper.GetDBHelper().ConsultaSQL(strSql);
-
-            combo.DataSource = tabla;
-            combo.DisplayMember = tabla.Columns[n].ColumnName;
-            combo.ValueMember = tabla.Columns[0].ColumnName;
+            combo.DataSource = source;
+            combo.DisplayMember = display;
+            combo.ValueMember = value;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
             combo.SelectedIndex = -1;
         }
@@ -75,6 +76,53 @@ namespace ProyectoBugs.GUILayer
                                 proyecto.Version.ToString(),
                                 proyecto.Responsable.ToString());
             }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            nuevo = true;
+            this.habilitarCampos(true);
+            limpiarCampos();
+            dgvProyecto.Enabled = false;
+            cboProducto.Focus();
+        }
+
+        private void limpiarCampos()
+        {
+            txtId.Clear();
+            txtDescripcion.Clear();
+            txtAlcance.Clear();
+            txtVersion.Clear();
+            cboProducto.SelectedIndex = -1;
+            cboResponsable.SelectedIndex = -1;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            habilitarCampos(false);
+            nuevo = false;
+            limpiarCampos();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            habilitarCampos(true);
+            dgvProyecto.Enabled = false;
+            cboProducto.Focus();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de que quiere eliminar el proyecto?", "Borrar proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                
+            }
+        }
+
+        private void actualizarCampos(string idProyecto)
+        {
+            Proyecto proyectoSeleccionado = oProyectoService.recuperarProyecto(idProyecto.ToString());
+
         }
     }
 }

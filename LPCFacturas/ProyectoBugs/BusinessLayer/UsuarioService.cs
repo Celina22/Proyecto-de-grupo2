@@ -15,7 +15,7 @@ namespace LPCFacturas.BusinessLayer
         {
             oUsuarioDao = new UsuarioDao();
         }
-        public IList<Usuario> ObtenerTodos()
+        public IList<Usuario> recuperarTodos()
         {
             return oUsuarioDao.GetAll();
         }
