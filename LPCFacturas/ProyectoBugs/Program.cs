@@ -4,10 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LPCFacturas.GUILayer;
-<<<<<<< HEAD
-=======
 using ProyectoBugs.GUILayer;
->>>>>>> 2d6edb7a6d04db306345006bac23d76f6f1540b0
 
 namespace LPCFacturas
 {
