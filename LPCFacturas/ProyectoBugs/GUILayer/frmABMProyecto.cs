@@ -1,6 +1,5 @@
 ﻿using LPCFacturas.BusinessLayer;
 using LPCFacturas.Entities;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +33,7 @@ namespace LPCFacturas.GUILayer
         {
             habilitarCampos(false);
             cargarCombo(cboProducto, oProductoService.recuperarTodos(), "Nombre", "Id_producto");
-            cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "IdUsuario");
+            cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "NombreUsuario");
             cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
 
         }
@@ -115,14 +114,93 @@ namespace LPCFacturas.GUILayer
         {
             if (MessageBox.Show("¿Está seguro de que quiere eliminar el proyecto?", "Borrar proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                
+                Proyecto oProyecto = new Proyecto();
+                oProyecto.Id_proyecto = Convert.ToInt32(txtId.Text);
+                oProyectoService.eliminarProyecto(oProyecto);
             }
         }
 
         private void actualizarCampos(string idProyecto)
         {
-            Proyecto proyectoSeleccionado = oProyectoService.recuperarProyecto(idProyecto.ToString());
+            Proyecto proyectoSeleccionado = oProyectoService.recuperarProyecto(idProyecto);
+            txtId.Text = proyectoSeleccionado.Id_proyecto.ToString();
+            cboProducto.SelectedValue = proyectoSeleccionado.Producto.Id_producto;
+            txtDescripcion.Text = proyectoSeleccionado.Descripcion;
+            txtVersion.Text = proyectoSeleccionado.Version;
+            txtAlcance.Text = proyectoSeleccionado.Alcance;
+            cboResponsable.SelectedValue = proyectoSeleccionado.Responsable.NombreUsuario;
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (validarCampos())
+            {
+                Proyecto oProyecto = new Proyecto();
+                //oProyecto.Id_proyecto = Convert.ToInt32(txtId.Text);
+                oProyecto.Producto = oProductoService.recuperarProducto(cboProducto.SelectedValue.ToString());
+                oProyecto.Descripcion = txtDescripcion.Text;
+                oProyecto.Alcance = txtAlcance.Text;
+                oProyecto.Version = txtVersion.Text;
+                oProyecto.Responsable = oUsuarioService.recuperarUsuario(cboResponsable.SelectedValue.ToString());
+                if(nuevo)
+                {
+                    oProyectoService.crearProyecto(oProyecto);
+                    MessageBox.Show("Proyecto creado con exito!");
+                }
+                else
+                {
+                    oProyecto.Id_proyecto = Convert.ToInt32(txtId.Text);
+                    oProyectoService.actualizarProyecto(oProyecto);
+                    MessageBox.Show("Proyecto actualizado con exito!");
+                }
+                cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
+            }
+            habilitarCampos(false);
+            this.nuevo = false;
+        }
+
+        public bool validarCampos()
+        {
+
+            if (cboProducto.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un producto");
+                cboProducto.Focus();
+                return false;
+            }
+            if (txtDescripcion.Text == string.Empty)
+            {
+                MessageBox.Show("Debe colocar una descripcion");
+                txtDescripcion.Focus();
+                return false;
+            }
+            if (txtVersion.Text == string.Empty)
+            {
+                MessageBox.Show("Debe colocar una Version");
+                txtVersion.Focus();
+                return false;
+            }
+            if (txtAlcance.Text == string.Empty)
+            {
+                MessageBox.Show("Debe colocar un alcance");
+                txtAlcance.Focus();
+                return false;
+            }
+ 
+            if (cboResponsable.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un usuario responsable");
+                cboResponsable.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        private void dgvProyecto_SelectionChanged(object sender, EventArgs e)
+        {
+            this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

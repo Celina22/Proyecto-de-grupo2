@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using LPCFacturas.Entities;
 using System.Data;
-using ProyectoBugs.Entities;
 
 namespace LPCFacturas.DataAccessLayer
 {
@@ -38,7 +37,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
             String consultaSql = string.Concat(" SELECT id_producto, nombre ",
-                                                "   FROM Prducto",
+                                                "   FROM Productos",
                                                 "  WHERE borrado=0 and id_producto =  '", idProducto, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()

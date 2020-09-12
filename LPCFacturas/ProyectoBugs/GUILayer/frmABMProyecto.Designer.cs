@@ -186,6 +186,7 @@
             this.dgvProyecto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProyecto.Size = new System.Drawing.Size(698, 174);
             this.dgvProyecto.TabIndex = 14;
+            this.dgvProyecto.SelectionChanged += new System.EventHandler(this.dgvProyecto_SelectionChanged);
             // 
             // ID
             // 
@@ -256,6 +257,7 @@
             this.btnGuardar.TabIndex = 9;
             this.toolTip1.SetToolTip(this.btnGuardar, "Guardar");
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 

@@ -25,5 +25,20 @@ namespace LPCFacturas.BusinessLayer
         {
             return oProyectoDao.GetProyecto(idProyecto);
         }
+
+        public void crearProyecto(Proyecto proyecto)
+        {
+            oProyectoDao.crearProyecto(proyecto);
+        }
+
+        public void actualizarProyecto(Proyecto proyecto)
+        {
+            oProyectoDao.actualizarProyecto(proyecto);
+        }
+
+        public void eliminarProyecto(Proyecto proyecto)
+        {
+            oProyectoDao.eliminarProyecto(proyecto);
+        }
     }
 }

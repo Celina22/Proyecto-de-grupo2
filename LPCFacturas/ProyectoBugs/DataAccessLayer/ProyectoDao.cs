@@ -62,13 +62,43 @@ namespace LPCFacturas.DataAccessLayer
             {
                 Id_proyecto = Convert.ToInt32(row["id_proyecto"].ToString()),
                 Descripcion = row["descripcion"].ToString(),
-                Version = row["estiado"].ToString(),
+                Version = row["version"].ToString(),
                 Alcance = row["alcance"].ToString(),
                 Responsable = oUsuario.GetUser(row["usuario"].ToString()),
                 Producto = oProducto.GetProducto(row["id_producto"].ToString())
             };
 
             return oProyecto;
+        }
+
+        public void crearProyecto(Proyecto proyecto)
+        {
+            string SQLInsert = " INSERT INTO Proyectos(id_producto, descripcion, version, alcance, id_responsable, borrado) " +
+                               "VALUES (" + proyecto.Producto.Id_producto + ", '" + proyecto.Descripcion + "', '"
+                                            + proyecto.Version + "','" + proyecto.Alcance + "'," + proyecto.Responsable.IdUsuario + ", 0) ";
+                               
+
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+        }
+
+        public void actualizarProyecto(Proyecto proyecto)
+        {
+            string SQLUpdate =  "UPDATE proyectos set id_producto= " + proyecto.Producto.Id_producto + ", " +
+                                                     "descripcion= '" + proyecto.Descripcion + "', " +
+                                                     "version= '" + proyecto.Version + "', " +
+                                                     "alcance= '" + proyecto.Alcance + "', " +
+                                                     "id_responsable= " + proyecto.Responsable.IdUsuario +
+                                                     " WHERE id_proyecto= " + proyecto.Id_proyecto;
+            
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+        }
+
+        public void eliminarProyecto(Proyecto proyecto)
+        {
+            string SQLUpdate = "UPDATE proyectos set borrado = 1 WHERE id_proyecto = " + proyecto.Id_proyecto;
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
         }
     }
 }

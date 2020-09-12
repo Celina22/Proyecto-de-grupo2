@@ -33,5 +33,10 @@ namespace LPCFacturas.BusinessLayer
             }
             return null;
         }
+
+        public Usuario recuperarUsuario(string nombreUsuario)
+        {
+            return oUsuarioDao.GetUser(nombreUsuario);
+        }
     }
 }
