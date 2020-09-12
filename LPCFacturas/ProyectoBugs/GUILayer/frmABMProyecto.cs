@@ -70,10 +70,10 @@ namespace ProyectoBugs.GUILayer
             foreach (var proyecto in lista)
             {
                 grilla.Rows.Add(proyecto.Id_proyecto.ToString(),
-                                proyecto.NombreProducto.ToString(),
+                                proyecto.Producto.ToString(),
                                 proyecto.Descripcion.ToString(),
                                 proyecto.Version.ToString(),
-                                proyecto.NombreResponsable).ToString();
+                                proyecto.Responsable.ToString());
             }
         }
     }

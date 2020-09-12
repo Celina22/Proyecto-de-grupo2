@@ -14,6 +14,10 @@ namespace LPCFacturas.Entities
         public string Email { get; set; }
         public string Estado { get; set; }
         public Perfil Perfil { get; set; }
-        
+
+        public override string ToString()
+        {
+            return NombreUsuario;
+        }
     }
 }
