@@ -48,8 +48,10 @@
   <ItemGroup>
     <Compile Include="BusinessLayer\UsuarioService.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
+    <Compile Include="DataAccessLayer\ProyectoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
     <Compile Include="Entities\Perfil.cs" />
+    <Compile Include="Entities\Proyecto.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="GUILayer\frmLogin.cs">
       <SubType>Form</SubType>
