@@ -28,6 +28,7 @@ namespace LPCFacturas.GUILayer
             Environment.Exit(0);
         }
 
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             if (this.txtUsuario.Text == string.Empty)
@@ -62,6 +63,22 @@ namespace LPCFacturas.GUILayer
                 this.txtUsuario.Text = string.Empty;
                 this.txtClave.Text = string.Empty;
                 this.txtUsuario.Focus();
+            }
+        }
+
+        private void txtClave_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnIngresar_Click(this, new EventArgs());
+            }
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnIngresar_Click(this, new EventArgs());
             }
         }
     }

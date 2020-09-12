@@ -10,9 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LPCFacturas.BusinessLayer;
 
-namespace ProyectoBugs.GUILayer
+namespace LPCFacturas.GUILayer
 {
     public partial class frmPrincipal : Form
     {
