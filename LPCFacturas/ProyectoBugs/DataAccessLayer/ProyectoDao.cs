@@ -17,14 +17,15 @@ namespace LPCFacturas.DataAccessLayer
 {
     class ProyectoDao
     {
+        ProductoDao oProducto = new ProductoDao();
+        UsuarioDao oUsuario = new UsuarioDao();
+
         public IList<Proyecto> GetAll()
         {
             List<Proyecto> listadoBugs = new List<Proyecto>();
 
-            var strSql = " SELECT id_proyecto, pr.nombre nombreProducto, descripcion, version, alcance, u.usuario nombreResponsable "+
-                         " FROM Proyectos p JOIN productos pr ON p.id_producto = pr.id_producto" +
-                                          " JOIN usuarios u ON p.id_responsable = u.id_usuario "+
-                         "  WHERE p.borrado=0";
+            var strSql = " SELECT p.id_proyecto, p.id_producto, p.descripcion, p.version, p.alcance, u.usuario " +
+                         " FROM Proyectos p JOIN usuarios u ON p.id_responsable = u.id_usuario WHERE p.borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -39,10 +40,9 @@ namespace LPCFacturas.DataAccessLayer
         public Proyecto GetProyecto(string idProyecto)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT id_proyecto, pr.nombre nombreProducto, descripcion, version, alcance, u.usuario nombreResponsable ",
-                                                "   FROM Proyectos p JOIN productos pr ON p.id_producto = pr.id_producto" +
-                                                                   " JOIN usuarios u ON p.id_responsable = u.id_usuario ",
-                                                "  WHERE borrado=0 and id_proyecto =  '", idProyecto, "'");
+            String consultaSql = string.Concat(" SELECT p.id_proyecto, p.id_producto, p.descripcion, p.version, p.alcance, u.usuario ",
+                                                " FROM Proyectos p JOIN usuarios u ON p.id_responsable = u.id_usuario" +
+                                                " WHERE p.borrado=0 and p.id_proyecto =  '", idProyecto, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
@@ -61,11 +61,11 @@ namespace LPCFacturas.DataAccessLayer
             Proyecto oProyecto = new Proyecto
             {
                 Id_proyecto = Convert.ToInt32(row["id_proyecto"].ToString()),
-                NombreProducto = row["nombreProducto"].ToString(),                
                 Descripcion = row["descripcion"].ToString(),
                 Version = row["estiado"].ToString(),
                 Alcance = row["alcance"].ToString(),
-                NombreResponsable = row["nombreResponsable"].ToString()
+                Responsable = oUsuario.GetUser(row["usuario"].ToString()),
+                Producto = oProducto.GetProducto(row["id_producto"].ToString())
             };
 
             return oProyecto;
