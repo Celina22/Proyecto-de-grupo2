@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LPCFacturas.GUILayer;
+using ProyectoBugs.GUILayer;
 
 namespace LPCFacturas
 {
@@ -17,7 +18,7 @@ namespace LPCFacturas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmABMProyecto());
         }
     }
 }

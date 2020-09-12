@@ -65,6 +65,12 @@
     <Compile Include="GUILayer\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmABMProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmABMProyecto.Designer.cs">
+      <DependentUpon>frmABMProyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUILayer\frmLogin.resx">
@@ -72,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmABMProyecto.resx">
+      <DependentUpon>frmABMProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,6 +105,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Sources\Imagenes\Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\Mono Pen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\Error X.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\firewallcheck.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\firewall off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\Close X.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

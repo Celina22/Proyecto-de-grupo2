@@ -21,8 +21,10 @@ namespace LPCFacturas.DataAccessLayer
         {
             List<Proyecto> listadoBugs = new List<Proyecto>();
 
-            var strSql = " SELECT id_proyecto, id_producto, descripcion, version, alcance, id_responsable" +
-                         " FROM proyectos WHERE borrado = 0";
+            var strSql = " SELECT id_proyecto, pr.nombre nombreProducto, descripcion, version, alcance, u.usuario nombreResponsable "+
+                         " FROM Proyectos p JOIN productos pr ON p.id_producto = pr.id_producto" +
+                                          " JOIN usuarios u ON p.id_responsable = u.id_usuario "+
+                         "  WHERE p.borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -37,8 +39,9 @@ namespace LPCFacturas.DataAccessLayer
         public Proyecto GetProyecto(string idProyecto)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT id_proyecto, id_producto, descripcion, version, alcance, id_responsable ",
-                                                "   FROM Proyectos ",
+            String consultaSql = string.Concat(" SELECT id_proyecto, pr.nombre nombreProducto, descripcion, version, alcance, u.usuario nombreResponsable ",
+                                                "   FROM Proyectos p JOIN productos pr ON p.id_producto = pr.id_producto" +
+                                                                   " JOIN usuarios u ON p.id_responsable = u.id_usuario ",
                                                 "  WHERE borrado=0 and id_proyecto =  '", idProyecto, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
@@ -58,11 +61,11 @@ namespace LPCFacturas.DataAccessLayer
             Proyecto oProyecto = new Proyecto
             {
                 Id_proyecto = Convert.ToInt32(row["id_proyecto"].ToString()),
-                Id_producto = Convert.ToInt32(row["id_producto"].ToString()),                
+                NombreProducto = row["nombreProducto"].ToString(),                
                 Descripcion = row["descripcion"].ToString(),
                 Version = row["estiado"].ToString(),
                 Alcance = row["alcance"].ToString(),
-                Id_responsable = Convert.ToInt32(row["id_responsable"].ToString())
+                NombreResponsable = row["nombreResponsable"].ToString()
             };
 
             return oProyecto;
