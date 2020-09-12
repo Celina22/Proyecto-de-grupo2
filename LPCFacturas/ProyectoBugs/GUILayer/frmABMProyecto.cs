@@ -36,6 +36,7 @@ namespace LPCFacturas.GUILayer
             cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "NombreUsuario");
             cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
 
+
         }
 
         private void habilitarCampos(bool x)
@@ -52,6 +53,8 @@ namespace LPCFacturas.GUILayer
             btnEditar.Enabled = !x;
             btnSalir.Enabled = !x;
             dgvProyecto.Enabled = !x;
+            if (dgvProyecto.Rows.Count == 0)
+                btnEditar.Enabled = btnEliminar.Enabled = false;
         }
 
         private void cargarCombo(ComboBox combo, Object source , string display, string value)
@@ -117,19 +120,26 @@ namespace LPCFacturas.GUILayer
                 Proyecto oProyecto = new Proyecto();
                 oProyecto.Id_proyecto = Convert.ToInt32(txtId.Text);
                 oProyectoService.eliminarProyecto(oProyecto);
+                cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
+                
             }
+            habilitarCampos(false);
         }
 
         private void actualizarCampos(string idProyecto)
         {
             Proyecto proyectoSeleccionado = oProyectoService.recuperarProyecto(idProyecto);
-            txtId.Text = proyectoSeleccionado.Id_proyecto.ToString();
-            cboProducto.SelectedValue = proyectoSeleccionado.Producto.Id_producto;
-            txtDescripcion.Text = proyectoSeleccionado.Descripcion;
-            txtVersion.Text = proyectoSeleccionado.Version;
-            txtAlcance.Text = proyectoSeleccionado.Alcance;
-            cboResponsable.SelectedValue = proyectoSeleccionado.Responsable.NombreUsuario;
-
+            if (proyectoSeleccionado != null)
+            {
+                txtId.Text = proyectoSeleccionado.Id_proyecto.ToString();
+                cboProducto.SelectedValue = proyectoSeleccionado.Producto.Id_producto;
+                txtDescripcion.Text = proyectoSeleccionado.Descripcion;
+                txtVersion.Text = proyectoSeleccionado.Version;
+                txtAlcance.Text = proyectoSeleccionado.Alcance;
+                cboResponsable.SelectedValue = proyectoSeleccionado.Responsable.NombreUsuario;
+            }
+            else
+                limpiarCampos();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -155,9 +165,9 @@ namespace LPCFacturas.GUILayer
                     MessageBox.Show("Proyecto actualizado con exito!");
                 }
                 cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
+                habilitarCampos(false);
+                this.nuevo = false;
             }
-            habilitarCampos(false);
-            this.nuevo = false;
         }
 
         public bool validarCampos()
