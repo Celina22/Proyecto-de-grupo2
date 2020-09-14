@@ -87,6 +87,7 @@
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
+            this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
             // facturaToolStripMenuItem
             // 
@@ -100,13 +101,13 @@
             // proyectosVendidosToolStripMenuItem
             // 
             this.proyectosVendidosToolStripMenuItem.Name = "proyectosVendidosToolStripMenuItem";
-            this.proyectosVendidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proyectosVendidosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.proyectosVendidosToolStripMenuItem.Text = "Proyectos Vendidos";
             // 
             // comprasClientesToolStripMenuItem
             // 
             this.comprasClientesToolStripMenuItem.Name = "comprasClientesToolStripMenuItem";
-            this.comprasClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comprasClientesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.comprasClientesToolStripMenuItem.Text = "Compras clientes";
             // 
             // salirToolStripMenuItem

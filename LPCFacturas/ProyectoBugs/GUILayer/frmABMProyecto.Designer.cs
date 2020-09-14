@@ -320,6 +320,8 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
+            this.MaximumSize = new System.Drawing.Size(786, 678);
+            this.MinimumSize = new System.Drawing.Size(786, 678);
             this.Name = "frmABMProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Proyecto";

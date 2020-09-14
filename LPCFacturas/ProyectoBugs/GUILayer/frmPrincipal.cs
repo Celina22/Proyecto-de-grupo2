@@ -35,5 +35,11 @@ namespace LPCFacturas.GUILayer
             fl.Dispose();
 
         }
+
+        private void proyectosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmABMProyecto abmProyecto = new frmABMProyecto();
+            abmProyecto.ShowDialog();
+        }
     }
 }
