@@ -102,7 +102,6 @@ namespace LPCFacturas.GUILayer
         {
             habilitarCampos(false);
             nuevo = false;
-            limpiarCampos();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
