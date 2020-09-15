@@ -15,7 +15,7 @@ namespace LPCFacturas.GUILayer
 {
     public partial class frmPrincipal : Form
     {
-        string usuarioActual;
+        Usuario usuarioActual;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -31,15 +31,14 @@ namespace LPCFacturas.GUILayer
             frmLogin fl = new frmLogin();
             fl.ShowDialog();
             usuarioActual = fl.UsuarioLogueado;
-            this.Text = "Menú Principal - " + usuarioActual;
+            this.Text = "Menú Principal - Usuario actual: " + usuarioActual.NombreUsuario;
             fl.Dispose();
-
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmABMProyecto fABMPr = new frmABMProyecto();
-            fABMPr.ShowDialog();
+            frmABMProyecto abmProyecto = new frmABMProyecto();
+            abmProyecto.ShowDialog();
         }
     }
 }
