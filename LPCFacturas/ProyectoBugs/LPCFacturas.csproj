@@ -133,8 +133,5 @@
   <ItemGroup>
     <None Include="Sources\Imagenes\Mono Pen2.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Sources\Imagenes\Salir.ico" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
