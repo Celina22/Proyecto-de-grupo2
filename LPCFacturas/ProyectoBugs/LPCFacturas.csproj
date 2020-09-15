@@ -136,5 +136,14 @@
   <ItemGroup>
     <None Include="Sources\Imagenes\Salir.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\Error X2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\firewallcheck2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\firewall off2.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

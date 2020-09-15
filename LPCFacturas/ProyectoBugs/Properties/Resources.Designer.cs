@@ -103,6 +103,16 @@ namespace ProyectoBugs.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Error_X2 {
+            get {
+                object obj = ResourceManager.GetObject("Error X2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap firewall_off {
             get {
                 object obj = ResourceManager.GetObject("firewall off", resourceCulture);
@@ -113,9 +123,29 @@ namespace ProyectoBugs.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap firewall_off2 {
+            get {
+                object obj = ResourceManager.GetObject("firewall off2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap firewallcheck {
             get {
                 object obj = ResourceManager.GetObject("firewallcheck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap firewallcheck2 {
+            get {
+                object obj = ResourceManager.GetObject("firewallcheck2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

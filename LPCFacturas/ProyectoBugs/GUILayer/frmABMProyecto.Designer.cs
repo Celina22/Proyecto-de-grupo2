@@ -252,7 +252,7 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnCancelar.Image = global::ProyectoBugs.Properties.Resources.firewall_off;
+            this.btnCancelar.Image = global::ProyectoBugs.Properties.Resources.firewall_off2;
             this.btnCancelar.Location = new System.Drawing.Point(498, 493);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(67, 56);
@@ -267,7 +267,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnGuardar.Image = global::ProyectoBugs.Properties.Resources.firewallcheck;
+            this.btnGuardar.Image = global::ProyectoBugs.Properties.Resources.firewallcheck2;
             this.btnGuardar.Location = new System.Drawing.Point(417, 493);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(71, 56);
@@ -282,7 +282,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEliminar.Image = global::ProyectoBugs.Properties.Resources.Error_X;
+            this.btnEliminar.Image = global::ProyectoBugs.Properties.Resources.Error_X2;
             this.btnEliminar.Location = new System.Drawing.Point(214, 493);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(71, 56);
