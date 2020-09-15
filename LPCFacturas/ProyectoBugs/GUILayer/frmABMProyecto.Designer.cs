@@ -47,13 +47,13 @@
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyecto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,6 +178,7 @@
             // 
             this.dgvProyecto.AllowUserToAddRows = false;
             this.dgvProyecto.AllowUserToDeleteRows = false;
+            this.dgvProyecto.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dgvProyecto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyecto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -296,7 +297,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEditar.Image = global::ProyectoBugs.Properties.Resources.Mono_Pen;
+            this.btnEditar.Image = global::ProyectoBugs.Properties.Resources.Mono_Pen2;
             this.btnEditar.Location = new System.Drawing.Point(125, 493);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(71, 56);
@@ -311,7 +312,7 @@
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnNuevo.Image = global::ProyectoBugs.Properties.Resources.Add;
+            this.btnNuevo.Image = global::ProyectoBugs.Properties.Resources.AddPrueba2;
             this.btnNuevo.Location = new System.Drawing.Point(36, 493);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(71, 56);
@@ -345,7 +346,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
-            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaximumSize = new System.Drawing.Size(786, 600);
             this.MinimumSize = new System.Drawing.Size(786, 600);
             this.Name = "frmABMProyecto";
