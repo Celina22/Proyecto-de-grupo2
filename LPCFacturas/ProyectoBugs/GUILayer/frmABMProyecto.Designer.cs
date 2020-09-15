@@ -237,7 +237,7 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSalir.Image = global::ProyectoBugs.Properties.Resources.Close_X;
+            this.btnSalir.Image = global::ProyectoBugs.Properties.Resources.Salir;
             this.btnSalir.Location = new System.Drawing.Point(663, 493);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(71, 56);
