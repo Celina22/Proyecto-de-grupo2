@@ -127,5 +127,9 @@
   <ItemGroup>
     <None Include="Sources\Imagenes\Close X.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sources\Imagenes\Display.ico" />
+    <Content Include="Sources\Imagenes\Settings.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
