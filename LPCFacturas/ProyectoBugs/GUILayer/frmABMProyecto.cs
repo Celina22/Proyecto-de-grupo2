@@ -154,13 +154,13 @@ namespace LPCFacturas.GUILayer
                 if(nuevo)
                 {
                     oProyectoService.crearProyecto(oProyecto);
-                    MessageBox.Show("Proyecto creado con exito!");
+                    MessageBox.Show("¡Proyecto creado con éxito!", "Crear proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     oProyecto.Id_proyecto = Convert.ToInt32(txtId.Text);
                     oProyectoService.actualizarProyecto(oProyecto);
-                    MessageBox.Show("Proyecto actualizado con exito!");
+                    MessageBox.Show("¡Proyecto actualizado con éxito!", "Actualizar proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
                 habilitarCampos(false);
@@ -173,32 +173,32 @@ namespace LPCFacturas.GUILayer
 
             if (cboProducto.SelectedIndex == -1)
             {
-                MessageBox.Show("Debe seleccionar un producto");
+                MessageBox.Show("Datos ingresados no válidos. Debe seleccionar un producto.", "Datos de proyecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cboProducto.Focus();
                 return false;
             }
             if (txtDescripcion.Text == string.Empty)
             {
-                MessageBox.Show("Debe colocar una descripcion");
+                MessageBox.Show("Datos ingresados no válidos. Debe ingresar una descripción de proyecto.", "Datos de proyecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDescripcion.Focus();
                 return false;
             }
             if (txtVersion.Text == string.Empty)
             {
-                MessageBox.Show("Debe colocar una Version");
+                MessageBox.Show("Datos ingresados no válidos. Debe ingresar una versión del proyecto.", "Datos de proyecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtVersion.Focus();
                 return false;
             }
             if (txtAlcance.Text == string.Empty)
             {
-                MessageBox.Show("Debe colocar un alcance");
+                MessageBox.Show("Datos ingresados no válidos. Debe ingresar un alcance.", "Datos de proyecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtAlcance.Focus();
                 return false;
             }
  
             if (cboResponsable.SelectedIndex == -1)
             {
-                MessageBox.Show("Debe seleccionar un usuario responsable");
+                MessageBox.Show("Datos ingresados no válidos. Debe seleccionar un usuario responsable.", "Datos de proyecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cboResponsable.Focus();
                 return false;
             }
