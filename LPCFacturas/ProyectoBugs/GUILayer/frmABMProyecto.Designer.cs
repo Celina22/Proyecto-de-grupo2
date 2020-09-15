@@ -61,6 +61,7 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblId.Location = new System.Drawing.Point(184, 22);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(32, 23);
@@ -88,6 +89,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblDescripcion.Location = new System.Drawing.Point(108, 128);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(108, 23);
@@ -106,6 +108,7 @@
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblVersion.Location = new System.Drawing.Point(141, 193);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(75, 23);
@@ -124,6 +127,7 @@
             // 
             this.lblAlcance.AutoSize = true;
             this.lblAlcance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlcance.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblAlcance.Location = new System.Drawing.Point(139, 247);
             this.lblAlcance.Name = "lblAlcance";
             this.lblAlcance.Size = new System.Drawing.Size(77, 23);
@@ -134,6 +138,7 @@
             // 
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblProducto.Location = new System.Drawing.Point(129, 78);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(87, 23);
@@ -144,6 +149,7 @@
             // 
             this.lblResponsable.AutoSize = true;
             this.lblResponsable.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResponsable.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblResponsable.Location = new System.Drawing.Point(100, 306);
             this.lblResponsable.Name = "lblResponsable";
             this.lblResponsable.Size = new System.Drawing.Size(116, 23);
@@ -186,6 +192,7 @@
             this.dgvProyecto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProyecto.Size = new System.Drawing.Size(698, 174);
             this.dgvProyecto.TabIndex = 14;
+            this.dgvProyecto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProyecto_CellContentClick);
             this.dgvProyecto.SelectionChanged += new System.EventHandler(this.dgvProyecto_SelectionChanged);
             // 
             // ID
@@ -225,7 +232,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.DimGray;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnSalir.Image = global::ProyectoBugs.Properties.Resources.Close_X;
             this.btnSalir.Location = new System.Drawing.Point(671, 551);
             this.btnSalir.Name = "btnSalir";
@@ -237,11 +247,14 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnCancelar.Image = global::ProyectoBugs.Properties.Resources.firewall_off;
-            this.btnCancelar.Location = new System.Drawing.Point(502, 551);
+            this.btnCancelar.Location = new System.Drawing.Point(506, 551);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(71, 56);
+            this.btnCancelar.Size = new System.Drawing.Size(67, 56);
             this.btnCancelar.TabIndex = 10;
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -249,7 +262,10 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.DimGray;
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnGuardar.Image = global::ProyectoBugs.Properties.Resources.firewallcheck;
             this.btnGuardar.Location = new System.Drawing.Point(425, 551);
             this.btnGuardar.Name = "btnGuardar";
@@ -261,7 +277,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.DimGray;
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEliminar.Image = global::ProyectoBugs.Properties.Resources.Error_X;
             this.btnEliminar.Location = new System.Drawing.Point(222, 551);
             this.btnEliminar.Name = "btnEliminar";
@@ -273,7 +292,10 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.DimGray;
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEditar.Image = global::ProyectoBugs.Properties.Resources.Mono_Pen;
             this.btnEditar.Location = new System.Drawing.Point(133, 551);
             this.btnEditar.Name = "btnEditar";
@@ -285,7 +307,10 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.DimGray;
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnNuevo.Image = global::ProyectoBugs.Properties.Resources.Add;
             this.btnNuevo.Location = new System.Drawing.Point(44, 551);
             this.btnNuevo.Name = "btnNuevo";
@@ -320,6 +345,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MaximumSize = new System.Drawing.Size(786, 678);
             this.MinimumSize = new System.Drawing.Size(786, 678);
             this.Name = "frmABMProyecto";
@@ -351,7 +377,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
@@ -359,5 +384,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn version;
         private System.Windows.Forms.DataGridViewTextBoxColumn responsable;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LPCFacturas.BusinessLayer;
+using LPCFacturas.Entities;
 
 namespace LPCFacturas.GUILayer
 {
@@ -16,7 +17,7 @@ namespace LPCFacturas.GUILayer
     {
         private readonly UsuarioService usuarioService;
 
-        public string UsuarioLogueado { get; internal set; }
+        public Usuario UsuarioLogueado { get; internal set; }
         public frmLogin()
         {
             InitializeComponent();
@@ -45,17 +46,16 @@ namespace LPCFacturas.GUILayer
                 return;
             }
 
-            var usr = usuarioService.ValidarUsuario(txtUsuario.Text, txtClave.Text);
+            UsuarioLogueado = usuarioService.ValidarUsuario(txtUsuario.Text, txtClave.Text);
             //Controlamos que las creadenciales sean las correctas. 
             string msj = "";
-            if (usr != null)
+            if (UsuarioLogueado != null)
             {
-                UsuarioLogueado = usr.NombreUsuario;
                 msj = "Login OK. Bienvenido, " + UsuarioLogueado + ".";
                 MessageBox.Show(msj, "Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 this.Close();
-
             }
+
             else
             {
                 msj = "Usuario y/o clave incorrectos.";

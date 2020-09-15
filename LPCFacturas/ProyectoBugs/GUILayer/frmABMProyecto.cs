@@ -30,12 +30,11 @@ namespace LPCFacturas.GUILayer
         }
 
         private void frmABMProyecto_Load(object sender, EventArgs e)
-        {
-            habilitarCampos(false);
+        {            
             cargarCombo(cboProducto, oProductoService.recuperarTodos(), "Nombre", "Id_producto");
             cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "NombreUsuario");
             cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
-
+            habilitarCampos(false);
 
         }
 
@@ -209,6 +208,11 @@ namespace LPCFacturas.GUILayer
         }
 
         private void dgvProyecto_SelectionChanged(object sender, EventArgs e)
+        {
+            this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void dgvProyecto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
         }

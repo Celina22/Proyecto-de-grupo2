@@ -15,7 +15,7 @@ namespace LPCFacturas.GUILayer
 {
     public partial class frmPrincipal : Form
     {
-        string usuarioActual;
+        Usuario usuarioActual;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace LPCFacturas.GUILayer
             frmLogin fl = new frmLogin();
             fl.ShowDialog();
             usuarioActual = fl.UsuarioLogueado;
-            this.Text = "Menu Principal " + usuarioActual;
+            this.Text = "Menu Principal " + usuarioActual.NombreUsuario;
             fl.Dispose();
 
         }
