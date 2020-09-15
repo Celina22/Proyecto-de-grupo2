@@ -73,16 +73,6 @@ namespace ProyectoBugs.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AddPrueba2 {
-            get {
-                object obj = ResourceManager.GetObject("AddPrueba2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Close_X {
             get {
                 object obj = ResourceManager.GetObject("Close X", resourceCulture);
@@ -126,16 +116,6 @@ namespace ProyectoBugs.Properties {
         internal static System.Drawing.Bitmap Mono_Pen {
             get {
                 object obj = ResourceManager.GetObject("Mono Pen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Mono_Pen2 {
-            get {
-                object obj = ResourceManager.GetObject("Mono Pen2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

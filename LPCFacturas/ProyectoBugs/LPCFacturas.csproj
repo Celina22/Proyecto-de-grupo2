@@ -127,11 +127,5 @@
   <ItemGroup>
     <None Include="Sources\Imagenes\Close X.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Sources\Imagenes\AddPrueba2.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Sources\Imagenes\Mono Pen2.ico" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
