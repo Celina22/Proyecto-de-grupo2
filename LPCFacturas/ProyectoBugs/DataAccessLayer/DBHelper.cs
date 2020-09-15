@@ -15,7 +15,7 @@ namespace LPCFacturas.DataAccessLayer
 
         private DBHelper()
         {
-            string_conexion = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BugsExtendido;User ID=sa;Password=12345";
+            string_conexion = @"Data Source=DESKTOP-SFPMQMT\SQLEXPRESS;Initial Catalog=Bugtracker;User ID=sa;Password=Blaziken99";
         }
 
         public static DBHelper GetDBHelper()
