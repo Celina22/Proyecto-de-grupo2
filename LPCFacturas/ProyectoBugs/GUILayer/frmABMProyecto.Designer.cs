@@ -62,7 +62,7 @@
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblId.Location = new System.Drawing.Point(184, 22);
+            this.lblId.Location = new System.Drawing.Point(176, 22);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(32, 23);
             this.lblId.TabIndex = 0;
@@ -72,7 +72,7 @@
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(231, 19);
+            this.txtId.Location = new System.Drawing.Point(214, 19);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(187, 31);
             this.txtId.TabIndex = 0;
@@ -80,7 +80,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(231, 125);
+            this.txtDescripcion.Location = new System.Drawing.Point(214, 113);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(342, 31);
             this.txtDescripcion.TabIndex = 2;
@@ -90,16 +90,16 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDescripcion.Location = new System.Drawing.Point(108, 128);
+            this.lblDescripcion.Location = new System.Drawing.Point(100, 116);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(108, 23);
             this.lblDescripcion.TabIndex = 4;
-            this.lblDescripcion.Text = "Descripcion:";
+            this.lblDescripcion.Text = "Descripción:";
             // 
             // txtVersion
             // 
             this.txtVersion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVersion.Location = new System.Drawing.Point(231, 185);
+            this.txtVersion.Location = new System.Drawing.Point(214, 160);
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(342, 31);
             this.txtVersion.TabIndex = 3;
@@ -109,16 +109,16 @@
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblVersion.Location = new System.Drawing.Point(141, 193);
+            this.lblVersion.Location = new System.Drawing.Point(133, 163);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(75, 23);
             this.lblVersion.TabIndex = 6;
-            this.lblVersion.Text = "Version:";
+            this.lblVersion.Text = "Versión:";
             // 
             // txtAlcance
             // 
             this.txtAlcance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlcance.Location = new System.Drawing.Point(231, 244);
+            this.txtAlcance.Location = new System.Drawing.Point(214, 207);
             this.txtAlcance.Name = "txtAlcance";
             this.txtAlcance.Size = new System.Drawing.Size(342, 31);
             this.txtAlcance.TabIndex = 4;
@@ -128,7 +128,7 @@
             this.lblAlcance.AutoSize = true;
             this.lblAlcance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlcance.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAlcance.Location = new System.Drawing.Point(139, 247);
+            this.lblAlcance.Location = new System.Drawing.Point(131, 210);
             this.lblAlcance.Name = "lblAlcance";
             this.lblAlcance.Size = new System.Drawing.Size(77, 23);
             this.lblAlcance.TabIndex = 8;
@@ -139,7 +139,7 @@
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblProducto.Location = new System.Drawing.Point(129, 78);
+            this.lblProducto.Location = new System.Drawing.Point(121, 69);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(87, 23);
             this.lblProducto.TabIndex = 10;
@@ -150,7 +150,7 @@
             this.lblResponsable.AutoSize = true;
             this.lblResponsable.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResponsable.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblResponsable.Location = new System.Drawing.Point(100, 306);
+            this.lblResponsable.Location = new System.Drawing.Point(92, 257);
             this.lblResponsable.Name = "lblResponsable";
             this.lblResponsable.Size = new System.Drawing.Size(116, 23);
             this.lblResponsable.TabIndex = 11;
@@ -160,7 +160,7 @@
             // 
             this.cboProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Location = new System.Drawing.Point(231, 75);
+            this.cboProducto.Location = new System.Drawing.Point(214, 66);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(342, 31);
             this.cboProducto.TabIndex = 1;
@@ -169,7 +169,7 @@
             // 
             this.cboResponsable.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboResponsable.FormattingEnabled = true;
-            this.cboResponsable.Location = new System.Drawing.Point(231, 303);
+            this.cboResponsable.Location = new System.Drawing.Point(214, 254);
             this.cboResponsable.Name = "cboResponsable";
             this.cboResponsable.Size = new System.Drawing.Size(342, 31);
             this.cboResponsable.TabIndex = 5;
@@ -185,7 +185,7 @@
             this.descripcion,
             this.version,
             this.responsable});
-            this.dgvProyecto.Location = new System.Drawing.Point(44, 356);
+            this.dgvProyecto.Location = new System.Drawing.Point(36, 304);
             this.dgvProyecto.MultiSelect = false;
             this.dgvProyecto.Name = "dgvProyecto";
             this.dgvProyecto.ReadOnly = true;
@@ -237,7 +237,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnSalir.Image = global::ProyectoBugs.Properties.Resources.Close_X;
-            this.btnSalir.Location = new System.Drawing.Point(671, 551);
+            this.btnSalir.Location = new System.Drawing.Point(663, 493);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(71, 56);
             this.btnSalir.TabIndex = 11;
@@ -252,7 +252,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnCancelar.Image = global::ProyectoBugs.Properties.Resources.firewall_off;
-            this.btnCancelar.Location = new System.Drawing.Point(506, 551);
+            this.btnCancelar.Location = new System.Drawing.Point(498, 493);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(67, 56);
             this.btnCancelar.TabIndex = 10;
@@ -267,7 +267,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnGuardar.Image = global::ProyectoBugs.Properties.Resources.firewallcheck;
-            this.btnGuardar.Location = new System.Drawing.Point(425, 551);
+            this.btnGuardar.Location = new System.Drawing.Point(417, 493);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(71, 56);
             this.btnGuardar.TabIndex = 9;
@@ -282,7 +282,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEliminar.Image = global::ProyectoBugs.Properties.Resources.Error_X;
-            this.btnEliminar.Location = new System.Drawing.Point(222, 551);
+            this.btnEliminar.Location = new System.Drawing.Point(214, 493);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(71, 56);
             this.btnEliminar.TabIndex = 8;
@@ -297,7 +297,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEditar.Image = global::ProyectoBugs.Properties.Resources.Mono_Pen;
-            this.btnEditar.Location = new System.Drawing.Point(133, 551);
+            this.btnEditar.Location = new System.Drawing.Point(125, 493);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(71, 56);
             this.btnEditar.TabIndex = 7;
@@ -312,7 +312,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnNuevo.Image = global::ProyectoBugs.Properties.Resources.Add;
-            this.btnNuevo.Location = new System.Drawing.Point(44, 551);
+            this.btnNuevo.Location = new System.Drawing.Point(36, 493);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(71, 56);
             this.btnNuevo.TabIndex = 6;
@@ -325,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(770, 639);
+            this.ClientSize = new System.Drawing.Size(770, 561);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -346,8 +346,8 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.MaximumSize = new System.Drawing.Size(786, 678);
-            this.MinimumSize = new System.Drawing.Size(786, 678);
+            this.MaximumSize = new System.Drawing.Size(786, 600);
+            this.MinimumSize = new System.Drawing.Size(786, 600);
             this.Name = "frmABMProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Proyecto";
