@@ -345,7 +345,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
-            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaximumSize = new System.Drawing.Size(786, 600);
             this.MinimumSize = new System.Drawing.Size(786, 600);
             this.Name = "frmABMProyecto";
