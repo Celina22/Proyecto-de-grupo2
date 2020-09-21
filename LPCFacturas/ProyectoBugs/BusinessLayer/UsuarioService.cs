@@ -38,5 +38,20 @@ namespace LPCFacturas.BusinessLayer
         {
             return oUsuarioDao.GetUser(nombreUsuario);
         }
+
+        public void eliminarUsuario(Usuario usuario)
+        {
+            oUsuarioDao.eliminarUsuario(usuario);
+        }
+
+        public void crearUsuario(Usuario usuario)
+        {
+            oUsuarioDao.crearUsuario(usuario);
+        }
+
+        public void actualizarUsuario(Usuario usuario)
+        {
+            oUsuarioDao.actualizarUsuario(usuario);
+        }
     }
 }
