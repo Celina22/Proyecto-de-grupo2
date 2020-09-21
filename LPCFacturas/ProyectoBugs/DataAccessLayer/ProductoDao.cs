@@ -33,6 +33,33 @@ namespace LPCFacturas.DataAccessLayer
             return listadoProductos;
         }
 
+        internal void actualizarProducto(Producto producto)
+        {
+            string SQLUpdate =  "UPDATE productos set nombre = '" + producto.Nombre + "'" +
+                                                     " WHERE id_producto= " + producto.Id_producto;
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+
+        }
+
+        internal void eliminarProducto(Producto producto)
+        {
+            string SQLUpdate = "UPDATE productos set borrado = 1 WHERE id_producto = " + producto.Id_producto;
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+        }
+
+
+        internal void crearProducto(Producto producto)
+        {
+            string SQLInsert = " INSERT INTO Productos(nombre, borrado) " +
+                               "VALUES ('" + producto.Nombre + "', 0) ";
+
+
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+        }
+
         public Producto GetProducto(string idProducto)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.

@@ -40,5 +40,11 @@ namespace LPCFacturas.GUILayer
             frmABMProyecto abmProyecto = new frmABMProyecto();
             abmProyecto.ShowDialog();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmABMProducto abmProducto = new frmABMProducto();
+            abmProducto.ShowDialog();
+        }
     }
 }

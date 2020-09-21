@@ -21,5 +21,20 @@ namespace LPCFacturas.BusinessLayer
         {
             return oProductoDao.GetProducto(idProducto);
         }
+
+        internal void crearProducto(Producto oProducto)
+        {
+            oProductoDao.crearProducto(oProducto);
+        }
+
+        internal void actualizarProducto(Producto oProducto)
+        {
+            oProductoDao.actualizarProducto(oProducto);
+        }
+
+        internal void eliminarProducto(Producto oProducto)
+        {
+            oProductoDao.eliminarProducto(oProducto);
+        }
     }
 }
