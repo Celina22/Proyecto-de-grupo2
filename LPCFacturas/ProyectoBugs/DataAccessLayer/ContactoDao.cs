@@ -23,7 +23,7 @@ namespace LPCFacturas.DataAccessLayer
             return listadoContactos;
         }
 
-        public Contacto GetContacto(int idContacto)
+        public Contacto GetContacto(string idContacto)
         {
             Contacto contactoObtenido;
 
@@ -33,6 +33,7 @@ namespace LPCFacturas.DataAccessLayer
             if (tabla.Rows.Count > 0)
             {
                 contactoObtenido = MappingContacto(tabla.Rows[0]);
+                return contactoObtenido;
             }
             return null;
         }
@@ -55,7 +56,7 @@ namespace LPCFacturas.DataAccessLayer
         }
         public void crearContacto(Contacto contacto)
         {
-            string SQLInsert = string.Concat("INSERT INTO Productos(nombre, apellido, email, telefono, borrado) VALUES('",
+            string SQLInsert = string.Concat("INSERT INTO Contactos(nombre, apellido, email, telefono, borrado) VALUES('",
                                                 contacto.Nombre, "','",
                                                 contacto.Apellido, "','",
                                                 contacto.Email, "',",

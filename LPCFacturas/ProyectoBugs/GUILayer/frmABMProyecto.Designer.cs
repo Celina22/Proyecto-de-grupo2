@@ -68,7 +68,6 @@
             this.lblId.Size = new System.Drawing.Size(32, 23);
             this.lblId.TabIndex = 0;
             this.lblId.Text = "ID:";
-            this.lblId.Click += new System.EventHandler(this.lblId_Click);
             // 
             // txtId
             // 
@@ -78,7 +77,6 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(187, 31);
             this.txtId.TabIndex = 0;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtDescripcion
             // 
@@ -167,7 +165,6 @@
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(342, 31);
             this.cboProducto.TabIndex = 1;
-            this.cboProducto.SelectedIndexChanged += new System.EventHandler(this.cboProducto_SelectedIndexChanged);
             // 
             // cboResponsable
             // 

@@ -20,7 +20,6 @@ namespace LPCFacturas.BusinessLayer
         {
             return oProyectoDao.GetAll();
         }
-
         public Proyecto recuperarProyecto(string idProyecto)
         {
             return oProyectoDao.GetProyecto(idProyecto);
@@ -30,12 +29,10 @@ namespace LPCFacturas.BusinessLayer
         {
             oProyectoDao.crearProyecto(proyecto);
         }
-
         public void actualizarProyecto(Proyecto proyecto)
         {
             oProyectoDao.actualizarProyecto(proyecto);
         }
-
         public void eliminarProyecto(Proyecto proyecto)
         {
             oProyectoDao.eliminarProyecto(proyecto);

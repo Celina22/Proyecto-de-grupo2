@@ -56,80 +56,90 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(163, 60);
+            this.lblId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblId.Location = new System.Drawing.Point(130, 15);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(21, 13);
+            this.lblId.Size = new System.Drawing.Size(32, 23);
             this.lblId.TabIndex = 0;
             this.lblId.Text = "ID:";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(192, 57);
+            this.txtId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtId.Location = new System.Drawing.Point(168, 12);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.Size = new System.Drawing.Size(368, 31);
             this.txtId.TabIndex = 1;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(192, 83);
+            this.txtNombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtNombre.Location = new System.Drawing.Point(168, 49);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(368, 31);
             this.txtNombre.TabIndex = 3;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(137, 86);
+            this.lblNombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Location = new System.Drawing.Point(82, 52);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(80, 23);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre:";
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(192, 109);
+            this.txtApellido.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtApellido.Location = new System.Drawing.Point(168, 86);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.Size = new System.Drawing.Size(368, 31);
             this.txtApellido.TabIndex = 5;
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(137, 112);
+            this.lblApellido.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblApellido.Location = new System.Drawing.Point(79, 89);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(47, 13);
+            this.lblApellido.Size = new System.Drawing.Size(82, 23);
             this.lblApellido.TabIndex = 4;
             this.lblApellido.Text = "Apellido:";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(192, 135);
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Location = new System.Drawing.Point(168, 123);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.Size = new System.Drawing.Size(368, 31);
             this.txtEmail.TabIndex = 7;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(149, 138);
+            this.lblEmail.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.Location = new System.Drawing.Point(103, 126);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.Size = new System.Drawing.Size(58, 23);
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "Email:";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(192, 161);
+            this.txtTelefono.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtTelefono.Location = new System.Drawing.Point(168, 160);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(368, 31);
             this.txtTelefono.TabIndex = 9;
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(132, 164);
+            this.lblTelefono.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTelefono.Location = new System.Drawing.Point(79, 163);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefono.Size = new System.Drawing.Size(83, 23);
             this.lblTelefono.TabIndex = 8;
             this.lblTelefono.Text = "Teléfono:";
             // 
@@ -143,10 +153,14 @@
             this.apellido,
             this.email,
             this.telefono});
-            this.dgvContactos.Location = new System.Drawing.Point(58, 210);
+            this.dgvContactos.Location = new System.Drawing.Point(12, 197);
+            this.dgvContactos.MultiSelect = false;
             this.dgvContactos.Name = "dgvContactos";
-            this.dgvContactos.Size = new System.Drawing.Size(625, 150);
+            this.dgvContactos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvContactos.Size = new System.Drawing.Size(681, 180);
             this.dgvContactos.TabIndex = 10;
+            this.dgvContactos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactos_CellContentClick);
+            this.dgvContactos.SelectionChanged += new System.EventHandler(this.dgvContactos_SelectionChanged);
             // 
             // btnSalir
             // 
@@ -155,11 +169,12 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
-            this.btnSalir.Location = new System.Drawing.Point(659, 366);
+            this.btnSalir.Location = new System.Drawing.Point(598, 393);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(71, 56);
             this.btnSalir.TabIndex = 17;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
@@ -168,11 +183,12 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnCancelar.Image = global::LPCFacturas.Properties.Resources.firewall_off2;
-            this.btnCancelar.Location = new System.Drawing.Point(494, 366);
+            this.btnCancelar.Location = new System.Drawing.Point(497, 393);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(67, 56);
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -181,11 +197,12 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.btnGuardar.Location = new System.Drawing.Point(413, 366);
+            this.btnGuardar.Location = new System.Drawing.Point(416, 393);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(71, 56);
             this.btnGuardar.TabIndex = 15;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -194,11 +211,12 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEliminar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btnEliminar.Location = new System.Drawing.Point(210, 366);
+            this.btnEliminar.Location = new System.Drawing.Point(213, 393);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(71, 56);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -207,11 +225,12 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btnEditar.Location = new System.Drawing.Point(121, 366);
+            this.btnEditar.Location = new System.Drawing.Point(124, 393);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(71, 56);
             this.btnEditar.TabIndex = 13;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -220,11 +239,12 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btnNuevo.Location = new System.Drawing.Point(32, 366);
+            this.btnNuevo.Location = new System.Drawing.Point(35, 393);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(71, 56);
             this.btnNuevo.TabIndex = 12;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // id
             // 
@@ -255,7 +275,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(705, 461);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -274,6 +295,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Name = "frmABMContactos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Contactos";
             this.Load += new System.EventHandler(this.frmABMContactos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();

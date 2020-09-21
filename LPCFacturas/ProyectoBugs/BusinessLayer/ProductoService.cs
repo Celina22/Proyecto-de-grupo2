@@ -26,12 +26,10 @@ namespace LPCFacturas.BusinessLayer
         {
             oProductoDao.crearProducto(oProducto);
         }
-
         internal void actualizarProducto(Producto oProducto)
         {
             oProductoDao.actualizarProducto(oProducto);
         }
-
         internal void eliminarProducto(Producto oProducto)
         {
             oProductoDao.eliminarProducto(oProducto);

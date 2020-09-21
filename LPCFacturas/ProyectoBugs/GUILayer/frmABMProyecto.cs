@@ -78,16 +78,6 @@ namespace LPCFacturas.GUILayer
                                 proyecto.Responsable.ToString());
             }
         }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            nuevo = true;
-            this.habilitarCampos(true);
-            limpiarCampos();
-            dgvProyecto.Enabled = false;
-            cboProducto.Focus();
-        }
-
         private void limpiarCampos()
         {
             txtId.Clear();
@@ -98,6 +88,14 @@ namespace LPCFacturas.GUILayer
             cboResponsable.SelectedIndex = -1;
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            nuevo = true;
+            this.habilitarCampos(true);
+            limpiarCampos();
+            dgvProyecto.Enabled = false;
+            cboProducto.Focus();
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             habilitarCampos(false);
@@ -210,25 +208,9 @@ namespace LPCFacturas.GUILayer
         {
             this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
         }
-
         private void dgvProyecto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
-        }
-
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblId_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

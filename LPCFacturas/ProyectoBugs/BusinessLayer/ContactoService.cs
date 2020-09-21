@@ -12,10 +12,31 @@ namespace LPCFacturas.BusinessLayer
     class ContactoService
     {
         private ContactoDao oContactoDao;
+        public ContactoService()
+        {
+            oContactoDao = new ContactoDao();
+        }
 
-        public Contacto recuperarContacto(int idContacto)
+        public Contacto recuperarContacto(string idContacto)
         {
             return oContactoDao.GetContacto(idContacto);
+        }
+        public IList<Contacto> recuperarTodos()
+        {
+            return oContactoDao.GetAll();
+        }
+
+        public void crearContacto(Contacto contacto)
+        {
+            oContactoDao.crearContacto(contacto);
+        }
+        public void actualizarContacto(Contacto contacto)
+        {
+            oContactoDao.actualizarContacto(contacto);
+        }
+        public void eliminarContacto(Contacto contacto)
+        {
+            oContactoDao.eliminarContacto(contacto);
         }
     }
 }
