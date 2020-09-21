@@ -33,7 +33,20 @@ namespace LPCFacturas.DataAccessLayer
             return listadoProductos;
         }
 
-        public Producto GetProducto(string idProducto)
+        
+
+        private Producto MappingProducto(DataRow row)
+        {
+            Producto oProducto = new Producto
+            {
+                Id_producto = Convert.ToInt32(row["id_producto"].ToString()),
+                Nombre = row["nombre"].ToString()
+            };
+
+            return oProducto;
+        }
+
+        public Producto GetPerfil(string idProducto)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
             String consultaSql = string.Concat(" SELECT id_producto, nombre ",
@@ -50,17 +63,6 @@ namespace LPCFacturas.DataAccessLayer
             }
 
             return null;
-        }
-
-        private Producto MappingProducto(DataRow row)
-        {
-            Producto oProducto = new Producto
-            {
-                Id_producto = Convert.ToInt32(row["id_producto"].ToString()),
-                Nombre = row["nombre"].ToString()
-            };
-
-            return oProducto;
         }
     }
 }
