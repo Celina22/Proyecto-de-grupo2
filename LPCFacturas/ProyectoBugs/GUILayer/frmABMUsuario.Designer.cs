@@ -229,7 +229,7 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSalir.Image = global::ProyectoBugs.Properties.Resources.Salir;
+            this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
             this.btnSalir.Location = new System.Drawing.Point(663, 493);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(71, 56);
@@ -244,7 +244,7 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnCancelar.Image = global::ProyectoBugs.Properties.Resources.firewall_off2;
+            this.btnCancelar.Image = global::LPCFacturas.Properties.Resources.firewall_off2;
             this.btnCancelar.Location = new System.Drawing.Point(498, 493);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(67, 56);
@@ -259,7 +259,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnGuardar.Image = global::ProyectoBugs.Properties.Resources.firewallcheck2;
+            this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
             this.btnGuardar.Location = new System.Drawing.Point(417, 493);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(71, 56);
@@ -274,7 +274,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEliminar.Image = global::ProyectoBugs.Properties.Resources.Error_X2;
+            this.btnEliminar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
             this.btnEliminar.Location = new System.Drawing.Point(214, 493);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(71, 56);
@@ -289,7 +289,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEditar.Image = global::ProyectoBugs.Properties.Resources.Mono_Pen2;
+            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
             this.btnEditar.Location = new System.Drawing.Point(125, 493);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(71, 56);
@@ -304,7 +304,7 @@
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnNuevo.Image = global::ProyectoBugs.Properties.Resources.AddPrueba2;
+            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
             this.btnNuevo.Location = new System.Drawing.Point(36, 493);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(71, 56);

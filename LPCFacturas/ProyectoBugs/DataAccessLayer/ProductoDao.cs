@@ -46,7 +46,7 @@ namespace LPCFacturas.DataAccessLayer
             return oProducto;
         }
 
-        public Producto GetPerfil(string idProducto)
+        public Producto GetProducto(string idProducto)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
             String consultaSql = string.Concat(" SELECT id_producto, nombre ",
