@@ -65,6 +65,34 @@ namespace LPCFacturas.DataAccessLayer
 
             return oUsuario;
         }
+
+        public void eliminarUsuario(Usuario usuario)
+        {
+            string SQLUpdate = "UPDATE Usuarios SET borrado = 1 WHERE id_usuario = " + usuario.IdUsuario;
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+        }
+
+        public void crearUsuario(Usuario usuario)
+        {
+            string SQLInsert = " INSERT INTO Usuarios(id_perfil, usuario, password, email, estado, borrado) " +
+                               "VALUES (" + usuario.Perfil.IdPerfil + ", '" + usuario.NombreUsuario + "', '"
+                                            + usuario.Password + "','" + usuario.Email + "','" + usuario.Estado + "', 0) ";
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+        }
+
+        public void actualizarUsuario(Usuario usuario)
+        {
+            string SQLUpdate = "UPDATE Usuarios SET id_perfil= " + usuario.Perfil.IdPerfil + ", " +
+                                                     "usuario= '" + usuario.NombreUsuario + "', " +
+                                                     "password= '" + usuario.Password + "', " +
+                                                     "email= '" + usuario.Email + "', " +
+                                                     "estado= '" + usuario.Estado +"'"+
+                                                     " WHERE id_usuario= " + usuario.IdUsuario;
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+        }
     }
 
 }
