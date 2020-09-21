@@ -215,5 +215,20 @@ namespace LPCFacturas.GUILayer
         {
             this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
         }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
