@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LPCFacturas.Entities;
-using LPCFacturas.DataAccessLayer;
 
 namespace LPCFacturas.BusinessLayer
 {

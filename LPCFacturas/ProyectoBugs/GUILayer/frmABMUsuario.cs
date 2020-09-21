@@ -73,7 +73,7 @@ namespace LPCFacturas.GUILayer
                                 usuario.Perfil.ToString(),
                                 usuario.NombreUsuario.ToString(),
                                 usuario.Password.ToString(),
-                                usuario.Estado.ToString())
+                                usuario.Estado.ToString());
                                 
             }
         }
