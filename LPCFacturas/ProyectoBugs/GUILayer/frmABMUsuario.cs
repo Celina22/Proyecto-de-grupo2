@@ -54,7 +54,7 @@ namespace LPCFacturas.GUILayer
                 btnEditar.Enabled = btnEliminar.Enabled = false;
         }
 
-        private void cargarCombo(ComboBox combo, Object source , string display, string value)
+        private void cargarCombo(ComboBox combo, Object source, string display, string value)
         {
             combo.DataSource = source;
             combo.DisplayMember = display;
@@ -131,7 +131,7 @@ namespace LPCFacturas.GUILayer
             if (usuarioSeleccionado != null)
             {
                 txtId.Text = usuarioSeleccionado.IdUsuario.ToString();
-                cboPerfil.SelectedValue = usuarioSeleccionado.Perfil.IdPerfil;
+                cboPerfil.SelectedValue = usuarioSeleccionado.Perfil.Id_Perfil;
                 txtUsuario.Text = usuarioSeleccionado.NombreUsuario;
                 txtPassword.Text = usuarioSeleccionado.Password;
                 txtEmail.Text = usuarioSeleccionado.Email;
@@ -207,14 +207,15 @@ namespace LPCFacturas.GUILayer
             return true;
         }
 
-        private void dgvUsuario_SelectionChanged(object sender, EventArgs e)
-        {
-            this.actualizarCampos(dgvUsuario.CurrentRow.Cells[0].Value.ToString());
-        }
 
         private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.actualizarCampos(dgvUsuario.CurrentRow.Cells[0].Value.ToString());
+            this.actualizarCampos(dgvUsuario.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void dgvUsuario_SelectionChanged_1(object sender, EventArgs e)
+        {
+            this.actualizarCampos(dgvUsuario.CurrentRow.Cells[2].Value.ToString());
         }
     }
 }

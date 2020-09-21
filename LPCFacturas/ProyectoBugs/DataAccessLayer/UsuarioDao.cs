@@ -17,11 +17,12 @@ namespace LPCFacturas.DataAccessLayer
 {
     public class UsuarioDao
     {
+        PerfilDao oPerfil = new PerfilDao();
         public IList<Usuario> GetAll()
         {
             List<Usuario> listadoUsuarios = new List<Usuario>();
 
-            var strSql = "SELECT id_usuario, usuario, email, estado from Usuarios where borrado=0";
+            var strSql = "SELECT id_usuario, id_perfil, usuario, email, estado, password from Usuarios where borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -36,7 +37,7 @@ namespace LPCFacturas.DataAccessLayer
         public Usuario GetUser(string pUsuario)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT id_usuario, usuario, email, estado, password ",
+            String consultaSql = string.Concat(" SELECT id_usuario, usuario, email, estado, password, id_perfil ",
                                                 "   FROM Usuarios ",
                                                 "  WHERE borrado=0 and usuario =  '", pUsuario, "'");
 
@@ -60,7 +61,8 @@ namespace LPCFacturas.DataAccessLayer
                 NombreUsuario = row["usuario"].ToString(),
                 Email = row["email"].ToString(),
                 Estado = row["estado"].ToString(),
-                Password = row.Table.Columns.Contains("password") ? row["password"].ToString() : null
+                Password = row.Table.Columns.Contains("password") ? row["password"].ToString() : null,
+                Perfil = oPerfil.GetPerfil(row["id_perfil"].ToString())
             };
 
             return oUsuario;
@@ -76,7 +78,7 @@ namespace LPCFacturas.DataAccessLayer
         public void crearUsuario(Usuario usuario)
         {
             string SQLInsert = " INSERT INTO Usuarios(id_perfil, usuario, password, email, estado, borrado) " +
-                               "VALUES (" + usuario.Perfil.IdPerfil + ", '" + usuario.NombreUsuario + "', '"
+                               "VALUES (" + usuario.Perfil.Id_Perfil + ", '" + usuario.NombreUsuario + "', '"
                                             + usuario.Password + "','" + usuario.Email + "','" + usuario.Estado + "', 0) ";
 
             DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
@@ -84,7 +86,7 @@ namespace LPCFacturas.DataAccessLayer
 
         public void actualizarUsuario(Usuario usuario)
         {
-            string SQLUpdate = "UPDATE Usuarios SET id_perfil= " + usuario.Perfil.IdPerfil + ", " +
+            string SQLUpdate = "UPDATE Usuarios SET id_perfil= " + usuario.Perfil.Id_Perfil + ", " +
                                                      "usuario= '" + usuario.NombreUsuario + "', " +
                                                      "password= '" + usuario.Password + "', " +
                                                      "email= '" + usuario.Email + "', " +

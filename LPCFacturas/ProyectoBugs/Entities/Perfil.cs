@@ -8,7 +8,7 @@ namespace LPCFacturas.Entities
 {
     public class Perfil
     {
-        public int IdPerfil { get; set; }
+        public int Id_Perfil { get; set; }
         public string Nombre { get; set; }
 
         public override string ToString()

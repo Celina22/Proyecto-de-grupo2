@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMUsuario));
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -186,7 +185,7 @@
             this.dgvUsuario.Size = new System.Drawing.Size(698, 174);
             this.dgvUsuario.TabIndex = 14;
             this.dgvUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentClick);
-            this.dgvUsuario.SelectionChanged += new System.EventHandler(this.dgvUsuario_SelectionChanged);
+            this.dgvUsuario.SelectionChanged += new System.EventHandler(this.dgvUsuario_SelectionChanged_1);
             // 
             // ID
             // 
@@ -348,7 +347,6 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(786, 600);
             this.MinimumSize = new System.Drawing.Size(786, 600);
             this.Name = "frmABMUsuario";

@@ -31,14 +31,14 @@ namespace LPCFacturas.DataAccessLayer
         {
             Perfil oPerfil = new Perfil()
             {
-                IdPerfil = Convert.ToInt32(row["id_perfil"].ToString()),
+                Id_Perfil = Convert.ToInt32(row["id_perfil"].ToString()),
                 Nombre = row["nombre"].ToString(),
             };
 
             return oPerfil;
         }
 
-        
+
 
         public Perfil GetPerfil(string idPerfil)
         {
@@ -60,3 +60,4 @@ namespace LPCFacturas.DataAccessLayer
         }
     }
 }
+
