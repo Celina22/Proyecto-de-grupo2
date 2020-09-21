@@ -18,15 +18,15 @@ namespace LPCFacturas.DataAccessLayer
 {
     class BarrioDao
     {
-        BarrioDao oBarrio = new BarrioDao();
-        BarrioDao oUsuario = new BarrioDao();
+        
+       UsuarioDao oUsuario = new UsuarioDao();
 
         public IList<Barrio> GetAll()
         {
             List<Barrio> listadoBugs = new List<Barrio>();
 
             var strSql = " SELECT id_barrio, nombre" +
-                         " FROM Barrios ";
+                         " FROM Barrios Where borrado = 0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -40,10 +40,10 @@ namespace LPCFacturas.DataAccessLayer
 
         public Barrio GetBarrio(string idBarrio)
         {
-            //Construimos la consulta sql para buscar el usuario en la base de datos.
+            //Construimos la consulta sql para buscar el barrio en la base de datos.
             String consultaSql = string.Concat(" SELECT id_barrio, nombre ",
-                                                " FROM Barrio " +
-                                                " WHERE borrado=0 and id_barrio =  '", idBarrio, "'");
+                                                " FROM Barrios " +
+                                                " WHERE borrado=0 and id_barrio =  ", idBarrio);
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
@@ -70,8 +70,8 @@ namespace LPCFacturas.DataAccessLayer
 
         public void crearBarrio(Barrio barrio)
         {
-            string SQLInsert = " INSERT INTO Barrios(id_barrio, nombre) " +
-                               "VALUES (" + barrio.Id_barrio + ", '" + barrio.Nombre;
+            string SQLInsert = " INSERT INTO Barrios (nombre, borrado) " +
+                               "VALUES ('" + barrio.Nombre + "', 0)";
 
 
 
@@ -80,8 +80,8 @@ namespace LPCFacturas.DataAccessLayer
 
         public void actualizarBarrio(Barrio barrio)
         {
-            string SQLUpdate = "UPDATE barrios set id_barrio= " + barrio.Id_barrio + ", " +
-                                                     "nombre= '" + barrio.Nombre;
+            string SQLUpdate = "UPDATE barrios set nombre= '" + barrio.Nombre + "'" +
+                                "WHERE id_barrio = " + barrio.Id_barrio;
 
             DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
         }

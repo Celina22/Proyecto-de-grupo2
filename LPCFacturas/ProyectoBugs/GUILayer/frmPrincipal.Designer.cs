@@ -80,6 +80,7 @@
             this.barriosToolStripMenuItem.Name = "barriosToolStripMenuItem";
             this.barriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barriosToolStripMenuItem.Text = "Barrios";
+            this.barriosToolStripMenuItem.Click += new System.EventHandler(this.barriosToolStripMenuItem_Click);
             // 
             // contactosToolStripMenuItem
             // 

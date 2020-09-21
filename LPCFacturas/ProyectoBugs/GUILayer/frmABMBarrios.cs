@@ -25,9 +25,14 @@ namespace LPCFacturas.GUILayer
 
         private void habilitarCampos(bool x)
         {
-            txt_id.Enabled = x;
             txt_nombre.Enabled = x;
             dgv_barrio.Enabled = !x;
+            btn_guardar.Enabled = x;
+            btn_cancelar.Enabled = x;
+            btn_eliminar.Enabled = !x;
+            btn_nuevo.Enabled = !x;
+            btn_editar.Enabled = !x;
+            btn_salir.Enabled = !x;
             if (dgv_barrio.Rows.Count == 0)
                 btn_editar.Enabled = btn_eliminar.Enabled = false;
         }
@@ -47,8 +52,8 @@ namespace LPCFacturas.GUILayer
             //for(int i = 0; i<lista.Count; i++)
             foreach (var barrio in lista)
             {
-                grilla.Rows.Add(barrio.ToString(),
-                               barrio.ToString());
+                grilla.Rows.Add(barrio.Id_barrio.ToString(),
+                               barrio.Nombre.ToString());
             }
         }
 
@@ -81,11 +86,6 @@ namespace LPCFacturas.GUILayer
             }
 
             return true;
-        }
-
-        private void lbl_id_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_nuevo_Click(object sender, EventArgs e)
@@ -158,12 +158,13 @@ namespace LPCFacturas.GUILayer
 
         private void frmABMBarrios_Load(object sender, EventArgs e)
         {
-
+            cargarGrilla(dgv_barrio, oBarrioService.recuperarTodos());
+            habilitarCampos(false);
         }
 
-        private void txt_nombre_TextChanged(object sender, EventArgs e)
+        private void dgv_barrio_SelectionChanged(object sender, EventArgs e)
         {
-
+            this.actualizarCampos(dgv_barrio.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

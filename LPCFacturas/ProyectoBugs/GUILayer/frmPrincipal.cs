@@ -52,5 +52,11 @@ namespace LPCFacturas.GUILayer
             frmABMUsuario aBMUsuario = new frmABMUsuario();
             aBMUsuario.ShowDialog();
         }
+
+        private void barriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmABMBarrios abmBarrios = new frmABMBarrios();
+            abmBarrios.ShowDialog();
+        }
     }
 }
