@@ -72,7 +72,7 @@ namespace LPCFacturas.GUILayer
                 grilla.Rows.Add(usuario.IdUsuario.ToString(),
                                 usuario.Perfil.ToString(),
                                 usuario.NombreUsuario.ToString(),
-                                usuario.Password.ToString(),
+                                usuario.Email.ToString(),
                                 usuario.Estado.ToString());
                                 
             }
