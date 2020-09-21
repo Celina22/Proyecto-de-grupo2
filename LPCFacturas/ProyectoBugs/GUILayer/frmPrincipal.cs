@@ -41,11 +41,10 @@ namespace LPCFacturas.GUILayer
             abmProyecto.ShowDialog();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmABMUsuario abmUsuario = new frmABMUsuario();
-            abmUsuario.ShowDialog();
-
+            frmABMProducto abmProducto = new frmABMProducto();
+            abmProducto.ShowDialog();
         }
     }
 }

@@ -33,17 +33,31 @@ namespace LPCFacturas.DataAccessLayer
             return listadoProductos;
         }
 
-        
-
-        private Producto MappingProducto(DataRow row)
+        internal void actualizarProducto(Producto producto)
         {
-            Producto oProducto = new Producto
-            {
-                Id_producto = Convert.ToInt32(row["id_producto"].ToString()),
-                Nombre = row["nombre"].ToString()
-            };
+            string SQLUpdate =  "UPDATE productos set nombre = '" + producto.Nombre + "'" +
+                                                     " WHERE id_producto= " + producto.Id_producto;
 
-            return oProducto;
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+
+        }
+
+        internal void eliminarProducto(Producto producto)
+        {
+            string SQLUpdate = "UPDATE productos set borrado = 1 WHERE id_producto = " + producto.Id_producto;
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+        }
+
+
+        internal void crearProducto(Producto producto)
+        {
+            string SQLInsert = " INSERT INTO Productos(nombre, borrado) " +
+                               "VALUES ('" + producto.Nombre + "', 0) ";
+
+
+
+            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
         }
 
         public Producto GetProducto(string idProducto)
@@ -63,6 +77,17 @@ namespace LPCFacturas.DataAccessLayer
             }
 
             return null;
+        }
+
+        private Producto MappingProducto(DataRow row)
+        {
+            Producto oProducto = new Producto
+            {
+                Id_producto = Convert.ToInt32(row["id_producto"].ToString()),
+                Nombre = row["nombre"].ToString()
+            };
+
+            return oProducto;
         }
     }
 }
