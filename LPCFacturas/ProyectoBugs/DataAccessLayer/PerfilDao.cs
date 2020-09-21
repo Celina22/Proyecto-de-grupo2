@@ -38,8 +38,6 @@ namespace LPCFacturas.DataAccessLayer
             return oPerfil;
         }
 
-
-
         public Perfil GetPerfil(string idPerfil)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
