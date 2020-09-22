@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLayer\BarrioService.cs" />
+    <Compile Include="BusinessLayer\ClienteService.cs" />
     <Compile Include="BusinessLayer\ContactoService.cs" />
     <Compile Include="BusinessLayer\PerfilService.cs" />
     <Compile Include="BusinessLayer\ProductoService.cs" />
     <Compile Include="BusinessLayer\ProyectoService.cs" />
     <Compile Include="BusinessLayer\UsuarioService.cs" />
     <Compile Include="DataAccessLayer\BarriosDao.cs" />
+    <Compile Include="DataAccessLayer\ClienteDao.cs" />
     <Compile Include="DataAccessLayer\ContactoDao.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
     <Compile Include="DataAccessLayer\PerfilDao.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="DataAccessLayer\ProyectoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
     <Compile Include="Entities\Barrio.cs" />
+    <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Contacto.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\Producto.cs" />
@@ -70,6 +73,12 @@
     </Compile>
     <Compile Include="GUILayer\frmABMBarrios.Designer.cs">
       <DependentUpon>frmABMBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmABMClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmABMClientes.Designer.cs">
+      <DependentUpon>frmABMClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\frmABMContactos.cs">
       <SubType>Form</SubType>
@@ -111,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUILayer\frmABMBarrios.resx">
       <DependentUpon>frmABMBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmABMClientes.resx">
+      <DependentUpon>frmABMClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmABMContactos.resx">
       <DependentUpon>frmABMContactos.cs</DependentUpon>
