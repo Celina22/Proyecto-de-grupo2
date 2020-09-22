@@ -105,7 +105,9 @@ namespace LPCFacturas.GUILayer
         {
             habilitarCampos(false);
             nuevo = false;
-            this.actualizarCampos(dgvClientes.CurrentRow.Cells[0].Value.ToString());
+            if (dgvClientes.Rows.Count != 0)
+                this.actualizarCampos(dgvClientes.CurrentRow.Cells[0].Value.ToString());
+            else limpiarCampos();
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {

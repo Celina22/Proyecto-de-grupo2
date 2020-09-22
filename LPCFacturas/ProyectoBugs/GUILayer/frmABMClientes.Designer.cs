@@ -45,17 +45,17 @@
             this.cboContacto = new System.Windows.Forms.ComboBox();
             this.lblContacto = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblId.Location = new System.Drawing.Point(197, 16);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(32, 23);
@@ -71,14 +72,16 @@
             // 
             // txtId
             // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txtId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtId.Location = new System.Drawing.Point(235, 13);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(342, 31);
+            this.txtId.Size = new System.Drawing.Size(167, 31);
             this.txtId.TabIndex = 1;
             // 
             // txtCuit
             // 
+            this.txtCuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txtCuit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtCuit.Location = new System.Drawing.Point(235, 50);
             this.txtCuit.Name = "txtCuit";
@@ -89,6 +92,7 @@
             // 
             this.lblCuit.AutoSize = true;
             this.lblCuit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblCuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblCuit.Location = new System.Drawing.Point(179, 53);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(50, 23);
@@ -97,6 +101,7 @@
             // 
             // txtRazonSocial
             // 
+            this.txtRazonSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txtRazonSocial.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtRazonSocial.Location = new System.Drawing.Point(235, 87);
             this.txtRazonSocial.Name = "txtRazonSocial";
@@ -107,6 +112,7 @@
             // 
             this.lblRazonSocial.AutoSize = true;
             this.lblRazonSocial.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblRazonSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblRazonSocial.Location = new System.Drawing.Point(116, 90);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(113, 23);
@@ -115,6 +121,7 @@
             // 
             // txtCalle
             // 
+            this.txtCalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txtCalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtCalle.Location = new System.Drawing.Point(235, 124);
             this.txtCalle.Name = "txtCalle";
@@ -125,6 +132,7 @@
             // 
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblCalle.Location = new System.Drawing.Point(175, 127);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(54, 23);
@@ -133,6 +141,7 @@
             // 
             // txtNumero
             // 
+            this.txtNumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txtNumero.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtNumero.Location = new System.Drawing.Point(235, 161);
             this.txtNumero.Name = "txtNumero";
@@ -143,6 +152,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblNumero.Location = new System.Drawing.Point(149, 164);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(80, 23);
@@ -153,6 +163,7 @@
             // 
             this.lblFechaAlta.AutoSize = true;
             this.lblFechaAlta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFechaAlta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblFechaAlta.Location = new System.Drawing.Point(110, 201);
             this.lblFechaAlta.Name = "lblFechaAlta";
             this.lblFechaAlta.Size = new System.Drawing.Size(119, 23);
@@ -161,6 +172,7 @@
             // 
             // dtpFechaAlta
             // 
+            this.dtpFechaAlta.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.dtpFechaAlta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.dtpFechaAlta.Location = new System.Drawing.Point(235, 198);
             this.dtpFechaAlta.Name = "dtpFechaAlta";
@@ -171,6 +183,7 @@
             // 
             this.lblBarrio.AutoSize = true;
             this.lblBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblBarrio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblBarrio.Location = new System.Drawing.Point(165, 238);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(64, 23);
@@ -179,6 +192,7 @@
             // 
             // cboBarrio
             // 
+            this.cboBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.cboBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(235, 235);
@@ -188,6 +202,7 @@
             // 
             // cboContacto
             // 
+            this.cboContacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.cboContacto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboContacto.FormattingEnabled = true;
             this.cboContacto.Location = new System.Drawing.Point(235, 272);
@@ -200,6 +215,7 @@
             // 
             this.lblContacto.AutoSize = true;
             this.lblContacto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblContacto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblContacto.Location = new System.Drawing.Point(143, 275);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(86, 23);
@@ -210,6 +226,7 @@
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(164)))), ((int)(((byte)(186)))));
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -227,36 +244,6 @@
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // cuit
-            // 
-            this.cuit.HeaderText = "CUIT";
-            this.cuit.Name = "cuit";
-            this.cuit.ReadOnly = true;
-            // 
-            // razonSocial
-            // 
-            this.razonSocial.HeaderText = "Razón Social";
-            this.razonSocial.Name = "razonSocial";
-            this.razonSocial.ReadOnly = true;
-            // 
-            // calle
-            // 
-            this.calle.HeaderText = "Calle";
-            this.calle.Name = "calle";
-            this.calle.ReadOnly = true;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Número";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
@@ -264,7 +251,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
-            this.btnSalir.Location = new System.Drawing.Point(682, 537);
+            this.btnSalir.Location = new System.Drawing.Point(736, 537);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(64, 56);
             this.btnSalir.TabIndex = 23;
@@ -278,7 +265,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnCancelar.Image = global::LPCFacturas.Properties.Resources.firewall_off2;
-            this.btnCancelar.Location = new System.Drawing.Point(501, 537);
+            this.btnCancelar.Location = new System.Drawing.Point(536, 537);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(64, 56);
             this.btnCancelar.TabIndex = 22;
@@ -292,7 +279,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.btnGuardar.Location = new System.Drawing.Point(424, 537);
+            this.btnGuardar.Location = new System.Drawing.Point(466, 537);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(64, 56);
             this.btnGuardar.TabIndex = 21;
@@ -306,7 +293,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEliminar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btnEliminar.Location = new System.Drawing.Point(239, 537);
+            this.btnEliminar.Location = new System.Drawing.Point(153, 537);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(64, 56);
             this.btnEliminar.TabIndex = 20;
@@ -320,7 +307,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btnEditar.Location = new System.Drawing.Point(153, 537);
+            this.btnEditar.Location = new System.Drawing.Point(82, 537);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 56);
             this.btnEditar.TabIndex = 19;
@@ -334,17 +321,53 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btnNuevo.Location = new System.Drawing.Point(67, 537);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 537);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 56);
             this.btnNuevo.TabIndex = 18;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // cuit
+            // 
+            this.cuit.HeaderText = "CUIT";
+            this.cuit.Name = "cuit";
+            this.cuit.ReadOnly = true;
+            this.cuit.Width = 125;
+            // 
+            // razonSocial
+            // 
+            this.razonSocial.HeaderText = "Razón Social";
+            this.razonSocial.Name = "razonSocial";
+            this.razonSocial.ReadOnly = true;
+            this.razonSocial.Width = 200;
+            // 
+            // calle
+            // 
+            this.calle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.calle.HeaderText = "Calle";
+            this.calle.Name = "calle";
+            this.calle.ReadOnly = true;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Número";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 125;
+            // 
             // frmABMClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(812, 605);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
