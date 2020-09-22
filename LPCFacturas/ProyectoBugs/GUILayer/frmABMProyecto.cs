@@ -100,6 +100,7 @@ namespace LPCFacturas.GUILayer
         {
             habilitarCampos(false);
             nuevo = false;
+            actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

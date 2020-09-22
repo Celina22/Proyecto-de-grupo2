@@ -102,6 +102,7 @@ namespace LPCFacturas.GUILayer
         {
             habilitarCampos(false);
             nuevo = false;
+            this.actualizarCampos(dgvUsuario.CurrentRow.Cells[2].Value.ToString());
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -196,13 +197,6 @@ namespace LPCFacturas.GUILayer
                 txtEmail.Focus();
                 return false;
             }
- 
-            //if (txtEstado.Text = string.Empty)
-            //{
-            //    MessageBox.Show("Datos ingresados no válidos. Debe ingresar un estado.", "Datos de usuario", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtEstado.Focus();
-            //    return false;
-            //}
 
             return true;
         }
