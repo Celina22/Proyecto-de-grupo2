@@ -33,7 +33,6 @@ namespace LPCFacturas.GUILayer
             cargarCombo(cboPerfil, oPerfilService.recuperarTodos(), "Nombre", "Id_perfil");
             cargarGrilla(dgvUsuario, oUsuarioService.recuperarTodos());
             habilitarCampos(false);
-
         }
 
         private void habilitarCampos(bool x)
@@ -77,16 +76,6 @@ namespace LPCFacturas.GUILayer
                                 
             }
         }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            nuevo = true;
-            this.habilitarCampos(true);
-            limpiarCampos();
-            dgvUsuario.Enabled = false;
-            cboPerfil.Focus();
-        }
-
         private void limpiarCampos()
         {
             txtId.Clear();
@@ -95,9 +84,15 @@ namespace LPCFacturas.GUILayer
             txtPassword.Clear();
             txtEstado.Clear();
             cboPerfil.SelectedIndex = -1;
-
         }
-
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            nuevo = true;
+            this.habilitarCampos(true);
+            limpiarCampos();
+            dgvUsuario.Enabled = false;
+            cboPerfil.Focus();
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             habilitarCampos(false);
@@ -200,8 +195,6 @@ namespace LPCFacturas.GUILayer
 
             return true;
         }
-
-
         private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.actualizarCampos(dgvUsuario.CurrentRow.Cells[2].Value.ToString());

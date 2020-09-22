@@ -64,5 +64,11 @@ namespace LPCFacturas.GUILayer
             frmABMContactos abmContactos = new frmABMContactos();
             abmContactos.ShowDialog();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmABMClientes abmClientes = new frmABMClientes();
+            abmClientes.ShowDialog();
+        }
     }
 }
