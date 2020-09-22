@@ -144,6 +144,7 @@ namespace LPCFacturas.GUILayer
         {
             habilitarCampos(false);
             nuevo = false;
+            this.actualizarCampos(dgv_barrio.CurrentRow.Cells[0].Value.ToString());
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
