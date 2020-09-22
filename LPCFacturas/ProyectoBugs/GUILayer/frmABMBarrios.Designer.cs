@@ -49,18 +49,18 @@
             // 
             this.dgv_barrio.AllowUserToAddRows = false;
             this.dgv_barrio.AllowUserToDeleteRows = false;
-            this.dgv_barrio.BackgroundColor = System.Drawing.Color.BlueViolet;
+            this.dgv_barrio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(164)))), ((int)(((byte)(186)))));
             this.dgv_barrio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_barrio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.producto});
             this.dgv_barrio.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgv_barrio.Location = new System.Drawing.Point(35, 133);
+            this.dgv_barrio.Location = new System.Drawing.Point(12, 120);
             this.dgv_barrio.MultiSelect = false;
             this.dgv_barrio.Name = "dgv_barrio";
             this.dgv_barrio.ReadOnly = true;
             this.dgv_barrio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_barrio.Size = new System.Drawing.Size(503, 174);
+            this.dgv_barrio.Size = new System.Drawing.Size(545, 174);
             this.dgv_barrio.TabIndex = 33;
             this.dgv_barrio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_barrio_CellContentClick);
             this.dgv_barrio.SelectionChanged += new System.EventHandler(this.dgv_barrio_SelectionChanged);
@@ -83,8 +83,8 @@
             // 
             this.lbl_nombre.AutoSize = true;
             this.lbl_nombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre.ForeColor = System.Drawing.Color.Orchid;
-            this.lbl_nombre.Location = new System.Drawing.Point(74, 83);
+            this.lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lbl_nombre.Location = new System.Drawing.Point(33, 69);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(80, 23);
             this.lbl_nombre.TabIndex = 30;
@@ -92,20 +92,20 @@
             // 
             // txt_id
             // 
-            this.txt_id.BackColor = System.Drawing.Color.GhostWhite;
+            this.txt_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txt_id.Enabled = false;
             this.txt_id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id.Location = new System.Drawing.Point(208, 27);
+            this.txt_id.Location = new System.Drawing.Point(142, 18);
             this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(187, 31);
+            this.txt_id.Size = new System.Drawing.Size(198, 31);
             this.txt_id.TabIndex = 16;
             // 
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.ForeColor = System.Drawing.Color.Orchid;
-            this.lbl_id.Location = new System.Drawing.Point(122, 35);
+            this.lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lbl_id.Location = new System.Drawing.Point(79, 21);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(32, 23);
             this.lbl_id.TabIndex = 15;
@@ -113,10 +113,11 @@
             // 
             // txt_nombre
             // 
+            this.txt_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txt_nombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txt_nombre.Location = new System.Drawing.Point(208, 80);
+            this.txt_nombre.Location = new System.Drawing.Point(142, 66);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(270, 31);
+            this.txt_nombre.Size = new System.Drawing.Size(303, 31);
             this.txt_nombre.TabIndex = 34;
             // 
             // btn_salir
@@ -126,7 +127,7 @@
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_salir.Image = global::LPCFacturas.Properties.Resources.Salir;
-            this.btn_salir.Location = new System.Drawing.Point(492, 345);
+            this.btn_salir.Location = new System.Drawing.Point(511, 309);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(46, 45);
             this.btn_salir.TabIndex = 32;
@@ -140,7 +141,7 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_cancelar.Image = global::LPCFacturas.Properties.Resources.firewall_off2;
-            this.btn_cancelar.Location = new System.Drawing.Point(381, 345);
+            this.btn_cancelar.Location = new System.Drawing.Point(392, 309);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(50, 47);
             this.btn_cancelar.TabIndex = 29;
@@ -154,7 +155,7 @@
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_guardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.btn_guardar.Location = new System.Drawing.Point(310, 347);
+            this.btn_guardar.Location = new System.Drawing.Point(345, 310);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(41, 45);
             this.btn_guardar.TabIndex = 28;
@@ -168,7 +169,7 @@
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_eliminar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btn_eliminar.Location = new System.Drawing.Point(190, 343);
+            this.btn_eliminar.Location = new System.Drawing.Point(154, 309);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(42, 47);
             this.btn_eliminar.TabIndex = 26;
@@ -182,7 +183,7 @@
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_editar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btn_editar.Location = new System.Drawing.Point(105, 344);
+            this.btn_editar.Location = new System.Drawing.Point(77, 309);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(53, 47);
             this.btn_editar.TabIndex = 25;
@@ -196,7 +197,7 @@
             this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_nuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btn_nuevo.Location = new System.Drawing.Point(35, 343);
+            this.btn_nuevo.Location = new System.Drawing.Point(11, 309);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(45, 47);
             this.btn_nuevo.TabIndex = 23;
@@ -207,8 +208,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(569, 436);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.ClientSize = new System.Drawing.Size(576, 377);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_cancelar);
