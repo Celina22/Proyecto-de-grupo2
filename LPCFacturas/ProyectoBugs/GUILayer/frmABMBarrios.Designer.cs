@@ -223,6 +223,8 @@
             this.Controls.Add(this.lbl_id);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(592, 416);
+            this.MinimumSize = new System.Drawing.Size(592, 416);
             this.Name = "frmABMBarrios";
             this.Text = "A B M barrios";
             this.Load += new System.EventHandler(this.frmABMBarrios_Load);

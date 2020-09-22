@@ -220,7 +220,10 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblId);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(624, 428);
+            this.MinimumSize = new System.Drawing.Size(624, 428);
             this.Name = "frmABMProducto";
             this.Text = "frmABMProducto";
             this.Load += new System.EventHandler(this.frmABMProducto_Load);

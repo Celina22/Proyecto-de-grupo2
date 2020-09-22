@@ -117,6 +117,8 @@
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(361, 248);
+            this.MinimumSize = new System.Drawing.Size(361, 248);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

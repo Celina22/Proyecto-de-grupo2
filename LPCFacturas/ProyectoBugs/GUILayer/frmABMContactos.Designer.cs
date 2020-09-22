@@ -165,7 +165,7 @@
             this.apellido,
             this.email,
             this.telefono});
-            this.dgvContactos.Location = new System.Drawing.Point(12, 214);
+            this.dgvContactos.Location = new System.Drawing.Point(10, 224);
             this.dgvContactos.MultiSelect = false;
             this.dgvContactos.Name = "dgvContactos";
             this.dgvContactos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -312,6 +312,8 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(725, 533);
+            this.MinimumSize = new System.Drawing.Size(725, 533);
             this.Name = "frmABMContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Contactos";
