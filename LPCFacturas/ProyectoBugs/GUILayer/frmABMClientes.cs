@@ -186,6 +186,12 @@ namespace LPCFacturas.GUILayer
                 txtCuit.Focus();
                 return false;
             }
+            else if (! Int32.TryParse(txtCuit.Text, out int numero))
+            {
+                MessageBox.Show("Datos ingresados no válidos. El CUIT debe contener sólamente números.", "Datos de cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCuit.Focus();
+                return false;
+            }
             if (txtRazonSocial.Text == string.Empty)
             {
                 MessageBox.Show("Datos ingresados no válidos. Debe ingresar una razón social.", "Datos de cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -201,6 +207,12 @@ namespace LPCFacturas.GUILayer
             if (txtNumero.Text == string.Empty)
             {
                 MessageBox.Show("Datos ingresados no válidos. Debe ingresar un número de calle.", "Datos de cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumero.Focus();
+                return false;
+            }
+            else if (! Int32.TryParse(txtNumero.Text, out int numero))
+            {
+                MessageBox.Show("Datos ingresados no válidos. El número de calle debe contener sólamente números.", "Datos de cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNumero.Focus();
                 return false;
             }

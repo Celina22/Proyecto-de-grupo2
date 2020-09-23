@@ -42,7 +42,7 @@ namespace LPCFacturas.DataAccessLayer
             string SQLUpdate = "UPDATE Contactos SET nombre='" + contacto.Nombre + "', " +
                                                      "apellido='" + contacto.Apellido + "', " +
                                                      "email='" + contacto.Email + "', " +
-                                                     "telefono=" + contacto.Telefono + "' " +
+                                                     "telefono=" + contacto.Telefono + " " +
                                                      "WHERE id_contacto=" + contacto.Id_contacto;
 
             DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);

@@ -194,6 +194,13 @@ namespace LPCFacturas.GUILayer
                 txtEmail.Focus();
                 return false;
             }
+            if (txtPassword.Text.Length >= 10)
+            {
+                MessageBox.Show("Datos ingresados no válidos. La contraseña no puede ser mayor a 10 caracteres.", "Datos de usuario", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPassword.Focus();
+                return false;
+            }
+
 
             return true;
         }

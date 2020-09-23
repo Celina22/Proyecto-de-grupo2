@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMContactos));
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -40,17 +41,18 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.dgvContactos = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,90 +176,6 @@
             this.dgvContactos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactos_CellContentClick);
             this.dgvContactos.SelectionChanged += new System.EventHandler(this.dgvContactos_SelectionChanged);
             // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
-            this.btnSalir.Location = new System.Drawing.Point(625, 410);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(71, 56);
-            this.btnSalir.TabIndex = 17;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnCancelar.Image = global::LPCFacturas.Properties.Resources.firewall_off2;
-            this.btnCancelar.Location = new System.Drawing.Point(495, 410);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(67, 56);
-            this.btnCancelar.TabIndex = 16;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.btnGuardar.Location = new System.Drawing.Point(418, 410);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(71, 56);
-            this.btnGuardar.TabIndex = 15;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEliminar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btnEliminar.Location = new System.Drawing.Point(183, 410);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(71, 56);
-            this.btnEliminar.TabIndex = 14;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btnEditar.Location = new System.Drawing.Point(89, 410);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(71, 56);
-            this.btnEditar.TabIndex = 13;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btnNuevo.Location = new System.Drawing.Point(10, 410);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(71, 56);
-            this.btnNuevo.TabIndex = 12;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // id
             // 
             this.id.HeaderText = "ID";
@@ -287,6 +205,96 @@
             this.telefono.HeaderText = "Teléfono";
             this.telefono.Name = "telefono";
             this.telefono.Width = 125;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
+            this.btnSalir.Location = new System.Drawing.Point(625, 410);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(71, 56);
+            this.btnSalir.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.btnSalir, "Salir");
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCancelar.Image = global::LPCFacturas.Properties.Resources.firewall_off2;
+            this.btnCancelar.Location = new System.Drawing.Point(437, 410);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(67, 56);
+            this.btnCancelar.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
+            this.btnGuardar.Location = new System.Drawing.Point(360, 410);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(71, 56);
+            this.btnGuardar.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.btnGuardar, "Guardar");
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEliminar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
+            this.btnEliminar.Location = new System.Drawing.Point(183, 410);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(71, 56);
+            this.btnEliminar.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
+            this.btnEditar.Location = new System.Drawing.Point(89, 410);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(71, 56);
+            this.btnEditar.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.btnEditar, "Editar");
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
+            this.btnNuevo.Location = new System.Drawing.Point(10, 410);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(71, 56);
+            this.btnNuevo.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmABMContactos
             // 
@@ -348,5 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

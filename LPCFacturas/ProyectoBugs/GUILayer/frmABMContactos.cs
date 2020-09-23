@@ -170,6 +170,12 @@ namespace LPCFacturas.GUILayer
                 txtTelefono.Focus();
                 return false;
             }
+            else if (! Int32.TryParse(txtTelefono.Text, out int numero))
+            {
+                MessageBox.Show("Datos ingresados no válidos. El teléfono de contacto debe contener solamente números.", "Datos de contacto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTelefono.Focus();
+                return false;
+            }
 
             return true;
         }
