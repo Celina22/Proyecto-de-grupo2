@@ -64,6 +64,7 @@
     <Compile Include="Entities\Barrio.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Contacto.cs" />
+    <Compile Include="Entities\DetalleFactura.cs" />
     <Compile Include="Entities\Factura.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\Producto.cs" />
