@@ -27,7 +27,7 @@ namespace LPCFacturas.DataAccessLayer
             var strSql = " SELECT p.id_proyecto, p.id_producto, p.descripcion, p.version, p.alcance, u.usuario " +
                          " FROM Proyectos p JOIN usuarios u ON p.id_responsable = u.id_usuario WHERE p.borrado=0";
 
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -45,7 +45,7 @@ namespace LPCFacturas.DataAccessLayer
                                                 " WHERE p.borrado=0 and p.id_proyecto =  '", idProyecto, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
 
             // Validamos que el resultado tenga al menos una fila.
             if (resultado.Rows.Count > 0)
@@ -79,7 +79,7 @@ namespace LPCFacturas.DataAccessLayer
                                
 
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+            DataManager.GetInstance().EjecutarSQL(SQLInsert);
         }
 
         public void actualizarProyecto(Proyecto proyecto)
@@ -91,14 +91,14 @@ namespace LPCFacturas.DataAccessLayer
                                                      "id_responsable= " + proyecto.Responsable.IdUsuario +
                                                      " WHERE id_proyecto= " + proyecto.Id_proyecto;
             
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
 
         public void eliminarProyecto(Proyecto proyecto)
         {
             string SQLUpdate = "UPDATE proyectos set borrado = 1 WHERE id_proyecto = " + proyecto.Id_proyecto;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
     }
 }

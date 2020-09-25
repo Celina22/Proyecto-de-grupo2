@@ -24,7 +24,7 @@ namespace LPCFacturas.DataAccessLayer
 
             var strSql = "SELECT id_usuario, id_perfil, usuario, email, estado, password from Usuarios where borrado=0";
 
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -42,7 +42,7 @@ namespace LPCFacturas.DataAccessLayer
                                                 "  WHERE borrado=0 and usuario =  '", pUsuario, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
 
             // Validamos que el resultado tenga al menos una fila.
             if (resultado.Rows.Count > 0)
@@ -72,7 +72,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             string SQLUpdate = "UPDATE Usuarios SET borrado = 1 WHERE id_usuario = " + usuario.IdUsuario;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
 
         public void crearUsuario(Usuario usuario)
@@ -81,7 +81,7 @@ namespace LPCFacturas.DataAccessLayer
                                "VALUES (" + usuario.Perfil.Id_Perfil + ", '" + usuario.NombreUsuario + "', '"
                                             + usuario.Password + "','" + usuario.Email + "','" + usuario.Estado + "', 0) ";
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+            DataManager.GetInstance().EjecutarSQL(SQLInsert);
         }
 
         public void actualizarUsuario(Usuario usuario)
@@ -93,7 +93,7 @@ namespace LPCFacturas.DataAccessLayer
                                                      "estado= '" + usuario.Estado +"'"+
                                                      " WHERE id_usuario= " + usuario.IdUsuario;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
     }
 

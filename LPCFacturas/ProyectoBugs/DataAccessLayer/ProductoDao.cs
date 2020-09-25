@@ -23,7 +23,7 @@ namespace LPCFacturas.DataAccessLayer
             List<Producto> listadoProductos = new List<Producto>();
             var strSql = "SELECT id_producto, nombre from Productos where borrado=0";
 
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -38,7 +38,7 @@ namespace LPCFacturas.DataAccessLayer
             string SQLUpdate =  "UPDATE productos set nombre = '" + producto.Nombre + "'" +
                                                      " WHERE id_producto= " + producto.Id_producto;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
 
         }
 
@@ -46,7 +46,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             string SQLUpdate = "UPDATE productos set borrado = 1 WHERE id_producto = " + producto.Id_producto;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
 
 
@@ -57,7 +57,7 @@ namespace LPCFacturas.DataAccessLayer
 
 
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+            DataManager.GetInstance().EjecutarSQL(SQLInsert);
         }
 
         public Producto GetProducto(string idProducto)
@@ -68,7 +68,7 @@ namespace LPCFacturas.DataAccessLayer
                                                 "  WHERE borrado=0 and id_producto =  '", idProducto, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
 
             // Validamos que el resultado tenga al menos una fila.
             if (resultado.Rows.Count > 0)

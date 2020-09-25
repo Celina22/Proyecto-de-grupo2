@@ -17,7 +17,7 @@ namespace LPCFacturas.DataAccessLayer
             List<Cliente> listadoClientes = new List<Cliente>();
 
             var SQLquery = "SELECT * FROM Clientes WHERE borrado=0";
-            DataTable tabla = DBHelper.GetDBHelper().ConsultaSQL(SQLquery);
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
 
             foreach (DataRow row in tabla.Rows)
                 listadoClientes.Add(MappingCliente(row));
@@ -29,7 +29,7 @@ namespace LPCFacturas.DataAccessLayer
             Cliente clienteObtenido;
 
             string consulta = "SELECT * FROM Clientes WHERE borrado=0 and id_cliente=" + idCliente;
-            DataTable tabla = DBHelper.GetDBHelper().ConsultaSQL(consulta);
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta);
 
             if (tabla.Rows.Count > 0)
             {
@@ -50,13 +50,13 @@ namespace LPCFacturas.DataAccessLayer
                                                      "id_contacto=" + cliente.Contacto.Id_contacto + " " +
                                                      "WHERE id_cliente=" + cliente.Id_cliente;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
         public void eliminarCliente(Cliente cliente)
         {
             string SQLUpdate = "UPDATE Clientes SET borrado=1 WHERE id_cliente=" + cliente.Id_cliente;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
         //Revisar cómo se registra la fecha en la base de datos.
         public void crearCliente(Cliente cliente)
@@ -71,7 +71,7 @@ namespace LPCFacturas.DataAccessLayer
                                                 cliente.Barrio.Id_barrio, ",",
                                                 cliente.Contacto.Id_contacto, ")");
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+            DataManager.GetInstance().EjecutarSQL(SQLInsert);
         }
         private Cliente MappingCliente(DataRow row)
         {

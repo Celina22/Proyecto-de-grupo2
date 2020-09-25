@@ -17,7 +17,7 @@ namespace LPCFacturas.DataAccessLayer
 
             var strSql = "SELECT id_perfil, nombre FROM Perfiles WHERE borrado=0";
 
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -46,7 +46,7 @@ namespace LPCFacturas.DataAccessLayer
                                                 "  WHERE borrado=0 and id_perfil =  '", idPerfil, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
 
             // Validamos que el resultado tenga al menos una fila.
             if (resultado.Rows.Count > 0)

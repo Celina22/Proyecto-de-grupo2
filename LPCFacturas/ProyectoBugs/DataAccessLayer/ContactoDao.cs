@@ -15,7 +15,7 @@ namespace LPCFacturas.DataAccessLayer
             List<Contacto> listadoContactos = new List<Contacto>();
 
             var SQLquery = "SELECT * FROM Contactos WHERE borrado=0";
-            DataTable tabla = DBHelper.GetDBHelper().ConsultaSQL(SQLquery);
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             
             foreach (DataRow row in tabla.Rows)
                 listadoContactos.Add(MappingContacto(row));
@@ -28,7 +28,7 @@ namespace LPCFacturas.DataAccessLayer
             Contacto contactoObtenido;
 
             string consulta = "SELECT * FROM Contactos WHERE borrado=0 and id_contacto=" + idContacto;
-            DataTable tabla = DBHelper.GetDBHelper().ConsultaSQL(consulta);
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(consulta);
 
             if (tabla.Rows.Count > 0)
             {
@@ -45,14 +45,14 @@ namespace LPCFacturas.DataAccessLayer
                                                      "telefono=" + contacto.Telefono + " " +
                                                      "WHERE id_contacto=" + contacto.Id_contacto;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
 
         }
         public void eliminarContacto(Contacto contacto)
         {
             string SQLUpdate = "UPDATE Contactos SET borrado=1 WHERE id_contacto=" + contacto.Id_contacto;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
         public void crearContacto(Contacto contacto)
         {
@@ -63,7 +63,7 @@ namespace LPCFacturas.DataAccessLayer
                                                 contacto.Telefono, ",",
                                                 0, ")");
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+            DataManager.GetInstance().EjecutarSQL(SQLInsert);
         }
         private Contacto MappingContacto(DataRow row)
         {

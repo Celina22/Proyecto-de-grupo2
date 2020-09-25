@@ -28,7 +28,7 @@ namespace LPCFacturas.DataAccessLayer
             var strSql = " SELECT id_barrio, nombre" +
                          " FROM Barrios Where borrado = 0";
 
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
@@ -46,7 +46,7 @@ namespace LPCFacturas.DataAccessLayer
                                                 " WHERE borrado=0 and id_barrio =  ", idBarrio);
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
 
             // Validamos que el resultado tenga al menos una fila.
             if (resultado.Rows.Count > 0)
@@ -75,7 +75,7 @@ namespace LPCFacturas.DataAccessLayer
 
 
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLInsert);
+            DataManager.GetInstance().EjecutarSQL(SQLInsert);
         }
 
         public void actualizarBarrio(Barrio barrio)
@@ -83,14 +83,14 @@ namespace LPCFacturas.DataAccessLayer
             string SQLUpdate = "UPDATE barrios set nombre= '" + barrio.Nombre + "'" +
                                 "WHERE id_barrio = " + barrio.Id_barrio;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
 
         public void eliminarBarrio(Barrio barrio)
         {
             string SQLUpdate = "UPDATE barrios set borrado = 1 WHERE id_barrio = " + barrio.Id_barrio;
 
-            DBHelper.GetDBHelper().EjecutarSQL(SQLUpdate);
+            DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
     }
 }
