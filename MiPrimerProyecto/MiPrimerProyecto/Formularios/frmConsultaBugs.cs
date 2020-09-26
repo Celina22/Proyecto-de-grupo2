@@ -127,5 +127,11 @@ namespace MiPrimerProyecto.Formularios
             }
             
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmBug frmBug = new frmBug();
+            frmBug.ShowDialog();
+        }
     }
 }

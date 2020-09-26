@@ -48,8 +48,15 @@
   <ItemGroup>
     <Compile Include="Clases\Bug.cs" />
     <Compile Include="Clases\BugHistorico.cs" />
+    <Compile Include="Clases\DataManager.cs" />
     <Compile Include="Clases\Datos.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\frmBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBug.Designer.cs">
+      <DependentUpon>frmBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmABMUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmABMUsuarios.resx">
       <DependentUpon>frmABMUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBug.resx">
+      <DependentUpon>frmBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsultaBugs.resx">
       <DependentUpon>frmConsultaBugs.cs</DependentUpon>

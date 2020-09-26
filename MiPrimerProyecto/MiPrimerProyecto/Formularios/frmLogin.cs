@@ -48,6 +48,7 @@ namespace MiPrimerProyecto
             {
                 msj = "Login OK. Bienvenido, " + Usuario.N_usuario + ".";
                 MessageBox.Show(msj, "Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                this.Close();
             }
             else
             {

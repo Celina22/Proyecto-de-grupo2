@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdBugs)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +67,7 @@
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(115, 18);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(186, 18);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaDesde.TabIndex = 0;
@@ -73,7 +75,7 @@
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
-            this.lblFechaDesde.Location = new System.Drawing.Point(37, 24);
+            this.lblFechaDesde.Location = new System.Drawing.Point(108, 24);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(72, 13);
             this.lblFechaDesde.TabIndex = 0;
@@ -82,7 +84,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(66, 51);
+            this.lblEstado.Location = new System.Drawing.Point(137, 51);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(43, 13);
             this.lblEstado.TabIndex = 1;
@@ -91,7 +93,7 @@
             // lblPrioridad
             // 
             this.lblPrioridad.AutoSize = true;
-            this.lblPrioridad.Location = new System.Drawing.Point(58, 77);
+            this.lblPrioridad.Location = new System.Drawing.Point(129, 77);
             this.lblPrioridad.Name = "lblPrioridad";
             this.lblPrioridad.Size = new System.Drawing.Size(51, 13);
             this.lblPrioridad.TabIndex = 2;
@@ -100,7 +102,7 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(56, 103);
+            this.lblProducto.Location = new System.Drawing.Point(127, 103);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(53, 13);
             this.lblProducto.TabIndex = 3;
@@ -109,7 +111,7 @@
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(379, 24);
+            this.lblFechaHasta.Location = new System.Drawing.Point(450, 24);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(69, 13);
             this.lblFechaHasta.TabIndex = 4;
@@ -118,7 +120,7 @@
             // lblAsignadoA
             // 
             this.lblAsignadoA.AutoSize = true;
-            this.lblAsignadoA.Location = new System.Drawing.Point(385, 51);
+            this.lblAsignadoA.Location = new System.Drawing.Point(456, 51);
             this.lblAsignadoA.Name = "lblAsignadoA";
             this.lblAsignadoA.Size = new System.Drawing.Size(63, 13);
             this.lblAsignadoA.TabIndex = 5;
@@ -127,7 +129,7 @@
             // lblCriticidad
             // 
             this.lblCriticidad.AutoSize = true;
-            this.lblCriticidad.Location = new System.Drawing.Point(395, 77);
+            this.lblCriticidad.Location = new System.Drawing.Point(466, 77);
             this.lblCriticidad.Name = "lblCriticidad";
             this.lblCriticidad.Size = new System.Drawing.Size(53, 13);
             this.lblCriticidad.TabIndex = 6;
@@ -195,7 +197,7 @@
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(454, 18);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(525, 18);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaHasta.TabIndex = 8;
@@ -204,7 +206,7 @@
             // 
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(115, 45);
+            this.cboEstado.Location = new System.Drawing.Point(186, 45);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(200, 21);
             this.cboEstado.TabIndex = 9;
@@ -213,7 +215,7 @@
             // 
             this.cboPrioridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPrioridad.FormattingEnabled = true;
-            this.cboPrioridad.Location = new System.Drawing.Point(115, 72);
+            this.cboPrioridad.Location = new System.Drawing.Point(186, 72);
             this.cboPrioridad.Name = "cboPrioridad";
             this.cboPrioridad.Size = new System.Drawing.Size(200, 21);
             this.cboPrioridad.TabIndex = 10;
@@ -222,7 +224,7 @@
             // 
             this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Location = new System.Drawing.Point(115, 99);
+            this.cboProducto.Location = new System.Drawing.Point(186, 99);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(200, 21);
             this.cboProducto.TabIndex = 11;
@@ -231,7 +233,7 @@
             // 
             this.cboAsignadoA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAsignadoA.FormattingEnabled = true;
-            this.cboAsignadoA.Location = new System.Drawing.Point(454, 45);
+            this.cboAsignadoA.Location = new System.Drawing.Point(525, 45);
             this.cboAsignadoA.Name = "cboAsignadoA";
             this.cboAsignadoA.Size = new System.Drawing.Size(200, 21);
             this.cboAsignadoA.TabIndex = 12;
@@ -240,7 +242,7 @@
             // 
             this.cboCriticidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriticidad.FormattingEnabled = true;
-            this.cboCriticidad.Location = new System.Drawing.Point(454, 72);
+            this.cboCriticidad.Location = new System.Drawing.Point(525, 72);
             this.cboCriticidad.Name = "cboCriticidad";
             this.cboCriticidad.Size = new System.Drawing.Size(200, 21);
             this.cboCriticidad.TabIndex = 13;
@@ -248,7 +250,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultar.Location = new System.Drawing.Point(509, 103);
+            this.btnConsultar.Location = new System.Drawing.Point(580, 103);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(87, 21);
             this.btnConsultar.TabIndex = 14;
@@ -288,6 +290,7 @@
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(56, 39);
             this.btnDetalle.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.btnDetalle, "Detalle");
             this.btnDetalle.UseVisualStyleBackColor = true;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
@@ -298,6 +301,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(56, 39);
             this.btnSalir.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.btnSalir, "Salir");
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -308,6 +312,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(56, 39);
             this.btnEditar.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.btnEditar, "Editar");
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnVisualizar
@@ -317,6 +322,7 @@
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(56, 39);
             this.btnVisualizar.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.btnVisualizar, "Visualizar");
             this.btnVisualizar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
@@ -326,7 +332,9 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(56, 39);
             this.btnAgregar.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmConsultaBugs
             // 
@@ -380,5 +388,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn asignadoA;
         private System.Windows.Forms.DataGridViewTextBoxColumn criticidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn prioridad;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

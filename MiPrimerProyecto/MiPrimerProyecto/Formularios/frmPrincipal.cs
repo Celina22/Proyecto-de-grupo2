@@ -41,5 +41,10 @@ namespace MiPrimerProyecto
             frmConsultaBugs fcb = new frmConsultaBugs();
             fcb.ShowDialog();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
