@@ -61,6 +61,9 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.gbxDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -101,6 +104,7 @@
             this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtNumeroFactura.Location = new System.Drawing.Point(183, 61);
             this.txtNumeroFactura.Name = "txtNumeroFactura";
+            this.txtNumeroFactura.ReadOnly = true;
             this.txtNumeroFactura.Size = new System.Drawing.Size(70, 31);
             this.txtNumeroFactura.TabIndex = 3;
             // 
@@ -133,7 +137,9 @@
             // 
             // gbxDetalles
             // 
+            this.gbxDetalles.Controls.Add(this.radioButton2);
             this.gbxDetalles.Controls.Add(this.btnAgregar);
+            this.gbxDetalles.Controls.Add(this.radioButton1);
             this.gbxDetalles.Controls.Add(this.textBox2);
             this.gbxDetalles.Controls.Add(this.lblSubtotal);
             this.gbxDetalles.Controls.Add(this.dataGridView1);
@@ -147,9 +153,9 @@
             this.gbxDetalles.Controls.Add(this.txtNombreProyecto);
             this.gbxDetalles.Controls.Add(this.txtIdProyecto);
             this.gbxDetalles.Controls.Add(this.lblProyecto);
-            this.gbxDetalles.Location = new System.Drawing.Point(12, 135);
+            this.gbxDetalles.Location = new System.Drawing.Point(12, 152);
             this.gbxDetalles.Name = "gbxDetalles";
-            this.gbxDetalles.Size = new System.Drawing.Size(603, 294);
+            this.gbxDetalles.Size = new System.Drawing.Size(890, 327);
             this.gbxDetalles.TabIndex = 7;
             this.gbxDetalles.TabStop = false;
             this.gbxDetalles.Text = "Detalle de Factura";
@@ -157,7 +163,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Calibri", 12F);
-            this.btnAgregar.Location = new System.Drawing.Point(499, 95);
+            this.btnAgregar.Location = new System.Drawing.Point(514, 123);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(98, 31);
             this.btnAgregar.TabIndex = 22;
@@ -167,7 +173,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(406, 95);
+            this.textBox2.Location = new System.Drawing.Point(421, 123);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(75, 31);
             this.textBox2.TabIndex = 21;
@@ -177,7 +183,7 @@
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(318, 98);
+            this.lblSubtotal.Location = new System.Drawing.Point(333, 126);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(82, 23);
             this.lblSubtotal.TabIndex = 20;
@@ -194,10 +200,10 @@
             this.cantidad,
             this.precio,
             this.subtotal});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 132);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 160);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(591, 156);
+            this.dataGridView1.Size = new System.Drawing.Size(853, 156);
             this.dataGridView1.TabIndex = 19;
             // 
             // id
@@ -234,7 +240,7 @@
             // txtProducto
             // 
             this.txtProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtProducto.Location = new System.Drawing.Point(180, 16);
+            this.txtProducto.Location = new System.Drawing.Point(195, 44);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(227, 31);
             this.txtProducto.TabIndex = 18;
@@ -242,7 +248,7 @@
             // txtIdProducto
             // 
             this.txtIdProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdProducto.Location = new System.Drawing.Point(113, 16);
+            this.txtIdProducto.Location = new System.Drawing.Point(128, 44);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(61, 31);
             this.txtIdProducto.TabIndex = 17;
@@ -252,7 +258,7 @@
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblProducto.Location = new System.Drawing.Point(25, 16);
+            this.lblProducto.Location = new System.Drawing.Point(40, 44);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(87, 23);
             this.lblProducto.TabIndex = 16;
@@ -261,7 +267,7 @@
             // txtHora
             // 
             this.txtHora.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtHora.Location = new System.Drawing.Point(243, 95);
+            this.txtHora.Location = new System.Drawing.Point(258, 123);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(68, 31);
             this.txtHora.TabIndex = 15;
@@ -271,7 +277,7 @@
             this.lblCantidadHoras.AutoSize = true;
             this.lblCantidadHoras.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblCantidadHoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCantidadHoras.Location = new System.Drawing.Point(180, 98);
+            this.lblCantidadHoras.Location = new System.Drawing.Point(195, 126);
             this.lblCantidadHoras.Name = "lblCantidadHoras";
             this.lblCantidadHoras.Size = new System.Drawing.Size(61, 23);
             this.lblCantidadHoras.TabIndex = 14;
@@ -280,7 +286,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(113, 95);
+            this.textBox1.Location = new System.Drawing.Point(128, 123);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(61, 31);
             this.textBox1.TabIndex = 13;
@@ -290,7 +296,7 @@
             this.lblCostoHora.AutoSize = true;
             this.lblCostoHora.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblCostoHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCostoHora.Location = new System.Drawing.Point(6, 98);
+            this.lblCostoHora.Location = new System.Drawing.Point(21, 126);
             this.lblCostoHora.Name = "lblCostoHora";
             this.lblCostoHora.Size = new System.Drawing.Size(106, 23);
             this.lblCostoHora.TabIndex = 12;
@@ -299,7 +305,7 @@
             // txtNombreProyecto
             // 
             this.txtNombreProyecto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNombreProyecto.Location = new System.Drawing.Point(180, 55);
+            this.txtNombreProyecto.Location = new System.Drawing.Point(195, 83);
             this.txtNombreProyecto.Name = "txtNombreProyecto";
             this.txtNombreProyecto.Size = new System.Drawing.Size(227, 31);
             this.txtNombreProyecto.TabIndex = 11;
@@ -307,7 +313,7 @@
             // txtIdProyecto
             // 
             this.txtIdProyecto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdProyecto.Location = new System.Drawing.Point(113, 55);
+            this.txtIdProyecto.Location = new System.Drawing.Point(128, 83);
             this.txtIdProyecto.Name = "txtIdProyecto";
             this.txtIdProyecto.Size = new System.Drawing.Size(61, 31);
             this.txtIdProyecto.TabIndex = 10;
@@ -317,7 +323,7 @@
             this.lblProyecto.AutoSize = true;
             this.lblProyecto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblProyecto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblProyecto.Location = new System.Drawing.Point(26, 55);
+            this.lblProyecto.Location = new System.Drawing.Point(41, 83);
             this.lblProyecto.Name = "lblProyecto";
             this.lblProyecto.Size = new System.Drawing.Size(86, 23);
             this.lblProyecto.TabIndex = 9;
@@ -326,7 +332,7 @@
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtTotal.Location = new System.Drawing.Point(515, 463);
+            this.txtTotal.Location = new System.Drawing.Point(515, 513);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 31);
             this.txtTotal.TabIndex = 8;
@@ -335,7 +341,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(456, 467);
+            this.lblTotal.Location = new System.Drawing.Point(456, 517);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(53, 23);
             this.lblTotal.TabIndex = 9;
@@ -343,10 +349,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_guardar);
             this.groupBox1.Controls.Add(this.btn_nuevo);
             this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Location = new System.Drawing.Point(12, 435);
+            this.groupBox1.Location = new System.Drawing.Point(12, 485);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(422, 86);
             this.groupBox1.TabIndex = 11;
@@ -372,7 +379,7 @@
             this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_nuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btn_nuevo.Location = new System.Drawing.Point(30, 19);
+            this.btn_nuevo.Location = new System.Drawing.Point(27, 19);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(50, 50);
             this.btn_nuevo.TabIndex = 30;
@@ -385,18 +392,53 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
-            this.btnSalir.Location = new System.Drawing.Point(350, 19);
+            this.btnSalir.Location = new System.Drawing.Point(340, 19);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 18;
             this.btnSalir.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
+            this.button1.Location = new System.Drawing.Point(108, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 34;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(142, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(233, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.TabIndex = 13;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(627, 534);
+            this.ClientSize = new System.Drawing.Size(928, 599);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtTotal);
@@ -409,7 +451,6 @@
             this.Controls.Add(this.dtpFechaFactura);
             this.Controls.Add(this.lblFecha);
             this.Name = "frmFactura";
-            this.Text = "frmFactura";
             this.gbxDetalles.ResumeLayout(false);
             this.gbxDetalles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -454,5 +495,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button1;
     }
 }
