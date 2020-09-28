@@ -46,13 +46,13 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtProducto = new System.Windows.Forms.TextBox();
-            this.txtIdProducto = new System.Windows.Forms.TextBox();
-            this.lblProducto = new System.Windows.Forms.Label();
-            this.txtHora = new System.Windows.Forms.TextBox();
-            this.lblCantidadHoras = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblCostoHora = new System.Windows.Forms.Label();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.txtIdDetalle = new System.Windows.Forms.TextBox();
+            this.lblDetalle = new System.Windows.Forms.Label();
+            this.txtProporcion = new System.Windows.Forms.TextBox();
+            this.lblProporcion = new System.Windows.Forms.Label();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -142,16 +142,16 @@
             this.gbxDetalles.Controls.Add(this.textBox2);
             this.gbxDetalles.Controls.Add(this.lblSubtotal);
             this.gbxDetalles.Controls.Add(this.dataGridView1);
-            this.gbxDetalles.Controls.Add(this.txtProducto);
-            this.gbxDetalles.Controls.Add(this.txtIdProducto);
-            this.gbxDetalles.Controls.Add(this.lblProducto);
-            this.gbxDetalles.Controls.Add(this.txtHora);
-            this.gbxDetalles.Controls.Add(this.lblCantidadHoras);
-            this.gbxDetalles.Controls.Add(this.textBox1);
-            this.gbxDetalles.Controls.Add(this.lblCostoHora);
+            this.gbxDetalles.Controls.Add(this.txtDetalle);
+            this.gbxDetalles.Controls.Add(this.txtIdDetalle);
+            this.gbxDetalles.Controls.Add(this.lblDetalle);
+            this.gbxDetalles.Controls.Add(this.txtProporcion);
+            this.gbxDetalles.Controls.Add(this.lblProporcion);
+            this.gbxDetalles.Controls.Add(this.txtValor);
+            this.gbxDetalles.Controls.Add(this.lblValor);
             this.gbxDetalles.Location = new System.Drawing.Point(12, 132);
             this.gbxDetalles.Name = "gbxDetalles";
-            this.gbxDetalles.Size = new System.Drawing.Size(622, 347);
+            this.gbxDetalles.Size = new System.Drawing.Size(653, 347);
             this.gbxDetalles.TabIndex = 7;
             this.gbxDetalles.TabStop = false;
             this.gbxDetalles.Text = "Detalle de Factura";
@@ -166,6 +166,7 @@
             this.rdbProyecto.TabStop = true;
             this.rdbProyecto.Text = "Proyecto";
             this.rdbProyecto.UseVisualStyleBackColor = true;
+            this.rdbProyecto.CheckedChanged += new System.EventHandler(this.rdbProyecto_CheckedChanged);
             // 
             // rdbProducto
             // 
@@ -177,11 +178,12 @@
             this.rdbProducto.TabStop = true;
             this.rdbProducto.Text = "Producto";
             this.rdbProducto.UseVisualStyleBackColor = true;
+            this.rdbProducto.CheckedChanged += new System.EventHandler(this.rdbProducto_CheckedChanged);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(422, 77);
+            this.textBox2.Location = new System.Drawing.Point(469, 78);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(75, 31);
             this.textBox2.TabIndex = 21;
@@ -191,11 +193,12 @@
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(340, 81);
+            this.lblSubtotal.Location = new System.Drawing.Point(381, 81);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(82, 23);
             this.lblSubtotal.TabIndex = 20;
             this.lblSubtotal.Text = "Subtotal:";
+            this.lblSubtotal.Click += new System.EventHandler(this.lblSubtotal_Click);
             // 
             // dataGridView1
             // 
@@ -211,7 +214,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(6, 118);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(610, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(641, 223);
             this.dataGridView1.TabIndex = 19;
             // 
             // id
@@ -245,70 +248,75 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
-            // txtProducto
+            // txtDetalle
             // 
-            this.txtProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtProducto.Location = new System.Drawing.Point(195, 41);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(227, 31);
-            this.txtProducto.TabIndex = 18;
+            this.txtDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtDetalle.Location = new System.Drawing.Point(195, 41);
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.Size = new System.Drawing.Size(227, 31);
+            this.txtDetalle.TabIndex = 18;
             // 
-            // txtIdProducto
+            // txtIdDetalle
             // 
-            this.txtIdProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdProducto.Location = new System.Drawing.Point(128, 41);
-            this.txtIdProducto.Name = "txtIdProducto";
-            this.txtIdProducto.Size = new System.Drawing.Size(61, 31);
-            this.txtIdProducto.TabIndex = 17;
+            this.txtIdDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtIdDetalle.Location = new System.Drawing.Point(128, 41);
+            this.txtIdDetalle.Name = "txtIdDetalle";
+            this.txtIdDetalle.Size = new System.Drawing.Size(61, 31);
+            this.txtIdDetalle.TabIndex = 17;
             // 
-            // lblProducto
+            // lblDetalle
             // 
-            this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblProducto.Location = new System.Drawing.Point(40, 44);
-            this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(87, 23);
-            this.lblProducto.TabIndex = 16;
-            this.lblProducto.Text = "Producto:";
+            this.lblDetalle.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDetalle.AutoSize = true;
+            this.lblDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblDetalle.Location = new System.Drawing.Point(35, 44);
+            this.lblDetalle.Name = "lblDetalle";
+            this.lblDetalle.Size = new System.Drawing.Size(87, 23);
+            this.lblDetalle.TabIndex = 16;
+            this.lblDetalle.Text = "Producto:";
+            this.lblDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtHora
+            // txtProporcion
             // 
-            this.txtHora.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtHora.Location = new System.Drawing.Point(260, 78);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(68, 31);
-            this.txtHora.TabIndex = 15;
+            this.txtProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtProporcion.Location = new System.Drawing.Point(307, 78);
+            this.txtProporcion.Name = "txtProporcion";
+            this.txtProporcion.Size = new System.Drawing.Size(68, 31);
+            this.txtProporcion.TabIndex = 15;
             // 
-            // lblCantidadHoras
+            // lblProporcion
             // 
-            this.lblCantidadHoras.AutoSize = true;
-            this.lblCantidadHoras.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblCantidadHoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCantidadHoras.Location = new System.Drawing.Point(195, 81);
-            this.lblCantidadHoras.Name = "lblCantidadHoras";
-            this.lblCantidadHoras.Size = new System.Drawing.Size(61, 23);
-            this.lblCantidadHoras.TabIndex = 14;
-            this.lblCantidadHoras.Text = "Horas:";
+            this.lblProporcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblProporcion.AutoSize = true;
+            this.lblProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblProporcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblProporcion.Location = new System.Drawing.Point(240, 81);
+            this.lblProporcion.Name = "lblProporcion";
+            this.lblProporcion.Size = new System.Drawing.Size(61, 23);
+            this.lblProporcion.TabIndex = 14;
+            this.lblProporcion.Text = "Horas:";
             // 
-            // textBox1
+            // txtValor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(128, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(61, 31);
-            this.textBox1.TabIndex = 13;
+            this.txtValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtValor.Location = new System.Drawing.Point(128, 78);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(61, 31);
+            this.txtValor.TabIndex = 13;
             // 
-            // lblCostoHora
+            // lblValor
             // 
-            this.lblCostoHora.AutoSize = true;
-            this.lblCostoHora.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblCostoHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCostoHora.Location = new System.Drawing.Point(21, 81);
-            this.lblCostoHora.Name = "lblCostoHora";
-            this.lblCostoHora.Size = new System.Drawing.Size(106, 23);
-            this.lblCostoHora.TabIndex = 12;
-            this.lblCostoHora.Text = "Costo/Hora:";
+            this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValor.AutoSize = true;
+            this.lblValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblValor.Location = new System.Drawing.Point(16, 81);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(106, 23);
+            this.lblValor.TabIndex = 12;
+            this.lblValor.Text = "Costo/Hora:";
+            this.lblValor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtTotal
             // 
@@ -399,7 +407,7 @@
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnQuitar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btnQuitar.Location = new System.Drawing.Point(568, 73);
+            this.btnQuitar.Location = new System.Drawing.Point(601, 73);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(35, 35);
             this.btnQuitar.TabIndex = 24;
@@ -412,7 +420,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnAgregar.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btnAgregar.Location = new System.Drawing.Point(517, 73);
+            this.btnAgregar.Location = new System.Drawing.Point(550, 73);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
             this.btnAgregar.TabIndex = 23;
@@ -423,7 +431,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(646, 578);
+            this.ClientSize = new System.Drawing.Size(677, 580);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtTotal);
@@ -456,14 +464,14 @@
         private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.GroupBox gbxDetalles;
-        private System.Windows.Forms.TextBox txtHora;
-        private System.Windows.Forms.Label lblCantidadHoras;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblCostoHora;
+        private System.Windows.Forms.TextBox txtProporcion;
+        private System.Windows.Forms.Label lblProporcion;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.TextBox txtIdProducto;
-        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.TextBox txtIdDetalle;
+        private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.TextBox txtTotal;
