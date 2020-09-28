@@ -36,9 +36,11 @@
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.gbxDetalles = new System.Windows.Forms.GroupBox();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.rdbProyecto = new System.Windows.Forms.RadioButton();
             this.rdbProducto = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,12 +58,10 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.gbxDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -124,6 +124,7 @@
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(70, 31);
             this.txtIdCliente.TabIndex = 5;
+            this.txtIdCliente.Leave += new System.EventHandler(this.txtIdCliente_TextChanged);
             // 
             // txtNombreCliente
             // 
@@ -139,7 +140,7 @@
             this.gbxDetalles.Controls.Add(this.btnAgregar);
             this.gbxDetalles.Controls.Add(this.rdbProyecto);
             this.gbxDetalles.Controls.Add(this.rdbProducto);
-            this.gbxDetalles.Controls.Add(this.textBox2);
+            this.gbxDetalles.Controls.Add(this.txtSubtotal);
             this.gbxDetalles.Controls.Add(this.lblSubtotal);
             this.gbxDetalles.Controls.Add(this.dataGridView1);
             this.gbxDetalles.Controls.Add(this.txtDetalle);
@@ -155,6 +156,32 @@
             this.gbxDetalles.TabIndex = 7;
             this.gbxDetalles.TabStop = false;
             this.gbxDetalles.Text = "Detalle de Factura";
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuitar.FlatAppearance.BorderSize = 0;
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnQuitar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
+            this.btnQuitar.Location = new System.Drawing.Point(601, 73);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(35, 35);
+            this.btnQuitar.TabIndex = 24;
+            this.btnQuitar.UseVisualStyleBackColor = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAgregar.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
+            this.btnAgregar.Location = new System.Drawing.Point(550, 73);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(35, 35);
+            this.btnAgregar.TabIndex = 23;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // rdbProyecto
             // 
@@ -180,13 +207,13 @@
             this.rdbProducto.UseVisualStyleBackColor = true;
             this.rdbProducto.CheckedChanged += new System.EventHandler(this.rdbProducto_CheckedChanged);
             // 
-            // textBox2
+            // txtSubtotal
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(469, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(75, 31);
-            this.textBox2.TabIndex = 21;
+            this.txtSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtSubtotal.Location = new System.Drawing.Point(469, 78);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(75, 31);
+            this.txtSubtotal.TabIndex = 21;
             // 
             // lblSubtotal
             // 
@@ -198,7 +225,6 @@
             this.lblSubtotal.Size = new System.Drawing.Size(82, 23);
             this.lblSubtotal.TabIndex = 20;
             this.lblSubtotal.Text = "Subtotal:";
-            this.lblSubtotal.Click += new System.EventHandler(this.lblSubtotal_Click);
             // 
             // dataGridView1
             // 
@@ -263,6 +289,7 @@
             this.txtIdDetalle.Name = "txtIdDetalle";
             this.txtIdDetalle.Size = new System.Drawing.Size(61, 31);
             this.txtIdDetalle.TabIndex = 17;
+            this.txtIdDetalle.Leave += new System.EventHandler(this.txtIdDetalle_Leave);
             // 
             // lblDetalle
             // 
@@ -273,7 +300,7 @@
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(102, 23);
             this.lblDetalle.TabIndex = 16;
-            this.lblDetalle.Text = "Producto:";
+            this.lblDetalle.Text = "Proyecto:";
             this.lblDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtProporcion
@@ -346,6 +373,19 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
+            this.btnEditar.Location = new System.Drawing.Point(108, 19);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar.TabIndex = 34;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
@@ -384,45 +424,6 @@
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 18;
             this.btnSalir.UseVisualStyleBackColor = false;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btnEditar.Location = new System.Drawing.Point(108, 19);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(50, 50);
-            this.btnEditar.TabIndex = 34;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.BackColor = System.Drawing.Color.Transparent;
-            this.btnQuitar.FlatAppearance.BorderSize = 0;
-            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnQuitar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btnQuitar.Location = new System.Drawing.Point(601, 73);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(35, 35);
-            this.btnQuitar.TabIndex = 24;
-            this.btnQuitar.UseVisualStyleBackColor = false;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnAgregar.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btnAgregar.Location = new System.Drawing.Point(550, 73);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(35, 35);
-            this.btnAgregar.TabIndex = 23;
-            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // frmFactura
             // 
@@ -470,7 +471,7 @@
         private System.Windows.Forms.TextBox txtDetalle;
         private System.Windows.Forms.TextBox txtIdDetalle;
         private System.Windows.Forms.Label lblDetalle;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
