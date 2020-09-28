@@ -16,5 +16,10 @@ namespace LPCFacturas.GUILayer
         {
             InitializeComponent();
         }
+
+        private void frmFactura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

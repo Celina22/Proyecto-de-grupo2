@@ -36,7 +36,8 @@
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.gbxDetalles = new System.Windows.Forms.GroupBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.rdbProyecto = new System.Windows.Forms.RadioButton();
+            this.rdbProducto = new System.Windows.Forms.RadioButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,18 +53,15 @@
             this.lblCantidadHoras = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCostoHora = new System.Windows.Forms.Label();
-            this.txtNombreProyecto = new System.Windows.Forms.TextBox();
-            this.txtIdProyecto = new System.Windows.Forms.TextBox();
-            this.lblProyecto = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_nuevo = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.gbxDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -93,7 +91,7 @@
             this.lblNumeroFactura.AutoSize = true;
             this.lblNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblNumeroFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblNumeroFactura.Location = new System.Drawing.Point(35, 64);
+            this.lblNumeroFactura.Location = new System.Drawing.Point(35, 61);
             this.lblNumeroFactura.Name = "lblNumeroFactura";
             this.lblNumeroFactura.Size = new System.Drawing.Size(142, 23);
             this.lblNumeroFactura.TabIndex = 2;
@@ -102,7 +100,7 @@
             // txtNumeroFactura
             // 
             this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNumeroFactura.Location = new System.Drawing.Point(183, 61);
+            this.txtNumeroFactura.Location = new System.Drawing.Point(183, 58);
             this.txtNumeroFactura.Name = "txtNumeroFactura";
             this.txtNumeroFactura.ReadOnly = true;
             this.txtNumeroFactura.Size = new System.Drawing.Size(70, 31);
@@ -122,7 +120,7 @@
             // txtIdCliente
             // 
             this.txtIdCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdCliente.Location = new System.Drawing.Point(183, 98);
+            this.txtIdCliente.Location = new System.Drawing.Point(183, 95);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(70, 31);
             this.txtIdCliente.TabIndex = 5;
@@ -130,16 +128,17 @@
             // txtNombreCliente
             // 
             this.txtNombreCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNombreCliente.Location = new System.Drawing.Point(259, 98);
+            this.txtNombreCliente.Location = new System.Drawing.Point(259, 95);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(241, 31);
             this.txtNombreCliente.TabIndex = 6;
             // 
             // gbxDetalles
             // 
-            this.gbxDetalles.Controls.Add(this.radioButton2);
+            this.gbxDetalles.Controls.Add(this.btnQuitar);
             this.gbxDetalles.Controls.Add(this.btnAgregar);
-            this.gbxDetalles.Controls.Add(this.radioButton1);
+            this.gbxDetalles.Controls.Add(this.rdbProyecto);
+            this.gbxDetalles.Controls.Add(this.rdbProducto);
             this.gbxDetalles.Controls.Add(this.textBox2);
             this.gbxDetalles.Controls.Add(this.lblSubtotal);
             this.gbxDetalles.Controls.Add(this.dataGridView1);
@@ -150,30 +149,39 @@
             this.gbxDetalles.Controls.Add(this.lblCantidadHoras);
             this.gbxDetalles.Controls.Add(this.textBox1);
             this.gbxDetalles.Controls.Add(this.lblCostoHora);
-            this.gbxDetalles.Controls.Add(this.txtNombreProyecto);
-            this.gbxDetalles.Controls.Add(this.txtIdProyecto);
-            this.gbxDetalles.Controls.Add(this.lblProyecto);
-            this.gbxDetalles.Location = new System.Drawing.Point(12, 152);
+            this.gbxDetalles.Location = new System.Drawing.Point(12, 132);
             this.gbxDetalles.Name = "gbxDetalles";
-            this.gbxDetalles.Size = new System.Drawing.Size(890, 327);
+            this.gbxDetalles.Size = new System.Drawing.Size(622, 347);
             this.gbxDetalles.TabIndex = 7;
             this.gbxDetalles.TabStop = false;
             this.gbxDetalles.Text = "Detalle de Factura";
             // 
-            // btnAgregar
+            // rdbProyecto
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Calibri", 12F);
-            this.btnAgregar.Location = new System.Drawing.Point(514, 123);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(98, 31);
-            this.btnAgregar.TabIndex = 22;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.rdbProyecto.AutoSize = true;
+            this.rdbProyecto.Location = new System.Drawing.Point(195, 19);
+            this.rdbProyecto.Name = "rdbProyecto";
+            this.rdbProyecto.Size = new System.Drawing.Size(67, 17);
+            this.rdbProyecto.TabIndex = 13;
+            this.rdbProyecto.TabStop = true;
+            this.rdbProyecto.Text = "Proyecto";
+            this.rdbProyecto.UseVisualStyleBackColor = true;
+            // 
+            // rdbProducto
+            // 
+            this.rdbProducto.AutoSize = true;
+            this.rdbProducto.Location = new System.Drawing.Point(128, 19);
+            this.rdbProducto.Name = "rdbProducto";
+            this.rdbProducto.Size = new System.Drawing.Size(68, 17);
+            this.rdbProducto.TabIndex = 12;
+            this.rdbProducto.TabStop = true;
+            this.rdbProducto.Text = "Producto";
+            this.rdbProducto.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(421, 123);
+            this.textBox2.Location = new System.Drawing.Point(422, 77);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(75, 31);
             this.textBox2.TabIndex = 21;
@@ -183,7 +191,7 @@
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(333, 126);
+            this.lblSubtotal.Location = new System.Drawing.Point(340, 81);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(82, 23);
             this.lblSubtotal.TabIndex = 20;
@@ -200,10 +208,10 @@
             this.cantidad,
             this.precio,
             this.subtotal});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 160);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 118);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(853, 156);
+            this.dataGridView1.Size = new System.Drawing.Size(610, 223);
             this.dataGridView1.TabIndex = 19;
             // 
             // id
@@ -240,7 +248,7 @@
             // txtProducto
             // 
             this.txtProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtProducto.Location = new System.Drawing.Point(195, 44);
+            this.txtProducto.Location = new System.Drawing.Point(195, 41);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(227, 31);
             this.txtProducto.TabIndex = 18;
@@ -248,7 +256,7 @@
             // txtIdProducto
             // 
             this.txtIdProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdProducto.Location = new System.Drawing.Point(128, 44);
+            this.txtIdProducto.Location = new System.Drawing.Point(128, 41);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(61, 31);
             this.txtIdProducto.TabIndex = 17;
@@ -267,7 +275,7 @@
             // txtHora
             // 
             this.txtHora.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtHora.Location = new System.Drawing.Point(258, 123);
+            this.txtHora.Location = new System.Drawing.Point(260, 78);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(68, 31);
             this.txtHora.TabIndex = 15;
@@ -277,7 +285,7 @@
             this.lblCantidadHoras.AutoSize = true;
             this.lblCantidadHoras.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblCantidadHoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCantidadHoras.Location = new System.Drawing.Point(195, 126);
+            this.lblCantidadHoras.Location = new System.Drawing.Point(195, 81);
             this.lblCantidadHoras.Name = "lblCantidadHoras";
             this.lblCantidadHoras.Size = new System.Drawing.Size(61, 23);
             this.lblCantidadHoras.TabIndex = 14;
@@ -286,7 +294,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(128, 123);
+            this.textBox1.Location = new System.Drawing.Point(128, 78);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(61, 31);
             this.textBox1.TabIndex = 13;
@@ -296,38 +304,11 @@
             this.lblCostoHora.AutoSize = true;
             this.lblCostoHora.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblCostoHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCostoHora.Location = new System.Drawing.Point(21, 126);
+            this.lblCostoHora.Location = new System.Drawing.Point(21, 81);
             this.lblCostoHora.Name = "lblCostoHora";
             this.lblCostoHora.Size = new System.Drawing.Size(106, 23);
             this.lblCostoHora.TabIndex = 12;
             this.lblCostoHora.Text = "Costo/Hora:";
-            // 
-            // txtNombreProyecto
-            // 
-            this.txtNombreProyecto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNombreProyecto.Location = new System.Drawing.Point(195, 83);
-            this.txtNombreProyecto.Name = "txtNombreProyecto";
-            this.txtNombreProyecto.Size = new System.Drawing.Size(227, 31);
-            this.txtNombreProyecto.TabIndex = 11;
-            // 
-            // txtIdProyecto
-            // 
-            this.txtIdProyecto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdProyecto.Location = new System.Drawing.Point(128, 83);
-            this.txtIdProyecto.Name = "txtIdProyecto";
-            this.txtIdProyecto.Size = new System.Drawing.Size(61, 31);
-            this.txtIdProyecto.TabIndex = 10;
-            // 
-            // lblProyecto
-            // 
-            this.lblProyecto.AutoSize = true;
-            this.lblProyecto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblProyecto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblProyecto.Location = new System.Drawing.Point(41, 83);
-            this.lblProyecto.Name = "lblProyecto";
-            this.lblProyecto.Size = new System.Drawing.Size(86, 23);
-            this.lblProyecto.TabIndex = 9;
-            this.lblProyecto.Text = "Proyecto:";
             // 
             // txtTotal
             // 
@@ -349,9 +330,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btn_guardar);
-            this.groupBox1.Controls.Add(this.btn_nuevo);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Location = new System.Drawing.Point(12, 485);
             this.groupBox1.Name = "groupBox1";
@@ -359,31 +340,31 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
-            // btn_guardar
+            // btnGuardar
             // 
-            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar.FlatAppearance.BorderSize = 0;
-            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btn_guardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.btn_guardar.Location = new System.Drawing.Point(191, 19);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(50, 50);
-            this.btn_guardar.TabIndex = 33;
-            this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
+            this.btnGuardar.Location = new System.Drawing.Point(191, 19);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar.TabIndex = 33;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // btn_nuevo
+            // btnNuevo
             // 
-            this.btn_nuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btn_nuevo.FlatAppearance.BorderSize = 0;
-            this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btn_nuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btn_nuevo.Location = new System.Drawing.Point(27, 19);
-            this.btn_nuevo.Name = "btn_nuevo";
-            this.btn_nuevo.Size = new System.Drawing.Size(50, 50);
-            this.btn_nuevo.TabIndex = 30;
-            this.btn_nuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
+            this.btnNuevo.Location = new System.Drawing.Point(27, 19);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(50, 50);
+            this.btnNuevo.TabIndex = 30;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             // 
             // btnSalir
             // 
@@ -398,47 +379,51 @@
             this.btnSalir.TabIndex = 18;
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnEditar
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.button1.Location = new System.Drawing.Point(108, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 34;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
+            this.btnEditar.Location = new System.Drawing.Point(108, 19);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar.TabIndex = 34;
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // btnQuitar
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(142, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.btnQuitar.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuitar.FlatAppearance.BorderSize = 0;
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnQuitar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
+            this.btnQuitar.Location = new System.Drawing.Point(568, 73);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(35, 35);
+            this.btnQuitar.TabIndex = 24;
+            this.btnQuitar.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // btnAgregar
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(233, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAgregar.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
+            this.btnAgregar.Location = new System.Drawing.Point(517, 73);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(35, 35);
+            this.btnAgregar.TabIndex = 23;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(928, 599);
+            this.ClientSize = new System.Drawing.Size(646, 578);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtTotal);
@@ -451,6 +436,7 @@
             this.Controls.Add(this.dtpFechaFactura);
             this.Controls.Add(this.lblFecha);
             this.Name = "frmFactura";
+            this.Load += new System.EventHandler(this.frmFactura_Load);
             this.gbxDetalles.ResumeLayout(false);
             this.gbxDetalles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -474,29 +460,27 @@
         private System.Windows.Forms.Label lblCantidadHoras;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCostoHora;
-        private System.Windows.Forms.TextBox txtNombreProyecto;
-        private System.Windows.Forms.TextBox txtIdProyecto;
-        private System.Windows.Forms.Label lblProyecto;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.Button btn_nuevo;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton rdbProyecto;
+        private System.Windows.Forms.RadioButton rdbProducto;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
