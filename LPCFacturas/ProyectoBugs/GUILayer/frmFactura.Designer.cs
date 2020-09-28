@@ -267,12 +267,11 @@
             // lblDetalle
             // 
             this.lblDetalle.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDetalle.AutoSize = true;
             this.lblDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblDetalle.Location = new System.Drawing.Point(35, 44);
+            this.lblDetalle.Location = new System.Drawing.Point(20, 44);
             this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(87, 23);
+            this.lblDetalle.Size = new System.Drawing.Size(102, 23);
             this.lblDetalle.TabIndex = 16;
             this.lblDetalle.Text = "Producto:";
             this.lblDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -288,14 +287,14 @@
             // lblProporcion
             // 
             this.lblProporcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblProporcion.AutoSize = true;
             this.lblProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblProporcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblProporcion.Location = new System.Drawing.Point(240, 81);
+            this.lblProporcion.Location = new System.Drawing.Point(195, 81);
             this.lblProporcion.Name = "lblProporcion";
-            this.lblProporcion.Size = new System.Drawing.Size(61, 23);
+            this.lblProporcion.Size = new System.Drawing.Size(106, 23);
             this.lblProporcion.TabIndex = 14;
             this.lblProporcion.Text = "Horas:";
+            this.lblProporcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtValor
             // 
@@ -308,7 +307,6 @@
             // lblValor
             // 
             this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblValor.Location = new System.Drawing.Point(16, 81);
