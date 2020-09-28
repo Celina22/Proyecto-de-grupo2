@@ -1,6 +1,7 @@
 ﻿using LPCFacturas.BusinessLayer;
 using LPCFacturas.Entities;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,8 @@ namespace LPCFacturas.GUILayer
         ClienteService oClienteService = new ClienteService();
         ProductoService oProductoService = new ProductoService();
         ProyectoService oProyectoService = new ProyectoService();
+        int ordenDetalle = 0;
+        IList<DetalleFactura> listaDetalleFactura;
 
         IList<DetalleFactura> detalles;
         bool flagProducto = false;
@@ -106,6 +109,47 @@ namespace LPCFacturas.GUILayer
         private void limpiarCampos()
         {
             txtIdDetalle.Text = txtDetalle.Text = string.Empty;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if(validarCampos())
+            {
+                dgvDetalles.Rows.Add(txtIdDetalle.Text.ToString(),
+                                txtDetalle.Text.ToString(),
+                                txtProporcion.Text.ToString(),
+                                txtValor.Text.ToString(),
+                                txtSubtotal.Text.ToString());
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public bool validarCampos()
+        {
+
+            if (txtDetalle.Text == string.Empty)
+            {
+                MessageBox.Show("Datos ingresados no válidos. Debe seleccionar un producto o proyecto.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDetalle.Focus();
+                return false;
+            }
+            if (txtValor.Text == string.Empty)
+            {
+                MessageBox.Show("Datos ingresados no válidos. Debe ingresar un valor del producto o proyecto.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtValor.Focus();
+                return false;
+            }
+            if (txtProporcion.Text == string.Empty)
+            {
+                MessageBox.Show("Datos ingresados no válidos. Debe ingresar una cantidad a facturar.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtProporcion.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }

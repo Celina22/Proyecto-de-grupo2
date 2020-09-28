@@ -42,7 +42,7 @@
             this.rdbProducto = new System.Windows.Forms.RadioButton();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDetalles = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +63,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.gbxDetalles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,7 +142,7 @@
             this.gbxDetalles.Controls.Add(this.rdbProducto);
             this.gbxDetalles.Controls.Add(this.txtSubtotal);
             this.gbxDetalles.Controls.Add(this.lblSubtotal);
-            this.gbxDetalles.Controls.Add(this.dataGridView1);
+            this.gbxDetalles.Controls.Add(this.dgvDetalles);
             this.gbxDetalles.Controls.Add(this.txtDetalle);
             this.gbxDetalles.Controls.Add(this.txtIdDetalle);
             this.gbxDetalles.Controls.Add(this.lblDetalle);
@@ -182,6 +182,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
             this.btnAgregar.TabIndex = 23;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // rdbProyecto
             // 
@@ -226,22 +227,22 @@
             this.lblSubtotal.TabIndex = 20;
             this.lblSubtotal.Text = "Subtotal:";
             // 
-            // dataGridView1
+            // dgvDetalles
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDetalles.AllowUserToAddRows = false;
+            this.dgvDetalles.AllowUserToDeleteRows = false;
+            this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.descripcion,
             this.cantidad,
             this.precio,
             this.subtotal});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(641, 223);
-            this.dataGridView1.TabIndex = 19;
+            this.dgvDetalles.Location = new System.Drawing.Point(6, 118);
+            this.dgvDetalles.Name = "dgvDetalles";
+            this.dgvDetalles.ReadOnly = true;
+            this.dgvDetalles.Size = new System.Drawing.Size(641, 223);
+            this.dgvDetalles.TabIndex = 19;
             // 
             // id
             // 
@@ -424,6 +425,7 @@
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 18;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmFactura
             // 
@@ -446,7 +448,7 @@
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.gbxDetalles.ResumeLayout(false);
             this.gbxDetalles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -467,7 +469,7 @@
         private System.Windows.Forms.Label lblProporcion;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDetalles;
         private System.Windows.Forms.TextBox txtDetalle;
         private System.Windows.Forms.TextBox txtIdDetalle;
         private System.Windows.Forms.Label lblDetalle;
