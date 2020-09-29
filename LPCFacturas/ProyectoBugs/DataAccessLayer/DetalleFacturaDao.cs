@@ -80,5 +80,28 @@ namespace LPCFacturas.DataAccessLayer
 
             return oDetalleFactura;
         }
+
+        internal void InsertarDetalles(IList<DetalleFactura> detalles)
+        {
+            string id_factura = DataManager.GetInstance().ConsultaSQLScalar("SELECT @@IDENTITY").ToString();
+            foreach (DetalleFactura detalle in detalles)
+            {
+                string SQLInject;
+                if (detalle.Producto == null)
+                {
+                    SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio, borrado) " +
+                                        "VALUES (" + id_factura + ", " + detalle.Numero_orden + ", "
+                                          + detalle.Proyecto.Id_proyecto + "," + "NULL" + "," + detalle.Precio + ", 0) ";
+                }
+                else
+                {
+                    SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio, borrado) " +
+                                        "VALUES (" + id_factura + ", " + detalle.Numero_orden + ", "
+                                          + "NULL" + "," + detalle.Producto.Id_producto + "," + detalle.Precio + ", 0) ";
+                }
+
+                DataManager.GetInstance().EjecutarSQL(SQLInject);
+            } 
+        }
     }
 }

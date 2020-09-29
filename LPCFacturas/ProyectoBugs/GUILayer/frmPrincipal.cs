@@ -15,7 +15,11 @@ namespace LPCFacturas.GUILayer
 {
     public partial class frmPrincipal : Form
     {
+        
         Usuario usuarioActual;
+
+        public Usuario UsuarioActual { get => usuarioActual; set => usuarioActual = value; }
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -30,8 +34,8 @@ namespace LPCFacturas.GUILayer
         {
             frmLogin fl = new frmLogin();
             fl.ShowDialog();
-            usuarioActual = fl.UsuarioLogueado;
-            this.Text = "Menú Principal - Usuario actual: " + usuarioActual.NombreUsuario;
+            UsuarioActual = fl.UsuarioLogueado;
+            this.Text = "Menú Principal - Usuario actual: " + UsuarioActual.NombreUsuario;
             fl.Dispose();
         }
 
@@ -69,6 +73,12 @@ namespace LPCFacturas.GUILayer
         {
             frmABMClientes abmClientes = new frmABMClientes();
             abmClientes.ShowDialog();
+        }
+
+        private void nuevaFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFactura nuevaFactura = new frmFactura(usuarioActual);
+            nuevaFactura.ShowDialog();
         }
     }
 }

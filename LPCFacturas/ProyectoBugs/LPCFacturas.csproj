@@ -49,6 +49,8 @@
     <Compile Include="BusinessLayer\BarrioService.cs" />
     <Compile Include="BusinessLayer\ClienteService.cs" />
     <Compile Include="BusinessLayer\ContactoService.cs" />
+    <Compile Include="BusinessLayer\DetalleFacturaService.cs" />
+    <Compile Include="BusinessLayer\FacturaService.cs" />
     <Compile Include="BusinessLayer\PerfilService.cs" />
     <Compile Include="BusinessLayer\ProductoService.cs" />
     <Compile Include="BusinessLayer\ProyectoService.cs" />

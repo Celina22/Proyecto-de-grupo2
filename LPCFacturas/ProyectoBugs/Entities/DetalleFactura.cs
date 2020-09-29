@@ -9,6 +9,7 @@ namespace LPCFacturas.Entities
     class DetalleFactura
     {
         private int id_detalle_factura;
+        //private int id_factura;
         private int numero_orden;
         private Producto producto;
         private Proyecto proyecto;
@@ -17,6 +18,7 @@ namespace LPCFacturas.Entities
         public int Id_detalle_factura { get => id_detalle_factura; set => id_detalle_factura = value; }
         public int Numero_orden { get => numero_orden; set => numero_orden = value; }
         public int Precio { get => precio; set => precio = value; }
+        //public int Id_factura { get => id_factura; set => id_factura = value; }
         internal Producto Producto { get => producto; set => producto = value; }
         internal Proyecto Proyecto { get => proyecto; set => proyecto = value; }
     }

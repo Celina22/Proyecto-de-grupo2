@@ -18,13 +18,15 @@ namespace LPCFacturas.GUILayer
         ClienteService oClienteService = new ClienteService();
         ProductoService oProductoService = new ProductoService();
         ProyectoService oProyectoService = new ProyectoService();
+        FacturaService oFacturaService = new FacturaService();
         int ordenDetalle = 0;
-        IList<DetalleFactura> listaDetalleFactura;
+        List<DetalleFactura> listaDetalleFactura = new List<DetalleFactura>();
 
-        IList<DetalleFactura> detalles;
         bool flagProducto = false;
-        public frmFactura()
+        Usuario usuarioActual;
+        public frmFactura(Usuario usuarioActual)
         {
+            this.usuarioActual = usuarioActual;
             InitializeComponent();
         }
 
@@ -131,10 +133,12 @@ namespace LPCFacturas.GUILayer
             if(validarCampos())
             {
                 dgvDetalles.Rows.Add(txtIdDetalle.Text.ToString(),
-                                txtDetalle.Text.ToString(),
-                                txtProporcion.Text.ToString(),
-                                txtValor.Text.ToString(),
-                                txtSubtotal.Text.ToString());
+                                     txtDetalle.Text.ToString(),
+                                     txtProporcion.Text.ToString(),
+                                     txtValor.Text.ToString(),
+                                     txtSubtotal.Text.ToString(),
+                                     flagProducto? true: false);
+                                
                 limpiarCampos();
             }
             
@@ -192,6 +196,28 @@ namespace LPCFacturas.GUILayer
         private void txtProporcion_Leave(object sender, EventArgs e)
         {
             calcularSubtotal();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            DetalleFactura detalle;
+            for (int i = 0; i < dgvDetalles.Rows.Count; i++)
+            {
+                detalle = new DetalleFactura();
+                detalle.Numero_orden = i + 1;
+                if ((bool) dgvDetalles.Rows[i].Cells["esProducto"].Value)
+                    detalle.Producto = oProductoService.recuperarProducto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
+                else
+                    detalle.Proyecto = oProyectoService.recuperarProyecto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
+                detalle.Precio = Convert.ToInt32(dgvDetalles.Rows[i].Cells["subtotal"].Value);
+                listaDetalleFactura.Add(detalle);
+            }
+            Factura factura = new Factura();
+            factura.Cliente = oClienteService.recuperarCliente(txtIdCliente.Text);
+            factura.Fecha = dtpFechaFactura.Value;
+            factura.Usuario_creador = usuarioActual;
+            factura.Detalles = listaDetalleFactura;
+            oFacturaService.CrearFactura(factura);
         }
     }
 }
