@@ -22,7 +22,7 @@ namespace LPCFacturas.Entities
         public int Cantidad { get => cantidad; set => cantidad = value; }
 
         //public int Id_factura { get => id_factura; set => id_factura = value; }
-        internal Producto Producto { get => producto; set => producto = value; }
-        internal Proyecto Proyecto { get => proyecto; set => proyecto = value; }
+        public Producto Producto { get => producto; set => producto = value; }
+        public Proyecto Proyecto { get => proyecto; set => proyecto = value; }
     }
 }

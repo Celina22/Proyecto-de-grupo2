@@ -278,7 +278,7 @@ namespace LPCFacturas.GUILayer
             Factura oFactura = new Factura();
             IList<DetalleFactura> listaDetalles;
             oFactura = oFacturaService.GetFactura(txtNumeroFactura.Text);
-            listaDetalles = oDetalleFacturaService.recuperarTodos();
+            listaDetalles = oDetalleFacturaService.recuperarTodos(txtNumeroFactura.Text);
 
             txtIdCliente.Text = oFactura.Cliente.Id_cliente.ToString();
             txtNombreCliente.Text = oFactura.Cliente.Razon_social;

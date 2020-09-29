@@ -22,7 +22,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             List<DetalleFactura> listadoDetalleFactura = new List<DetalleFactura>();
 
-            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio, cantidad " +
+            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio, cantidad" +
                          " FROM FacturasDetalle WHERE borrado=0";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
@@ -39,7 +39,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             List<DetalleFactura> listadoDetalleFactura = new List<DetalleFactura>();
 
-            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio, cantidad " +
+            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio, cantidad" +
                          " FROM FacturasDetalle WHERE borrado=0 AND id_factura = " + idFactura;
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
