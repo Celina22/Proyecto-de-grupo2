@@ -57,6 +57,8 @@
     <Compile Include="DataAccessLayer\ClienteDao.cs" />
     <Compile Include="DataAccessLayer\ContactoDao.cs" />
     <Compile Include="DataAccessLayer\DataManager.cs" />
+    <Compile Include="DataAccessLayer\DetalleFacturaDao.cs" />
+    <Compile Include="DataAccessLayer\FacturaDao.cs" />
     <Compile Include="DataAccessLayer\PerfilDao.cs" />
     <Compile Include="DataAccessLayer\ProductoDao.cs" />
     <Compile Include="DataAccessLayer\ProyectoDao.cs" />

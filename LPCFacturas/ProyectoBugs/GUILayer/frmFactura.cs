@@ -68,6 +68,11 @@ namespace LPCFacturas.GUILayer
                     else
                         MessageBox.Show("Cliente no encontrado...");
                 }
+                else
+                {
+                    MessageBox.Show("Debe ingresar un id de cliente correcto...");
+                    txtIdCliente.Text = string.Empty;
+                }
 
             }    
         }
@@ -88,6 +93,11 @@ namespace LPCFacturas.GUILayer
                     else
                         MessageBox.Show("Producto no encontrado...");
                 }
+                else
+                {
+                    MessageBox.Show("Debe ingresar un id de Producto correcto...");
+                    txtIdDetalle.Text = string.Empty;
+                }
             }
             else
             {
@@ -103,12 +113,17 @@ namespace LPCFacturas.GUILayer
                     else
                         MessageBox.Show("Proyecto no encontrado...");
                 }
+                else
+                {
+                    MessageBox.Show("Debe ingresar un id de Producto correcto...");
+                    txtIdDetalle.Text = string.Empty;
+                }
             }
         }
 
         private void limpiarCampos()
         {
-            txtIdDetalle.Text = txtDetalle.Text = string.Empty;
+            txtIdDetalle.Text = txtDetalle.Text = txtValor.Text = txtProporcion.Text = txtSubtotal.Text = string.Empty;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -120,7 +135,9 @@ namespace LPCFacturas.GUILayer
                                 txtProporcion.Text.ToString(),
                                 txtValor.Text.ToString(),
                                 txtSubtotal.Text.ToString());
+                limpiarCampos();
             }
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -150,6 +167,31 @@ namespace LPCFacturas.GUILayer
                 return false;
             }
             return true;
+        }
+
+        private void txtValor_Leave(object sender, EventArgs e)
+        {
+            calcularSubtotal();
+        }
+
+        private void calcularSubtotal()
+        {
+            if (txtProporcion.Text != string.Empty && txtValor.Text != string.Empty)
+            {
+                int numero;
+                if (Int32.TryParse(txtValor.Text, out numero) && Int32.TryParse(txtProporcion.Text, out numero))
+                {
+                    double valor = Convert.ToDouble(txtValor.Text);
+                    double proporcion = Convert.ToDouble(txtProporcion.Text);
+                    double subtotal = valor * proporcion;
+                    txtSubtotal.Text = subtotal.ToString();
+                }
+            }
+        }
+
+        private void txtProporcion_Leave(object sender, EventArgs e)
+        {
+            calcularSubtotal();
         }
     }
 }

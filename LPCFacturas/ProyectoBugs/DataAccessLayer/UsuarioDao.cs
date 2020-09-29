@@ -53,6 +53,25 @@ namespace LPCFacturas.DataAccessLayer
             return null;
         }
 
+        public Usuario GetUserId(string idUsuario)
+        {
+            //Construimos la consulta sql para buscar el usuario en la base de datos.
+            String consultaSql = string.Concat(" SELECT id_usuario, usuario, email, estado, password, id_perfil ",
+                                                "   FROM Usuarios ",
+                                                "  WHERE borrado=0 and id_usuario =  '", idUsuario, "'");
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return MappingUsuario(resultado.Rows[0]);
+            }
+
+            return null;
+        }
+
         private Usuario MappingUsuario(DataRow row)
         {
             Usuario oUsuario = new Usuario

@@ -213,6 +213,7 @@
             this.txtSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtSubtotal.Location = new System.Drawing.Point(469, 78);
             this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.ReadOnly = true;
             this.txtSubtotal.Size = new System.Drawing.Size(75, 31);
             this.txtSubtotal.TabIndex = 21;
             // 
@@ -311,6 +312,7 @@
             this.txtProporcion.Name = "txtProporcion";
             this.txtProporcion.Size = new System.Drawing.Size(68, 31);
             this.txtProporcion.TabIndex = 15;
+            this.txtProporcion.Leave += new System.EventHandler(this.txtProporcion_Leave);
             // 
             // lblProporcion
             // 
@@ -331,6 +333,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(61, 31);
             this.txtValor.TabIndex = 13;
+            this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
             // lblValor
             // 
@@ -444,6 +447,8 @@
             this.Controls.Add(this.lblNumeroFactura);
             this.Controls.Add(this.dtpFechaFactura);
             this.Controls.Add(this.lblFecha);
+            this.MaximumSize = new System.Drawing.Size(693, 619);
+            this.MinimumSize = new System.Drawing.Size(693, 619);
             this.Name = "frmFactura";
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.gbxDetalles.ResumeLayout(false);
