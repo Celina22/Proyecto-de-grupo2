@@ -19,7 +19,6 @@ namespace LPCFacturas.GUILayer
         ProductoService oProductoService = new ProductoService();
         ProyectoService oProyectoService = new ProyectoService();
         FacturaService oFacturaService = new FacturaService();
-        int ordenDetalle = 0;
         List<DetalleFactura> listaDetalleFactura = new List<DetalleFactura>();
 
         bool flagProducto = false;
@@ -33,6 +32,7 @@ namespace LPCFacturas.GUILayer
         private void frmFactura_Load(object sender, EventArgs e)
         {
             rdbProyecto.Checked = true;
+            txtIdCliente.Focus();
         }
 
         private void rdbProducto_CheckedChanged(object sender, EventArgs e)
@@ -78,7 +78,6 @@ namespace LPCFacturas.GUILayer
 
             }    
         }
-
         private void txtIdDetalle_Leave(object sender, EventArgs e)
         {
             if(flagProducto)
@@ -140,6 +139,9 @@ namespace LPCFacturas.GUILayer
                                      flagProducto? true: false);
                                 
                 limpiarCampos();
+                txtIdDetalle.Focus();
+                calcularTotal();
+
             }
             
         }
@@ -200,24 +202,47 @@ namespace LPCFacturas.GUILayer
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            DetalleFactura detalle;
-            for (int i = 0; i < dgvDetalles.Rows.Count; i++)
+            if (validarCliente())
             {
-                detalle = new DetalleFactura();
-                detalle.Numero_orden = i + 1;
-                if ((bool) dgvDetalles.Rows[i].Cells["esProducto"].Value)
-                    detalle.Producto = oProductoService.recuperarProducto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
+                DetalleFactura detalle;
+                for (int i = 0; i < dgvDetalles.Rows.Count; i++)
+                {
+                    detalle = new DetalleFactura();
+                    detalle.Numero_orden = i + 1;
+                    if ((bool)dgvDetalles.Rows[i].Cells["esProducto"].Value)
+                        detalle.Producto = oProductoService.recuperarProducto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
+                    else
+                        detalle.Proyecto = oProyectoService.recuperarProyecto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
+                    detalle.Precio = Convert.ToInt32(dgvDetalles.Rows[i].Cells["subtotal"].Value);
+                    listaDetalleFactura.Add(detalle);
+                }
+                Factura factura = new Factura();
+                factura.Cliente = oClienteService.recuperarCliente(txtIdCliente.Text);
+                factura.Fecha = dtpFechaFactura.Value;
+                factura.Usuario_creador = usuarioActual;
+                factura.Detalles = listaDetalleFactura;
+                string resultado = oFacturaService.CrearFactura(factura);
+                if (resultado.Length > 0)
+                {
+                    MessageBox.Show("La factura se ha registrado con éxito. Número de factura:" + resultado, "Registrar factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
-                    detalle.Proyecto = oProyectoService.recuperarProyecto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
-                detalle.Precio = Convert.ToInt32(dgvDetalles.Rows[i].Cells["subtotal"].Value);
-                listaDetalleFactura.Add(detalle);
+                {
+                    MessageBox.Show("La factura no se ha podido registrar correctamente.", "Registrar factura", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            Factura factura = new Factura();
-            factura.Cliente = oClienteService.recuperarCliente(txtIdCliente.Text);
-            factura.Fecha = dtpFechaFactura.Value;
-            factura.Usuario_creador = usuarioActual;
-            factura.Detalles = listaDetalleFactura;
-            oFacturaService.CrearFactura(factura);
+            
+        }
+
+        private bool validarCliente()
+        {
+            if (txtNombreCliente.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un cliente.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreCliente.Focus();
+                return false;
+            }
+            return true;
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
@@ -225,7 +250,18 @@ namespace LPCFacturas.GUILayer
             if (this.dgvDetalles.SelectedRows.Count > 0)
             {
                 dgvDetalles.Rows.RemoveAt(this.dgvDetalles.SelectedRows[0].Index);
+                calcularTotal();
             }
+        }
+
+        private void calcularTotal()
+        {
+            double ac = 0;
+            for (int i = 0; i < dgvDetalles.Rows.Count; i++)
+            {
+                ac += Convert.ToDouble(dgvDetalles.Rows[i].Cells["subtotal"].Value);
+            }
+            txtTotal.Text = ac.ToString();
         }
     }
 }

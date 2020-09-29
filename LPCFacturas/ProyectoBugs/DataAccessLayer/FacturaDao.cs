@@ -53,38 +53,39 @@ namespace LPCFacturas.DataAccessLayer
             return oFactura;
         }
 
-        public void InsertarFactura(Factura oFactura)
+        public string InsertarFactura(Factura oFactura)
         {
-            string SQLinsert = " INSERT INTO Facturas(numero_factura, id_cliente, fecha, id_usuario_creador, borrado) " +
-                               "VALUES (" + oFactura.Numero_factura + ", " + oFactura.Cliente.Id_cliente + ", Convert(date,'"
+            string SQLinsert = "INSERT INTO Facturas(numero_factura, id_cliente, fecha, id_usuario_creador, borrado) " +
+                               "VALUES ('" + 0 + "', " + oFactura.Cliente.Id_cliente + ", Convert(date,'"
                                             + oFactura.Fecha.ToShortDateString() + "',103) ," + oFactura.Usuario_creador.IdUsuario + ", 0) ";
             DataManager.GetInstance().EjecutarSQL(SQLinsert);
+            int identity = Convert.ToInt32(DataManager.GetInstance().ConsultaSQLScalar("SELECT @@IDENTITY"));
+            string numeroFactura = "001-" + (1 + identity).ToString().PadLeft(9, '0');
+            DataManager.GetInstance().EjecutarSQL("UPDATE Facturas SET numero_factura='" + numeroFactura + "' WHERE id_factura=" + identity);
+            return numeroFactura;
         }
 
-        public void CrearFactura(Factura oFactura)
+        public string CrearFactura(Factura oFactura)
         {
+            string idFactura;
             try
             {
-                DataManager.GetInstance().Open();
                 DataManager.GetInstance().BeginTransaction();
-                InsertarFactura(oFactura);
+                idFactura = InsertarFactura(oFactura);
                 oDetalleFacturaDao.InsertarDetalles(oFactura.Detalles);
                 DataManager.GetInstance().Commit();
-                MessageBox.Show("Transaccion realizada con exito.");
-                
             }
             catch(Exception ex)
             {
                 DataManager.GetInstance().Rollback();
-                MessageBox.Show("No se pudo realizar la transaccion.");
+                idFactura = "";
                 throw ex;
-                
             }
             finally
             {
                 DataManager.GetInstance().Close();
             }
-                
+            return idFactura;
         }
     }
 }

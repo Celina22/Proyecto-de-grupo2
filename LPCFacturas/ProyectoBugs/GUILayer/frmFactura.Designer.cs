@@ -100,6 +100,7 @@
             // 
             // txtNumeroFactura
             // 
+            this.txtNumeroFactura.Enabled = false;
             this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtNumeroFactura.Location = new System.Drawing.Point(183, 58);
             this.txtNumeroFactura.Name = "txtNumeroFactura";
@@ -132,6 +133,7 @@
             this.txtNombreCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtNombreCliente.Location = new System.Drawing.Point(259, 95);
             this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.ReadOnly = true;
             this.txtNombreCliente.Size = new System.Drawing.Size(241, 31);
             this.txtNombreCliente.TabIndex = 6;
             // 
@@ -169,7 +171,7 @@
             this.btnQuitar.Location = new System.Drawing.Point(601, 73);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(35, 35);
-            this.btnQuitar.TabIndex = 24;
+            this.btnQuitar.TabIndex = 12;
             this.btnQuitar.UseVisualStyleBackColor = false;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
@@ -184,7 +186,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(550, 73);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
-            this.btnAgregar.TabIndex = 23;
+            this.btnAgregar.TabIndex = 11;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -194,7 +196,7 @@
             this.rdbProyecto.Location = new System.Drawing.Point(195, 19);
             this.rdbProyecto.Name = "rdbProyecto";
             this.rdbProyecto.Size = new System.Drawing.Size(67, 17);
-            this.rdbProyecto.TabIndex = 13;
+            this.rdbProyecto.TabIndex = 1;
             this.rdbProyecto.TabStop = true;
             this.rdbProyecto.Text = "Proyecto";
             this.rdbProyecto.UseVisualStyleBackColor = true;
@@ -206,7 +208,7 @@
             this.rdbProducto.Location = new System.Drawing.Point(128, 19);
             this.rdbProducto.Name = "rdbProducto";
             this.rdbProducto.Size = new System.Drawing.Size(68, 17);
-            this.rdbProducto.TabIndex = 12;
+            this.rdbProducto.TabIndex = 0;
             this.rdbProducto.TabStop = true;
             this.rdbProducto.Text = "Producto";
             this.rdbProducto.UseVisualStyleBackColor = true;
@@ -214,12 +216,13 @@
             // 
             // txtSubtotal
             // 
+            this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtSubtotal.Location = new System.Drawing.Point(469, 78);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.ReadOnly = true;
             this.txtSubtotal.Size = new System.Drawing.Size(75, 31);
-            this.txtSubtotal.TabIndex = 21;
+            this.txtSubtotal.TabIndex = 10;
             // 
             // lblSubtotal
             // 
@@ -229,7 +232,7 @@
             this.lblSubtotal.Location = new System.Drawing.Point(381, 81);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(82, 23);
-            this.lblSubtotal.TabIndex = 20;
+            this.lblSubtotal.TabIndex = 9;
             this.lblSubtotal.Text = "Subtotal:";
             // 
             // dgvDetalles
@@ -297,8 +300,9 @@
             this.txtDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtDetalle.Location = new System.Drawing.Point(195, 41);
             this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(227, 31);
-            this.txtDetalle.TabIndex = 18;
+            this.txtDetalle.ReadOnly = true;
+            this.txtDetalle.Size = new System.Drawing.Size(349, 31);
+            this.txtDetalle.TabIndex = 4;
             // 
             // txtIdDetalle
             // 
@@ -306,7 +310,7 @@
             this.txtIdDetalle.Location = new System.Drawing.Point(128, 41);
             this.txtIdDetalle.Name = "txtIdDetalle";
             this.txtIdDetalle.Size = new System.Drawing.Size(61, 31);
-            this.txtIdDetalle.TabIndex = 17;
+            this.txtIdDetalle.TabIndex = 3;
             this.txtIdDetalle.Leave += new System.EventHandler(this.txtIdDetalle_Leave);
             // 
             // lblDetalle
@@ -317,7 +321,7 @@
             this.lblDetalle.Location = new System.Drawing.Point(20, 44);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(102, 23);
-            this.lblDetalle.TabIndex = 16;
+            this.lblDetalle.TabIndex = 2;
             this.lblDetalle.Text = "Proyecto:";
             this.lblDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -327,7 +331,7 @@
             this.txtProporcion.Location = new System.Drawing.Point(307, 78);
             this.txtProporcion.Name = "txtProporcion";
             this.txtProporcion.Size = new System.Drawing.Size(68, 31);
-            this.txtProporcion.TabIndex = 15;
+            this.txtProporcion.TabIndex = 8;
             this.txtProporcion.Leave += new System.EventHandler(this.txtProporcion_Leave);
             // 
             // lblProporcion
@@ -338,7 +342,7 @@
             this.lblProporcion.Location = new System.Drawing.Point(195, 81);
             this.lblProporcion.Name = "lblProporcion";
             this.lblProporcion.Size = new System.Drawing.Size(106, 23);
-            this.lblProporcion.TabIndex = 14;
+            this.lblProporcion.TabIndex = 7;
             this.lblProporcion.Text = "Horas:";
             this.lblProporcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -348,7 +352,7 @@
             this.txtValor.Location = new System.Drawing.Point(128, 78);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(61, 31);
-            this.txtValor.TabIndex = 13;
+            this.txtValor.TabIndex = 6;
             this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
             // lblValor
@@ -359,12 +363,13 @@
             this.lblValor.Location = new System.Drawing.Point(16, 81);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(106, 23);
-            this.lblValor.TabIndex = 12;
+            this.lblValor.TabIndex = 5;
             this.lblValor.Text = "Costo/Hora:";
             this.lblValor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtTotal
             // 
+            this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtTotal.Location = new System.Drawing.Point(515, 513);
             this.txtTotal.Name = "txtTotal";
@@ -404,7 +409,7 @@
             this.btnEditar.Location = new System.Drawing.Point(108, 19);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(50, 50);
-            this.btnEditar.TabIndex = 34;
+            this.btnEditar.TabIndex = 1;
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
@@ -418,7 +423,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(191, 19);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar.TabIndex = 33;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -433,7 +438,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(27, 19);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(50, 50);
-            this.btnNuevo.TabIndex = 30;
+            this.btnNuevo.TabIndex = 0;
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
             // btnSalir
@@ -447,7 +452,7 @@
             this.btnSalir.Location = new System.Drawing.Point(340, 19);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 18;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -471,6 +476,7 @@
             this.MaximumSize = new System.Drawing.Size(693, 619);
             this.MinimumSize = new System.Drawing.Size(693, 619);
             this.Name = "frmFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.gbxDetalles.ResumeLayout(false);
             this.gbxDetalles.PerformLayout();
