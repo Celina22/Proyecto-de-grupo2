@@ -60,7 +60,7 @@ namespace LPCFacturas.DataAccessLayer
                                             + oFactura.Fecha.ToShortDateString() + "',103) ," + oFactura.Usuario_creador.IdUsuario + ", 0) ";
             DataManager.GetInstance().EjecutarSQL(SQLinsert);
             int identity = Convert.ToInt32(DataManager.GetInstance().ConsultaSQLScalar("SELECT @@IDENTITY"));
-            string numeroFactura = "001-" + (1 + identity).ToString().PadLeft(9, '0');
+            string numeroFactura = "001-" + (identity).ToString().PadLeft(9, '0');
             DataManager.GetInstance().EjecutarSQL("UPDATE Facturas SET numero_factura='" + numeroFactura + "' WHERE id_factura=" + identity);
             return numeroFactura;
         }
