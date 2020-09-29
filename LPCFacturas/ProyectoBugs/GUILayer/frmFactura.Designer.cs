@@ -161,6 +161,7 @@
             // btnQuitar
             // 
             this.btnQuitar.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuitar.FlatAppearance.BorderSize = 0;
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -175,6 +176,7 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -243,8 +245,10 @@
             this.subtotal,
             this.esProducto});
             this.dgvDetalles.Location = new System.Drawing.Point(6, 118);
+            this.dgvDetalles.MultiSelect = false;
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
+            this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalles.Size = new System.Drawing.Size(641, 223);
             this.dgvDetalles.TabIndex = 19;
             // 
@@ -392,6 +396,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -405,6 +410,7 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -419,6 +425,7 @@
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -432,6 +439,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;

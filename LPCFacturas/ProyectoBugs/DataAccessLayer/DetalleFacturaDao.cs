@@ -91,13 +91,13 @@ namespace LPCFacturas.DataAccessLayer
                 {
                     SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio, borrado) " +
                                         "VALUES (" + id_factura + ", " + detalle.Numero_orden + ", "
-                                          + detalle.Proyecto.Id_proyecto + "," + "NULL" + "," + detalle.Precio + ", 0) ";
+                                          + "NULL" + "," + detalle.Proyecto.Id_proyecto + "," + detalle.Precio + ", 0) ";
                 }
                 else
                 {
                     SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio, borrado) " +
                                         "VALUES (" + id_factura + ", " + detalle.Numero_orden + ", "
-                                          + "NULL" + "," + detalle.Producto.Id_producto + "," + detalle.Precio + ", 0) ";
+                                          + detalle.Producto.Id_producto + "," + "NULL" + "," + detalle.Precio + ", 0) ";
                 }
 
                 DataManager.GetInstance().EjecutarSQL(SQLInject);
