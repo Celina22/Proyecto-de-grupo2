@@ -55,7 +55,7 @@ namespace LPCFacturas.DataAccessLayer
         private DetalleFactura MappingDetalleFactura(DataRow row)
         {
             DetalleFactura oDetalleFactura;
-            if (row["id_producto"].ToString() != "NULL")
+            if (!DBNull.Value.Equals(row["id_producto"]))
             {
                 oDetalleFactura = new DetalleFactura
                 {
@@ -74,7 +74,7 @@ namespace LPCFacturas.DataAccessLayer
                     Id_detalle_factura = Convert.ToInt32(row["id_detalle_factura"].ToString()),
                     Numero_orden = Convert.ToInt32(row["numero_orden"].ToString()),
                     //Producto = oProducto.GetProducto(row["id_cliente"].ToString()),
-                    Proyecto = oProyecto.GetProyecto(row["id_producto"].ToString()),
+                    Proyecto = oProyecto.GetProyecto(row["id_proyecto"].ToString()),
                     Precio = Convert.ToDouble(row["precio"].ToString()),
                     Cantidad = Convert.ToInt32(row["cantidad"].ToString())
                 };

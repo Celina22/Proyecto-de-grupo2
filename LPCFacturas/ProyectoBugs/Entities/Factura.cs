@@ -14,7 +14,7 @@ namespace LPCFacturas.Entities
         private DateTime fecha;
         private Usuario usuario_creador;
         private float total;
-        private IList<DetalleFactura> detalles;
+        private IList<DetalleFactura> detalles = new List<DetalleFactura>();
 
         public int Id_factura { get => id_factura; set => id_factura = value; }
         public string Numero_factura { get => numero_factura; set => numero_factura = value; }

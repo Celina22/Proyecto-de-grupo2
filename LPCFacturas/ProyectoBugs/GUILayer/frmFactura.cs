@@ -20,7 +20,6 @@ namespace LPCFacturas.GUILayer
         ProyectoService oProyectoService = new ProyectoService();
         FacturaService oFacturaService = new FacturaService();
         DetalleFacturaService oDetalleFacturaService = new DetalleFacturaService();
-        List<DetalleFactura> listaDetalleFactura = new List<DetalleFactura>();
 
         bool flagProducto = false;
         Usuario usuarioActual;
@@ -205,6 +204,7 @@ namespace LPCFacturas.GUILayer
         {
             if (validarCliente())
             {
+                Factura factura = new Factura();
                 DetalleFactura detalle;
                 for (int i = 0; i < dgvDetalles.Rows.Count; i++)
                 {
@@ -216,18 +216,18 @@ namespace LPCFacturas.GUILayer
                         detalle.Proyecto = oProyectoService.recuperarProyecto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
                     detalle.Precio = Convert.ToDouble(dgvDetalles.Rows[i].Cells["precio"].Value);
                     detalle.Cantidad = Convert.ToInt32(dgvDetalles.Rows[i].Cells["cantidad"].Value);
-                    listaDetalleFactura.Add(detalle);
+                    factura.Detalles.Add(detalle);
                 }
-                Factura factura = new Factura();
+                
                 factura.Cliente = oClienteService.recuperarCliente(txtIdCliente.Text);
                 factura.Fecha = dtpFechaFactura.Value;
                 factura.Usuario_creador = usuarioActual;
                 factura.Total = Convert.ToSingle(txtTotal.Text);
-                factura.Detalles = listaDetalleFactura;
                 string resultado = oFacturaService.CrearFactura(factura);
                 if (resultado.Length > 0)
                 {
                     MessageBox.Show("La factura se ha registrado con éxito. Número de factura:" + resultado, "Registrar factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvDetalles.Rows.Clear();
                 }
                 else
                 {
@@ -285,7 +285,7 @@ namespace LPCFacturas.GUILayer
 
             foreach (DetalleFactura detalle in listaDetalles)
             {
-                dgvDetalles.Rows.Add(detalle.Id_detalle_factura,
+                dgvDetalles.Rows.Add((detalle.Producto != null) ? detalle.Producto.Id_producto : detalle.Proyecto.Id_proyecto,
                                      (detalle.Producto != null)?detalle.Producto.Nombre:detalle.Proyecto.Descripcion,
                                      detalle.Cantidad,
                                      detalle.Precio,
@@ -293,6 +293,7 @@ namespace LPCFacturas.GUILayer
                                      (detalle.Producto != null) ? true : false);
 
             }
+            txtTotal.Text = oFactura.Total.ToString();
 
         }
     }
