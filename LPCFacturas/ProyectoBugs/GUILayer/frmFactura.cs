@@ -19,6 +19,7 @@ namespace LPCFacturas.GUILayer
         ProductoService oProductoService = new ProductoService();
         ProyectoService oProyectoService = new ProyectoService();
         FacturaService oFacturaService = new FacturaService();
+        DetalleFacturaService oDetalleFacturaService = new DetalleFacturaService();
         List<DetalleFactura> listaDetalleFactura = new List<DetalleFactura>();
 
         bool flagProducto = false;
@@ -213,13 +214,15 @@ namespace LPCFacturas.GUILayer
                         detalle.Producto = oProductoService.recuperarProducto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
                     else
                         detalle.Proyecto = oProyectoService.recuperarProyecto(dgvDetalles.Rows[i].Cells["id"].Value.ToString());
-                    detalle.Precio = Convert.ToInt32(dgvDetalles.Rows[i].Cells["subtotal"].Value);
+                    detalle.Precio = Convert.ToDouble(dgvDetalles.Rows[i].Cells["precio"].Value);
+                    detalle.Cantidad = Convert.ToInt32(dgvDetalles.Rows[i].Cells["cantidad"].Value);
                     listaDetalleFactura.Add(detalle);
                 }
                 Factura factura = new Factura();
                 factura.Cliente = oClienteService.recuperarCliente(txtIdCliente.Text);
                 factura.Fecha = dtpFechaFactura.Value;
                 factura.Usuario_creador = usuarioActual;
+                factura.Total = Convert.ToSingle(txtTotal.Text);
                 factura.Detalles = listaDetalleFactura;
                 string resultado = oFacturaService.CrearFactura(factura);
                 if (resultado.Length > 0)
@@ -266,6 +269,30 @@ namespace LPCFacturas.GUILayer
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            txtNumeroFactura.Enabled = true;
+            btnBuscar.Visible = true;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Factura oFactura = new Factura();
+            IList<DetalleFactura> listaDetalles;
+            oFactura = oFacturaService.GetFactura(txtNumeroFactura.Text);
+            listaDetalles = oDetalleFacturaService.recuperarTodos();
+
+            txtIdCliente.Text = oFactura.Cliente.Id_cliente.ToString();
+            txtNombreCliente.Text = oFactura.Cliente.Razon_social;
+
+            foreach (DetalleFactura detalle in listaDetalles)
+            {
+                dgvDetalles.Rows.Add(detalle.Id_detalle_factura,
+                                     (detalle.Producto != null)?detalle.Producto.Nombre:detalle.Proyecto.Descripcion,
+                                     detalle.Cantidad,
+                                     detalle.Precio,
+                                     (detalle.Cantidad*detalle.Precio),
+                                     (detalle.Producto != null) ? true : false);
+
+            }
 
         }
     }

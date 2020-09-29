@@ -17,5 +17,11 @@ namespace LPCFacturas.BusinessLayer
         {
             return oFacturaDao.CrearFactura(oFactura);
         }
+
+        public Factura GetFactura(string idFactura)
+        {
+            return oFacturaDao.GetFactura(idFactura);
+        }
+
     }
 }

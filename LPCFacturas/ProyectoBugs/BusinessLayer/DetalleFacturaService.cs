@@ -12,5 +12,11 @@ namespace LPCFacturas.BusinessLayer
     class DetalleFacturaService
     {
         private DetalleFacturaDao oDetalleFacturaDao = new DetalleFacturaDao();
+
+        public IList<DetalleFactura> recuperarTodos()
+        {
+            return oDetalleFacturaDao.GetAll();
+        }
     }
+
 }

@@ -22,8 +22,8 @@ namespace LPCFacturas.DataAccessLayer
         {
             List<DetalleFactura> listadoDetalleFactura = new List<DetalleFactura>();
 
-            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio " +
-                         " FROM FacturasDetalle WHERE p.borrado=0";
+            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio, cantidad " +
+                         " FROM FacturasDetalle WHERE borrado=0";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
@@ -39,8 +39,8 @@ namespace LPCFacturas.DataAccessLayer
         {
             List<DetalleFactura> listadoDetalleFactura = new List<DetalleFactura>();
 
-            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio " +
-                         " FROM FacturasDetalle WHERE p.borrado=0 AND id_factura = " + idFactura;
+            var strSql = " SELECT id_detalle_factura, numero_orden, id_producto, id_proyecto, precio, cantidad " +
+                         " FROM FacturasDetalle WHERE borrado=0 AND id_factura = " + idFactura;
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 
@@ -63,7 +63,8 @@ namespace LPCFacturas.DataAccessLayer
                     Numero_orden = Convert.ToInt32(row["numero_orden"].ToString()),
                     Producto = oProducto.GetProducto(row["id_producto"].ToString()),
                     //Proyecto = oProyecto.GetProyecto(row["id_cliente"].ToString()),
-                    Precio = Convert.ToInt32(row["precio"].ToString())
+                    Precio = Convert.ToDouble(row["precio"].ToString()),
+                    Cantidad = Convert.ToInt32(row["cantidad"].ToString())
                 };
             }
             else
@@ -74,7 +75,8 @@ namespace LPCFacturas.DataAccessLayer
                     Numero_orden = Convert.ToInt32(row["numero_orden"].ToString()),
                     //Producto = oProducto.GetProducto(row["id_cliente"].ToString()),
                     Proyecto = oProyecto.GetProyecto(row["id_producto"].ToString()),
-                    Precio = Convert.ToInt32(row["precio"].ToString())
+                    Precio = Convert.ToDouble(row["precio"].ToString()),
+                    Cantidad = Convert.ToInt32(row["cantidad"].ToString())
                 };
             }
 
@@ -89,15 +91,15 @@ namespace LPCFacturas.DataAccessLayer
                 string SQLInject;
                 if (detalle.Producto == null)
                 {
-                    SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio, borrado) " +
+                    SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio,cantidad, borrado) " +
                                         "VALUES (" + id_factura + ", " + detalle.Numero_orden + ", "
-                                          + "NULL" + "," + detalle.Proyecto.Id_proyecto + "," + detalle.Precio + ", 0) ";
+                                          + "NULL" + "," + detalle.Proyecto.Id_proyecto + "," + detalle.Precio +"," + detalle.Cantidad + ", 0) ";
                 }
                 else
                 {
-                    SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio, borrado) " +
+                    SQLInject = " INSERT INTO FacturasDetalle(id_factura, numero_orden, id_producto, id_proyecto, precio,cantidad, borrado) " +
                                         "VALUES (" + id_factura + ", " + detalle.Numero_orden + ", "
-                                          + detalle.Producto.Id_producto + "," + "NULL" + "," + detalle.Precio + ", 0) ";
+                                          + detalle.Producto.Id_producto + "," + "NULL" + "," + detalle.Precio + ","+ detalle.Cantidad+ ", 0) ";
                 }
 
                 DataManager.GetInstance().EjecutarSQL(SQLInject);
