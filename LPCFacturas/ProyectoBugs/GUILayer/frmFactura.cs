@@ -219,5 +219,13 @@ namespace LPCFacturas.GUILayer
             factura.Detalles = listaDetalleFactura;
             oFacturaService.CrearFactura(factura);
         }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvDetalles.SelectedRows.Count > 0)
+            {
+                dgvDetalles.Rows.RemoveAt(this.dgvDetalles.SelectedRows[0].Index);
+            }
+        }
     }
 }
