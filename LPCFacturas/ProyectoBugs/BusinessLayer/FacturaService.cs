@@ -13,9 +13,9 @@ namespace LPCFacturas.BusinessLayer
     {
         FacturaDao oFacturaDao = new FacturaDao();
 
-        public void CrearFactura(Factura oFactura)
+        public string CrearFactura(Factura oFactura)
         {
-            oFacturaDao.CrearFactura(oFactura);
+            return oFacturaDao.CrearFactura(oFactura);
         }
     }
 }
