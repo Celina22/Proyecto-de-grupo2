@@ -86,5 +86,23 @@ namespace LPCFacturas.DataAccessLayer
             }
                 
         }
+
+        public Factura GetFactura(string idFactura)
+        {
+            String consultaSql = string.Concat(" SELECT id_cliente, fecha",
+                                                "   FROM Facturas",
+                                                "  WHERE borrado=0 and id_factura =  '", idFactura, "'");
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return MappingFactura(resultado.Rows[0]);
+            }
+
+            return null;
+        }
     }
 }
