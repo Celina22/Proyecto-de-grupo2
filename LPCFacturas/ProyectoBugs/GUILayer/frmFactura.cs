@@ -269,16 +269,27 @@ namespace LPCFacturas.GUILayer
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            txtPuntoDeVenta.Text = "001";
             txtNumeroFactura.Enabled = true;
             btnBuscar.Visible = true;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            dgvDetalles.Rows.Clear();
             Factura oFactura = new Factura();
+            string numeroFactura;
             IList<DetalleFactura> listaDetalles;
-            oFactura = oFacturaService.GetFactura(txtNumeroFactura.Text);
-            listaDetalles = oDetalleFacturaService.recuperarTodos(txtNumeroFactura.Text);
+            numeroFactura = txtPuntoDeVenta.Text + "-" + txtNumeroFactura.Text;
+            oFactura = oFacturaService.GetFactura(numeroFactura);
+            if (oFactura == null)
+            {
+                MessageBox.Show("No se encontro esa factura", "Factura no encontrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumeroFactura.Clear();
+                txtPuntoDeVenta.Clear();
+                return;
+            }
+            listaDetalles = oDetalleFacturaService.recuperarTodos(oFactura.Id_factura.ToString());
 
             txtIdCliente.Text = oFactura.Cliente.Id_cliente.ToString();
             txtNombreCliente.Text = oFactura.Cliente.Razon_social;
@@ -294,7 +305,12 @@ namespace LPCFacturas.GUILayer
 
             }
             txtTotal.Text = oFactura.Total.ToString();
+            
+        }
 
+        private void txtNumeroFactura_Leave(object sender, EventArgs e)
+        {
+            txtNumeroFactura.Text = txtNumeroFactura.Text.PadLeft(6, '0');
         }
     }
 }

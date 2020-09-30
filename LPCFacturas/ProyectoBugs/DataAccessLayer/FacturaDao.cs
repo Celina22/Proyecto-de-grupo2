@@ -62,7 +62,7 @@ namespace LPCFacturas.DataAccessLayer
                                             oFactura.Total + ", 0) ";
             DataManager.GetInstance().EjecutarSQL(SQLinsert);
             int identity = Convert.ToInt32(DataManager.GetInstance().ConsultaSQLScalar("SELECT @@IDENTITY"));
-            string numeroFactura = "001-" + (identity).ToString().PadLeft(9, '0');
+            string numeroFactura = "001-" + (identity).ToString().PadLeft(6, '0');
             DataManager.GetInstance().EjecutarSQL("UPDATE Facturas SET numero_factura='" + numeroFactura + "' WHERE id_factura=" + identity);
             return numeroFactura;
         }
@@ -90,11 +90,11 @@ namespace LPCFacturas.DataAccessLayer
             return idFactura;
         }
 
-        public Factura GetFactura(string idFactura)
+        public Factura GetFactura(string numeroFactura)
         {
             String consultaSql = string.Concat(" SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador, total",
                                                 "   FROM Facturas",
-                                                "  WHERE borrado=0 and id_factura = ",idFactura);
+                                                "  WHERE borrado=0 and numero_factura = '", numeroFactura, "'");
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
             var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);

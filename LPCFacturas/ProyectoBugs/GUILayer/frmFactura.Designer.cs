@@ -31,7 +31,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.dtpFechaFactura = new System.Windows.Forms.DateTimePicker();
             this.lblNumeroFactura = new System.Windows.Forms.Label();
-            this.txtNumeroFactura = new System.Windows.Forms.TextBox();
+            this.txtPuntoDeVenta = new System.Windows.Forms.TextBox();
             this.lblClientes = new System.Windows.Forms.Label();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -64,6 +64,8 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtNumeroFactura = new System.Windows.Forms.TextBox();
+            this.lblPuntoDeVenta = new System.Windows.Forms.Label();
             this.gbxDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -85,7 +87,7 @@
             this.dtpFechaFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.dtpFechaFactura.Location = new System.Drawing.Point(183, 21);
             this.dtpFechaFactura.Name = "dtpFechaFactura";
-            this.dtpFechaFactura.Size = new System.Drawing.Size(317, 31);
+            this.dtpFechaFactura.Size = new System.Drawing.Size(346, 31);
             this.dtpFechaFactura.TabIndex = 1;
             // 
             // lblNumeroFactura
@@ -93,20 +95,20 @@
             this.lblNumeroFactura.AutoSize = true;
             this.lblNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblNumeroFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblNumeroFactura.Location = new System.Drawing.Point(35, 61);
+            this.lblNumeroFactura.Location = new System.Drawing.Point(269, 61);
             this.lblNumeroFactura.Name = "lblNumeroFactura";
             this.lblNumeroFactura.Size = new System.Drawing.Size(142, 23);
             this.lblNumeroFactura.TabIndex = 2;
             this.lblNumeroFactura.Text = "Número Factura:";
             // 
-            // txtNumeroFactura
+            // txtPuntoDeVenta
             // 
-            this.txtNumeroFactura.Enabled = false;
-            this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNumeroFactura.Location = new System.Drawing.Point(183, 58);
-            this.txtNumeroFactura.Name = "txtNumeroFactura";
-            this.txtNumeroFactura.Size = new System.Drawing.Size(70, 31);
-            this.txtNumeroFactura.TabIndex = 3;
+            this.txtPuntoDeVenta.Enabled = false;
+            this.txtPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtPuntoDeVenta.Location = new System.Drawing.Point(183, 58);
+            this.txtPuntoDeVenta.Name = "txtPuntoDeVenta";
+            this.txtPuntoDeVenta.Size = new System.Drawing.Size(70, 31);
+            this.txtPuntoDeVenta.TabIndex = 3;
             // 
             // lblClientes
             // 
@@ -134,7 +136,7 @@
             this.txtNombreCliente.Location = new System.Drawing.Point(259, 95);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.ReadOnly = true;
-            this.txtNombreCliente.Size = new System.Drawing.Size(241, 31);
+            this.txtNombreCliente.Size = new System.Drawing.Size(270, 31);
             this.txtNombreCliente.TabIndex = 6;
             // 
             // gbxDetalles
@@ -459,7 +461,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(260, 58);
+            this.btnBuscar.Location = new System.Drawing.Point(540, 58);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 31);
             this.btnBuscar.TabIndex = 12;
@@ -468,12 +470,35 @@
             this.btnBuscar.Visible = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // txtNumeroFactura
+            // 
+            this.txtNumeroFactura.Enabled = false;
+            this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtNumeroFactura.Location = new System.Drawing.Point(417, 57);
+            this.txtNumeroFactura.Name = "txtNumeroFactura";
+            this.txtNumeroFactura.Size = new System.Drawing.Size(112, 31);
+            this.txtNumeroFactura.TabIndex = 13;
+            this.txtNumeroFactura.Leave += new System.EventHandler(this.txtNumeroFactura_Leave);
+            // 
+            // lblPuntoDeVenta
+            // 
+            this.lblPuntoDeVenta.AutoSize = true;
+            this.lblPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblPuntoDeVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblPuntoDeVenta.Location = new System.Drawing.Point(41, 60);
+            this.lblPuntoDeVenta.Name = "lblPuntoDeVenta";
+            this.lblPuntoDeVenta.Size = new System.Drawing.Size(136, 23);
+            this.lblPuntoDeVenta.TabIndex = 14;
+            this.lblPuntoDeVenta.Text = "Punto de Venta:";
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(677, 580);
+            this.Controls.Add(this.lblPuntoDeVenta);
+            this.Controls.Add(this.txtNumeroFactura);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTotal);
@@ -482,7 +507,7 @@
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.lblClientes);
-            this.Controls.Add(this.txtNumeroFactura);
+            this.Controls.Add(this.txtPuntoDeVenta);
             this.Controls.Add(this.lblNumeroFactura);
             this.Controls.Add(this.dtpFechaFactura);
             this.Controls.Add(this.lblFecha);
@@ -505,7 +530,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DateTimePicker dtpFechaFactura;
         private System.Windows.Forms.Label lblNumeroFactura;
-        private System.Windows.Forms.TextBox txtNumeroFactura;
+        private System.Windows.Forms.TextBox txtPuntoDeVenta;
         private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
@@ -538,5 +563,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.DataGridViewCheckBoxColumn esProducto;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtNumeroFactura;
+        private System.Windows.Forms.Label lblPuntoDeVenta;
     }
 }
