@@ -216,5 +216,11 @@
   <ItemGroup>
     <None Include="Sources\Imagenes\firewall off2.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\Mime Blank.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\Search.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

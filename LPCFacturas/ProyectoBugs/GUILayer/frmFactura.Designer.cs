@@ -76,7 +76,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblFecha.Location = new System.Drawing.Point(116, 27);
+            this.lblFecha.Location = new System.Drawing.Point(139, 27);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(61, 23);
             this.lblFecha.TabIndex = 0;
@@ -85,7 +85,7 @@
             // dtpFechaFactura
             // 
             this.dtpFechaFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.dtpFechaFactura.Location = new System.Drawing.Point(183, 21);
+            this.dtpFechaFactura.Location = new System.Drawing.Point(206, 21);
             this.dtpFechaFactura.Name = "dtpFechaFactura";
             this.dtpFechaFactura.Size = new System.Drawing.Size(346, 31);
             this.dtpFechaFactura.TabIndex = 1;
@@ -95,7 +95,7 @@
             this.lblNumeroFactura.AutoSize = true;
             this.lblNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblNumeroFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblNumeroFactura.Location = new System.Drawing.Point(269, 61);
+            this.lblNumeroFactura.Location = new System.Drawing.Point(292, 61);
             this.lblNumeroFactura.Name = "lblNumeroFactura";
             this.lblNumeroFactura.Size = new System.Drawing.Size(142, 23);
             this.lblNumeroFactura.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             this.txtPuntoDeVenta.Enabled = false;
             this.txtPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtPuntoDeVenta.Location = new System.Drawing.Point(183, 58);
+            this.txtPuntoDeVenta.Location = new System.Drawing.Point(206, 58);
             this.txtPuntoDeVenta.Name = "txtPuntoDeVenta";
             this.txtPuntoDeVenta.Size = new System.Drawing.Size(70, 31);
             this.txtPuntoDeVenta.TabIndex = 3;
@@ -115,7 +115,7 @@
             this.lblClientes.AutoSize = true;
             this.lblClientes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblClientes.Location = new System.Drawing.Point(105, 98);
+            this.lblClientes.Location = new System.Drawing.Point(128, 98);
             this.lblClientes.Name = "lblClientes";
             this.lblClientes.Size = new System.Drawing.Size(72, 23);
             this.lblClientes.TabIndex = 4;
@@ -124,7 +124,7 @@
             // txtIdCliente
             // 
             this.txtIdCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdCliente.Location = new System.Drawing.Point(183, 95);
+            this.txtIdCliente.Location = new System.Drawing.Point(206, 95);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(70, 31);
             this.txtIdCliente.TabIndex = 5;
@@ -133,7 +133,7 @@
             // txtNombreCliente
             // 
             this.txtNombreCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNombreCliente.Location = new System.Drawing.Point(259, 95);
+            this.txtNombreCliente.Location = new System.Drawing.Point(282, 95);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.ReadOnly = true;
             this.txtNombreCliente.Size = new System.Drawing.Size(270, 31);
@@ -437,10 +437,10 @@
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btnNuevo.Location = new System.Drawing.Point(27, 19);
+            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.Mime_Blank;
+            this.btnNuevo.Location = new System.Drawing.Point(20, 15);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(50, 50);
+            this.btnNuevo.Size = new System.Drawing.Size(57, 59);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
@@ -461,11 +461,13 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(540, 58);
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
+            this.btnBuscar.Location = new System.Drawing.Point(577, 48);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(57, 51);
             this.btnBuscar.TabIndex = 12;
-            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Visible = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -474,7 +476,7 @@
             // 
             this.txtNumeroFactura.Enabled = false;
             this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNumeroFactura.Location = new System.Drawing.Point(417, 57);
+            this.txtNumeroFactura.Location = new System.Drawing.Point(440, 57);
             this.txtNumeroFactura.Name = "txtNumeroFactura";
             this.txtNumeroFactura.Size = new System.Drawing.Size(112, 31);
             this.txtNumeroFactura.TabIndex = 13;
@@ -485,7 +487,7 @@
             this.lblPuntoDeVenta.AutoSize = true;
             this.lblPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblPuntoDeVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblPuntoDeVenta.Location = new System.Drawing.Point(41, 60);
+            this.lblPuntoDeVenta.Location = new System.Drawing.Point(64, 60);
             this.lblPuntoDeVenta.Name = "lblPuntoDeVenta";
             this.lblPuntoDeVenta.Size = new System.Drawing.Size(136, 23);
             this.lblPuntoDeVenta.TabIndex = 14;
