@@ -33,6 +33,8 @@ namespace LPCFacturas.GUILayer
         {
             rdbProyecto.Checked = true;
             txtIdCliente.Focus();
+            habilitarCampos(false);
+
         }
 
         private void rdbProducto_CheckedChanged(object sender, EventArgs e)
