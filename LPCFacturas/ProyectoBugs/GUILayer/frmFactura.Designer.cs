@@ -443,6 +443,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(57, 59);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnSalir
             // 
@@ -464,9 +465,9 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
-            this.btnBuscar.Location = new System.Drawing.Point(577, 48);
+            this.btnBuscar.Location = new System.Drawing.Point(567, 57);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(57, 51);
+            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Visible = false;

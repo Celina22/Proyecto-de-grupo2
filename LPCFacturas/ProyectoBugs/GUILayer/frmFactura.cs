@@ -139,7 +139,7 @@ namespace LPCFacturas.GUILayer
                                      flagProducto? true: false);
                                 
                 limpiarCampos();
-                txtIdDetalle.Focus();
+                rdbProducto.Focus();
                 calcularTotal();
 
             }
@@ -272,6 +272,7 @@ namespace LPCFacturas.GUILayer
             txtPuntoDeVenta.Text = "001";
             txtNumeroFactura.Enabled = true;
             btnBuscar.Visible = true;
+            habilitarCampos(false);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -284,7 +285,7 @@ namespace LPCFacturas.GUILayer
             oFactura = oFacturaService.GetFactura(numeroFactura);
             if (oFactura == null)
             {
-                MessageBox.Show("No se encontro esa factura", "Factura no encontrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se encontró la factura ingresada.", "Factura no encontrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNumeroFactura.Clear();
                 txtPuntoDeVenta.Clear();
                 return;
@@ -302,15 +303,40 @@ namespace LPCFacturas.GUILayer
                                      detalle.Precio,
                                      (detalle.Cantidad*detalle.Precio),
                                      (detalle.Producto != null) ? true : false);
-
             }
             txtTotal.Text = oFactura.Total.ToString();
-            
         }
 
         private void txtNumeroFactura_Leave(object sender, EventArgs e)
         {
             txtNumeroFactura.Text = txtNumeroFactura.Text.PadLeft(6, '0');
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Quiere crear una nueva factura?", "Registrar factura",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                limpiarCampos();
+                dgvDetalles.Rows.Clear();
+                txtIdCliente.Clear();
+                txtNumeroFactura.Clear();
+                txtPuntoDeVenta.Clear();
+                txtNumeroFactura.Enabled = false;
+                btnBuscar.Visible = false;
+                habilitarCampos(true);
+            }
+        }
+
+        private void habilitarCampos(bool valor)
+        {
+            txtIdCliente.Enabled = valor;
+            txtNombreCliente.Enabled = valor;
+            rdbProducto.Enabled = rdbProyecto.Enabled = valor;
+            txtIdDetalle.Enabled = txtDetalle.Enabled = valor;
+            txtProporcion.Enabled = txtValor.Enabled = valor;
+            dgvDetalles.Enabled = valor;
+            btnAgregar.Enabled = btnQuitar.Enabled = valor;
         }
     }
 }
