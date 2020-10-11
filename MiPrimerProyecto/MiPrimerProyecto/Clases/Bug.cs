@@ -114,10 +114,10 @@ namespace MiPrimerProyecto.Clases
                             "WHERE b.id_bug=" + idBug;
             return oBD.consultar(query);
         }
-        public void crearBug()
+        /*public void crearBug()
         {
             string insertSQL = "INSERT INTO Bugs"
             DataManager.GetInstance().EjecutarSQL
-        }
+        }*/
     }
 }

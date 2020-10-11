@@ -50,7 +50,7 @@ namespace MiPrimerProyecto.Formularios
             BugHistorico oBugHistorico = new BugHistorico();
             oBugHistorico.Fecha_historico = DateTime.Today;
             oBugHistorico.Id_usuario_responsable = 1;
-            oBug.crearBug();
+            //oBug.crearBug();
         }
     }
 }

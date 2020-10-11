@@ -305,6 +305,7 @@ namespace LPCFacturas.GUILayer
                                      (detalle.Producto != null) ? true : false);
             }
             txtTotal.Text = oFactura.Total.ToString();
+            habilitarCampos(true);
         }
 
         private void txtNumeroFactura_Leave(object sender, EventArgs e)

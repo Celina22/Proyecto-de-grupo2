@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiPrimerProyecto.Formularios;
+using MiPrimerProyecto.Reportes;
 
 namespace MiPrimerProyecto
 {
@@ -17,7 +18,7 @@ namespace MiPrimerProyecto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_principal());
+            Application.Run(new Form1());
         }
     }
 }
