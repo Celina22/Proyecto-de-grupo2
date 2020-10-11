@@ -133,7 +133,7 @@ namespace LPCFacturas.GUILayer
             {
                 Cliente oCliente = new Cliente();
 
-                oCliente.Cuit = Convert.ToInt32(txtCuit.Text);
+                oCliente.Cuit = Convert.ToInt64(txtCuit.Text);
                 oCliente.Razon_social = txtRazonSocial.Text;
                 oCliente.Calle = txtCalle.Text;
                 oCliente.Numero = Convert.ToInt32(txtNumero.Text);
@@ -186,7 +186,7 @@ namespace LPCFacturas.GUILayer
                 txtCuit.Focus();
                 return false;
             }
-            else if (! Int32.TryParse(txtCuit.Text, out int numero))
+            else if (! Int64.TryParse(txtCuit.Text, out long numero))
             {
                 MessageBox.Show("Datos ingresados no válidos. El CUIT debe contener sólamente números.", "Datos de cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCuit.Focus();

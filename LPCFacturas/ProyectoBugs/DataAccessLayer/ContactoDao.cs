@@ -73,7 +73,7 @@ namespace LPCFacturas.DataAccessLayer
                 Nombre = row["nombre"].ToString(),
                 Apellido = row["apellido"].ToString(),
                 Email = row["email"].ToString(),
-                Telefono = Convert.ToInt32(row["telefono"].ToString())
+                Telefono = Convert.ToInt64(row["telefono"].ToString())
             };
 
             return oProyecto;
