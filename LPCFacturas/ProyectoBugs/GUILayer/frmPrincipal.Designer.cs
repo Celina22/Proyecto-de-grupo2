@@ -40,8 +40,8 @@
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,19 +134,19 @@
             this.comprasClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.comprasClientesToolStripMenuItem.Text = "Compras clientes";
             // 
-            // nuevaFacturaToolStripMenuItem
-            // 
-            this.nuevaFacturaToolStripMenuItem.Name = "nuevaFacturaToolStripMenuItem";
-            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevaFacturaToolStripMenuItem.Text = "Registrar Factura";
-            this.nuevaFacturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaFacturaToolStripMenuItem_Click);
-            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // nuevaFacturaToolStripMenuItem
+            // 
+            this.nuevaFacturaToolStripMenuItem.Name = "nuevaFacturaToolStripMenuItem";
+            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaFacturaToolStripMenuItem.Text = "Nueva Factura";
+            this.nuevaFacturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaFacturaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
