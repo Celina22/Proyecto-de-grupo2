@@ -424,7 +424,6 @@
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(346, 31);
             this.cboCliente.TabIndex = 15;
-            this.cboCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // cboDetalle
             // 

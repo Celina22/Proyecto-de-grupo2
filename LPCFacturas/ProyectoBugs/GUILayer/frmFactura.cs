@@ -351,9 +351,5 @@ namespace LPCFacturas.GUILayer
             btnAgregar.Enabled = btnQuitar.Enabled = valor;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
