@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,11 @@ namespace LPCFacturas.BusinessLayer
         public void eliminarCliente(Cliente cliente)
         {
             oClienteDao.eliminarCliente(cliente);
+        }
+
+        public DataTable recuperarClientes()
+        {
+            return oClienteDao.recuperarCLientes();
         }
     }
 }

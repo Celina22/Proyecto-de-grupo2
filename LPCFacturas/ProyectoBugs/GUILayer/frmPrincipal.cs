@@ -32,11 +32,13 @@ namespace LPCFacturas.GUILayer
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            this.Visible = false;
             frmLogin fl = new frmLogin();
             fl.ShowDialog();
             UsuarioActual = fl.UsuarioLogueado;
             this.Text = "Menú Principal - Usuario actual: " + UsuarioActual.NombreUsuario;
             fl.Dispose();
+            this.Visible = true;
         }
 
         private void proyectosToolStripMenuItem_Click(object sender, EventArgs e)

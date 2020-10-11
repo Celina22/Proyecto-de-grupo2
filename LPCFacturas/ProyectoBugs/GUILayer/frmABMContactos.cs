@@ -124,7 +124,7 @@ namespace LPCFacturas.GUILayer
                 oContacto.Nombre = txtNombre.Text;
                 oContacto.Apellido = txtApellido.Text;
                 oContacto.Email = txtEmail.Text;
-                oContacto.Telefono = Convert.ToInt32(txtTelefono.Text);
+                oContacto.Telefono = Convert.ToInt64(txtTelefono.Text);
                 if (nuevo)
                 {
                     oContactoService.crearContacto(oContacto);
@@ -170,7 +170,7 @@ namespace LPCFacturas.GUILayer
                 txtTelefono.Focus();
                 return false;
             }
-            else if (! Int32.TryParse(txtTelefono.Text, out int numero))
+            else if (! Int64.TryParse(txtTelefono.Text, out long numero))
             {
                 MessageBox.Show("Datos ingresados no válidos. El teléfono de contacto debe contener solamente números.", "Datos de contacto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTelefono.Focus();

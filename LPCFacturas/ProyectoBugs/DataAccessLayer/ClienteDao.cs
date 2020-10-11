@@ -24,6 +24,14 @@ namespace LPCFacturas.DataAccessLayer
 
             return listadoClientes;
         }
+
+        public DataTable recuperarCLientes()
+        {
+            var SQLquery = "SELECT * FROM Clientes WHERE borrado=0";
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
         public Cliente GetCliente(string idCliente)
         {
             Cliente clienteObtenido;
@@ -78,7 +86,7 @@ namespace LPCFacturas.DataAccessLayer
             Cliente oCliente = new Cliente
             {
                 Id_cliente = Convert.ToInt32(row["id_cliente"].ToString()),
-                Cuit = Convert.ToInt32(row["cuit"].ToString()),
+                Cuit = Convert.ToInt64(row["cuit"].ToString()),
                 Razon_social = row["razon_social"].ToString(),
                 Calle = row["calle"].ToString(),
                 Numero = Convert.ToInt32(row["numero"].ToString()),
