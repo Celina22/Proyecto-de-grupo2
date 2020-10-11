@@ -27,23 +27,14 @@ namespace LPCFacturas.GUILayer
         {
             this.usuarioActual = usuarioActual;
             InitializeComponent();
-            cargarCombo(cboCliente, oClienteService.recuperarTodos(), "razon_social", "id_cliente");
         }
 
         private void frmFactura_Load(object sender, EventArgs e)
         {
             rdbProyecto.Checked = true;
-            cboCliente.Focus();
-            cboCliente.DropDownHeight = 100;
-        }
+            txtIdCliente.Focus();
+            habilitarCampos(false);
 
-        private void cargarCombo(ComboBox combo, Object source, string display, string value)
-        {
-            combo.DataSource = source;
-            combo.DisplayMember = display;
-            combo.ValueMember = value;
-            combo.DropDownStyle = ComboBoxStyle.DropDownList;
-            combo.SelectedIndex = -1;
         }
 
         private void rdbProducto_CheckedChanged(object sender, EventArgs e)
@@ -53,7 +44,6 @@ namespace LPCFacturas.GUILayer
             lblDetalle.Text = "Producto:";
             lblValor.Text = "Precio:";
             lblProporcion.Text = "Cantidad:";
-            cargarCombo(cboDetalle, oProductoService.recuperarTodos(), "nombre", "id_producto");
 
         }
 
@@ -64,89 +54,87 @@ namespace LPCFacturas.GUILayer
             lblDetalle.Text = "Proyecto:";
             lblValor.Text = "Costo/Hora:";
             lblProporcion.Text = "Horas:";
-            cargarCombo(cboDetalle, oProyectoService.recuperarTodos(), "descripcion", "id_proyecto");
         }
 
-        //private void txtIdCliente_TextChanged(object sender, EventArgs e)
-        //{
-        //    if (txtIdCliente.Text != string.Empty)
-        //    {
-        //        int numero;
-        //        if (Int32.TryParse(txtIdCliente.Text, out numero))
-        //        {
-        //            Cliente oCliente;
-        //            oCliente = oClienteService.recuperarCliente(txtIdCliente.Text);
-        //            if (oCliente != null)
-        //            {
-        //                txtNombreCliente.Text = oCliente.Razon_social;
-        //            }
-        //            else
-        //                MessageBox.Show("Cliente no encontrado...");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Debe ingresar un id de cliente correcto...");
-        //            txtIdCliente.Text = string.Empty;
-        //        }
+        private void txtIdCliente_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIdCliente.Text != string.Empty)
+            {
+                int numero;
+                if (Int32.TryParse(txtIdCliente.Text, out numero))
+                {
+                    Cliente oCliente;
+                    oCliente = oClienteService.recuperarCliente(txtIdCliente.Text);
+                    if (oCliente != null)
+                    {
+                        txtNombreCliente.Text = oCliente.Razon_social;
+                    }
+                    else
+                        MessageBox.Show("Cliente no encontrado...");
+                }
+                else
+                {
+                    MessageBox.Show("Debe ingresar un id de cliente correcto...");
+                    txtIdCliente.Text = string.Empty;
+                }
 
-        //    }    
-        //}
-        //private void txtIdDetalle_Leave(object sender, EventArgs e)
-        //{
-        //    if(flagProducto)
-        //    {
-        //        int numero;
-        //        if (Int32.TryParse(txtIdDetalle.Text, out numero))
-        //        {
-        //            Producto oProducto;
-        //            oProducto = oProductoService.recuperarProducto(txtIdDetalle.Text);
-        //            if (oProducto != null)
-        //            {
-        //                txtDetalle.Text = oProducto.Nombre;
-        //            }
-        //            else
-        //                MessageBox.Show("Producto no encontrado...");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Debe ingresar un id de Producto correcto...");
-        //            txtIdDetalle.Text = string.Empty;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        int numero;
-        //        if (Int32.TryParse(txtIdDetalle.Text, out numero))
-        //        {
-        //            Proyecto oProyecto;
-        //            oProyecto = oProyectoService.recuperarProyecto(txtIdDetalle.Text);
-        //            if (oProyecto != null)
-        //            {
-        //                txtDetalle.Text = oProyecto.Descripcion;
-        //            }
-        //            else
-        //                MessageBox.Show("Proyecto no encontrado...");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Debe ingresar un id de Producto correcto...");
-        //            txtIdDetalle.Text = string.Empty;
-        //        }
-        //    }
-        //}
+            }    
+        }
+        private void txtIdDetalle_Leave(object sender, EventArgs e)
+        {
+            if(flagProducto)
+            {
+                int numero;
+                if (Int32.TryParse(txtIdDetalle.Text, out numero))
+                {
+                    Producto oProducto;
+                    oProducto = oProductoService.recuperarProducto(txtIdDetalle.Text);
+                    if (oProducto != null)
+                    {
+                        txtDetalle.Text = oProducto.Nombre;
+                    }
+                    else
+                        MessageBox.Show("Producto no encontrado...");
+                }
+                else
+                {
+                    MessageBox.Show("Debe ingresar un id de Producto correcto...");
+                    txtIdDetalle.Text = string.Empty;
+                }
+            }
+            else
+            {
+                int numero;
+                if (Int32.TryParse(txtIdDetalle.Text, out numero))
+                {
+                    Proyecto oProyecto;
+                    oProyecto = oProyectoService.recuperarProyecto(txtIdDetalle.Text);
+                    if (oProyecto != null)
+                    {
+                        txtDetalle.Text = oProyecto.Descripcion;
+                    }
+                    else
+                        MessageBox.Show("Proyecto no encontrado...");
+                }
+                else
+                {
+                    MessageBox.Show("Debe ingresar un id de Producto correcto...");
+                    txtIdDetalle.Text = string.Empty;
+                }
+            }
+        }
 
         private void limpiarCampos()
         {
-            txtValor.Text = txtProporcion.Text = txtSubtotal.Text = string.Empty;
-            cboDetalle.SelectedIndex = -1;
+            txtIdDetalle.Text = txtDetalle.Text = txtValor.Text = txtProporcion.Text = txtSubtotal.Text = string.Empty;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if(validarCampos())
             {
-                dgvDetalles.Rows.Add(cboDetalle.SelectedValue.ToString(),
-                                     cboDetalle.Text.ToString(),
+                dgvDetalles.Rows.Add(txtIdDetalle.Text.ToString(),
+                                     txtDetalle.Text.ToString(),
                                      txtProporcion.Text.ToString(),
                                      txtValor.Text.ToString(),
                                      txtSubtotal.Text.ToString(),
@@ -168,19 +156,19 @@ namespace LPCFacturas.GUILayer
         public bool validarCampos()
         {
 
-            if (cboDetalle.SelectedIndex == -1)
+            if (txtDetalle.Text == string.Empty)
             {
                 MessageBox.Show("Datos ingresados no válidos. Debe seleccionar un producto o proyecto.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cboDetalle.Focus();
+                txtDetalle.Focus();
                 return false;
             }
-            if (txtValor.Text == string.Empty || Convert.ToDouble(txtValor.Text) <= 0)
+            if (txtValor.Text == string.Empty)
             {
                 MessageBox.Show("Datos ingresados no válidos. Debe ingresar un valor del producto o proyecto.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtValor.Focus();
                 return false;
             }
-            if (txtProporcion.Text == string.Empty || Convert.ToDouble(txtProporcion.Text) <= 0)
+            if (txtProporcion.Text == string.Empty)
             {
                 MessageBox.Show("Datos ingresados no válidos. Debe ingresar una cantidad a facturar.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtProporcion.Focus();
@@ -233,7 +221,7 @@ namespace LPCFacturas.GUILayer
                     factura.Detalles.Add(detalle);
                 }
                 
-                factura.Cliente = oClienteService.recuperarCliente(cboCliente.ValueMember);
+                factura.Cliente = oClienteService.recuperarCliente(txtIdCliente.Text);
                 factura.Fecha = dtpFechaFactura.Value;
                 factura.Usuario_creador = usuarioActual;
                 factura.Total = Convert.ToSingle(txtTotal.Text);
@@ -248,16 +236,15 @@ namespace LPCFacturas.GUILayer
                     MessageBox.Show("La factura no se ha podido registrar correctamente.", "Registrar factura", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            txtTotal.Clear();
             
         }
 
         private bool validarCliente()
         {
-            if (cboCliente.SelectedIndex == -1)
+            if (txtNombreCliente.Text == "")
             {
-                MessageBox.Show("Debe seleccionar un cliente.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cboCliente.Focus();
+                MessageBox.Show("Debe ingresar un cliente.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreCliente.Focus();
                 return false;
             }
             return true;
@@ -307,7 +294,8 @@ namespace LPCFacturas.GUILayer
             }
             listaDetalles = oDetalleFacturaService.recuperarTodos(oFactura.Id_factura.ToString());
 
-            cboCliente.Text = oFactura.Cliente.Razon_social;
+            txtIdCliente.Text = oFactura.Cliente.Id_cliente.ToString();
+            txtNombreCliente.Text = oFactura.Cliente.Razon_social;
 
             foreach (DetalleFactura detalle in listaDetalles)
             {
@@ -333,6 +321,7 @@ namespace LPCFacturas.GUILayer
             {
                 limpiarCampos();
                 dgvDetalles.Rows.Clear();
+                txtIdCliente.Clear();
                 txtNumeroFactura.Clear();
                 txtPuntoDeVenta.Clear();
                 txtNumeroFactura.Enabled = false;
@@ -343,17 +332,13 @@ namespace LPCFacturas.GUILayer
 
         private void habilitarCampos(bool valor)
         {
-            cboCliente.Enabled = valor;
+            txtIdCliente.Enabled = valor;
+            txtNombreCliente.Enabled = valor;
             rdbProducto.Enabled = rdbProyecto.Enabled = valor;
-            cboDetalle.Enabled = valor;
+            txtIdDetalle.Enabled = txtDetalle.Enabled = valor;
             txtProporcion.Enabled = txtValor.Enabled = valor;
             dgvDetalles.Enabled = valor;
             btnAgregar.Enabled = btnQuitar.Enabled = valor;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
