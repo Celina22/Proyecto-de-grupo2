@@ -24,6 +24,14 @@ namespace LPCFacturas.DataAccessLayer
 
             return listadoClientes;
         }
+
+        public DataTable recuperarCLientes()
+        {
+            var SQLquery = "SELECT * FROM Clientes WHERE borrado=0";
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
         public Cliente GetCliente(string idCliente)
         {
             Cliente clienteObtenido;
