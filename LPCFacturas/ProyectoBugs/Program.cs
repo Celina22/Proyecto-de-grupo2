@@ -18,7 +18,7 @@ namespace LPCFacturas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmReporteCliente());
+            Application.Run(new frmPrincipal());
         }
     }
 }
