@@ -107,5 +107,20 @@ namespace LPCFacturas.DataAccessLayer
 
             return null;
         }
+
+        public DataTable recuperarFacturas(DateTime fechaDesde, DateTime FechaHasta, string cliente, string monto)
+        {
+            var SQLquery = "SELECT * FROM Facturas WHERE fecha BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                                                      "AND  CONVERT(datetime,'" + FechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+                                                                     " AND borrado=0 ";
+
+            if (cliente != "-1")
+                SQLquery += "AND id_cliente = " + cliente;
+            if (monto != "-1")
+                SQLquery += " AND total >= " + monto;
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
     }
 }

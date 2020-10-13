@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LPCFacturas.Entities;
-
+using System.Data;
 
 namespace LPCFacturas.BusinessLayer
 {
@@ -21,6 +21,11 @@ namespace LPCFacturas.BusinessLayer
         public Factura GetFactura(string numeroFactura)
         {
             return oFacturaDao.GetFactura(numeroFactura);
+        }
+
+        public DataTable recuperarFacturas(DateTime fechaDesde, DateTime fechaHasta, string cliente, string monto)
+        {
+            return oFacturaDao.recuperarFacturas(fechaDesde, fechaHasta, cliente, monto);
         }
 
     }

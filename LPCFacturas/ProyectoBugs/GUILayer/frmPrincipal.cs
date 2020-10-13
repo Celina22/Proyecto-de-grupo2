@@ -95,5 +95,11 @@ namespace LPCFacturas.GUILayer
             frmReporteListadoProducto nuevoReporteProducto = new frmReporteListadoProducto();
             nuevoReporteProducto.ShowDialog();
         }
+
+        private void listadoDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteListadoFactura nuevoReporteFactura = new frmReporteListadoFactura();
+            nuevoReporteFactura.ShowDialog();
+        }
     }
 }
