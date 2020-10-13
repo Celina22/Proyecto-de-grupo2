@@ -43,5 +43,10 @@ namespace LPCFacturas.BusinessLayer
         {
             return oClienteDao.recuperarCLientes();
         }
+
+        public DataTable recuperarClientes(DateTime fechaDesde, DateTime fechaHasta, string barrio)
+        {
+            return oClienteDao.recuperarCLientes(fechaDesde, fechaHasta, barrio);
+        }
     }
 }

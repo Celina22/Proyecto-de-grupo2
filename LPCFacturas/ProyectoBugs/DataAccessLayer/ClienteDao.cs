@@ -32,6 +32,19 @@ namespace LPCFacturas.DataAccessLayer
             return tabla;
         }
 
+        public DataTable recuperarCLientes(DateTime fechaDesde, DateTime FechaHasta, string barrio)
+        {
+            var SQLquery = "SELECT * FROM Clientes WHERE fecha_alta BETWEEN CONVERT(datetime,'"+ fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                                                      "AND  CONVERT(datetime,'" + FechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+                                                                     " AND borrado=0 ";
+
+            if (barrio != "-1")
+                SQLquery += "AND id_barrio = " + barrio;
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
         public Cliente GetCliente(string idCliente)
         {
             Cliente clienteObtenido;
