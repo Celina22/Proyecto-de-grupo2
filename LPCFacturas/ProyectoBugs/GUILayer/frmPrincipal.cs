@@ -1,6 +1,7 @@
 ﻿using LPCFacturas.BusinessLayer;
 using LPCFacturas.Entities;
 using LPCFacturas.GUILayer;
+using LPCFacturas.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,6 +82,18 @@ namespace LPCFacturas.GUILayer
         {
             frmFactura nuevaFactura = new frmFactura(usuarioActual);
             nuevaFactura.ShowDialog();
+        }
+
+        private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteListadoCliente nuevoReporteCliente = new frmReporteListadoCliente();
+            nuevoReporteCliente.ShowDialog();
+        }
+
+        private void listadoDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteListadoProducto nuevoReporteProducto = new frmReporteListadoProducto();
+            nuevoReporteProducto.ShowDialog();
         }
     }
 }

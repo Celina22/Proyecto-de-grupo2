@@ -89,5 +89,19 @@ namespace LPCFacturas.DataAccessLayer
 
             return oProducto;
         }
+
+        public DataTable recuperarProductos(DateTime fechaDesde, DateTime FechaHasta, string nombre)
+        {
+            //var SQLquery = "SELECT * FROM Productos WHERE fecha_alta BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+            //                                                       "AND  CONVERT(datetime,'" + FechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+            //                                       " AND borrado=0 ";
+
+            var SQLquery = "SELECT * FROM Productos WHERE borrado = 0";
+            if (nombre != "-1")
+                SQLquery += " AND nombre LIKE '%" +nombre+"%'";
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
     }
 }
