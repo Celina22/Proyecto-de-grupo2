@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.rvwProductos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblFechaHasta = new System.Windows.Forms.Label();
@@ -46,9 +46,9 @@
             // 
             // rvwProductos
             // 
-            reportDataSource2.Name = "ListadoProductos";
-            reportDataSource2.Value = this.bugsExtendidoDataSetBindingSource;
-            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "ListadoProductos";
+            reportDataSource3.Value = this.bugsExtendidoDataSetBindingSource;
+            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource3);
             this.rvwProductos.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoProducto.rdlc";
             this.rvwProductos.Location = new System.Drawing.Point(2, 66);
             this.rvwProductos.Name = "rvwProductos";
@@ -98,6 +98,7 @@
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
             this.btnBuscar.Location = new System.Drawing.Point(959, 6);
