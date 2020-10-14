@@ -44,6 +44,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblUsuario.Location = new System.Drawing.Point(27, 230);
@@ -55,6 +56,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
+            this.lblClave.BackColor = System.Drawing.Color.Transparent;
             this.lblClave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lblClave.Location = new System.Drawing.Point(44, 281);
@@ -89,8 +91,9 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Info;
             this.txtUsuario.Location = new System.Drawing.Point(124, 223);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(192, 26);
@@ -99,8 +102,9 @@
             // 
             // txtClave
             // 
-            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.txtClave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.ForeColor = System.Drawing.SystemColors.Window;
             this.txtClave.Location = new System.Drawing.Point(124, 274);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(192, 26);
@@ -110,15 +114,17 @@
             // 
             // pcbUser
             // 
+            this.pcbUser.BackColor = System.Drawing.Color.Transparent;
             this.pcbUser.Image = ((System.Drawing.Image)(resources.GetObject("pcbUser.Image")));
-            this.pcbUser.Location = new System.Drawing.Point(117, 92);
+            this.pcbUser.Location = new System.Drawing.Point(109, 92);
             this.pcbUser.Name = "pcbUser";
-            this.pcbUser.Size = new System.Drawing.Size(111, 115);
+            this.pcbUser.Size = new System.Drawing.Size(126, 115);
             this.pcbUser.TabIndex = 6;
             this.pcbUser.TabStop = false;
             // 
             // pcbLogo
             // 
+            this.pcbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
             this.pcbLogo.Location = new System.Drawing.Point(71, 12);
             this.pcbLogo.Name = "pcbLogo";
@@ -131,6 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(345, 361);
             this.Controls.Add(this.pcbLogo);
             this.Controls.Add(this.pcbUser);
