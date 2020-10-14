@@ -249,7 +249,7 @@ namespace LPCFacturas.GUILayer
                     factura.Detalles.Add(detalle);
                 }
                 
-                factura.Cliente = oClienteService.recuperarCliente(cboCliente.ValueMember);
+                factura.Cliente = oClienteService.recuperarCliente(cboCliente.SelectedValue.ToString());
                 factura.Fecha = dtpFechaFactura.Value;
                 factura.Usuario_creador = usuarioActual;
                 factura.Total = Convert.ToSingle(txtTotal.Text);
