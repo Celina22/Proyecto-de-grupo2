@@ -32,12 +32,9 @@ namespace LPCFacturas.GUILayer
             habilitarCampos(false);
             dgvClientes.DefaultCellStyle.SelectionBackColor = Color.Thistle;
             dgvClientes.DefaultCellStyle.SelectionForeColor = Color.Black;
-
-
             dgvClientes.RowHeadersDefaultCellStyle.BackColor = Color.Thistle;
             dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
-            dgvClientes.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
-            dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
+
         }
         private void habilitarCampos(bool x)
         {

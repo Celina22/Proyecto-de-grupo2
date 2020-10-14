@@ -35,6 +35,10 @@ namespace LPCFacturas.GUILayer
             rdbProyecto.Checked = true;
             cboCliente.Focus();
             cboCliente.DropDownHeight = 100;
+            dgvDetalles.DefaultCellStyle.SelectionBackColor = Color.Thistle;
+            dgvDetalles.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvDetalles.RowHeadersDefaultCellStyle.BackColor = Color.Thistle;
+            dgvDetalles.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
         }
 
         private void cargarCombo(ComboBox combo, Object source, string display, string value)

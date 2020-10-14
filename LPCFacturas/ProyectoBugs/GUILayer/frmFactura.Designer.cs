@@ -85,8 +85,8 @@
             this.dtpFechaFactura.CalendarForeColor = System.Drawing.Color.Thistle;
             this.dtpFechaFactura.CalendarMonthBackground = System.Drawing.Color.Thistle;
             this.dtpFechaFactura.CalendarTitleBackColor = System.Drawing.Color.Thistle;
-            this.dtpFechaFactura.CalendarTitleForeColor = System.Drawing.Color.White;
-            this.dtpFechaFactura.CalendarTrailingForeColor = System.Drawing.Color.White;
+            this.dtpFechaFactura.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.dtpFechaFactura.CalendarTrailingForeColor = System.Drawing.Color.Black;
             this.dtpFechaFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.dtpFechaFactura.Location = new System.Drawing.Point(250, 21);
             this.dtpFechaFactura.Name = "dtpFechaFactura";
@@ -109,7 +109,7 @@
             this.txtPuntoDeVenta.BackColor = System.Drawing.Color.Thistle;
             this.txtPuntoDeVenta.Enabled = false;
             this.txtPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtPuntoDeVenta.ForeColor = System.Drawing.Color.White;
+            this.txtPuntoDeVenta.ForeColor = System.Drawing.Color.Black;
             this.txtPuntoDeVenta.Location = new System.Drawing.Point(250, 57);
             this.txtPuntoDeVenta.Name = "txtPuntoDeVenta";
             this.txtPuntoDeVenta.Size = new System.Drawing.Size(70, 31);
@@ -150,6 +150,7 @@
             // 
             // cboDetalle
             // 
+            this.cboDetalle.BackColor = System.Drawing.Color.Thistle;
             this.cboDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboDetalle.FormattingEnabled = true;
             this.cboDetalle.Location = new System.Drawing.Point(238, 40);
@@ -213,6 +214,7 @@
             // 
             // txtSubtotal
             // 
+            this.txtSubtotal.BackColor = System.Drawing.Color.Thistle;
             this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtSubtotal.Location = new System.Drawing.Point(607, 78);
@@ -236,6 +238,7 @@
             // 
             this.dgvDetalles.AllowUserToAddRows = false;
             this.dgvDetalles.AllowUserToDeleteRows = false;
+            this.dgvDetalles.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -244,6 +247,7 @@
             this.precio,
             this.subtotal,
             this.esProducto});
+            this.dgvDetalles.EnableHeadersVisualStyles = false;
             this.dgvDetalles.Location = new System.Drawing.Point(6, 118);
             this.dgvDetalles.MultiSelect = false;
             this.dgvDetalles.Name = "dgvDetalles";
@@ -306,6 +310,7 @@
             // 
             // txtProporcion
             // 
+            this.txtProporcion.BackColor = System.Drawing.Color.Thistle;
             this.txtProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtProporcion.Location = new System.Drawing.Point(430, 76);
             this.txtProporcion.Name = "txtProporcion";
@@ -327,6 +332,7 @@
             // 
             // txtValor
             // 
+            this.txtValor.BackColor = System.Drawing.Color.Thistle;
             this.txtValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtValor.Location = new System.Drawing.Point(238, 77);
             this.txtValor.Name = "txtValor";
@@ -349,6 +355,7 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.BackColor = System.Drawing.Color.Thistle;
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtTotal.Location = new System.Drawing.Point(844, 561);
@@ -456,7 +463,7 @@
             this.txtNumeroFactura.BackColor = System.Drawing.Color.Thistle;
             this.txtNumeroFactura.Enabled = false;
             this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNumeroFactura.ForeColor = System.Drawing.Color.White;
+            this.txtNumeroFactura.ForeColor = System.Drawing.Color.Black;
             this.txtNumeroFactura.Location = new System.Drawing.Point(510, 57);
             this.txtNumeroFactura.Name = "txtNumeroFactura";
             this.txtNumeroFactura.Size = new System.Drawing.Size(184, 31);
@@ -478,7 +485,7 @@
             // 
             this.cboCliente.BackColor = System.Drawing.Color.Thistle;
             this.cboCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cboCliente.ForeColor = System.Drawing.Color.White;
+            this.cboCliente.ForeColor = System.Drawing.Color.Black;
             this.cboCliente.FormattingEnabled = true;
             this.cboCliente.IntegralHeight = false;
             this.cboCliente.Location = new System.Drawing.Point(250, 94);
