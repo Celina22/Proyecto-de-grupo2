@@ -110,9 +110,13 @@ namespace LPCFacturas.DataAccessLayer
 
         public DataTable recuperarFacturas(DateTime fechaDesde, DateTime FechaHasta, string cliente, string monto)
         {
-            var SQLquery = "SELECT * FROM Facturas WHERE fecha BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+            var SQLquery = "SELECT F.id_factura,F.numero_factura, C.razon_social AS id_cliente,F.fecha,U.usuario AS id_usuario_creador,total, F.borrado" +
+                " FROM Facturas F " +
+                "JOIN Clientes C ON (F.id_cliente = C.id_cliente) " +
+                "JOIN Usuarios U ON (F.id_usuario_creador = U.id_usuario) " +
+                "WHERE F.fecha BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
                                                                       "AND  CONVERT(datetime,'" + FechaHasta.ToString("dd/MM/yyyy") + "',103) " +
-                                                                     " AND borrado=0 ";
+                                                                     " AND F.borrado=0 ";
 
             if (cliente != "-1")
                 SQLquery += "AND id_cliente = " + cliente;

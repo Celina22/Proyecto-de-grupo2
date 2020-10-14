@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtVersion = new System.Windows.Forms.TextBox();
             this.lblVersion = new System.Windows.Forms.Label();
@@ -40,6 +42,10 @@
             this.txtAlcance = new System.Windows.Forms.TextBox();
             this.lblAlcance = new System.Windows.Forms.Label();
             this.rvwProyectos = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
+            this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -156,6 +162,9 @@
             // 
             // rvwProyectos
             // 
+            reportDataSource1.Name = "ListadoProyectos";
+            reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource;
+            this.rvwProyectos.LocalReport.DataSources.Add(reportDataSource1);
             this.rvwProyectos.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoProyectos.rdlc";
             this.rvwProyectos.Location = new System.Drawing.Point(11, 106);
             this.rvwProyectos.Margin = new System.Windows.Forms.Padding(2);
@@ -163,6 +172,16 @@
             this.rvwProyectos.Size = new System.Drawing.Size(1030, 532);
             this.rvwProyectos.TabIndex = 47;
             this.rvwProyectos.Load += new System.EventHandler(this.rvwProyectos_Load);
+            // 
+            // bugsExtendidoDataSet
+            // 
+            this.bugsExtendidoDataSet.DataSetName = "BugsExtendidoDataSet";
+            this.bugsExtendidoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bugsExtendidoDataSetBindingSource
+            // 
+            this.bugsExtendidoDataSetBindingSource.DataSource = this.bugsExtendidoDataSet;
+            this.bugsExtendidoDataSetBindingSource.Position = 0;
             // 
             // frmReporteListadoProyectos
             // 
@@ -185,6 +204,8 @@
             this.Name = "frmReporteListadoProyectos";
             this.Text = "Listado de Proyectos";
             this.Load += new System.EventHandler(this.frmReporteListadoProyectos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +224,7 @@
         private System.Windows.Forms.TextBox txtAlcance;
         private System.Windows.Forms.Label lblAlcance;
         private Microsoft.Reporting.WinForms.ReportViewer rvwProyectos;
+        private System.Windows.Forms.BindingSource bugsExtendidoDataSetBindingSource;
+        private BugsExtendidoDataSet bugsExtendidoDataSet;
     }
 }

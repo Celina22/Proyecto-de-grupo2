@@ -9,7 +9,7 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79104cm</Width>
+              <Width>3.36776cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>4.61667cm</Width>
@@ -37,7 +37,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id factura</Value>
+                              <Value>Id Factura</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -68,7 +68,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>numero factura</Value>
+                              <Value>Numero de Factura</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -99,7 +99,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id cliente</Value>
+                              <Value>Cliente</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -130,7 +130,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>fecha</Value>
+                              <Value>Fecha</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -161,7 +161,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id usuario creador</Value>
+                              <Value>Usuario Creador</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -192,7 +192,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>total</Value>
+                              <Value>Total</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -427,7 +427,7 @@
         <Top>1.13453cm</Top>
         <Left>1.21391cm</Left>
         <Height>1.2cm</Height>
-        <Width>22.3025cm</Width>
+        <Width>22.87922cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
