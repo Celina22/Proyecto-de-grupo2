@@ -26,6 +26,7 @@ namespace LPCFacturas.GUILayer
         public frmPrincipal()
         {
             InitializeComponent();
+
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,16 +36,16 @@ namespace LPCFacturas.GUILayer
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            this.Visible = false;
+            frmLogin fl = new frmLogin();
+            fl.ShowDialog();
             int ancho = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
             int alto = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
             Size = new System.Drawing.Size(ancho, alto);
 
-            pbLogo.Location = new System.Drawing.Point((ancho - pbLogo.Size.Width)/2, (alto  - pbLogo.Size.Height)/2);
+            pbLogo.Location = new System.Drawing.Point((ancho - pbLogo.Size.Width) / 2, (alto - pbLogo.Size.Height) / 2);
 
             this.menuPrincipal.Renderer = new ToolStripProfessionalRenderer(new TestColorTable());
-            this.Visible = false;
-            frmLogin fl = new frmLogin();
-            fl.ShowDialog();
             UsuarioActual = fl.UsuarioLogueado;
             this.Text = "Menú Principal - Usuario actual: " + UsuarioActual.NombreUsuario;
             fl.Dispose();

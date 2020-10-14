@@ -63,16 +63,17 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblId.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblId.Location = new System.Drawing.Point(86, 15);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(32, 23);
             this.lblId.TabIndex = 0;
             this.lblId.Text = "ID:";
+            this.lblId.Click += new System.EventHandler(this.lblId_Click);
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.Thistle;
+            this.txtId.BackColor = System.Drawing.Color.White;
             this.txtId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtId.Location = new System.Drawing.Point(124, 12);
             this.txtId.Name = "txtId";
@@ -81,7 +82,7 @@
             // 
             // txtCuit
             // 
-            this.txtCuit.BackColor = System.Drawing.Color.Thistle;
+            this.txtCuit.BackColor = System.Drawing.Color.White;
             this.txtCuit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtCuit.Location = new System.Drawing.Point(124, 49);
             this.txtCuit.Name = "txtCuit";
@@ -93,16 +94,17 @@
             // 
             this.lblCuit.AutoSize = true;
             this.lblCuit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblCuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblCuit.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblCuit.Location = new System.Drawing.Point(68, 52);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(50, 23);
             this.lblCuit.TabIndex = 2;
             this.lblCuit.Text = "CUIT:";
+            this.lblCuit.Click += new System.EventHandler(this.lblCuit_Click);
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.BackColor = System.Drawing.Color.Thistle;
+            this.txtRazonSocial.BackColor = System.Drawing.Color.White;
             this.txtRazonSocial.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtRazonSocial.Location = new System.Drawing.Point(124, 86);
             this.txtRazonSocial.Name = "txtRazonSocial";
@@ -114,16 +116,17 @@
             // 
             this.lblRazonSocial.AutoSize = true;
             this.lblRazonSocial.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblRazonSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblRazonSocial.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblRazonSocial.Location = new System.Drawing.Point(5, 89);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(113, 23);
             this.lblRazonSocial.TabIndex = 4;
             this.lblRazonSocial.Text = "Razón Social:";
+            this.lblRazonSocial.Click += new System.EventHandler(this.lblRazonSocial_Click);
             // 
             // txtCalle
             // 
-            this.txtCalle.BackColor = System.Drawing.Color.Thistle;
+            this.txtCalle.BackColor = System.Drawing.Color.White;
             this.txtCalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtCalle.Location = new System.Drawing.Point(536, 49);
             this.txtCalle.Name = "txtCalle";
@@ -135,16 +138,17 @@
             // 
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblCalle.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblCalle.Location = new System.Drawing.Point(461, 52);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(54, 23);
             this.lblCalle.TabIndex = 6;
             this.lblCalle.Text = "Calle:";
+            this.lblCalle.Click += new System.EventHandler(this.lblCalle_Click);
             // 
             // txtNumero
             // 
-            this.txtNumero.BackColor = System.Drawing.Color.Thistle;
+            this.txtNumero.BackColor = System.Drawing.Color.White;
             this.txtNumero.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtNumero.Location = new System.Drawing.Point(536, 89);
             this.txtNumero.Name = "txtNumero";
@@ -156,7 +160,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblNumero.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblNumero.Location = new System.Drawing.Point(435, 89);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(80, 23);
@@ -168,7 +172,7 @@
             // 
             this.lblFechaAlta.AutoSize = true;
             this.lblFechaAlta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaAlta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblFechaAlta.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblFechaAlta.Location = new System.Drawing.Point(396, 126);
             this.lblFechaAlta.Name = "lblFechaAlta";
             this.lblFechaAlta.Size = new System.Drawing.Size(119, 23);
@@ -195,7 +199,7 @@
             // 
             this.lblBarrio.AutoSize = true;
             this.lblBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblBarrio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblBarrio.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblBarrio.Location = new System.Drawing.Point(451, 15);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(64, 23);
@@ -205,7 +209,7 @@
             // 
             // cboBarrio
             // 
-            this.cboBarrio.BackColor = System.Drawing.Color.Thistle;
+            this.cboBarrio.BackColor = System.Drawing.Color.White;
             this.cboBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(536, 12);
@@ -216,7 +220,7 @@
             // 
             // cboContacto
             // 
-            this.cboContacto.BackColor = System.Drawing.Color.Thistle;
+            this.cboContacto.BackColor = System.Drawing.Color.White;
             this.cboContacto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboContacto.FormattingEnabled = true;
             this.cboContacto.Location = new System.Drawing.Point(124, 123);
@@ -230,7 +234,7 @@
             // 
             this.lblContacto.AutoSize = true;
             this.lblContacto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblContacto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblContacto.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblContacto.Location = new System.Drawing.Point(32, 126);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(86, 23);
@@ -384,7 +388,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(812, 605);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
@@ -409,6 +413,7 @@
             this.Controls.Add(this.lblCuit);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "frmABMClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Clientes";

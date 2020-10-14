@@ -30,10 +30,11 @@ namespace LPCFacturas.GUILayer
             cargarCombo(cboContacto, oContactoService.recuperarTodos(), "Nombre", "Id_contacto");
             cargarGrilla(dgvClientes, oClienteService.recuperarTodos());
             habilitarCampos(false);
-            dgvClientes.DefaultCellStyle.SelectionBackColor = Color.Thistle;
+            dgvClientes.ForeColor = Color.Black;
+            dgvClientes.DefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182); ;
             dgvClientes.DefaultCellStyle.SelectionForeColor = Color.Black;
-            dgvClientes.RowHeadersDefaultCellStyle.BackColor = Color.Thistle;
-            dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
+            dgvClientes.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(165, 177, 182);
+            dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182); ;
 
         }
         private void habilitarCampos(bool x)
@@ -299,6 +300,26 @@ namespace LPCFacturas.GUILayer
         }
 
         private void txtCuit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCalle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCuit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRazonSocial_Click(object sender, EventArgs e)
         {
 
         }
