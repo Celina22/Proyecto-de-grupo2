@@ -110,7 +110,7 @@ namespace LPCFacturas.DataAccessLayer
 
         public DataTable recuperarFacturas(DateTime fechaDesde, DateTime FechaHasta, string cliente, string monto)
         {
-            var SQLquery = "SELECT F.id_factura,F.numero_factura, C.razon_social AS id_cliente,F.fecha,U.usuario AS id_usuario_creador,total, F.borrado" +
+            var SQLquery = "SELECT F.id_factura,F.numero_factura, C.razon_social AS id_cliente,F.fecha,U.usuario AS id_usuario_creador,F.total, F.borrado" +
                 " FROM Facturas F " +
                 "JOIN Clientes C ON (F.id_cliente = C.id_cliente) " +
                 "JOIN Usuarios U ON (F.id_usuario_creador = U.id_usuario) " +
@@ -119,9 +119,9 @@ namespace LPCFacturas.DataAccessLayer
                                                                      " AND F.borrado=0 ";
 
             if (cliente != "-1")
-                SQLquery += "AND id_cliente = " + cliente;
+                SQLquery += "AND F.id_cliente = " + cliente;
             if (monto != "-1")
-                SQLquery += " AND total >= " + monto;
+                SQLquery += " AND F.total >= " + monto;
 
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;

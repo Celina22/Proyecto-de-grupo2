@@ -34,6 +34,7 @@
             this.txtPuntoDeVenta = new System.Windows.Forms.TextBox();
             this.lblClientes = new System.Windows.Forms.Label();
             this.gbxDetalles = new System.Windows.Forms.GroupBox();
+            this.cboDetalle = new System.Windows.Forms.ComboBox();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.rdbProyecto = new System.Windows.Forms.RadioButton();
@@ -41,6 +42,12 @@
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.esProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.txtProporcion = new System.Windows.Forms.TextBox();
             this.lblProporcion = new System.Windows.Forms.Label();
@@ -57,13 +64,6 @@
             this.txtNumeroFactura = new System.Windows.Forms.TextBox();
             this.lblPuntoDeVenta = new System.Windows.Forms.Label();
             this.cboCliente = new System.Windows.Forms.ComboBox();
-            this.cboDetalle = new System.Windows.Forms.ComboBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.esProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.gbxDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblFecha.Location = new System.Drawing.Point(139, 27);
+            this.lblFecha.Location = new System.Drawing.Point(183, 27);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(61, 23);
             this.lblFecha.TabIndex = 0;
@@ -83,9 +83,9 @@
             // dtpFechaFactura
             // 
             this.dtpFechaFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.dtpFechaFactura.Location = new System.Drawing.Point(206, 21);
+            this.dtpFechaFactura.Location = new System.Drawing.Point(250, 21);
             this.dtpFechaFactura.Name = "dtpFechaFactura";
-            this.dtpFechaFactura.Size = new System.Drawing.Size(346, 31);
+            this.dtpFechaFactura.Size = new System.Drawing.Size(444, 31);
             this.dtpFechaFactura.TabIndex = 1;
             // 
             // lblNumeroFactura
@@ -93,7 +93,7 @@
             this.lblNumeroFactura.AutoSize = true;
             this.lblNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblNumeroFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblNumeroFactura.Location = new System.Drawing.Point(292, 61);
+            this.lblNumeroFactura.Location = new System.Drawing.Point(345, 60);
             this.lblNumeroFactura.Name = "lblNumeroFactura";
             this.lblNumeroFactura.Size = new System.Drawing.Size(142, 23);
             this.lblNumeroFactura.TabIndex = 2;
@@ -103,7 +103,7 @@
             // 
             this.txtPuntoDeVenta.Enabled = false;
             this.txtPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtPuntoDeVenta.Location = new System.Drawing.Point(206, 58);
+            this.txtPuntoDeVenta.Location = new System.Drawing.Point(250, 57);
             this.txtPuntoDeVenta.Name = "txtPuntoDeVenta";
             this.txtPuntoDeVenta.Size = new System.Drawing.Size(70, 31);
             this.txtPuntoDeVenta.TabIndex = 3;
@@ -113,7 +113,7 @@
             this.lblClientes.AutoSize = true;
             this.lblClientes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblClientes.Location = new System.Drawing.Point(128, 98);
+            this.lblClientes.Location = new System.Drawing.Point(172, 98);
             this.lblClientes.Name = "lblClientes";
             this.lblClientes.Size = new System.Drawing.Size(72, 23);
             this.lblClientes.TabIndex = 4;
@@ -136,10 +136,19 @@
             this.gbxDetalles.Controls.Add(this.lblValor);
             this.gbxDetalles.Location = new System.Drawing.Point(12, 132);
             this.gbxDetalles.Name = "gbxDetalles";
-            this.gbxDetalles.Size = new System.Drawing.Size(653, 347);
+            this.gbxDetalles.Size = new System.Drawing.Size(938, 395);
             this.gbxDetalles.TabIndex = 7;
             this.gbxDetalles.TabStop = false;
             this.gbxDetalles.Text = "Detalle de Factura";
+            // 
+            // cboDetalle
+            // 
+            this.cboDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cboDetalle.FormattingEnabled = true;
+            this.cboDetalle.Location = new System.Drawing.Point(238, 40);
+            this.cboDetalle.Name = "cboDetalle";
+            this.cboDetalle.Size = new System.Drawing.Size(444, 31);
+            this.cboDetalle.TabIndex = 20;
             // 
             // btnQuitar
             // 
@@ -149,7 +158,7 @@
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnQuitar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btnQuitar.Location = new System.Drawing.Point(601, 73);
+            this.btnQuitar.Location = new System.Drawing.Point(751, 73);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(35, 35);
             this.btnQuitar.TabIndex = 12;
@@ -164,7 +173,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnAgregar.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btnAgregar.Location = new System.Drawing.Point(550, 73);
+            this.btnAgregar.Location = new System.Drawing.Point(701, 72);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
             this.btnAgregar.TabIndex = 11;
@@ -174,7 +183,7 @@
             // rdbProyecto
             // 
             this.rdbProyecto.AutoSize = true;
-            this.rdbProyecto.Location = new System.Drawing.Point(195, 19);
+            this.rdbProyecto.Location = new System.Drawing.Point(379, 17);
             this.rdbProyecto.Name = "rdbProyecto";
             this.rdbProyecto.Size = new System.Drawing.Size(67, 17);
             this.rdbProyecto.TabIndex = 1;
@@ -186,7 +195,7 @@
             // rdbProducto
             // 
             this.rdbProducto.AutoSize = true;
-            this.rdbProducto.Location = new System.Drawing.Point(128, 19);
+            this.rdbProducto.Location = new System.Drawing.Point(305, 17);
             this.rdbProducto.Name = "rdbProducto";
             this.rdbProducto.Size = new System.Drawing.Size(68, 17);
             this.rdbProducto.TabIndex = 0;
@@ -199,7 +208,7 @@
             // 
             this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtSubtotal.Location = new System.Drawing.Point(469, 78);
+            this.txtSubtotal.Location = new System.Drawing.Point(607, 78);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.ReadOnly = true;
             this.txtSubtotal.Size = new System.Drawing.Size(75, 31);
@@ -210,7 +219,7 @@
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(381, 81);
+            this.lblSubtotal.Location = new System.Drawing.Point(519, 81);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(82, 23);
             this.lblSubtotal.TabIndex = 9;
@@ -233,206 +242,8 @@
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalles.Size = new System.Drawing.Size(641, 223);
+            this.dgvDetalles.Size = new System.Drawing.Size(926, 271);
             this.dgvDetalles.TabIndex = 19;
-            // 
-            // lblDetalle
-            // 
-            this.lblDetalle.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblDetalle.Location = new System.Drawing.Point(20, 44);
-            this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(102, 23);
-            this.lblDetalle.TabIndex = 2;
-            this.lblDetalle.Text = "Proyecto:";
-            this.lblDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtProporcion
-            // 
-            this.txtProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtProporcion.Location = new System.Drawing.Point(307, 78);
-            this.txtProporcion.Name = "txtProporcion";
-            this.txtProporcion.Size = new System.Drawing.Size(68, 31);
-            this.txtProporcion.TabIndex = 8;
-            this.txtProporcion.Leave += new System.EventHandler(this.txtProporcion_Leave);
-            // 
-            // lblProporcion
-            // 
-            this.lblProporcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblProporcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblProporcion.Location = new System.Drawing.Point(195, 81);
-            this.lblProporcion.Name = "lblProporcion";
-            this.lblProporcion.Size = new System.Drawing.Size(106, 23);
-            this.lblProporcion.TabIndex = 7;
-            this.lblProporcion.Text = "Horas:";
-            this.lblProporcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtValor
-            // 
-            this.txtValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtValor.Location = new System.Drawing.Point(128, 78);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(61, 31);
-            this.txtValor.TabIndex = 6;
-            this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
-            // 
-            // lblValor
-            // 
-            this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblValor.Location = new System.Drawing.Point(16, 81);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(106, 23);
-            this.lblValor.TabIndex = 5;
-            this.lblValor.Text = "Costo/Hora:";
-            this.lblValor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtTotal.Location = new System.Drawing.Point(565, 513);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 31);
-            this.txtTotal.TabIndex = 8;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(499, 516);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(53, 23);
-            this.lblTotal.TabIndex = 9;
-            this.lblTotal.Text = "Total:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnEditar);
-            this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Controls.Add(this.btnNuevo);
-            this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Location = new System.Drawing.Point(12, 485);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 86);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btnEditar.Location = new System.Drawing.Point(108, 19);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(50, 50);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.btnGuardar.Location = new System.Drawing.Point(191, 19);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar.TabIndex = 2;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.Mime_Blank;
-            this.btnNuevo.Location = new System.Drawing.Point(20, 15);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(57, 59);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
-            this.btnSalir.Location = new System.Drawing.Point(340, 19);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 50);
-            this.btnSalir.TabIndex = 3;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
-            this.btnBuscar.Location = new System.Drawing.Point(567, 57);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscar.TabIndex = 12;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Visible = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtNumeroFactura
-            // 
-            this.txtNumeroFactura.Enabled = false;
-            this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNumeroFactura.Location = new System.Drawing.Point(440, 57);
-            this.txtNumeroFactura.Name = "txtNumeroFactura";
-            this.txtNumeroFactura.Size = new System.Drawing.Size(112, 31);
-            this.txtNumeroFactura.TabIndex = 13;
-            this.txtNumeroFactura.Leave += new System.EventHandler(this.txtNumeroFactura_Leave);
-            // 
-            // lblPuntoDeVenta
-            // 
-            this.lblPuntoDeVenta.AutoSize = true;
-            this.lblPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblPuntoDeVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblPuntoDeVenta.Location = new System.Drawing.Point(64, 60);
-            this.lblPuntoDeVenta.Name = "lblPuntoDeVenta";
-            this.lblPuntoDeVenta.Size = new System.Drawing.Size(136, 23);
-            this.lblPuntoDeVenta.TabIndex = 14;
-            this.lblPuntoDeVenta.Text = "Punto de Venta:";
-            // 
-            // cboCliente
-            // 
-            this.cboCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.IntegralHeight = false;
-            this.cboCliente.Location = new System.Drawing.Point(206, 95);
-            this.cboCliente.Name = "cboCliente";
-            this.cboCliente.Size = new System.Drawing.Size(346, 31);
-            this.cboCliente.TabIndex = 15;
-            // 
-            // cboDetalle
-            // 
-            this.cboDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cboDetalle.FormattingEnabled = true;
-            this.cboDetalle.Location = new System.Drawing.Point(128, 41);
-            this.cboDetalle.Name = "cboDetalle";
-            this.cboDetalle.Size = new System.Drawing.Size(247, 31);
-            this.cboDetalle.TabIndex = 20;
             // 
             // id
             // 
@@ -474,12 +285,202 @@
             this.esProducto.TrueValue = "true";
             this.esProducto.Visible = false;
             // 
+            // lblDetalle
+            // 
+            this.lblDetalle.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblDetalle.Location = new System.Drawing.Point(126, 43);
+            this.lblDetalle.Name = "lblDetalle";
+            this.lblDetalle.Size = new System.Drawing.Size(102, 23);
+            this.lblDetalle.TabIndex = 2;
+            this.lblDetalle.Text = "Proyecto:";
+            this.lblDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtProporcion
+            // 
+            this.txtProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtProporcion.Location = new System.Drawing.Point(430, 76);
+            this.txtProporcion.Name = "txtProporcion";
+            this.txtProporcion.Size = new System.Drawing.Size(68, 31);
+            this.txtProporcion.TabIndex = 8;
+            this.txtProporcion.Leave += new System.EventHandler(this.txtProporcion_Leave);
+            // 
+            // lblProporcion
+            // 
+            this.lblProporcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblProporcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblProporcion.Location = new System.Drawing.Point(318, 80);
+            this.lblProporcion.Name = "lblProporcion";
+            this.lblProporcion.Size = new System.Drawing.Size(106, 23);
+            this.lblProporcion.TabIndex = 7;
+            this.lblProporcion.Text = "Horas:";
+            this.lblProporcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtValor
+            // 
+            this.txtValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtValor.Location = new System.Drawing.Point(238, 77);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(74, 31);
+            this.txtValor.TabIndex = 6;
+            this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
+            this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
+            // 
+            // lblValor
+            // 
+            this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblValor.Location = new System.Drawing.Point(126, 80);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(106, 23);
+            this.lblValor.TabIndex = 5;
+            this.lblValor.Text = "Costo/Hora:";
+            this.lblValor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtTotal.Location = new System.Drawing.Point(844, 561);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 31);
+            this.txtTotal.TabIndex = 8;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.Location = new System.Drawing.Point(778, 564);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(53, 23);
+            this.lblTotal.TabIndex = 9;
+            this.lblTotal.Text = "Total:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Controls.Add(this.btnNuevo);
+            this.groupBox1.Controls.Add(this.btnSalir);
+            this.groupBox1.Location = new System.Drawing.Point(12, 533);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(736, 86);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
+            this.btnEditar.Location = new System.Drawing.Point(138, 19);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
+            this.btnGuardar.Location = new System.Drawing.Point(262, 19);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnNuevo.Image = global::LPCFacturas.Properties.Resources.Mime_Blank;
+            this.btnNuevo.Location = new System.Drawing.Point(20, 15);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(57, 59);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
+            this.btnSalir.Location = new System.Drawing.Point(664, 19);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
+            this.btnBuscar.Location = new System.Drawing.Point(728, 60);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtNumeroFactura
+            // 
+            this.txtNumeroFactura.Enabled = false;
+            this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtNumeroFactura.Location = new System.Drawing.Point(510, 57);
+            this.txtNumeroFactura.Name = "txtNumeroFactura";
+            this.txtNumeroFactura.Size = new System.Drawing.Size(184, 31);
+            this.txtNumeroFactura.TabIndex = 13;
+            this.txtNumeroFactura.Leave += new System.EventHandler(this.txtNumeroFactura_Leave);
+            // 
+            // lblPuntoDeVenta
+            // 
+            this.lblPuntoDeVenta.AutoSize = true;
+            this.lblPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblPuntoDeVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblPuntoDeVenta.Location = new System.Drawing.Point(108, 60);
+            this.lblPuntoDeVenta.Name = "lblPuntoDeVenta";
+            this.lblPuntoDeVenta.Size = new System.Drawing.Size(136, 23);
+            this.lblPuntoDeVenta.TabIndex = 14;
+            this.lblPuntoDeVenta.Text = "Punto de Venta:";
+            // 
+            // cboCliente
+            // 
+            this.cboCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cboCliente.FormattingEnabled = true;
+            this.cboCliente.IntegralHeight = false;
+            this.cboCliente.Location = new System.Drawing.Point(250, 94);
+            this.cboCliente.Name = "cboCliente";
+            this.cboCliente.Size = new System.Drawing.Size(444, 31);
+            this.cboCliente.TabIndex = 15;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(677, 580);
+            this.ClientSize = new System.Drawing.Size(962, 631);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.lblPuntoDeVenta);
             this.Controls.Add(this.txtNumeroFactura);
@@ -493,8 +494,6 @@
             this.Controls.Add(this.lblNumeroFactura);
             this.Controls.Add(this.dtpFechaFactura);
             this.Controls.Add(this.lblFecha);
-            this.MaximumSize = new System.Drawing.Size(693, 619);
-            this.MinimumSize = new System.Drawing.Size(693, 619);
             this.Name = "frmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmFactura_Load);

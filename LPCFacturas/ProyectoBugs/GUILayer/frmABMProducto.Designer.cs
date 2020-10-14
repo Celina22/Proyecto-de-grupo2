@@ -208,7 +208,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(624, 428);
+            this.ClientSize = new System.Drawing.Size(608, 389);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -224,6 +224,7 @@
             this.MaximumSize = new System.Drawing.Size(624, 428);
             this.MinimumSize = new System.Drawing.Size(624, 428);
             this.Name = "frmABMProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmABMProducto";
             this.Load += new System.EventHandler(this.frmABMProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).EndInit();

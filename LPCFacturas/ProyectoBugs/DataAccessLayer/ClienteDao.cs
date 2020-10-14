@@ -41,7 +41,7 @@ namespace LPCFacturas.DataAccessLayer
                                             "AND c.borrado=0 ";
 
             if (barrio != "-1")
-                SQLquery += "AND id_barrio = " + barrio;
+                SQLquery += "AND c.id_barrio = " + barrio;
 
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
