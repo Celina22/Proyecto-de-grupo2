@@ -44,8 +44,8 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeProyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,18 +170,19 @@
             this.listadoDeProductosToolStripMenuItem.Text = "Listado de Productos";
             this.listadoDeProductosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeProductosToolStripMenuItem_Click);
             // 
+            // listadoDeProyectosToolStripMenuItem
+            // 
+            this.listadoDeProyectosToolStripMenuItem.Name = "listadoDeProyectosToolStripMenuItem";
+            this.listadoDeProyectosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.listadoDeProyectosToolStripMenuItem.Text = "Listado de Proyectos";
+            this.listadoDeProyectosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeProyectosToolStripMenuItem_Click);
+            // 
             // listadoDeFacturasToolStripMenuItem
             // 
             this.listadoDeFacturasToolStripMenuItem.Name = "listadoDeFacturasToolStripMenuItem";
             this.listadoDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.listadoDeFacturasToolStripMenuItem.Text = "Listado de Facturas";
             this.listadoDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeFacturasToolStripMenuItem_Click);
-            // 
-            // listadoDeProyectosToolStripMenuItem
-            // 
-            this.listadoDeProyectosToolStripMenuItem.Name = "listadoDeProyectosToolStripMenuItem";
-            this.listadoDeProyectosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.listadoDeProyectosToolStripMenuItem.Text = "Listado de Proyectos";
             // 
             // frmPrincipal
             // 
