@@ -39,6 +39,8 @@ namespace LPCFacturas.GUILayer
             int alto = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
             Size = new System.Drawing.Size(ancho, alto);
 
+            pbLogo.Location = new System.Drawing.Point((ancho - pbLogo.Size.Width)/2, (alto  - pbLogo.Size.Height)/2);
+
             this.menuPrincipal.Renderer = new ToolStripProfessionalRenderer(new TestColorTable());
             this.Visible = false;
             frmLogin fl = new frmLogin();
