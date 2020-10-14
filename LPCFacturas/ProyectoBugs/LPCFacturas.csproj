@@ -172,6 +172,12 @@
     <Compile Include="Reportes\frmReporteListadoProducto.Designer.cs">
       <DependentUpon>frmReporteListadoProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frmReporteListadoProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteListadoProyectos.Designer.cs">
+      <DependentUpon>frmReporteListadoProyectos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUILayer\frmABMBarrios.resx">
       <DependentUpon>frmABMBarrios.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,9 +224,13 @@
     <EmbeddedResource Include="Reportes\frmReporteListadoProducto.resx">
       <DependentUpon>frmReporteListadoProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteListadoProyectos.resx">
+      <DependentUpon>frmReporteListadoProyectos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteListadoFactura.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoProducto.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteListadoProyectos.rdlc" />
     <None Include="BugsExtendidoDataSet.xsc">
       <DependentUpon>BugsExtendidoDataSet.xsd</DependentUpon>
     </None>

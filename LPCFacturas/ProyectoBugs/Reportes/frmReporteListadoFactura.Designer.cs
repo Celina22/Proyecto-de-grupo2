@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.bugsExtendidoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.rvwFacturas = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.lblFechaHasta = new System.Windows.Forms.Label();
@@ -40,13 +42,21 @@
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.lblMontoMayor = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bugsExtendidoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bugsExtendidoDataSetBindingSource1
+            // 
+            this.bugsExtendidoDataSetBindingSource1.DataSource = this.bugsExtendidoDataSet;
+            this.bugsExtendidoDataSetBindingSource1.Position = 0;
+            // 
+            // bugsExtendidoDataSet
+            // 
+            this.bugsExtendidoDataSet.DataSetName = "BugsExtendidoDataSet";
+            this.bugsExtendidoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rvwFacturas
             // 
@@ -152,20 +162,10 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
-            // bugsExtendidoDataSet
-            // 
-            this.bugsExtendidoDataSet.DataSetName = "BugsExtendidoDataSet";
-            this.bugsExtendidoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bugsExtendidoDataSetBindingSource
             // 
             this.bugsExtendidoDataSetBindingSource.DataSource = this.bugsExtendidoDataSet;
             this.bugsExtendidoDataSetBindingSource.Position = 0;
-            // 
-            // bugsExtendidoDataSetBindingSource1
-            // 
-            this.bugsExtendidoDataSetBindingSource1.DataSource = this.bugsExtendidoDataSet;
-            this.bugsExtendidoDataSetBindingSource1.Position = 0;
             // 
             // frmReporteListadoFactura
             // 
@@ -184,11 +184,11 @@
             this.Controls.Add(this.lblFechaDesde);
             this.Controls.Add(this.rvwFacturas);
             this.Name = "frmReporteListadoFactura";
-            this.Text = "frmReporteListadoFactura";
+            this.Text = "Listado de Facturas";
             this.Load += new System.EventHandler(this.frmReporteListadoFactura_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

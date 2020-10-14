@@ -45,6 +45,7 @@
             this.listadoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeProyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,6 +150,7 @@
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listadoDeClientesToolStripMenuItem,
             this.listadoDeProductosToolStripMenuItem,
+            this.listadoDeProyectosToolStripMenuItem,
             this.listadoDeFacturasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
@@ -174,6 +176,12 @@
             this.listadoDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.listadoDeFacturasToolStripMenuItem.Text = "Listado de Facturas";
             this.listadoDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeFacturasToolStripMenuItem_Click);
+            // 
+            // listadoDeProyectosToolStripMenuItem
+            // 
+            this.listadoDeProyectosToolStripMenuItem.Name = "listadoDeProyectosToolStripMenuItem";
+            this.listadoDeProyectosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.listadoDeProyectosToolStripMenuItem.Text = "Listado de Proyectos";
             // 
             // frmPrincipal
             // 
@@ -212,5 +220,6 @@
         private System.Windows.Forms.ToolStripMenuItem listadoDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeFacturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeProyectosToolStripMenuItem;
     }
 }
