@@ -2,6 +2,7 @@
 using LPCFacturas.Entities;
 using LPCFacturas.GUILayer;
 using LPCFacturas.Reportes;
+using LPCFacturas.Sources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,7 @@ namespace LPCFacturas.GUILayer
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            this.menuPrincipal.Renderer = new ToolStripProfessionalRenderer(new TestColorTable());
             this.Visible = false;
             frmLogin fl = new frmLogin();
             fl.ShowDialog();
