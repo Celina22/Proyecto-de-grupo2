@@ -35,6 +35,10 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
+            this.pcbUser = new System.Windows.Forms.PictureBox();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -42,7 +46,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblUsuario.Location = new System.Drawing.Point(19, 52);
+            this.lblUsuario.Location = new System.Drawing.Point(27, 230);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(75, 19);
             this.lblUsuario.TabIndex = 0;
@@ -53,7 +57,7 @@
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblClave.Location = new System.Drawing.Point(36, 103);
+            this.lblClave.Location = new System.Drawing.Point(44, 281);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(58, 19);
             this.lblClave.TabIndex = 1;
@@ -63,7 +67,7 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.btnIngresar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(116, 140);
+            this.btnIngresar.Location = new System.Drawing.Point(124, 318);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(92, 32);
             this.btnIngresar.TabIndex = 2;
@@ -75,7 +79,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.btnSalir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(216, 140);
+            this.btnSalir.Location = new System.Drawing.Point(224, 318);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 32);
             this.btnSalir.TabIndex = 3;
@@ -87,7 +91,7 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(116, 45);
+            this.txtUsuario.Location = new System.Drawing.Point(124, 223);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(192, 26);
             this.txtUsuario.TabIndex = 4;
@@ -97,19 +101,39 @@
             // 
             this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.txtClave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(116, 96);
+            this.txtClave.Location = new System.Drawing.Point(124, 274);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(192, 26);
             this.txtClave.TabIndex = 5;
             this.txtClave.UseSystemPasswordChar = true;
             this.txtClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClave_KeyDown);
             // 
+            // pcbUser
+            // 
+            this.pcbUser.Image = ((System.Drawing.Image)(resources.GetObject("pcbUser.Image")));
+            this.pcbUser.Location = new System.Drawing.Point(117, 92);
+            this.pcbUser.Name = "pcbUser";
+            this.pcbUser.Size = new System.Drawing.Size(111, 115);
+            this.pcbUser.TabIndex = 6;
+            this.pcbUser.TabStop = false;
+            // 
+            // pcbLogo
+            // 
+            this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
+            this.pcbLogo.Location = new System.Drawing.Point(71, 12);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(203, 84);
+            this.pcbLogo.TabIndex = 7;
+            this.pcbLogo.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(345, 209);
+            this.ClientSize = new System.Drawing.Size(345, 361);
+            this.Controls.Add(this.pcbLogo);
+            this.Controls.Add(this.pcbUser);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnSalir);
@@ -117,11 +141,13 @@
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(361, 248);
-            this.MinimumSize = new System.Drawing.Size(361, 248);
+            this.MaximumSize = new System.Drawing.Size(361, 400);
+            this.MinimumSize = new System.Drawing.Size(361, 400);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +161,8 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.PictureBox pcbUser;
+        private System.Windows.Forms.PictureBox pcbLogo;
     }
 }
 
