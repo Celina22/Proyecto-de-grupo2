@@ -226,6 +226,7 @@
             this.MaximumSize = new System.Drawing.Size(592, 416);
             this.MinimumSize = new System.Drawing.Size(592, 416);
             this.Name = "frmABMBarrios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Barrios";
             this.Load += new System.EventHandler(this.frmABMBarrios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_barrio)).EndInit();

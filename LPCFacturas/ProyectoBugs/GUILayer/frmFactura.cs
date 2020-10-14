@@ -368,5 +368,9 @@ namespace LPCFacturas.GUILayer
             btnAgregar.Enabled = btnQuitar.Enabled = valor;
         }
 
+        private void txtValor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
