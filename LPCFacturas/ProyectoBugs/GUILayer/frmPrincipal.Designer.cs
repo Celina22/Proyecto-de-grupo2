@@ -46,7 +46,9 @@
             this.listadoDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeProyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -184,12 +186,22 @@
             this.listadoDeFacturasToolStripMenuItem.Text = "Listado de Facturas";
             this.listadoDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeFacturasToolStripMenuItem_Click);
             // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::LPCFacturas.Properties.Resources.logo_size1;
+            this.pbLogo.Location = new System.Drawing.Point(0, 27);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(400, 156);
+            this.pbLogo.TabIndex = 3;
+            this.pbLogo.TabStop = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
@@ -198,6 +210,7 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem listadoDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeProyectosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

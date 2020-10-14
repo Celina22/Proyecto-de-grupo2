@@ -298,6 +298,11 @@
   <ItemGroup>
     <None Include="Sources\Imagenes\Search.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Sources\Imagenes\logo_size.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\Imagenes\logo_size.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
