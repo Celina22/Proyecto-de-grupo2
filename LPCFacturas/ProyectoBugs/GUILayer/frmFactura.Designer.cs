@@ -82,6 +82,11 @@
             // 
             // dtpFechaFactura
             // 
+            this.dtpFechaFactura.CalendarForeColor = System.Drawing.Color.Thistle;
+            this.dtpFechaFactura.CalendarMonthBackground = System.Drawing.Color.Thistle;
+            this.dtpFechaFactura.CalendarTitleBackColor = System.Drawing.Color.Thistle;
+            this.dtpFechaFactura.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtpFechaFactura.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.dtpFechaFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.dtpFechaFactura.Location = new System.Drawing.Point(250, 21);
             this.dtpFechaFactura.Name = "dtpFechaFactura";
@@ -101,8 +106,10 @@
             // 
             // txtPuntoDeVenta
             // 
+            this.txtPuntoDeVenta.BackColor = System.Drawing.Color.Thistle;
             this.txtPuntoDeVenta.Enabled = false;
             this.txtPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtPuntoDeVenta.ForeColor = System.Drawing.Color.White;
             this.txtPuntoDeVenta.Location = new System.Drawing.Point(250, 57);
             this.txtPuntoDeVenta.Name = "txtPuntoDeVenta";
             this.txtPuntoDeVenta.Size = new System.Drawing.Size(70, 31);
@@ -446,8 +453,10 @@
             // 
             // txtNumeroFactura
             // 
+            this.txtNumeroFactura.BackColor = System.Drawing.Color.Thistle;
             this.txtNumeroFactura.Enabled = false;
             this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtNumeroFactura.ForeColor = System.Drawing.Color.White;
             this.txtNumeroFactura.Location = new System.Drawing.Point(510, 57);
             this.txtNumeroFactura.Name = "txtNumeroFactura";
             this.txtNumeroFactura.Size = new System.Drawing.Size(184, 31);
@@ -467,7 +476,9 @@
             // 
             // cboCliente
             // 
+            this.cboCliente.BackColor = System.Drawing.Color.Thistle;
             this.cboCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cboCliente.ForeColor = System.Drawing.Color.White;
             this.cboCliente.FormattingEnabled = true;
             this.cboCliente.IntegralHeight = false;
             this.cboCliente.Location = new System.Drawing.Point(250, 94);
@@ -479,7 +490,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(962, 631);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.lblPuntoDeVenta);
@@ -496,6 +507,7 @@
             this.Controls.Add(this.lblFecha);
             this.Name = "frmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Registrar Factura";
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.gbxDetalles.ResumeLayout(false);
             this.gbxDetalles.PerformLayout();

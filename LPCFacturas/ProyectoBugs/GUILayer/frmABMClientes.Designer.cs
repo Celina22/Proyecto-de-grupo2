@@ -64,7 +64,7 @@
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblId.Location = new System.Drawing.Point(197, 16);
+            this.lblId.Location = new System.Drawing.Point(86, 15);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(32, 23);
             this.lblId.TabIndex = 0;
@@ -72,28 +72,29 @@
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtId.BackColor = System.Drawing.Color.Thistle;
             this.txtId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtId.Location = new System.Drawing.Point(235, 13);
+            this.txtId.Location = new System.Drawing.Point(124, 12);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(167, 31);
+            this.txtId.Size = new System.Drawing.Size(93, 31);
             this.txtId.TabIndex = 1;
             // 
             // txtCuit
             // 
-            this.txtCuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtCuit.BackColor = System.Drawing.Color.Thistle;
             this.txtCuit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtCuit.Location = new System.Drawing.Point(235, 50);
+            this.txtCuit.Location = new System.Drawing.Point(124, 49);
             this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(342, 31);
+            this.txtCuit.Size = new System.Drawing.Size(251, 31);
             this.txtCuit.TabIndex = 3;
+            this.txtCuit.TextChanged += new System.EventHandler(this.txtCuit_TextChanged);
             // 
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
             this.lblCuit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblCuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCuit.Location = new System.Drawing.Point(179, 53);
+            this.lblCuit.Location = new System.Drawing.Point(68, 52);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(50, 23);
             this.lblCuit.TabIndex = 2;
@@ -101,19 +102,20 @@
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtRazonSocial.BackColor = System.Drawing.Color.Thistle;
             this.txtRazonSocial.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtRazonSocial.Location = new System.Drawing.Point(235, 87);
+            this.txtRazonSocial.Location = new System.Drawing.Point(124, 86);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(342, 31);
+            this.txtRazonSocial.Size = new System.Drawing.Size(251, 31);
             this.txtRazonSocial.TabIndex = 5;
+            this.txtRazonSocial.TextChanged += new System.EventHandler(this.txtRazonSocial_TextChanged);
             // 
             // lblRazonSocial
             // 
             this.lblRazonSocial.AutoSize = true;
             this.lblRazonSocial.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblRazonSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblRazonSocial.Location = new System.Drawing.Point(116, 90);
+            this.lblRazonSocial.Location = new System.Drawing.Point(5, 89);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(113, 23);
             this.lblRazonSocial.TabIndex = 4;
@@ -121,19 +123,20 @@
             // 
             // txtCalle
             // 
-            this.txtCalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtCalle.BackColor = System.Drawing.Color.Thistle;
             this.txtCalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtCalle.Location = new System.Drawing.Point(235, 124);
+            this.txtCalle.Location = new System.Drawing.Point(536, 49);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(342, 31);
+            this.txtCalle.Size = new System.Drawing.Size(264, 31);
             this.txtCalle.TabIndex = 7;
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
             // 
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblCalle.Location = new System.Drawing.Point(175, 127);
+            this.lblCalle.Location = new System.Drawing.Point(461, 52);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(54, 23);
             this.lblCalle.TabIndex = 6;
@@ -141,74 +144,86 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtNumero.BackColor = System.Drawing.Color.Thistle;
             this.txtNumero.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtNumero.Location = new System.Drawing.Point(235, 161);
+            this.txtNumero.Location = new System.Drawing.Point(536, 89);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(342, 31);
+            this.txtNumero.Size = new System.Drawing.Size(264, 31);
             this.txtNumero.TabIndex = 9;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblNumero.Location = new System.Drawing.Point(149, 164);
+            this.lblNumero.Location = new System.Drawing.Point(435, 89);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(80, 23);
             this.lblNumero.TabIndex = 8;
             this.lblNumero.Text = "Número:";
+            this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
             // 
             // lblFechaAlta
             // 
             this.lblFechaAlta.AutoSize = true;
             this.lblFechaAlta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblFechaAlta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblFechaAlta.Location = new System.Drawing.Point(110, 201);
+            this.lblFechaAlta.Location = new System.Drawing.Point(396, 126);
             this.lblFechaAlta.Name = "lblFechaAlta";
             this.lblFechaAlta.Size = new System.Drawing.Size(119, 23);
             this.lblFechaAlta.TabIndex = 10;
             this.lblFechaAlta.Text = "Fecha de alta:";
+            this.lblFechaAlta.Click += new System.EventHandler(this.lblFechaAlta_Click);
             // 
             // dtpFechaAlta
             // 
-            this.dtpFechaAlta.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.dtpFechaAlta.CalendarForeColor = System.Drawing.Color.White;
+            this.dtpFechaAlta.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
+            this.dtpFechaAlta.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
+            this.dtpFechaAlta.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtpFechaAlta.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.dtpFechaAlta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.dtpFechaAlta.Location = new System.Drawing.Point(235, 198);
+            this.dtpFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaAlta.Location = new System.Drawing.Point(536, 123);
             this.dtpFechaAlta.Name = "dtpFechaAlta";
-            this.dtpFechaAlta.Size = new System.Drawing.Size(342, 31);
+            this.dtpFechaAlta.Size = new System.Drawing.Size(264, 31);
             this.dtpFechaAlta.TabIndex = 11;
+            this.dtpFechaAlta.ValueChanged += new System.EventHandler(this.dtpFechaAlta_ValueChanged);
             // 
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
             this.lblBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblBarrio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblBarrio.Location = new System.Drawing.Point(165, 238);
+            this.lblBarrio.Location = new System.Drawing.Point(451, 15);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(64, 23);
             this.lblBarrio.TabIndex = 12;
             this.lblBarrio.Text = "Barrio:";
+            this.lblBarrio.Click += new System.EventHandler(this.lblBarrio_Click);
             // 
             // cboBarrio
             // 
-            this.cboBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboBarrio.BackColor = System.Drawing.Color.Thistle;
             this.cboBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(235, 235);
+            this.cboBarrio.Location = new System.Drawing.Point(536, 12);
             this.cboBarrio.Name = "cboBarrio";
-            this.cboBarrio.Size = new System.Drawing.Size(342, 31);
+            this.cboBarrio.Size = new System.Drawing.Size(264, 31);
             this.cboBarrio.TabIndex = 13;
+            this.cboBarrio.SelectedIndexChanged += new System.EventHandler(this.cboBarrio_SelectedIndexChanged);
             // 
             // cboContacto
             // 
-            this.cboContacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboContacto.BackColor = System.Drawing.Color.Thistle;
             this.cboContacto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboContacto.FormattingEnabled = true;
-            this.cboContacto.Location = new System.Drawing.Point(235, 272);
+            this.cboContacto.Location = new System.Drawing.Point(124, 123);
             this.cboContacto.Name = "cboContacto";
-            this.cboContacto.Size = new System.Drawing.Size(342, 31);
+            this.cboContacto.Size = new System.Drawing.Size(251, 31);
             this.cboContacto.TabIndex = 15;
+            this.cboContacto.SelectedIndexChanged += new System.EventHandler(this.cboContacto_SelectedIndexChanged);
             this.cboContacto.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboContactoFormat);
             // 
             // lblContacto
@@ -216,17 +231,18 @@
             this.lblContacto.AutoSize = true;
             this.lblContacto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblContacto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblContacto.Location = new System.Drawing.Point(143, 275);
+            this.lblContacto.Location = new System.Drawing.Point(32, 126);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(86, 23);
             this.lblContacto.TabIndex = 14;
             this.lblContacto.Text = "Contacto:";
+            this.lblContacto.Click += new System.EventHandler(this.lblContacto_Click);
             // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(164)))), ((int)(((byte)(186)))));
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -234,12 +250,13 @@
             this.razonSocial,
             this.calle,
             this.numero});
-            this.dgvClientes.Location = new System.Drawing.Point(12, 309);
+            this.dgvClientes.EnableHeadersVisualStyles = false;
+            this.dgvClientes.Location = new System.Drawing.Point(12, 170);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(788, 222);
+            this.dgvClientes.Size = new System.Drawing.Size(788, 361);
             this.dgvClientes.TabIndex = 16;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
@@ -367,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(812, 605);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);

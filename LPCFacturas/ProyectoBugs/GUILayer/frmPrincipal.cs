@@ -40,8 +40,7 @@ namespace LPCFacturas.GUILayer
             this.Text = "Menú Principal - Usuario actual: " + UsuarioActual.NombreUsuario;
             fl.Dispose();
             this.Visible = true;
-        }
-
+        } 
         private void proyectosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmABMProyecto abmProyecto = new frmABMProyecto();
@@ -106,6 +105,11 @@ namespace LPCFacturas.GUILayer
         {
             frmReporteListadoProyectos nuevoReporteProyecto = new frmReporteListadoProyectos();
             nuevoReporteProyecto.ShowDialog();
+        }
+
+        private void facturaToolStripMenuItem_BackColorChanged(object sender, EventArgs e)
+        {
+            menuPrincipal.BackColor = Color.FromArgb(137, 2, 62);
         }
     }
 }

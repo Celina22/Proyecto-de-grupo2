@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LPCFacturas.BusinessLayer;
+using System.Runtime.InteropServices;
 
 namespace LPCFacturas.GUILayer
 {
@@ -29,6 +30,14 @@ namespace LPCFacturas.GUILayer
             cargarCombo(cboContacto, oContactoService.recuperarTodos(), "Nombre", "Id_contacto");
             cargarGrilla(dgvClientes, oClienteService.recuperarTodos());
             habilitarCampos(false);
+            dgvClientes.DefaultCellStyle.SelectionBackColor = Color.Thistle;
+            dgvClientes.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+
+            dgvClientes.RowHeadersDefaultCellStyle.BackColor = Color.Thistle;
+            dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
+            dgvClientes.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
+            dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
         }
         private void habilitarCampos(bool x)
         {
@@ -240,6 +249,61 @@ namespace LPCFacturas.GUILayer
         private void dgvClientes_SelectionChanged(object sender, EventArgs e)
         {
             this.actualizarCampos(dgvClientes.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void lblNumero_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblContacto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboBarrio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBarrio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFechaAlta_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFechaAlta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboContacto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCalle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRazonSocial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCuit_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
