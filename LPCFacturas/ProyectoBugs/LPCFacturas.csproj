@@ -122,6 +122,12 @@
     <Compile Include="GUILayer\frmABMProducto.Designer.cs">
       <DependentUpon>frmABMProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmABMProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmABMProductos.Designer.cs">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmABMUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="GUILayer\frmABMProyecto.Designer.cs">
       <DependentUpon>frmABMProyecto.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\frmReporteListadoCliente.cs">
@@ -178,6 +190,7 @@
     <Compile Include="Reportes\frmReporteListadoProyectos.Designer.cs">
       <DependentUpon>frmReporteListadoProyectos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sources\TestColorTable.cs" />
     <EmbeddedResource Include="GUILayer\frmABMBarrios.resx">
       <DependentUpon>frmABMBarrios.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmABMProducto.resx">
       <DependentUpon>frmABMProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmABMProductos.resx">
+      <DependentUpon>frmABMProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmABMUsuario.resx">
       <DependentUpon>frmABMUsuario.cs</DependentUpon>
@@ -204,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmABMProyecto.resx">
       <DependentUpon>frmABMProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
