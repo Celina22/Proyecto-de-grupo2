@@ -58,18 +58,21 @@ namespace LPCFacturas.DataAccessLayer
 
         public DataTable recuperarProyectos(string descripcion, string producto, string responsable, string alcance, string version)
         {
-            var SQLquery = "SELECT * FROM Proyectos WHERE borrado=0";
+            var SQLquery =  "SELECT id_proyecto, pr.nombre \"id_producto\", descripcion, version, alcance, u.usuario \"id_responsable\" " +
+                            "FROM Proyectos p   JOIN Usuarios u ON p.id_responsable = u.id_usuario " +
+                            "                   JOIN Productos pr ON p.id_producto = pr.id_producto " +
+                            "WHERE p.borrado=0";
 
             if (descripcion != "")
-                SQLquery += " AND descripcion='" + descripcion + "'";
+                SQLquery += " AND p.descripcion='" + descripcion + "'";
             if (producto != "-1")
-                SQLquery += " AND id_producto=" + producto;
+                SQLquery += " AND p.id_producto=" + producto;
             if (responsable != "-1")
-                SQLquery += " AND id_responsable=" + responsable;
+                SQLquery += " AND p.id_responsable=" + responsable;
             if (alcance != "")
-                SQLquery += " AND alcance='" + alcance + "'";
+                SQLquery += " AND p.alcance='" + alcance + "'";
             if (version != "")
-                SQLquery += " AND version='" + version + "'";
+                SQLquery += " AND p.version='" + version + "'";
 
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
