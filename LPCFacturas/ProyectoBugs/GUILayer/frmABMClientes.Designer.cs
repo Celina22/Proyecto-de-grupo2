@@ -393,6 +393,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Name = "frmABMClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Clientes";
             this.Load += new System.EventHandler(this.frmABMClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();

@@ -191,7 +191,7 @@
             this.pbLogo.Image = global::LPCFacturas.Properties.Resources.logo_size1;
             this.pbLogo.Location = new System.Drawing.Point(0, 27);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(400, 156);
+            this.pbLogo.Size = new System.Drawing.Size(398, 153);
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
             // 
