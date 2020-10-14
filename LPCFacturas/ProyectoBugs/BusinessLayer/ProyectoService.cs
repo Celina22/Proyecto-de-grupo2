@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LPCFacturas.Entities;
+using System.Data;
 
 namespace LPCFacturas.BusinessLayer
 {
@@ -36,6 +37,11 @@ namespace LPCFacturas.BusinessLayer
         public void eliminarProyecto(Proyecto proyecto)
         {
             oProyectoDao.eliminarProyecto(proyecto);
+        }
+
+        public DataTable recuperarProyectos(string descripcion, string producto, string responsable, string alcance, string version)
+        {
+            return oProyectoDao.recuperarProyectos(descripcion, producto, responsable, alcance, version);
         }
     }
 }

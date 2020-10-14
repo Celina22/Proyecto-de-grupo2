@@ -29,52 +29,42 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.rvwProductos = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.lblFechaDesde = new System.Windows.Forms.Label();
-            this.lblFechaHasta = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblFechaDesde = new System.Windows.Forms.Label();
+            this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
-            this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
-            this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bugsExtendidoDataSetBindingSource
+            // 
+            this.bugsExtendidoDataSetBindingSource.DataSource = this.bugsExtendidoDataSet;
+            this.bugsExtendidoDataSetBindingSource.Position = 0;
+            // 
+            // bugsExtendidoDataSet
+            // 
+            this.bugsExtendidoDataSet.DataSetName = "BugsExtendidoDataSet";
+            this.bugsExtendidoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rvwProductos
             // 
-            reportDataSource3.Name = "ListadoProductos";
-            reportDataSource3.Value = this.bugsExtendidoDataSetBindingSource;
-            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource2.Name = "ListadoProductos";
+            reportDataSource2.Value = this.bugsExtendidoDataSetBindingSource;
+            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource2);
             this.rvwProductos.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoProducto.rdlc";
             this.rvwProductos.Location = new System.Drawing.Point(2, 66);
             this.rvwProductos.Name = "rvwProductos";
             this.rvwProductos.Size = new System.Drawing.Size(1084, 451);
             this.rvwProductos.TabIndex = 0;
             this.rvwProductos.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // lblFechaDesde
-            // 
-            this.lblFechaDesde.AutoSize = true;
-            this.lblFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaDesde.Location = new System.Drawing.Point(12, 16);
-            this.lblFechaDesde.Name = "lblFechaDesde";
-            this.lblFechaDesde.Size = new System.Drawing.Size(115, 23);
-            this.lblFechaDesde.TabIndex = 1;
-            this.lblFechaDesde.Text = "FechaDesde: ";
-            // 
-            // lblFechaHasta
-            // 
-            this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaHasta.Location = new System.Drawing.Point(306, 16);
-            this.lblFechaHasta.Name = "lblFechaHasta";
-            this.lblFechaHasta.Size = new System.Drawing.Size(106, 23);
-            this.lblFechaHasta.TabIndex = 2;
-            this.lblFechaHasta.Text = "FechaHasta:";
             // 
             // lblNombre
             // 
@@ -108,6 +98,26 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
+            // lblFechaDesde
+            // 
+            this.lblFechaDesde.AutoSize = true;
+            this.lblFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFechaDesde.Location = new System.Drawing.Point(12, 16);
+            this.lblFechaDesde.Name = "lblFechaDesde";
+            this.lblFechaDesde.Size = new System.Drawing.Size(115, 23);
+            this.lblFechaDesde.TabIndex = 1;
+            this.lblFechaDesde.Text = "FechaDesde: ";
+            // 
+            // lblFechaHasta
+            // 
+            this.lblFechaHasta.AutoSize = true;
+            this.lblFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFechaHasta.Location = new System.Drawing.Point(306, 16);
+            this.lblFechaHasta.Name = "lblFechaHasta";
+            this.lblFechaHasta.Size = new System.Drawing.Size(106, 23);
+            this.lblFechaHasta.TabIndex = 2;
+            this.lblFechaHasta.Text = "FechaHasta:";
+            // 
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
@@ -126,16 +136,6 @@
             this.dtpFechaHasta.Size = new System.Drawing.Size(142, 31);
             this.dtpFechaHasta.TabIndex = 7;
             // 
-            // bugsExtendidoDataSet
-            // 
-            this.bugsExtendidoDataSet.DataSetName = "BugsExtendidoDataSet";
-            this.bugsExtendidoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bugsExtendidoDataSetBindingSource
-            // 
-            this.bugsExtendidoDataSetBindingSource.DataSource = this.bugsExtendidoDataSet;
-            this.bugsExtendidoDataSetBindingSource.Position = 0;
-            // 
             // frmReporteListadoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,10 +151,10 @@
             this.Controls.Add(this.lblFechaDesde);
             this.Controls.Add(this.rvwProductos);
             this.Name = "frmReporteListadoProducto";
-            this.Text = "frmReporteListadoProducto";
+            this.Text = "Listado de Productos";
             this.Load += new System.EventHandler(this.frmReporteListadoProducto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,14 +163,14 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer rvwProductos;
-        private System.Windows.Forms.Label lblFechaDesde;
-        private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DateTimePicker dtpFechaDesde;
-        private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.BindingSource bugsExtendidoDataSetBindingSource;
         private BugsExtendidoDataSet bugsExtendidoDataSet;
+        private System.Windows.Forms.Label lblFechaDesde;
+        private System.Windows.Forms.Label lblFechaHasta;
+        private System.Windows.Forms.DateTimePicker dtpFechaDesde;
+        private System.Windows.Forms.DateTimePicker dtpFechaHasta;
     }
 }

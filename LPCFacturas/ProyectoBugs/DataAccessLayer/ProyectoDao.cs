@@ -56,6 +56,25 @@ namespace LPCFacturas.DataAccessLayer
             return null;
         }
 
+        public DataTable recuperarProyectos(string descripcion, string producto, string responsable, string alcance, string version)
+        {
+            var SQLquery = "SELECT * FROM Proyectos WHERE borrado=0";
+
+            if (descripcion != "")
+                SQLquery += " AND descripcion=" + descripcion;
+            if (producto != "-1")
+                SQLquery += " AND id_producto=" + producto;
+            if (responsable != "-1")
+                SQLquery += " AND id_responsable=" + responsable;
+            if (alcance != "")
+                SQLquery += " AND alcance=" + alcance;
+            if (version != "")
+                SQLquery += " AND version=" + version;
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
         private Proyecto MappingBug(DataRow row)
         {
             Proyecto oProyecto = new Proyecto

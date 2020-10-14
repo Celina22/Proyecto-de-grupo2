@@ -9,19 +9,19 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79104cm</Width>
+              <Width>5.11401cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.61667cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>5.64854cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>4.24625cm</Width>
+              <Width>5.22048cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>4.21979cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>4.29917cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -37,7 +37,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id factura</Value>
+                              <Value>ID de Proyecto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -68,7 +68,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>numero factura</Value>
+                              <Value>Producto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -99,7 +99,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id cliente</Value>
+                              <Value>Descripción</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -130,7 +130,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>fecha</Value>
+                              <Value>Versión</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -161,7 +161,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id usuario creador</Value>
+                              <Value>Alcance</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -192,7 +192,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>total</Value>
+                              <Value>Responsable</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -221,21 +221,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_factura">
+                    <Textbox Name="id_proyecto">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_factura.Value</Value>
+                              <Value>=Fields!id_proyecto.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_factura</rd:DefaultName>
+                      <rd:DefaultName>id_proyecto</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -251,21 +251,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="numero_factura">
+                    <Textbox Name="id_producto">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!numero_factura.Value</Value>
+                              <Value>=Fields!id_producto.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>numero_factura</rd:DefaultName>
+                      <rd:DefaultName>id_producto</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -281,21 +281,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_cliente">
+                    <Textbox Name="descripcion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_cliente.Value</Value>
+                              <Value>=Fields!descripcion.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_cliente</rd:DefaultName>
+                      <rd:DefaultName>descripcion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -311,21 +311,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="fecha">
+                    <Textbox Name="version">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!fecha.Value</Value>
+                              <Value>=Fields!version.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>fecha</rd:DefaultName>
+                      <rd:DefaultName>version</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -341,21 +341,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_usuario_creador">
+                    <Textbox Name="alcance">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_usuario_creador.Value</Value>
+                              <Value>=Fields!alcance.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_usuario_creador</rd:DefaultName>
+                      <rd:DefaultName>alcance</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -371,21 +371,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="total">
+                    <Textbox Name="id_responsable">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!total.Value</Value>
+                              <Value>=Fields!id_responsable.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>total</rd:DefaultName>
+                      <rd:DefaultName>id_responsable</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -423,11 +423,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ListadoFactura</DataSetName>
-        <Top>1.13453cm</Top>
+        <DataSetName>ListadoProyectos</DataSetName>
+        <Top>1.90183cm</Top>
         <Left>1.21391cm</Left>
         <Height>1.2cm</Height>
-        <Width>22.3025cm</Width>
+        <Width>23.85345cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -435,7 +435,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>3.47917in</Height>
     <Style />
   </Body>
   <Width>10.21168in</Width>
@@ -452,7 +452,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Listado de Facturas</Value>
+                  <Value>Listado de Proyectos</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                   </Style>
@@ -465,7 +465,7 @@
           <Top>0.60537cm</Top>
           <Left>1.21391cm</Left>
           <Height>1.20854cm</Height>
-          <Width>6.57458cm</Width>
+          <Width>8.32083cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -514,7 +514,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>2.48708cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -604,48 +604,48 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ListadoFactura">
+    <DataSet Name="ListadoProyectos">
       <Query>
         <DataSourceName>BugsExtendidoDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="id_factura">
-          <DataField>id_factura</DataField>
+        <Field Name="id_proyecto">
+          <DataField>id_proyecto</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="numero_factura">
-          <DataField>numero_factura</DataField>
+        <Field Name="id_producto">
+          <DataField>id_producto</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_cliente">
-          <DataField>id_cliente</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="version">
+          <DataField>version</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fecha">
-          <DataField>fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="alcance">
+          <DataField>alcance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_usuario_creador">
-          <DataField>id_usuario_creador</DataField>
+        <Field Name="id_responsable">
+          <DataField>id_responsable</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="borrado">
           <DataField>borrado</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="total">
-          <DataField>total</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BugsExtendidoDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Varios\Facultad\Tercero\Programacion de Aplicaciones Visuales 1\ProyectosGit\PAV12020\LPCFacturas\ProyectoBugs\BugsExtendidoDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>Facturas</rd:TableName>
+        <rd:SchemaPath>C:\Users\gfran\Documents\Universidad\Repositorio PAV\PAV12020\LPCFacturas\ProyectoBugs\BugsExtendidoDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Proyectos</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>FacturasTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>ProyectosTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
