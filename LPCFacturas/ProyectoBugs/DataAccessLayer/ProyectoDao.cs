@@ -61,15 +61,15 @@ namespace LPCFacturas.DataAccessLayer
             var SQLquery = "SELECT * FROM Proyectos WHERE borrado=0";
 
             if (descripcion != "")
-                SQLquery += " AND descripcion=" + descripcion;
+                SQLquery += " AND descripcion='" + descripcion + "'";
             if (producto != "-1")
                 SQLquery += " AND id_producto=" + producto;
             if (responsable != "-1")
                 SQLquery += " AND id_responsable=" + responsable;
             if (alcance != "")
-                SQLquery += " AND alcance=" + alcance;
+                SQLquery += " AND alcance='" + alcance + "'";
             if (version != "")
-                SQLquery += " AND version=" + version;
+                SQLquery += " AND version='" + version + "'";
 
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
