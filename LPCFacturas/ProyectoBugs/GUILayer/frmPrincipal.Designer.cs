@@ -60,7 +60,7 @@
             this.soporteToolStripMenuItem});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Size = new System.Drawing.Size(1370, 24);
+            this.menuPrincipal.Size = new System.Drawing.Size(1904, 24);
             this.menuPrincipal.TabIndex = 0;
             this.menuPrincipal.Text = "menuStrip1";
             // 
@@ -81,7 +81,7 @@
             this.proyectosVendidosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.proyectosVendidosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.proyectosVendidosToolStripMenuItem.Name = "proyectosVendidosToolStripMenuItem";
-            this.proyectosVendidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proyectosVendidosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.proyectosVendidosToolStripMenuItem.Text = "Proyectos Vendidos";
             // 
             // comprasClientesToolStripMenuItem
@@ -89,7 +89,7 @@
             this.comprasClientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.comprasClientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.comprasClientesToolStripMenuItem.Name = "comprasClientesToolStripMenuItem";
-            this.comprasClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comprasClientesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.comprasClientesToolStripMenuItem.Text = "Compras Clientes";
             // 
             // nuevaFacturaToolStripMenuItem
@@ -97,7 +97,7 @@
             this.nuevaFacturaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.nuevaFacturaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.nuevaFacturaToolStripMenuItem.Name = "nuevaFacturaToolStripMenuItem";
-            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.nuevaFacturaToolStripMenuItem.Text = "Nueva Factura";
             this.nuevaFacturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaFacturaToolStripMenuItem_Click);
             // 
@@ -220,8 +220,9 @@
             // 
             // pbLogo
             // 
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pbLogo.Image = global::LPCFacturas.Properties.Resources.logo_size1;
-            this.pbLogo.Location = new System.Drawing.Point(485, 296);
+            this.pbLogo.Location = new System.Drawing.Point(752, 444);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(400, 152);
             this.pbLogo.TabIndex = 3;
@@ -233,7 +234,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.menuPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

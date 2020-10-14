@@ -116,7 +116,7 @@
             // 
             this.pcbUser.BackColor = System.Drawing.Color.Transparent;
             this.pcbUser.Image = ((System.Drawing.Image)(resources.GetObject("pcbUser.Image")));
-            this.pcbUser.Location = new System.Drawing.Point(109, 92);
+            this.pcbUser.Location = new System.Drawing.Point(110, 102);
             this.pcbUser.Name = "pcbUser";
             this.pcbUser.Size = new System.Drawing.Size(126, 115);
             this.pcbUser.TabIndex = 6;

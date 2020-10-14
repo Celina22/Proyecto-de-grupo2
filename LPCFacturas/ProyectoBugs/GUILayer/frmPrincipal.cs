@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,10 @@ namespace LPCFacturas.GUILayer
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            int ancho = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
+            int alto = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+            Size = new System.Drawing.Size(ancho, alto);
+
             this.menuPrincipal.Renderer = new ToolStripProfessionalRenderer(new TestColorTable());
             this.Visible = false;
             frmLogin fl = new frmLogin();
