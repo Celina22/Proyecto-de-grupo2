@@ -57,6 +57,7 @@ namespace LPCFacturas.Reportes
             DataTable tabla = new DataTable();
             tabla = oProyectoService.recuperarProyectos(descripcion, producto, responsable, alcance, version);
 
+
             ReportDataSource ds = new ReportDataSource("ListadoProyectos", tabla);
 
             rvwProyectos.LocalReport.DataSources.Clear();
