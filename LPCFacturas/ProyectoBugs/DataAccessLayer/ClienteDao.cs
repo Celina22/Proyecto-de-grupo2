@@ -34,9 +34,11 @@ namespace LPCFacturas.DataAccessLayer
 
         public DataTable recuperarCLientes(DateTime fechaDesde, DateTime FechaHasta, string barrio)
         {
-            var SQLquery = "SELECT * FROM Clientes WHERE fecha_alta BETWEEN CONVERT(datetime,'"+ fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
-                                                                      "AND  CONVERT(datetime,'" + FechaHasta.ToString("dd/MM/yyyy") + "',103) " +
-                                                                     " AND borrado=0 ";
+            var SQLquery = "SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, CONVERT(varchar,c.fecha_alta,103) as fecha_alta, b.nombre as id_barrio, CONCAT(co.nombre,' ' ,co.apellido) as id_contacto " +
+                           "FROM Clientes c LEFT JOIN Barrios b ON (c.id_barrio = b.id_barrio) LEFT JOIN Contactos co ON (co.id_contacto = c.id_contacto)" +
+                           "WHERE c.fecha_alta BETWEEN CONVERT(datetime,'"+ fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND  CONVERT(datetime,'" + FechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND c.borrado=0 ";
 
             if (barrio != "-1")
                 SQLquery += "AND id_barrio = " + barrio;
