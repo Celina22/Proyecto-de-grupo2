@@ -27,11 +27,6 @@ namespace LPCFacturas.Reportes
             this.rvwProductos.RefreshReport();
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void cargarCombo(ComboBox combo, Object source, string display, string value)
         {
             combo.DataSource = source;

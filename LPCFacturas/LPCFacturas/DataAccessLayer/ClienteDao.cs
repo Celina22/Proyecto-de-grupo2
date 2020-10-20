@@ -32,6 +32,18 @@ namespace LPCFacturas.DataAccessLayer
             return tabla;
         }
 
+        public DataTable recuperarCLientes(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            var SQLquery = "SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, CONVERT(varchar,c.fecha_alta,103) as fecha_alta, b.nombre as id_barrio, CONCAT(co.nombre,' ' ,co.apellido) as id_contacto " +
+                           "FROM Clientes c LEFT JOIN Barrios b ON (c.id_barrio = b.id_barrio) LEFT JOIN Contactos co ON (co.id_contacto = c.id_contacto)" +
+                           "WHERE c.fecha_alta BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND  CONVERT(datetime,'" + fechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND c.borrado=0 ";
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
         public DataTable recuperarCLientes(DateTime fechaDesde, DateTime FechaHasta, string barrio)
         {
             var SQLquery = "SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, CONVERT(varchar,c.fecha_alta,103) as fecha_alta, b.nombre as id_barrio, CONCAT(co.nombre,' ' ,co.apellido) as id_contacto " +
