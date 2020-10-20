@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.rvwProductos = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -56,15 +56,15 @@
             // 
             // rvwProductos
             // 
-            reportDataSource2.Name = "ListadoProductos";
-            reportDataSource2.Value = this.bugsExtendidoDataSetBindingSource;
-            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "ListadoProductos";
+            reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource;
+            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource1);
             this.rvwProductos.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoProducto.rdlc";
             this.rvwProductos.Location = new System.Drawing.Point(2, 66);
             this.rvwProductos.Name = "rvwProductos";
+            this.rvwProductos.ServerReport.BearerToken = null;
             this.rvwProductos.Size = new System.Drawing.Size(1084, 451);
             this.rvwProductos.TabIndex = 0;
-            this.rvwProductos.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // lblNombre
             // 
