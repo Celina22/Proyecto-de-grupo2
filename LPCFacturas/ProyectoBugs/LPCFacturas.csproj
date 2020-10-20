@@ -166,6 +166,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\frmReporteGraficoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteGraficoFactura.Designer.cs">
+      <DependentUpon>frmReporteGraficoFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmReporteListadoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\frmReporteGraficoFactura.resx">
+      <DependentUpon>frmReporteGraficoFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmReporteListadoCliente.resx">
       <DependentUpon>frmReporteListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +255,7 @@
     <EmbeddedResource Include="Reportes\frmReporteListadoProyectos.resx">
       <DependentUpon>frmReporteListadoProyectos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteGraficoFactura.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoFactura.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoProducto.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoCliente.rdlc" />
