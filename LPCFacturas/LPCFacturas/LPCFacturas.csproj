@@ -171,7 +171,9 @@
     <Compile Include="Reportes\frmEstadisticaGraficoFactura.Designer.cs">
       <DependentUpon>frmEstadisticaGraficoFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmReporteListadoCliente.cs" />
+    <Compile Include="Reportes\frmReporteListadoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\frmReporteListadoCliente.Designer.cs">
       <DependentUpon>frmReporteListadoCliente.cs</DependentUpon>
     </Compile>

@@ -38,7 +38,7 @@ namespace LPCFacturas.Reportes
             ReportDataSource ds = new ReportDataSource("ListadoClientes", tabla);
 
             reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(ds);
+            reportViewer1.LocalReport.DataSources.Add(ds);t
             reportViewer1.LocalReport.Refresh();*/
 
 
