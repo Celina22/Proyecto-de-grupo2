@@ -155,7 +155,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             //var SQLquery = "SELECT * FROM facturas WHERE borrado=0";
 
-            var SQLquery = "SELECT SUM(F.total) AS total, MONTH(F.fecha) FROM facturas F GROUP BY MONTH(F.fecha)";
+            var SQLquery = "SELECT SUM(F.total) AS total, MONTH(F.fecha) AS fecha FROM facturas F GROUP BY MONTH(F.fecha)";
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
         }

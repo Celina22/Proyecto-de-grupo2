@@ -34,17 +34,17 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bugsExtendidoDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
+            this.bugsExtendidoDataSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.bugsExtendidoDataSetBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rpvGraficoFacturas = new Microsoft.Reporting.WinForms.ReportViewer();
             this.bugsExtendidoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bugsExtendidoDataSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.bugsExtendidoDataSetBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // bugsExtendidoDataSetBindingSource2
@@ -56,6 +56,16 @@
             // 
             this.bugsExtendidoDataSet.DataSetName = "BugsExtendidoDataSet";
             this.bugsExtendidoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bugsExtendidoDataSetBindingSource3
+            // 
+            this.bugsExtendidoDataSetBindingSource3.DataSource = this.bugsExtendidoDataSet;
+            this.bugsExtendidoDataSetBindingSource3.Position = 0;
+            // 
+            // bugsExtendidoDataSetBindingSource4
+            // 
+            this.bugsExtendidoDataSetBindingSource4.DataSource = this.bugsExtendidoDataSet;
+            this.bugsExtendidoDataSetBindingSource4.Position = 0;
             // 
             // bugsExtendidoDataSetBindingSource
             // 
@@ -86,31 +96,23 @@
             this.bugsExtendidoDataSetBindingSource1.DataSource = this.bugsExtendidoDataSet;
             this.bugsExtendidoDataSetBindingSource1.Position = 0;
             // 
-            // bugsExtendidoDataSetBindingSource3
-            // 
-            this.bugsExtendidoDataSetBindingSource3.DataSource = this.bugsExtendidoDataSet;
-            this.bugsExtendidoDataSetBindingSource3.Position = 0;
-            // 
-            // bugsExtendidoDataSetBindingSource4
-            // 
-            this.bugsExtendidoDataSetBindingSource4.DataSource = this.bugsExtendidoDataSet;
-            this.bugsExtendidoDataSetBindingSource4.Position = 0;
-            // 
             // frmEstadisticaGraficoFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 749);
             this.Controls.Add(this.rpvGraficoFacturas);
+            this.MaximumSize = new System.Drawing.Size(1112, 788);
+            this.MinimumSize = new System.Drawing.Size(1112, 726);
             this.Name = "frmEstadisticaGraficoFactura";
             this.Text = "frmEstadisticaGraficoFactura";
             this.Load += new System.EventHandler(this.frmEstadisticaGraficoFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
