@@ -62,8 +62,8 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblId.Location = new System.Drawing.Point(176, 22);
+            this.lblId.ForeColor = System.Drawing.Color.White;
+            this.lblId.Location = new System.Drawing.Point(119, 27);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(32, 23);
             this.lblId.TabIndex = 0;
@@ -71,19 +71,19 @@
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtId.BackColor = System.Drawing.Color.White;
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(214, 19);
+            this.txtId.Location = new System.Drawing.Point(157, 24);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(187, 31);
             this.txtId.TabIndex = 0;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(214, 113);
+            this.txtDescripcion.Location = new System.Drawing.Point(157, 118);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(342, 31);
             this.txtDescripcion.TabIndex = 2;
@@ -92,8 +92,8 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblDescripcion.Location = new System.Drawing.Point(100, 116);
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
+            this.lblDescripcion.Location = new System.Drawing.Point(43, 121);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(108, 23);
             this.lblDescripcion.TabIndex = 4;
@@ -101,9 +101,9 @@
             // 
             // txtVersion
             // 
-            this.txtVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtVersion.BackColor = System.Drawing.Color.White;
             this.txtVersion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVersion.Location = new System.Drawing.Point(214, 160);
+            this.txtVersion.Location = new System.Drawing.Point(684, 24);
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(342, 31);
             this.txtVersion.TabIndex = 3;
@@ -112,8 +112,8 @@
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblVersion.Location = new System.Drawing.Point(133, 163);
+            this.lblVersion.ForeColor = System.Drawing.Color.White;
+            this.lblVersion.Location = new System.Drawing.Point(603, 27);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(75, 23);
             this.lblVersion.TabIndex = 6;
@@ -121,9 +121,9 @@
             // 
             // txtAlcance
             // 
-            this.txtAlcance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txtAlcance.BackColor = System.Drawing.Color.White;
             this.txtAlcance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlcance.Location = new System.Drawing.Point(214, 207);
+            this.txtAlcance.Location = new System.Drawing.Point(684, 71);
             this.txtAlcance.Name = "txtAlcance";
             this.txtAlcance.Size = new System.Drawing.Size(342, 31);
             this.txtAlcance.TabIndex = 4;
@@ -132,8 +132,8 @@
             // 
             this.lblAlcance.AutoSize = true;
             this.lblAlcance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlcance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblAlcance.Location = new System.Drawing.Point(131, 210);
+            this.lblAlcance.ForeColor = System.Drawing.Color.White;
+            this.lblAlcance.Location = new System.Drawing.Point(601, 74);
             this.lblAlcance.Name = "lblAlcance";
             this.lblAlcance.Size = new System.Drawing.Size(77, 23);
             this.lblAlcance.TabIndex = 8;
@@ -143,8 +143,8 @@
             // 
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblProducto.Location = new System.Drawing.Point(121, 69);
+            this.lblProducto.ForeColor = System.Drawing.Color.White;
+            this.lblProducto.Location = new System.Drawing.Point(64, 74);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(87, 23);
             this.lblProducto.TabIndex = 10;
@@ -154,8 +154,8 @@
             // 
             this.lblResponsable.AutoSize = true;
             this.lblResponsable.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResponsable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblResponsable.Location = new System.Drawing.Point(92, 257);
+            this.lblResponsable.ForeColor = System.Drawing.Color.White;
+            this.lblResponsable.Location = new System.Drawing.Point(562, 121);
             this.lblResponsable.Name = "lblResponsable";
             this.lblResponsable.Size = new System.Drawing.Size(116, 23);
             this.lblResponsable.TabIndex = 11;
@@ -163,20 +163,20 @@
             // 
             // cboProducto
             // 
-            this.cboProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboProducto.BackColor = System.Drawing.Color.White;
             this.cboProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Location = new System.Drawing.Point(214, 66);
+            this.cboProducto.Location = new System.Drawing.Point(157, 71);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(342, 31);
             this.cboProducto.TabIndex = 1;
             // 
             // cboResponsable
             // 
-            this.cboResponsable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboResponsable.BackColor = System.Drawing.Color.White;
             this.cboResponsable.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboResponsable.FormattingEnabled = true;
-            this.cboResponsable.Location = new System.Drawing.Point(214, 254);
+            this.cboResponsable.Location = new System.Drawing.Point(684, 118);
             this.cboResponsable.Name = "cboResponsable";
             this.cboResponsable.Size = new System.Drawing.Size(342, 31);
             this.cboResponsable.TabIndex = 5;
@@ -185,7 +185,7 @@
             // 
             this.dgvProyecto.AllowUserToAddRows = false;
             this.dgvProyecto.AllowUserToDeleteRows = false;
-            this.dgvProyecto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(164)))), ((int)(((byte)(186)))));
+            this.dgvProyecto.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvProyecto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyecto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -193,12 +193,13 @@
             this.descripcion,
             this.version,
             this.responsable});
-            this.dgvProyecto.Location = new System.Drawing.Point(36, 304);
+            this.dgvProyecto.GridColor = System.Drawing.Color.Silver;
+            this.dgvProyecto.Location = new System.Drawing.Point(36, 195);
             this.dgvProyecto.MultiSelect = false;
             this.dgvProyecto.Name = "dgvProyecto";
             this.dgvProyecto.ReadOnly = true;
             this.dgvProyecto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProyecto.Size = new System.Drawing.Size(698, 174);
+            this.dgvProyecto.Size = new System.Drawing.Size(990, 283);
             this.dgvProyecto.TabIndex = 14;
             this.dgvProyecto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProyecto_CellContentClick);
             this.dgvProyecto.SelectionChanged += new System.EventHandler(this.dgvProyecto_SelectionChanged);
@@ -245,7 +246,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnSalir.Image = global::LPCFacturas.Properties.Resources.Salir;
-            this.btnSalir.Location = new System.Drawing.Point(663, 493);
+            this.btnSalir.Location = new System.Drawing.Point(955, 493);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(71, 56);
             this.btnSalir.TabIndex = 11;
@@ -260,7 +261,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnCancelar.Image = global::LPCFacturas.Properties.Resources.firewall_off2;
-            this.btnCancelar.Location = new System.Drawing.Point(498, 493);
+            this.btnCancelar.Location = new System.Drawing.Point(738, 493);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(67, 56);
             this.btnCancelar.TabIndex = 10;
@@ -275,7 +276,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnGuardar.Image = global::LPCFacturas.Properties.Resources.firewallcheck2;
-            this.btnGuardar.Location = new System.Drawing.Point(417, 493);
+            this.btnGuardar.Location = new System.Drawing.Point(657, 493);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(71, 56);
             this.btnGuardar.TabIndex = 9;
@@ -332,8 +333,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(770, 561);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
+            this.ClientSize = new System.Drawing.Size(1063, 561);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -355,8 +356,6 @@
             this.Controls.Add(this.lblId);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(786, 600);
-            this.MinimumSize = new System.Drawing.Size(786, 600);
             this.Name = "frmABMProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Proyecto";

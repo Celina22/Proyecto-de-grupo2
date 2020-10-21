@@ -126,5 +126,38 @@ namespace LPCFacturas.DataAccessLayer
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
         }
+
+        public DataTable recuperarTodas()
+        {
+            //var SQLquery = "SELECT * FROM facturas WHERE borrado=0";
+
+            var SQLquery = "SELECT F.id_factura,F.numero_factura, C.razon_social AS id_cliente,F.fecha,U.usuario AS id_usuario_creador,F.total, F.borrado" +
+                " FROM Facturas F " +
+                "JOIN Clientes C ON (F.id_cliente = C.id_cliente) " +
+                "JOIN Usuarios U ON (F.id_usuario_creador = U.id_usuario) " +
+                "WHERE F.borrado=0";                             
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
+        public DataTable recuperarTodasPorMes()
+        {
+            //var SQLquery = "SELECT * FROM facturas WHERE borrado=0";
+
+            //var SQLquery = "SELECT Convert(varchar,F.fecha,103) AS fecha FROM facturas F GROUP BY Convert(varchar,F.fecha,103)";
+            var SQLquery = "SELECT MONTH(F.fecha) AS fecha FROM facturas F WHERE YEAR(F.fecha) = YEAR(GETDATE())";
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
+        public DataTable recuperarTodasTotal()
+        {
+            //var SQLquery = "SELECT * FROM facturas WHERE borrado=0";
+
+            var SQLquery = "SELECT SUM(F.total) AS total, MONTH(F.fecha) AS fecha FROM facturas F GROUP BY MONTH(F.fecha)";
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -56,34 +56,34 @@
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "ListadoClientes";
-            reportDataSource3.Value = this.bugsExtendidoDataSetBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "ListadoClientes";
+            reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoCliente.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(9, 100);
+            this.reportViewer1.Location = new System.Drawing.Point(7, 81);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1335, 632);
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1002, 514);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // cboBarrio
             // 
-            this.cboBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboBarrio.BackColor = System.Drawing.Color.White;
             this.cboBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(993, 36);
-            this.cboBarrio.Margin = new System.Windows.Forms.Padding(4);
+            this.cboBarrio.Location = new System.Drawing.Point(745, 29);
             this.cboBarrio.Name = "cboBarrio";
-            this.cboBarrio.Size = new System.Drawing.Size(202, 31);
+            this.cboBarrio.Size = new System.Drawing.Size(152, 31);
             this.cboBarrio.TabIndex = 29;
             // 
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
             this.lblBarrio.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblBarrio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblBarrio.Location = new System.Drawing.Point(906, 42);
-            this.lblBarrio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBarrio.ForeColor = System.Drawing.Color.White;
+            this.lblBarrio.Location = new System.Drawing.Point(680, 34);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(64, 23);
             this.lblBarrio.TabIndex = 28;
@@ -94,19 +94,17 @@
             this.dtpFechaDesde.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.dtpFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(195, 36);
-            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(146, 29);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(164, 31);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(124, 31);
             this.dtpFechaDesde.TabIndex = 27;
             // 
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaDesde.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblFechaDesde.Location = new System.Drawing.Point(27, 42);
-            this.lblFechaDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaDesde.ForeColor = System.Drawing.Color.White;
+            this.lblFechaDesde.Location = new System.Drawing.Point(20, 34);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(113, 23);
             this.lblFechaDesde.TabIndex = 26;
@@ -117,19 +115,17 @@
             this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
             this.dtpFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(660, 36);
-            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(495, 29);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(164, 31);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(124, 31);
             this.dtpFechaHasta.TabIndex = 31;
             // 
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaHasta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.lblFechaHasta.Location = new System.Drawing.Point(463, 42);
-            this.lblFechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaHasta.ForeColor = System.Drawing.Color.White;
+            this.lblFechaHasta.Location = new System.Drawing.Point(347, 34);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(110, 23);
             this.lblFechaHasta.TabIndex = 30;
@@ -141,19 +137,20 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
-            this.btnBuscar.Location = new System.Drawing.Point(1268, 32);
+            this.btnBuscar.Location = new System.Drawing.Point(951, 26);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(53, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(40, 34);
             this.btnBuscar.TabIndex = 32;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmReporteListadoCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1356, 744);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
+            this.ClientSize = new System.Drawing.Size(1017, 604);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.lblFechaHasta);
@@ -162,6 +159,7 @@
             this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.lblFechaDesde);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmReporteListadoCliente";
             this.Text = "Listado de Clientes";
             this.Load += new System.EventHandler(this.frmReporteListadoCliente_Load);

@@ -28,5 +28,19 @@ namespace LPCFacturas.BusinessLayer
             return oFacturaDao.recuperarFacturas(fechaDesde, fechaHasta, cliente, monto);
         }
 
+        public DataTable recuperarTodas()
+        {
+            return oFacturaDao.recuperarTodas();
+        }
+
+        public DataTable recuperarTodasPorMes()
+        {
+            return oFacturaDao.recuperarTodasPorMes();
+        }
+
+        public DataTable recuperarTodasTotal()
+        {
+            return oFacturaDao.recuperarTodasTotal();
+        }
     }
 }

@@ -123,10 +123,23 @@ namespace LPCFacturas.GUILayer
             nuevoReporteFactura.ShowDialog();
         }
 
-        private void graficoDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void estToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstadisticaGraficoProducto ventana = new frmEstadisticaGraficoProducto();
-            ventana.ShowDialog();
+            frmEstadisticaProyecto frmep = new frmEstadisticaProyecto();
+            frmep.ShowDialog();
+        }
+
+        private void gráficoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaGraficoCliente nuevoReporteClientes = new frmEstadisticaGraficoCliente();
+            nuevoReporteClientes.ShowDialog();
+
+        }
+
+        private void gráficosDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaProyecto nuevoReporteProyectos = new frmEstadisticaProyecto();
+            nuevoReporteProyectos.ShowDialog();
         }
     }
 }

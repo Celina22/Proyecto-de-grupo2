@@ -73,7 +73,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
             this.lblFecha.Location = new System.Drawing.Point(183, 27);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(61, 23);
@@ -97,7 +97,7 @@
             // 
             this.lblNumeroFactura.AutoSize = true;
             this.lblNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblNumeroFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblNumeroFactura.ForeColor = System.Drawing.Color.White;
             this.lblNumeroFactura.Location = new System.Drawing.Point(345, 60);
             this.lblNumeroFactura.Name = "lblNumeroFactura";
             this.lblNumeroFactura.Size = new System.Drawing.Size(142, 23);
@@ -106,7 +106,7 @@
             // 
             // txtPuntoDeVenta
             // 
-            this.txtPuntoDeVenta.BackColor = System.Drawing.Color.Thistle;
+            this.txtPuntoDeVenta.BackColor = System.Drawing.Color.White;
             this.txtPuntoDeVenta.Enabled = false;
             this.txtPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtPuntoDeVenta.ForeColor = System.Drawing.Color.Black;
@@ -119,7 +119,7 @@
             // 
             this.lblClientes.AutoSize = true;
             this.lblClientes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblClientes.ForeColor = System.Drawing.Color.White;
             this.lblClientes.Location = new System.Drawing.Point(172, 98);
             this.lblClientes.Name = "lblClientes";
             this.lblClientes.Size = new System.Drawing.Size(72, 23);
@@ -141,6 +141,7 @@
             this.gbxDetalles.Controls.Add(this.lblProporcion);
             this.gbxDetalles.Controls.Add(this.txtValor);
             this.gbxDetalles.Controls.Add(this.lblValor);
+            this.gbxDetalles.ForeColor = System.Drawing.Color.White;
             this.gbxDetalles.Location = new System.Drawing.Point(12, 132);
             this.gbxDetalles.Name = "gbxDetalles";
             this.gbxDetalles.Size = new System.Drawing.Size(938, 395);
@@ -150,8 +151,9 @@
             // 
             // cboDetalle
             // 
-            this.cboDetalle.BackColor = System.Drawing.Color.Thistle;
+            this.cboDetalle.BackColor = System.Drawing.Color.White;
             this.cboDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cboDetalle.ForeColor = System.Drawing.Color.Black;
             this.cboDetalle.FormattingEnabled = true;
             this.cboDetalle.Location = new System.Drawing.Point(238, 40);
             this.cboDetalle.Name = "cboDetalle";
@@ -214,9 +216,10 @@
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.BackColor = System.Drawing.Color.Thistle;
+            this.txtSubtotal.BackColor = System.Drawing.Color.White;
             this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtSubtotal.ForeColor = System.Drawing.Color.Black;
             this.txtSubtotal.Location = new System.Drawing.Point(607, 78);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.ReadOnly = true;
@@ -227,7 +230,7 @@
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblSubtotal.ForeColor = System.Drawing.Color.White;
             this.lblSubtotal.Location = new System.Drawing.Point(519, 81);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(82, 23);
@@ -300,7 +303,7 @@
             // 
             this.lblDetalle.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblDetalle.ForeColor = System.Drawing.Color.White;
             this.lblDetalle.Location = new System.Drawing.Point(126, 43);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(102, 23);
@@ -310,8 +313,9 @@
             // 
             // txtProporcion
             // 
-            this.txtProporcion.BackColor = System.Drawing.Color.Thistle;
+            this.txtProporcion.BackColor = System.Drawing.Color.White;
             this.txtProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtProporcion.ForeColor = System.Drawing.Color.Black;
             this.txtProporcion.Location = new System.Drawing.Point(430, 76);
             this.txtProporcion.Name = "txtProporcion";
             this.txtProporcion.Size = new System.Drawing.Size(68, 31);
@@ -322,7 +326,7 @@
             // 
             this.lblProporcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblProporcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblProporcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblProporcion.ForeColor = System.Drawing.Color.White;
             this.lblProporcion.Location = new System.Drawing.Point(318, 80);
             this.lblProporcion.Name = "lblProporcion";
             this.lblProporcion.Size = new System.Drawing.Size(106, 23);
@@ -332,8 +336,9 @@
             // 
             // txtValor
             // 
-            this.txtValor.BackColor = System.Drawing.Color.Thistle;
+            this.txtValor.BackColor = System.Drawing.Color.White;
             this.txtValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtValor.ForeColor = System.Drawing.Color.Black;
             this.txtValor.Location = new System.Drawing.Point(238, 77);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(74, 31);
@@ -345,7 +350,7 @@
             // 
             this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblValor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblValor.ForeColor = System.Drawing.Color.White;
             this.lblValor.Location = new System.Drawing.Point(126, 80);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(106, 23);
@@ -355,7 +360,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.BackColor = System.Drawing.Color.Thistle;
+            this.txtTotal.BackColor = System.Drawing.Color.White;
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtTotal.Location = new System.Drawing.Point(844, 561);
@@ -367,6 +372,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(778, 564);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(53, 23);
@@ -460,7 +466,7 @@
             // 
             // txtNumeroFactura
             // 
-            this.txtNumeroFactura.BackColor = System.Drawing.Color.Thistle;
+            this.txtNumeroFactura.BackColor = System.Drawing.Color.White;
             this.txtNumeroFactura.Enabled = false;
             this.txtNumeroFactura.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtNumeroFactura.ForeColor = System.Drawing.Color.Black;
@@ -474,7 +480,7 @@
             // 
             this.lblPuntoDeVenta.AutoSize = true;
             this.lblPuntoDeVenta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblPuntoDeVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblPuntoDeVenta.ForeColor = System.Drawing.Color.White;
             this.lblPuntoDeVenta.Location = new System.Drawing.Point(108, 60);
             this.lblPuntoDeVenta.Name = "lblPuntoDeVenta";
             this.lblPuntoDeVenta.Size = new System.Drawing.Size(136, 23);
@@ -483,7 +489,7 @@
             // 
             // cboCliente
             // 
-            this.cboCliente.BackColor = System.Drawing.Color.Thistle;
+            this.cboCliente.BackColor = System.Drawing.Color.White;
             this.cboCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboCliente.ForeColor = System.Drawing.Color.Black;
             this.cboCliente.FormattingEnabled = true;
@@ -497,7 +503,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(962, 631);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.lblPuntoDeVenta);

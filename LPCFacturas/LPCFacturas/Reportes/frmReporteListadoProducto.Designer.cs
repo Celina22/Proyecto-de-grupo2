@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.rvwProductos = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -56,20 +56,21 @@
             // 
             // rvwProductos
             // 
-            reportDataSource2.Name = "ListadoProductos";
-            reportDataSource2.Value = this.bugsExtendidoDataSetBindingSource;
-            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "ListadoProductos";
+            reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource;
+            this.rvwProductos.LocalReport.DataSources.Add(reportDataSource1);
             this.rvwProductos.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoProducto.rdlc";
             this.rvwProductos.Location = new System.Drawing.Point(2, 66);
             this.rvwProductos.Name = "rvwProductos";
+            this.rvwProductos.ServerReport.BearerToken = null;
             this.rvwProductos.Size = new System.Drawing.Size(1084, 451);
             this.rvwProductos.TabIndex = 0;
-            this.rvwProductos.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(625, 16);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(80, 23);
@@ -102,6 +103,7 @@
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFechaDesde.ForeColor = System.Drawing.Color.White;
             this.lblFechaDesde.Location = new System.Drawing.Point(12, 16);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(115, 23);
@@ -112,6 +114,7 @@
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFechaHasta.ForeColor = System.Drawing.Color.White;
             this.lblFechaHasta.Location = new System.Drawing.Point(306, 16);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(106, 23);
@@ -140,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1088, 529);
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.dtpFechaDesde);

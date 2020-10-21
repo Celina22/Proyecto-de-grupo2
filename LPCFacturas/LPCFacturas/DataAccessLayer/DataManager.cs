@@ -16,8 +16,7 @@ public class DataManager
         // var string_conexion = ConfigurationManager.ConnectionStrings[dataBaseName].ConnectionString;
         //dbConnection.ConnectionString = @"Data Source=DESKTOP-SFPMQMT\SQLEXPRESS;Initial Catalog=BugsExtendido;User ID=sa;Password=Blaziken99";
         //dbConnection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BugsExtendido;Persist Security Info=True;User ID=sa;Password=12345";
-        //dbConnection.ConnectionString = @"Data Source=desktop-802ntj4;Initial Catalog=BugsExtendido;User ID=sa;Password=sa";
-        dbConnection.ConnectionString = @"Data Source=DESKTOP-1PTMA4A;Initial Catalog=BugsExtendido;Integrated Security=True";
+        dbConnection.ConnectionString = @"Data Source=desktop-802ntj4;Initial Catalog=BugsExtendido;User ID=sa;Password=sa";
     }
 
     public void BeginTransaction()
