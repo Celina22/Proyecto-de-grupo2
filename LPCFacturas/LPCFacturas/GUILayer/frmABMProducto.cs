@@ -28,6 +28,11 @@ namespace LPCFacturas.GUILayer
         {
             cargarGrilla(dgvProducto, oProductoService.recuperarTodos());
             habilitarCampos(false);
+            dgvProducto.ForeColor = Color.Black;
+            dgvProducto.DefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182); ;
+            dgvProducto.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvProducto.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(165, 177, 182);
+            dgvProducto.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

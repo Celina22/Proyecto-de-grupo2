@@ -163,6 +163,11 @@ namespace LPCFacturas.GUILayer
         {
             cargarGrilla(dgv_barrio, oBarrioService.recuperarTodos());
             habilitarCampos(false);
+            dgv_barrio.ForeColor = Color.Black;
+            dgv_barrio.DefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182); ;
+            dgv_barrio.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgv_barrio.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(165, 177, 182);
+            dgv_barrio.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182);
         }
 
         private void dgv_barrio_SelectionChanged(object sender, EventArgs e)

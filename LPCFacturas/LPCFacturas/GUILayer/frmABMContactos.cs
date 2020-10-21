@@ -29,6 +29,11 @@ namespace LPCFacturas.GUILayer
             cargarGrilla(dgvContactos, oContactoService.recuperarTodos()); 
             habilitarCampos(false);
             txtId.Enabled = false;
+            dgvContactos.ForeColor = Color.Black;
+            dgvContactos.DefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182); ;
+            dgvContactos.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvContactos.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(165, 177, 182);
+            dgvContactos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182); 
         }
 
         private void habilitarCampos(bool x)

@@ -41,7 +41,7 @@ namespace LPCFacturas.Reportes
             rvwGraficosClientes.RefreshReport();
 
             DataTable tabla2 = new DataTable();
-            tabla = 
+            //tabla = 
         }
     }
 }
