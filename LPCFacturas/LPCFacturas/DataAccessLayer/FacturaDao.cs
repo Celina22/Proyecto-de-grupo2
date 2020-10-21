@@ -127,7 +127,7 @@ namespace LPCFacturas.DataAccessLayer
             return tabla;
         }
 
-        public DataTable recuperarTodas()
+        public DataTable recuperarTodas(DateTime fechaDesde, DateTime fechaHasta)
         {
             //var SQLquery = "SELECT * FROM facturas WHERE borrado=0";
 
@@ -135,27 +135,29 @@ namespace LPCFacturas.DataAccessLayer
                 " FROM Facturas F " +
                 "JOIN Clientes C ON (F.id_cliente = C.id_cliente) " +
                 "JOIN Usuarios U ON (F.id_usuario_creador = U.id_usuario) " +
-                "WHERE F.borrado=0";                             
+                "WHERE F.borrado=0 AND F.fecha BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND  CONVERT(datetime,'" + fechaHasta.ToString("dd/MM/yyyy") + "',103) ";                             
 
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
         }
 
-        public DataTable recuperarTodasPorMes()
+        public DataTable recuperarTodasPorMes(DateTime fechaDesde, DateTime fechaHasta)
         {
-            //var SQLquery = "SELECT * FROM facturas WHERE borrado=0";
 
-            //var SQLquery = "SELECT Convert(varchar,F.fecha,103) AS fecha FROM facturas F GROUP BY Convert(varchar,F.fecha,103)";
-            var SQLquery = "SELECT MONTH(F.fecha) AS fecha FROM facturas F WHERE YEAR(F.fecha) = YEAR(GETDATE())";
+            var SQLquery = "SELECT MONTH(F.fecha) AS fecha FROM facturas F WHERE YEAR(F.fecha) = YEAR(GETDATE()) AND F.fecha BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND  CONVERT(datetime,'" + fechaHasta.ToString("dd/MM/yyyy") + "',103) AND F.borrado=0"; 
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
         }
 
-        public DataTable recuperarTodasTotal()
+        public DataTable recuperarTodasTotal(DateTime fechaDesde, DateTime fechaHasta)
         {
             //var SQLquery = "SELECT * FROM facturas WHERE borrado=0";
 
-            var SQLquery = "SELECT SUM(F.total) AS total, MONTH(F.fecha) AS fecha FROM facturas F GROUP BY MONTH(F.fecha)";
+            var SQLquery = "SELECT SUM(F.total) AS total, MONTH(F.fecha) AS fecha FROM facturas F WHERE F.fecha BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND  CONVERT(datetime,'" + fechaHasta.ToString("dd/MM/yyyy") + "',103) AND F.borrado=0 "+
+                                                "GROUP BY MONTH(F.fecha)";
             DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
             return tabla;
         }

@@ -177,11 +177,11 @@
     <Compile Include="Reportes\frmEstadisticaGraficoProducto.Designer.cs">
       <DependentUpon>frmEstadisticaGraficoProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmEstadisticaProyecto.cs">
+    <Compile Include="Reportes\frmEstadisticaGraficoProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmEstadisticaProyecto.Designer.cs">
-      <DependentUpon>frmEstadisticaProyecto.cs</DependentUpon>
+    <Compile Include="Reportes\frmEstadisticaGraficoProyecto.Designer.cs">
+      <DependentUpon>frmEstadisticaGraficoProyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmEstadisticaGraficoFactura.cs">
       <SubType>Form</SubType>
@@ -263,13 +263,13 @@
     <EmbeddedResource Include="Reportes\frmEstadisticaGraficoProducto.resx">
       <DependentUpon>frmEstadisticaGraficoProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmEstadisticaProyecto.resx">
-      <DependentUpon>frmEstadisticaProyecto.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\frmEstadisticaGraficoProyecto.resx">
+      <DependentUpon>frmEstadisticaGraficoProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmEstadisticaGraficoFactura.resx">
       <DependentUpon>frmEstadisticaGraficoFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\EstadisticaProyecto.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteGraficoProyecto.rdlc" />
     <EmbeddedResource Include="Reportes\frmReporteListadoCliente.resx">
       <DependentUpon>frmReporteListadoCliente.cs</DependentUpon>
     </EmbeddedResource>

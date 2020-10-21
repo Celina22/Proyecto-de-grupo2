@@ -28,19 +28,19 @@ namespace LPCFacturas.BusinessLayer
             return oFacturaDao.recuperarFacturas(fechaDesde, fechaHasta, cliente, monto);
         }
 
-        public DataTable recuperarTodas()
+        public DataTable recuperarTodas(DateTime fechaDesde, DateTime fechaHasta)
         {
-            return oFacturaDao.recuperarTodas();
+            return oFacturaDao.recuperarTodas(fechaDesde,fechaHasta);
         }
 
-        public DataTable recuperarTodasPorMes()
+        public DataTable recuperarTodasPorMes(DateTime fechaDesde, DateTime fechaHasta)
         {
-            return oFacturaDao.recuperarTodasPorMes();
+            return oFacturaDao.recuperarTodasPorMes(fechaDesde, fechaHasta);
         }
 
-        public DataTable recuperarTodasTotal()
+        public DataTable recuperarTodasTotal(DateTime fechaDesde, DateTime fechaHasta)
         {
-            return oFacturaDao.recuperarTodasTotal();
+            return oFacturaDao.recuperarTodasTotal(fechaDesde, fechaHasta);
         }
     }
 }

@@ -125,7 +125,7 @@ namespace LPCFacturas.GUILayer
 
         private void estToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstadisticaProyecto frmep = new frmEstadisticaProyecto();
+            frmEstadisticaGraficoProyecto frmep = new frmEstadisticaGraficoProyecto();
             frmep.ShowDialog();
         }
 
@@ -138,7 +138,7 @@ namespace LPCFacturas.GUILayer
 
         private void gráficosDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstadisticaProyecto nuevoReporteProyectos = new frmEstadisticaProyecto();
+            frmEstadisticaGraficoProyecto nuevoReporteProyectos = new frmEstadisticaGraficoProyecto();
             nuevoReporteProyectos.ShowDialog();
         }
 

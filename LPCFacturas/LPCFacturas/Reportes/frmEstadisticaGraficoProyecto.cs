@@ -12,10 +12,10 @@ using Microsoft.Reporting.WinForms;
 
 namespace LPCFacturas.Reportes
 {
-    public partial class frmEstadisticaProyecto : Form
+    public partial class frmEstadisticaGraficoProyecto : Form
     {
         ProyectoService oProyectoService = new ProyectoService();
-        public frmEstadisticaProyecto()
+        public frmEstadisticaGraficoProyecto()
         {
             InitializeComponent();
         }

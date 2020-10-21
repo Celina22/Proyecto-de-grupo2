@@ -1,6 +1,6 @@
 ﻿namespace LPCFacturas.Reportes
 {
-    partial class frmEstadisticaProyecto
+    partial class frmEstadisticaGraficoProyecto
     {
         /// <summary>
         /// Required designer variable.
