@@ -35,7 +35,11 @@ namespace LPCFacturas.GUILayer
             cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "NombreUsuario");
             cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
             habilitarCampos(false);
-
+            dgvProyecto.ForeColor = Color.Black;
+            dgvProyecto.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvProyecto.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(165, 177, 182);
+            dgvProyecto.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182);
+            dgvProyecto.DefaultCellStyle.SelectionBackColor = Color.FromArgb(165, 177, 182); ;
         }
 
         private void habilitarCampos(bool x)
