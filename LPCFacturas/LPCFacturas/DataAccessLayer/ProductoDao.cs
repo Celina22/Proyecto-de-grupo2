@@ -17,7 +17,6 @@ namespace LPCFacturas.DataAccessLayer
 {
     class ProductoDao
     {
-
         public IList<Producto> GetAll()
         {
             List<Producto> listadoProductos = new List<Producto>();

@@ -56,6 +56,15 @@ namespace LPCFacturas.DataAccessLayer
             return null;
         }
 
+        internal DataTable recuperarProyectosPorResponsables()
+        {
+            string consultaSQL = "SELECT u.usuario as id_responsable, p.id_proyecto " +
+                                 "FROM proyectos p JOIN usuarios u on (p.id_responsable = u.id_usuario) " +
+                                 "WHERE p.borrado = 0 ";
+
+            return DataManager.GetInstance().ConsultaSQL(consultaSQL);
+        }
+
         public DataTable recuperarProyectos(string descripcion, string producto, string responsable, string alcance, string version)
         {
             var SQLquery =  "SELECT id_proyecto, pr.nombre \"id_producto\", descripcion, version, alcance, u.usuario \"id_responsable\" " +
@@ -121,6 +130,16 @@ namespace LPCFacturas.DataAccessLayer
             string SQLUpdate = "UPDATE proyectos set borrado = 1 WHERE id_proyecto = " + proyecto.Id_proyecto;
 
             DataManager.GetInstance().EjecutarSQL(SQLUpdate);
+        }
+
+        public DataTable recuperarProyectosFacturadosEstadistica()
+        {
+            string consultaSQL = "SELECT p.descripcion as id_proyecto, (f.cantidad * f.precio) as cantidad, u.usuario as id_producto  " +
+                                 "FROM facturasDetalle f JOIN proyectos p on (f.id_proyecto = p.id_proyecto) " +
+                                                        "JOIN usuarios u on (p.id_responsable = u.id_usuario) " +
+                                 "WHERE f.borrado = 0";
+
+            return DataManager.GetInstance().ConsultaSQL(consultaSQL);
         }
     }
 }

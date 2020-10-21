@@ -122,5 +122,11 @@ namespace LPCFacturas.GUILayer
             frmEstadisticaGraficoFactura nuevoReporteFactura = new frmEstadisticaGraficoFactura();
             nuevoReporteFactura.ShowDialog();
         }
+
+        private void estToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaProyecto frmep = new frmEstadisticaProyecto();
+            frmep.ShowDialog();
+        }
     }
 }
