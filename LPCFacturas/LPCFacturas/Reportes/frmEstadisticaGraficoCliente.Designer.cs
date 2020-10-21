@@ -33,7 +33,7 @@
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.lblFechaDesde = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rvwGraficosClientes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -46,6 +46,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(75, 46);
             this.btnBuscar.TabIndex = 45;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dtpFechaHasta
             // 
@@ -89,14 +90,14 @@
             this.lblFechaDesde.TabIndex = 41;
             this.lblFechaDesde.Text = "Fecha desde:";
             // 
-            // reportViewer1
+            // rvwGraficosClientes
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteGraficoCliente.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 107);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(733, 331);
-            this.reportViewer1.TabIndex = 46;
+            this.rvwGraficosClientes.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteGraficoCliente.rdlc";
+            this.rvwGraficosClientes.Location = new System.Drawing.Point(12, 107);
+            this.rvwGraficosClientes.Name = "rvwGraficosClientes";
+            this.rvwGraficosClientes.ServerReport.BearerToken = null;
+            this.rvwGraficosClientes.Size = new System.Drawing.Size(733, 331);
+            this.rvwGraficosClientes.TabIndex = 46;
             // 
             // frmEstadisticaGraficoCliente
             // 
@@ -104,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(757, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rvwGraficosClientes);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.lblFechaHasta);
@@ -125,6 +126,6 @@
         private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Label lblFechaDesde;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rvwGraficosClientes;
     }
 }

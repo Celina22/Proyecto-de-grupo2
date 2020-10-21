@@ -67,7 +67,8 @@ namespace LPCFacturas.Reportes
 
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(ds);
-            reportViewer1.LocalReport.Refresh();
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[] { new ReportParameter("prmFechaDesde", dtpFechaDesde.Value.ToShortDateString()),
+                                                                            new ReportParameter("prmFechaHasta", dtpFechaHasta.Value.ToShortDateString())});
             reportViewer1.RefreshReport();
         }
     }

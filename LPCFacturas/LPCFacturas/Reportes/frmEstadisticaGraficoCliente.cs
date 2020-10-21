@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LPCFacturas.BusinessLayer;
+using Microsoft.Reporting.WinForms;
 
 namespace LPCFacturas.Reportes
 {
     public partial class frmEstadisticaGraficoCliente : Form
     {
+        private ClienteService oClienteService = new ClienteService();
+        
         public frmEstadisticaGraficoCliente()
         {
             InitializeComponent();
@@ -20,7 +24,24 @@ namespace LPCFacturas.Reportes
         private void frmEstadisticaGraficoCliente_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            this.rvwGraficosClientes.RefreshReport();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = oClienteService.recuperarClientes(dtpFechaDesde.Value, dtpFechaHasta.Value);
+
+            ReportDataSource ds = new ReportDataSource("GraficoClientes", tabla);
+
+            rvwGraficosClientes.LocalReport.DataSources.Clear();
+            rvwGraficosClientes.LocalReport.DataSources.Add(ds);
+            rvwGraficosClientes.LocalReport.SetParameters(new ReportParameter[] { new ReportParameter("prmFechaDesde", dtpFechaDesde.Value.ToShortDateString()),
+                                                                            new ReportParameter("prmFechaHasta", dtpFechaHasta.Value.ToShortDateString())});
+            rvwGraficosClientes.RefreshReport();
+
+            DataTable tabla2 = new DataTable();
+            tabla = 
         }
     }
 }
