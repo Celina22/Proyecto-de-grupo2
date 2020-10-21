@@ -47,6 +47,10 @@
             this.rvwProyectos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.grbFiltros = new System.Windows.Forms.GroupBox();
             this.tltReporteProyectos = new System.Windows.Forms.ToolTip(this.components);
+            this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaHasta = new System.Windows.Forms.Label();
+            this.lblFechaDesde = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).BeginInit();
             this.grbFiltros.SuspendLayout();
@@ -189,16 +193,20 @@
             reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource;
             this.rvwProyectos.LocalReport.DataSources.Add(reportDataSource1);
             this.rvwProyectos.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoProyectos.rdlc";
-            this.rvwProyectos.Location = new System.Drawing.Point(11, 132);
+            this.rvwProyectos.Location = new System.Drawing.Point(11, 160);
             this.rvwProyectos.Margin = new System.Windows.Forms.Padding(2);
             this.rvwProyectos.Name = "rvwProyectos";
             this.rvwProyectos.ServerReport.BearerToken = null;
-            this.rvwProyectos.Size = new System.Drawing.Size(1030, 506);
+            this.rvwProyectos.Size = new System.Drawing.Size(1030, 478);
             this.rvwProyectos.TabIndex = 47;
             this.rvwProyectos.Load += new System.EventHandler(this.rvwProyectos_Load);
             // 
             // grbFiltros
             // 
+            this.grbFiltros.Controls.Add(this.dtpFechaHasta);
+            this.grbFiltros.Controls.Add(this.dtpFechaDesde);
+            this.grbFiltros.Controls.Add(this.lblFechaHasta);
+            this.grbFiltros.Controls.Add(this.lblFechaDesde);
             this.grbFiltros.Controls.Add(this.cboResponsable);
             this.grbFiltros.Controls.Add(this.lblVersion);
             this.grbFiltros.Controls.Add(this.btnBuscar);
@@ -213,7 +221,7 @@
             this.grbFiltros.ForeColor = System.Drawing.Color.White;
             this.grbFiltros.Location = new System.Drawing.Point(11, 12);
             this.grbFiltros.Name = "grbFiltros";
-            this.grbFiltros.Size = new System.Drawing.Size(1029, 115);
+            this.grbFiltros.Size = new System.Drawing.Size(1029, 143);
             this.grbFiltros.TabIndex = 48;
             this.grbFiltros.TabStop = false;
             this.grbFiltros.Text = "Filtros de Listado";
@@ -224,6 +232,46 @@
             this.tltReporteProyectos.InitialDelay = 250;
             this.tltReporteProyectos.IsBalloon = true;
             this.tltReporteProyectos.ReshowDelay = 100;
+            // 
+            // dtpFechaHasta
+            // 
+            this.dtpFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaHasta.Location = new System.Drawing.Point(503, 99);
+            this.dtpFechaHasta.Name = "dtpFechaHasta";
+            this.dtpFechaHasta.Size = new System.Drawing.Size(232, 31);
+            this.dtpFechaHasta.TabIndex = 50;
+            // 
+            // dtpFechaDesde
+            // 
+            this.dtpFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaDesde.Location = new System.Drawing.Point(143, 99);
+            this.dtpFechaDesde.Name = "dtpFechaDesde";
+            this.dtpFechaDesde.Size = new System.Drawing.Size(232, 31);
+            this.dtpFechaDesde.TabIndex = 49;
+            // 
+            // lblFechaHasta
+            // 
+            this.lblFechaHasta.AutoSize = true;
+            this.lblFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFechaHasta.ForeColor = System.Drawing.Color.White;
+            this.lblFechaHasta.Location = new System.Drawing.Point(391, 103);
+            this.lblFechaHasta.Name = "lblFechaHasta";
+            this.lblFechaHasta.Size = new System.Drawing.Size(106, 23);
+            this.lblFechaHasta.TabIndex = 48;
+            this.lblFechaHasta.Text = "FechaHasta:";
+            // 
+            // lblFechaDesde
+            // 
+            this.lblFechaDesde.AutoSize = true;
+            this.lblFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFechaDesde.ForeColor = System.Drawing.Color.White;
+            this.lblFechaDesde.Location = new System.Drawing.Point(22, 103);
+            this.lblFechaDesde.Name = "lblFechaDesde";
+            this.lblFechaDesde.Size = new System.Drawing.Size(115, 23);
+            this.lblFechaDesde.TabIndex = 47;
+            this.lblFechaDesde.Text = "FechaDesde: ";
             // 
             // frmReporteListadoProyectos
             // 
@@ -263,5 +311,9 @@
         private BugsExtendidoDataSet bugsExtendidoDataSet;
         private System.Windows.Forms.GroupBox grbFiltros;
         private System.Windows.Forms.ToolTip tltReporteProyectos;
+        private System.Windows.Forms.DateTimePicker dtpFechaHasta;
+        private System.Windows.Forms.DateTimePicker dtpFechaDesde;
+        private System.Windows.Forms.Label lblFechaHasta;
+        private System.Windows.Forms.Label lblFechaDesde;
     }
 }

@@ -55,7 +55,7 @@ namespace LPCFacturas.Reportes
             var version = txtVersion.Text;
 
             DataTable tabla = new DataTable();
-            tabla = oProyectoService.recuperarProyectos(descripcion, producto, responsable, alcance, version);
+            tabla = oProyectoService.recuperarProyectos(descripcion, producto, responsable, alcance, version,dtpFechaDesde.Value,dtpFechaHasta.Value);
 
 
             ReportDataSource ds = new ReportDataSource("ListadoProyectos", tabla);
