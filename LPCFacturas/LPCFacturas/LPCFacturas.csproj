@@ -121,7 +121,9 @@
     <Compile Include="GUILayer\frmABMProducto.Designer.cs">
       <DependentUpon>frmABMProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmABMProductos.cs" />
+    <Compile Include="GUILayer\frmABMProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUILayer\frmABMProductos.Designer.cs">
       <DependentUpon>frmABMProductos.cs</DependentUpon>
     </Compile>
@@ -163,9 +165,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\frmEstadisticaGraficoCliente.cs" />
+    <Compile Include="Reportes\frmEstadisticaGraficoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\frmEstadisticaGraficoCliente.Designer.cs">
       <DependentUpon>frmEstadisticaGraficoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmEstadisticaGraficoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmEstadisticaGraficoProducto.Designer.cs">
+      <DependentUpon>frmEstadisticaGraficoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmEstadisticaProyecto.cs">
       <SubType>Form</SubType>
@@ -250,6 +260,9 @@
     <EmbeddedResource Include="Reportes\frmEstadisticaGraficoCliente.resx">
       <DependentUpon>frmEstadisticaGraficoCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmEstadisticaGraficoProducto.resx">
+      <DependentUpon>frmEstadisticaGraficoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmEstadisticaProyecto.resx">
       <DependentUpon>frmEstadisticaProyecto.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +284,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteGraficoCliente.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteGraficoFactura.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteGraficoProducto.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoCliente.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoFactura.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoProducto.rdlc" />
