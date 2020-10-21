@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -171,7 +172,15 @@
     <Compile Include="Reportes\frmEstadisticaGraficoFactura.Designer.cs">
       <DependentUpon>frmEstadisticaGraficoFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmReporteListadoCliente.cs" />
+    <Compile Include="Reportes\frmEstadisticaGraficoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmEstadisticaGraficoProducto.Designer.cs">
+      <DependentUpon>frmEstadisticaGraficoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteListadoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\frmReporteListadoCliente.Designer.cs">
       <DependentUpon>frmReporteListadoCliente.cs</DependentUpon>
     </Compile>
@@ -240,6 +249,9 @@
     <EmbeddedResource Include="Reportes\frmEstadisticaGraficoFactura.resx">
       <DependentUpon>frmEstadisticaGraficoFactura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmEstadisticaGraficoProducto.resx">
+      <DependentUpon>frmEstadisticaGraficoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmReporteListadoCliente.resx">
       <DependentUpon>frmReporteListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +265,7 @@
       <DependentUpon>frmReporteListadoProyectos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteGraficoFactura.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteGraficoProducto.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoCliente.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoFactura.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteListadoProducto.rdlc" />

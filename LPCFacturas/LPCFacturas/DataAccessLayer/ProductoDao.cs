@@ -49,6 +49,27 @@ namespace LPCFacturas.DataAccessLayer
             DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
 
+        public DataTable recuperarProductosEstadisticasImporte()
+        {
+            string consultaSQL = "SELECT p.nombre as id_producto, sum(cantidad * precio) as cantidad " +
+            "FROM Productos p, FacturasDetalle fd " +
+            "WHERE p.id_producto = fd.id_producto " +
+            "and fd.id_producto is not null " +
+            "Group by p.nombre";
+
+            return DataManager.GetInstance().ConsultaSQL(consultaSQL);
+        }
+
+        public DataTable recuperarProductosEstadisticas() 
+        {
+            string consultaSQL = "SELECT p.nombre as id_producto, sum(cantidad) as cantidad " +
+            "FROM Productos p, FacturasDetalle fd " +
+            "WHERE p.id_producto = fd.id_producto " +
+            "and fd.id_producto is not null " +
+            "Group by p.nombre ";
+
+            return DataManager.GetInstance().ConsultaSQL(consultaSQL);
+        }
 
         internal void crearProducto(Producto producto)
         {

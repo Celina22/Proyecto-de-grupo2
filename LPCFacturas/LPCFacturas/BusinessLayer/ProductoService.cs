@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,5 +41,15 @@ namespace LPCFacturas.BusinessLayer
         {
             return oProductoDao.recuperarProductos(fechaDesde, fechaHasta, nombre);
         }
-    }
+
+        public DataTable recuperarProductosEstadisticas()
+        {
+            return oProductoDao.recuperarProductosEstadisticas();
+        }
+
+        public DataTable recuperarProcutosEstadisticasImporte()
+        {
+            return oProductoDao.recuperarProductosEstadisticasImporte();
+        }
+    }   
 }
