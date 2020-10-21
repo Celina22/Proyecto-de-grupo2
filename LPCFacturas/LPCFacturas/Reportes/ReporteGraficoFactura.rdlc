@@ -452,7 +452,7 @@
                 </ChartAreas>
                 <ChartTitles>
                   <ChartTitle Name="Default">
-                    <Caption>Cantidad de Facturas por mes del año actual</Caption>
+                    <Caption>Cantidad de facturas por mes </Caption>
                     <Style>
                       <BackgroundGradientType>None</BackgroundGradientType>
                       <FontSize>12pt</FontSize>
@@ -495,8 +495,8 @@
               </Chart>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.33514cm</Top>
-            <Left>14.8439cm</Left>
+            <Top>1.73743cm</Top>
+            <Left>15.0049cm</Left>
             <Height>9.53382cm</Height>
             <Width>12.91104cm</Width>
             <Style>
@@ -815,7 +815,7 @@
                 </ChartAreas>
                 <ChartTitles>
                   <ChartTitle Name="Default">
-                    <Caption>Variación de la facturación por mes en el año actual</Caption>
+                    <Caption>Variación de la facturación por mes </Caption>
                     <Style>
                       <BackgroundGradientType>None</BackgroundGradientType>
                       <FontSize>12pt</FontSize>
@@ -858,8 +858,8 @@
               </Chart>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>10.77542cm</Top>
-            <Left>0.79058cm</Left>
+            <Top>12.17771cm</Top>
+            <Left>0.95158cm</Left>
             <Height>12.56576cm</Height>
             <Width>26.96436cm</Width>
             <ZIndex>1</ZIndex>
@@ -1195,7 +1195,7 @@
                 </ChartLegends>
                 <ChartTitles>
                   <ChartTitle Name="Default">
-                    <Caption>Cantidad de Facturas por cliente</Caption>
+                    <Caption>Cantidad de facturas por cliente</Caption>
                     <Style>
                       <BackgroundGradientType>None</BackgroundGradientType>
                       <FontSize>12pt</FontSize>
@@ -1238,10 +1238,10 @@
               </Chart>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>0.33514cm</Top>
-            <Left>0.79058cm</Left>
+            <Top>1.73743cm</Top>
+            <Left>0.95158cm</Left>
             <Height>9.53382cm</Height>
-            <Width>13.22854cm</Width>
+            <Width>12.97595cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1251,11 +1251,84 @@
               </Border>
             </Style>
           </Rectangle>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Datos considerados entre fechas </Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!prmFechaDesde.Value</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> y </Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!prmFechaHasta.Value</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>.</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.37715cm</Top>
+            <Left>0.95158cm</Left>
+            <Height>0.9175cm</Height>
+            <Width>27.4222cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>23.79097cm</Height>
+        <Height>25.06097cm</Height>
         <Style />
       </Body>
-      <Width>30.12722cm</Width>
+      <Width>30.28822cm</Width>
       <Page>
         <PageHeader>
           <Height>2.96898cm</Height>
@@ -1266,6 +1339,7 @@
               <Source>Embedded</Source>
               <Value>logo_size</Value>
               <Sizing>FitProportional</Sizing>
+              <Left>0.161cm</Left>
               <Height>2.96898cm</Height>
               <Width>7.66662cm</Width>
               <Style>
@@ -1290,7 +1364,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>1.1448cm</Top>
-              <Left>25.25494cm</Left>
+              <Left>25.41594cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>1</ZIndex>
@@ -1311,7 +1385,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Estadisticas de Facturación</Value>
+                      <Value>Estadísticas de Facturación</Value>
                       <Style>
                         <FontSize>20pt</FontSize>
                       </Style>
@@ -1322,7 +1396,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>1.01251cm</Top>
-              <Left>9.53633cm</Left>
+              <Left>9.69733cm</Left>
               <Height>1.20854cm</Height>
               <Width>9.22041cm</Width>
               <ZIndex>2</ZIndex>
@@ -1364,7 +1438,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.17639cm</Top>
-              <Left>26.49848cm</Left>
+              <Left>26.65948cm</Left>
               <Height>0.6cm</Height>
               <Width>0.93896cm</Width>
               <Style>
@@ -1393,7 +1467,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
               <Top>0.17639cm</Top>
-              <Left>25.15382cm</Left>
+              <Left>25.31482cm</Left>
               <Height>0.6cm</Height>
               <Width>1.30938cm</Width>
               <ZIndex>1</ZIndex>
@@ -1425,10 +1499,32 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="prmFechaDesde">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prmFechaHasta">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>prmFechaDesde</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>prmFechaHasta</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <EmbeddedImages>

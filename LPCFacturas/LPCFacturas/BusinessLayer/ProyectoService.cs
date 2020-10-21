@@ -39,9 +39,9 @@ namespace LPCFacturas.BusinessLayer
             oProyectoDao.eliminarProyecto(proyecto);
         }
 
-        public DataTable recuperarProyectos(string descripcion, string producto, string responsable, string alcance, string version)
+        public DataTable recuperarProyectos(string descripcion, string producto, string responsable, string alcance, string version,DateTime fechaDesde, DateTime fechaHasta)
         {
-            return oProyectoDao.recuperarProyectos(descripcion, producto, responsable, alcance, version);
+            return oProyectoDao.recuperarProyectos(descripcion, producto, responsable, alcance, version,fechaDesde,fechaHasta);
         }
 
         public DataTable recuperarProyectosPorResponsables(DateTime desde, DateTime hasta)
