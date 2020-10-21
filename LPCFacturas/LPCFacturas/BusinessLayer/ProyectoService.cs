@@ -44,14 +44,14 @@ namespace LPCFacturas.BusinessLayer
             return oProyectoDao.recuperarProyectos(descripcion, producto, responsable, alcance, version);
         }
 
-        public DataTable recuperarProyectosPorResponsables()
+        public DataTable recuperarProyectosPorResponsables(DateTime desde, DateTime hasta)
         {
-            return oProyectoDao.recuperarProyectosPorResponsables();
+            return oProyectoDao.recuperarProyectosPorResponsables(desde, hasta);
         }
 
-        public DataTable recuperarProyectosFacturadosEstadistica()
+        public DataTable recuperarProyectosFacturadosEstadistica(DateTime desde, DateTime hasta)
         {
-            return oProyectoDao.recuperarProyectosFacturadosEstadistica();
+            return oProyectoDao.recuperarProyectosFacturadosEstadistica(desde, hasta);
         }
     }
 }
