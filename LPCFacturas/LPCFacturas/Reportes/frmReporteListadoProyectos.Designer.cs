@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteListadoProyectos));
             this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
@@ -91,6 +91,7 @@
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblVersion.ForeColor = System.Drawing.Color.White;
             this.lblVersion.Location = new System.Drawing.Point(741, 26);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(75, 23);
@@ -110,6 +111,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(29, 26);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(108, 23);
@@ -118,7 +120,7 @@
             // 
             // cboProducto
             // 
-            this.cboProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboProducto.BackColor = System.Drawing.Color.White;
             this.cboProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(143, 60);
@@ -131,7 +133,7 @@
             // 
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblProducto.ForeColor = System.Drawing.Color.White;
             this.lblProducto.Location = new System.Drawing.Point(50, 63);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(87, 23);
@@ -140,7 +142,7 @@
             // 
             // cboResponsable
             // 
-            this.cboResponsable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboResponsable.BackColor = System.Drawing.Color.White;
             this.cboResponsable.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboResponsable.FormattingEnabled = true;
             this.cboResponsable.Location = new System.Drawing.Point(503, 23);
@@ -153,7 +155,7 @@
             // 
             this.lblResponsable.AutoSize = true;
             this.lblResponsable.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblResponsable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblResponsable.ForeColor = System.Drawing.Color.White;
             this.lblResponsable.Location = new System.Drawing.Point(381, 26);
             this.lblResponsable.Name = "lblResponsable";
             this.lblResponsable.Size = new System.Drawing.Size(116, 23);
@@ -174,6 +176,7 @@
             // 
             this.lblAlcance.AutoSize = true;
             this.lblAlcance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblAlcance.ForeColor = System.Drawing.Color.White;
             this.lblAlcance.Location = new System.Drawing.Point(420, 63);
             this.lblAlcance.Name = "lblAlcance";
             this.lblAlcance.Size = new System.Drawing.Size(77, 23);
@@ -182,13 +185,14 @@
             // 
             // rvwProyectos
             // 
-            reportDataSource4.Name = "ListadoProyectos";
-            reportDataSource4.Value = this.bugsExtendidoDataSetBindingSource;
-            this.rvwProyectos.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "ListadoProyectos";
+            reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource;
+            this.rvwProyectos.LocalReport.DataSources.Add(reportDataSource1);
             this.rvwProyectos.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoProyectos.rdlc";
             this.rvwProyectos.Location = new System.Drawing.Point(11, 132);
             this.rvwProyectos.Margin = new System.Windows.Forms.Padding(2);
             this.rvwProyectos.Name = "rvwProyectos";
+            this.rvwProyectos.ServerReport.BearerToken = null;
             this.rvwProyectos.Size = new System.Drawing.Size(1030, 506);
             this.rvwProyectos.TabIndex = 47;
             this.rvwProyectos.Load += new System.EventHandler(this.rvwProyectos_Load);
@@ -206,6 +210,7 @@
             this.grbFiltros.Controls.Add(this.lblResponsable);
             this.grbFiltros.Controls.Add(this.lblProducto);
             this.grbFiltros.Controls.Add(this.cboProducto);
+            this.grbFiltros.ForeColor = System.Drawing.Color.White;
             this.grbFiltros.Location = new System.Drawing.Point(11, 12);
             this.grbFiltros.Name = "grbFiltros";
             this.grbFiltros.Size = new System.Drawing.Size(1029, 115);
@@ -224,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1052, 649);
             this.Controls.Add(this.grbFiltros);
             this.Controls.Add(this.rvwProyectos);

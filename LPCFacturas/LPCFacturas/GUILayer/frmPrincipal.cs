@@ -131,7 +131,15 @@ namespace LPCFacturas.GUILayer
 
         private void gráficoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmEstadisticaGraficoCliente nuevoReporteClientes = new frmEstadisticaGraficoCliente();
+            nuevoReporteClientes.ShowDialog();
 
+        }
+
+        private void gráficosDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaProyecto nuevoReporteProyectos = new frmEstadisticaProyecto();
+            nuevoReporteProyectos.ShowDialog();
         }
     }
 }

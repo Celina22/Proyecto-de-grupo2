@@ -26,6 +26,9 @@ namespace LPCFacturas.Reportes
         {
 
             this.rvwGraficosClientes.RefreshReport();
+            this.BackColor = Color.FromArgb(137, 2, 62);
+            lblFechaDesde.ForeColor = Color.White;
+            lblFechaHasta.ForeColor = Color.White;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

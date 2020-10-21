@@ -66,6 +66,7 @@
             this.rvwFacturas.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoFactura.rdlc";
             this.rvwFacturas.Location = new System.Drawing.Point(2, 55);
             this.rvwFacturas.Name = "rvwFacturas";
+            this.rvwFacturas.ServerReport.BearerToken = null;
             this.rvwFacturas.Size = new System.Drawing.Size(1185, 390);
             this.rvwFacturas.TabIndex = 0;
             // 
@@ -83,7 +84,7 @@
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaHasta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblFechaHasta.ForeColor = System.Drawing.Color.White;
             this.lblFechaHasta.Location = new System.Drawing.Point(265, 18);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(110, 23);
@@ -92,7 +93,7 @@
             // 
             // cboCliente
             // 
-            this.cboCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.cboCliente.BackColor = System.Drawing.Color.White;
             this.cboCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.cboCliente.FormattingEnabled = true;
             this.cboCliente.Location = new System.Drawing.Point(626, 13);
@@ -104,7 +105,7 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblCliente.ForeColor = System.Drawing.Color.White;
             this.lblCliente.Location = new System.Drawing.Point(548, 18);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(72, 23);
@@ -125,7 +126,7 @@
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaDesde.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblFechaDesde.ForeColor = System.Drawing.Color.White;
             this.lblFechaDesde.Location = new System.Drawing.Point(-2, 18);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(113, 23);
@@ -144,6 +145,7 @@
             // 
             this.lblMontoMayor.AutoSize = true;
             this.lblMontoMayor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblMontoMayor.ForeColor = System.Drawing.Color.White;
             this.lblMontoMayor.Location = new System.Drawing.Point(838, 16);
             this.lblMontoMayor.Name = "lblMontoMayor";
             this.lblMontoMayor.Size = new System.Drawing.Size(136, 23);
@@ -171,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1189, 450);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtMonto);
