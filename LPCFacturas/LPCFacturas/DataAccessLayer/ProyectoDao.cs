@@ -56,11 +56,13 @@ namespace LPCFacturas.DataAccessLayer
             return null;
         }
 
-        internal DataTable recuperarProyectosPorResponsables()
+        internal DataTable recuperarProyectosPorResponsables(DateTime desde, DateTime hasta)
         {
             string consultaSQL = "SELECT u.usuario as id_responsable, p.id_proyecto " +
                                  "FROM proyectos p JOIN usuarios u on (p.id_responsable = u.id_usuario) " +
-                                 "WHERE p.borrado = 0 ";
+                                 "WHERE p.borrado = 0 " +
+                                 "AND p.fecha_alta BETWEEN CONVERT(datetime,'" + desde.ToString("dd/MM/yyyy") + "',103) " +
+                                                     "AND  CONVERT(datetime,'" + hasta.ToString("dd/MM/yyyy") + "',103) ";
 
             return DataManager.GetInstance().ConsultaSQL(consultaSQL);
         }
@@ -133,12 +135,15 @@ namespace LPCFacturas.DataAccessLayer
             DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
 
-        public DataTable recuperarProyectosFacturadosEstadistica()
+        public DataTable recuperarProyectosFacturadosEstadistica(DateTime desde, DateTime hasta)
         {
             string consultaSQL = "SELECT p.descripcion as id_proyecto, (f.cantidad * f.precio) as cantidad, u.usuario as id_producto  " +
                                  "FROM facturasDetalle f JOIN proyectos p on (f.id_proyecto = p.id_proyecto) " +
                                                         "JOIN usuarios u on (p.id_responsable = u.id_usuario) " +
-                                 "WHERE f.borrado = 0";
+                                                        "JOIN facturas fa on (fa.id_factura = f.id_factura) " +
+                                 "WHERE f.borrado = 0 " +
+                                 "AND fa.fecha BETWEEN CONVERT(datetime,'" + desde.ToString("dd/MM/yyyy") + "',103) " +
+                                                 "AND  CONVERT(datetime,'" + hasta.ToString("dd/MM/yyyy") + "',103) " ;
 
             return DataManager.GetInstance().ConsultaSQL(consultaSQL);
         }
