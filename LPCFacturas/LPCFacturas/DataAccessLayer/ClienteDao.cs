@@ -44,6 +44,20 @@ namespace LPCFacturas.DataAccessLayer
             return tabla;
         }
 
+        public DataTable recuperar5ClientesMasFacturados(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            var SQLquery = "SELECT TOP(5) C.razon_social as id_cliente, COUNT(F.id_factura) as id_factura" +
+                "           FROM Facturas F JOIN Clientes C ON F.id_cliente = C.id_cliente " +
+                "           WHERE C.fecha_alta BETWEEN  CONVERT(datetime, '" + fechaDesde.ToString("dd/MM/yyyy") + "', 103) " +
+                "                                       AND CONVERT(datetime,'" + fechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+                                  "AND C.borrado = 0 " +
+                "           GROUP BY C.id_cliente, C.razon_social " +
+                "           ORDER BY 2 DESC";
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+            return tabla;
+        }
+
         public DataTable recuperarCLientes(DateTime fechaDesde, DateTime FechaHasta, string barrio)
         {
             var SQLquery = "SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, CONVERT(varchar,c.fecha_alta,103) as fecha_alta, b.nombre as id_barrio, CONCAT(co.nombre,' ' ,co.apellido) as id_contacto " +
