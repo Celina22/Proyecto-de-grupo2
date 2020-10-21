@@ -148,6 +148,7 @@ namespace LPCFacturas.GUILayer
                 this.actualizarCampos(dgv_barrio.CurrentRow.Cells[0].Value.ToString());
             else limpiarCampos();
             cargarGrilla(dgv_barrio, oBarrioService.recuperarTodos());
+            btnBuscar.Visible = false;
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
