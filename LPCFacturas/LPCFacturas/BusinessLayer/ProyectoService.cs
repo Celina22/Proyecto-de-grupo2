@@ -43,5 +43,15 @@ namespace LPCFacturas.BusinessLayer
         {
             return oProyectoDao.recuperarProyectos(descripcion, producto, responsable, alcance, version);
         }
+
+        public DataTable recuperarProyectosPorResponsables()
+        {
+            return oProyectoDao.recuperarProyectosPorResponsables();
+        }
+
+        public DataTable recuperarProyectosFacturadosEstadistica()
+        {
+            return oProyectoDao.recuperarProyectosFacturadosEstadistica();
+        }
     }
 }
