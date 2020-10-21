@@ -49,7 +49,6 @@
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graficoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.estToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -173,7 +172,7 @@
             this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -182,7 +181,7 @@
             this.barriosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.barriosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.barriosToolStripMenuItem.Name = "barriosToolStripMenuItem";
-            this.barriosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.barriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barriosToolStripMenuItem.Text = "Barrios";
             this.barriosToolStripMenuItem.Click += new System.EventHandler(this.barriosToolStripMenuItem_Click);
             // 
@@ -191,7 +190,7 @@
             this.contactosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.contactosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
-            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactosToolStripMenuItem.Text = "Contactos";
             this.contactosToolStripMenuItem.Click += new System.EventHandler(this.contactosToolStripMenuItem_Click);
             // 
@@ -200,7 +199,7 @@
             this.proyectosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.proyectosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
@@ -209,7 +208,7 @@
             this.productosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.productosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
@@ -218,15 +217,15 @@
             this.usuarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.usuarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // estadisticasToolStripMenuItem
             // 
+            this.estadisticasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.estadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.graficoDeFacturasToolStripMenuItem,
-            this.estToolStripMenuItem});
+            this.graficoDeFacturasToolStripMenuItem});
             this.estadisticasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
             this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
@@ -234,8 +233,10 @@
             // 
             // graficoDeFacturasToolStripMenuItem
             // 
+            this.graficoDeFacturasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
+            this.graficoDeFacturasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.graficoDeFacturasToolStripMenuItem.Name = "graficoDeFacturasToolStripMenuItem";
-            this.graficoDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.graficoDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graficoDeFacturasToolStripMenuItem.Text = "Grafico de Facturas";
             this.graficoDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.graficoDeFacturasToolStripMenuItem_Click);
             // 
@@ -248,13 +249,6 @@
             this.pbLogo.Size = new System.Drawing.Size(400, 152);
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
-            // 
-            // estToolStripMenuItem
-            // 
-            this.estToolStripMenuItem.Name = "estToolStripMenuItem";
-            this.estToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.estToolStripMenuItem.Text = "Gráficos de Proyectos";
-            this.estToolStripMenuItem.Click += new System.EventHandler(this.estToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -301,6 +295,5 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.ToolStripMenuItem estadisticasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem graficoDeFacturasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estToolStripMenuItem;
     }
 }

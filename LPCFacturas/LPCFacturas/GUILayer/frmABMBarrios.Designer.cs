@@ -49,12 +49,11 @@
             // 
             this.dgv_barrio.AllowUserToAddRows = false;
             this.dgv_barrio.AllowUserToDeleteRows = false;
-            this.dgv_barrio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(164)))), ((int)(((byte)(186)))));
+            this.dgv_barrio.BackgroundColor = System.Drawing.Color.Silver;
             this.dgv_barrio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_barrio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.producto});
-            this.dgv_barrio.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgv_barrio.Location = new System.Drawing.Point(12, 120);
             this.dgv_barrio.MultiSelect = false;
             this.dgv_barrio.Name = "dgv_barrio";
@@ -82,6 +81,7 @@
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
+            this.lbl_nombre.BackColor = System.Drawing.Color.White;
             this.lbl_nombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lbl_nombre.Location = new System.Drawing.Point(52, 69);
@@ -92,7 +92,7 @@
             // 
             // txt_id
             // 
-            this.txt_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txt_id.BackColor = System.Drawing.Color.White;
             this.txt_id.Enabled = false;
             this.txt_id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id.Location = new System.Drawing.Point(137, 18);
@@ -103,6 +103,7 @@
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
+            this.lbl_id.BackColor = System.Drawing.Color.White;
             this.lbl_id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.lbl_id.Location = new System.Drawing.Point(98, 21);
@@ -113,7 +114,7 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
+            this.txt_nombre.BackColor = System.Drawing.Color.White;
             this.txt_nombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.txt_nombre.Location = new System.Drawing.Point(137, 66);
             this.txt_nombre.Name = "txt_nombre";
@@ -208,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(576, 377);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.btn_salir);
