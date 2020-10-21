@@ -128,5 +128,10 @@ namespace LPCFacturas.GUILayer
             frmEstadisticaProyecto frmep = new frmEstadisticaProyecto();
             frmep.ShowDialog();
         }
+
+        private void gráficoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -49,6 +49,7 @@
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graficoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.gráficoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -225,7 +226,8 @@
             // 
             this.estadisticasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.estadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.graficoDeFacturasToolStripMenuItem});
+            this.graficoDeFacturasToolStripMenuItem,
+            this.gráficoDeClientesToolStripMenuItem});
             this.estadisticasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
             this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
@@ -237,7 +239,7 @@
             this.graficoDeFacturasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.graficoDeFacturasToolStripMenuItem.Name = "graficoDeFacturasToolStripMenuItem";
             this.graficoDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.graficoDeFacturasToolStripMenuItem.Text = "Grafico de Facturas";
+            this.graficoDeFacturasToolStripMenuItem.Text = "Gráficos de Facturas";
             this.graficoDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.graficoDeFacturasToolStripMenuItem_Click);
             // 
             // pbLogo
@@ -249,6 +251,15 @@
             this.pbLogo.Size = new System.Drawing.Size(400, 152);
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
+            // 
+            // gráficoDeClientesToolStripMenuItem
+            // 
+            this.gráficoDeClientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
+            this.gráficoDeClientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.gráficoDeClientesToolStripMenuItem.Name = "gráficoDeClientesToolStripMenuItem";
+            this.gráficoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gráficoDeClientesToolStripMenuItem.Text = "Gráficos de Clientes";
+            this.gráficoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.gráficoDeClientesToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -295,5 +306,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.ToolStripMenuItem estadisticasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem graficoDeFacturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gráficoDeClientesToolStripMenuItem;
     }
 }
