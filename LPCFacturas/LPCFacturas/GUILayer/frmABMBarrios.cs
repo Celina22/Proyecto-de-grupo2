@@ -147,6 +147,7 @@ namespace LPCFacturas.GUILayer
             if (dgv_barrio.Rows.Count != 0)
                 this.actualizarCampos(dgv_barrio.CurrentRow.Cells[0].Value.ToString());
             else limpiarCampos();
+            cargarGrilla(dgv_barrio, oBarrioService.recuperarTodos());
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
@@ -173,6 +174,20 @@ namespace LPCFacturas.GUILayer
         private void dgv_barrio_SelectionChanged(object sender, EventArgs e)
         {
             this.actualizarCampos(dgv_barrio.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgv_barrio, oBarrioService.recuperarBarrioNombre(txt_nombre.Text));
+        }
+
+        private void btnHabilitarBusqueda_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgv_barrio, oBarrioService.recuperarTodos());
+            btnBuscar.Visible = true;
+            habilitarCampos(true);
+            txt_nombre.Text = "";
+            btn_guardar.Enabled = false;
         }
     }
 }

@@ -40,5 +40,10 @@ namespace LPCFacturas.BusinessLayer
         {
             oBarrioDao.eliminarBarrio(barrio);
         }
+
+        public IList<Barrio> recuperarBarrioNombre(string barrio)
+        {
+            return oBarrioDao.recuperarBarrioNombre(barrio);
+        }
     }
 }
