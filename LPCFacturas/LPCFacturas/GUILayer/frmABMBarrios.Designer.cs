@@ -42,6 +42,8 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnHabilitarBusqueda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_barrio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +83,9 @@
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.BackColor = System.Drawing.Color.White;
+            this.lbl_nombre.BackColor = System.Drawing.Color.Transparent;
             this.lbl_nombre.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lbl_nombre.ForeColor = System.Drawing.Color.White;
             this.lbl_nombre.Location = new System.Drawing.Point(52, 69);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(80, 23);
@@ -103,9 +105,9 @@
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.BackColor = System.Drawing.Color.White;
+            this.lbl_id.BackColor = System.Drawing.Color.Transparent;
             this.lbl_id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lbl_id.ForeColor = System.Drawing.Color.White;
             this.lbl_id.Location = new System.Drawing.Point(98, 21);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(32, 23);
@@ -123,7 +125,7 @@
             // 
             // btn_salir
             // 
-            this.btn_salir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.btn_salir.FlatAppearance.BorderSize = 0;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -137,7 +139,7 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.btn_cancelar.FlatAppearance.BorderSize = 0;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -151,7 +153,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.btn_guardar.FlatAppearance.BorderSize = 0;
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -165,7 +167,7 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.btn_eliminar.FlatAppearance.BorderSize = 0;
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -179,12 +181,12 @@
             // 
             // btn_editar
             // 
-            this.btn_editar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.btn_editar.FlatAppearance.BorderSize = 0;
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_editar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btn_editar.Location = new System.Drawing.Point(111, 309);
+            this.btn_editar.Location = new System.Drawing.Point(63, 309);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(53, 47);
             this.btn_editar.TabIndex = 25;
@@ -193,17 +195,42 @@
             // 
             // btn_nuevo
             // 
-            this.btn_nuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.btn_nuevo.FlatAppearance.BorderSize = 0;
             this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btn_nuevo.Image = global::LPCFacturas.Properties.Resources.AddPrueba2;
-            this.btn_nuevo.Location = new System.Drawing.Point(45, 309);
+            this.btn_nuevo.Location = new System.Drawing.Point(12, 309);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(45, 47);
             this.btn_nuevo.TabIndex = 23;
             this.btn_nuevo.UseVisualStyleBackColor = false;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
+            this.btnBuscar.Location = new System.Drawing.Point(455, 55);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(48, 55);
+            this.btnBuscar.TabIndex = 35;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnHabilitarBusqueda
+            // 
+            this.btnHabilitarBusqueda.FlatAppearance.BorderSize = 0;
+            this.btnHabilitarBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabilitarBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarBusqueda.Image")));
+            this.btnHabilitarBusqueda.Location = new System.Drawing.Point(122, 309);
+            this.btnHabilitarBusqueda.Name = "btnHabilitarBusqueda";
+            this.btnHabilitarBusqueda.Size = new System.Drawing.Size(60, 55);
+            this.btnHabilitarBusqueda.TabIndex = 36;
+            this.btnHabilitarBusqueda.UseVisualStyleBackColor = true;
+            this.btnHabilitarBusqueda.Click += new System.EventHandler(this.btnHabilitarBusqueda_Click);
             // 
             // frmABMBarrios
             // 
@@ -211,6 +238,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(576, 377);
+            this.Controls.Add(this.btnHabilitarBusqueda);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_cancelar);
@@ -251,5 +280,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
         private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnHabilitarBusqueda;
     }
 }

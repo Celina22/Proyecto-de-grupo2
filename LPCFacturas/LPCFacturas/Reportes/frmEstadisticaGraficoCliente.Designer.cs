@@ -62,7 +62,7 @@
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaHasta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblFechaHasta.ForeColor = System.Drawing.Color.White;
             this.lblFechaHasta.Location = new System.Drawing.Point(418, 35);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(110, 23);
@@ -83,7 +83,7 @@
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaDesde.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.lblFechaDesde.ForeColor = System.Drawing.Color.White;
             this.lblFechaDesde.Location = new System.Drawing.Point(151, 35);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(113, 23);

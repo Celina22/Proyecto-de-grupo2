@@ -92,5 +92,22 @@ namespace LPCFacturas.DataAccessLayer
 
             DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
+
+        public IList<Barrio> recuperarBarrioNombre(string barrio)
+        {
+            List<Barrio> listadoBugs = new List<Barrio>();
+
+            var strSql = " SELECT id_barrio, nombre" +
+                         " FROM Barrios WHERE borrado = 0 AND nombre LIKE '%"+barrio+"%'";
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoBugs.Add(MappingBug(row));
+            }
+
+            return listadoBugs;
+        }
     }
 }
