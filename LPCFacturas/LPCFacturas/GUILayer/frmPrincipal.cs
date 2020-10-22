@@ -47,7 +47,10 @@ namespace LPCFacturas.GUILayer
 
             this.menuPrincipal.Renderer = new ToolStripProfessionalRenderer(new TestColorTable());
             UsuarioActual = fl.UsuarioLogueado;
-            this.Text = "Menú Principal - Usuario actual: " + UsuarioActual.NombreUsuario;
+            if (UsuarioActual != null) 
+            {
+                this.Text = "Menú Principal - Usuario actual: " + UsuarioActual.NombreUsuario;
+            }
             fl.Dispose();
             this.Visible = true;
         } 

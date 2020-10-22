@@ -105,7 +105,7 @@
             this.MaximumSize = new System.Drawing.Size(1112, 788);
             this.MinimumSize = new System.Drawing.Size(1112, 726);
             this.Name = "frmEstadisticaGraficoFactura";
-            this.Text = "frmEstadisticaGraficoFactura";
+            this.Text = "Estadísticas de Facturas";
             this.Load += new System.EventHandler(this.frmEstadisticaGraficoFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();

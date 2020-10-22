@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(131)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(938, 659);
             this.Controls.Add(this.rvwGraficosClientes);
             this.Controls.Add(this.btnBuscar);
@@ -113,7 +113,7 @@
             this.Controls.Add(this.lblFechaDesde);
             this.Name = "frmEstadisticaGraficoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmEstadisticaGraficoCliente";
+            this.Text = "Estadísticas de Clientes";
             this.Load += new System.EventHandler(this.frmEstadisticaGraficoCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
