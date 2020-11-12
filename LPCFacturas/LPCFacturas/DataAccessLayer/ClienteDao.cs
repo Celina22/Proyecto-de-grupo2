@@ -25,6 +25,37 @@ namespace LPCFacturas.DataAccessLayer
             return listadoClientes;
         }
 
+        public IList<Cliente> recuperarClientesFiltro(string cuit, string razonSocial, string contacto, string barrio, string calle,
+            string numero, DateTime fechaAlta)
+        {
+            List<Cliente> listadoClientes = new List<Cliente>();
+
+            var SQLquery = "SELECT c.id_cliente, c.cuit, c.razon_social, c.calle, c.numero, CONVERT(varchar,c.fecha_alta,103) as fecha_alta, c.id_barrio, c.id_contacto " +
+                           "FROM Clientes c LEFT JOIN Barrios b ON (c.id_barrio = b.id_barrio) LEFT JOIN Contactos co ON (co.id_contacto = c.id_contacto)" +
+                           "WHERE c.fecha_alta > CONVERT(datetime,'" + fechaAlta.ToString("dd/MM/yyyy") + "',103) "+
+                                            "AND c.borrado=0";
+            if(cuit.Length > 0)
+                SQLquery += " AND c.cuit LIKE '%" + cuit + "%'";
+            if (razonSocial.Length > 0)
+                SQLquery += " AND c.razon_social LIKE '%" + razonSocial + "%'";
+            if (contacto != "-1")
+                SQLquery += " AND c.id_contacto = " + contacto;
+            if (barrio != "-1")
+                SQLquery += " AND c.id_barrio = " + barrio;
+            if (calle.Length > 0)
+                SQLquery += " AND c.calle LIKE '%" + calle + "%'";
+            if (numero.Length > 0)
+                SQLquery += " AND c.numero LIKE '%" + numero + "%'";
+
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+
+            foreach (DataRow row in tabla.Rows)
+                listadoClientes.Add(MappingCliente(row));
+
+            return listadoClientes;
+        }
+
         public DataTable recuperarCLientes()
         {
             var SQLquery = "SELECT * FROM Clientes WHERE borrado=0";

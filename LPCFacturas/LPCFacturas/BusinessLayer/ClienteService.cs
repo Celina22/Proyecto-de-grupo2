@@ -58,5 +58,11 @@ namespace LPCFacturas.BusinessLayer
         {
             return oClienteDao.recuperarCLientes(fechaDesde, fechaHasta);
         }
+
+        public IList<Cliente> recuperarClientesFiltro(string cuit, string razonSocial, string contacto, string barrio, string calle, 
+            string numero, DateTime fechaAlta)
+        {
+            return oClienteDao.recuperarClientesFiltro(cuit,razonSocial,contacto,barrio,calle,numero,fechaAlta);
+        }
     }
 }

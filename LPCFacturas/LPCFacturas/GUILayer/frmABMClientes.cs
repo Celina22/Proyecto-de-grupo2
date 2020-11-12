@@ -115,6 +115,8 @@ namespace LPCFacturas.GUILayer
             if (dgvClientes.Rows.Count != 0)
                 this.actualizarCampos(dgvClientes.CurrentRow.Cells[0].Value.ToString());
             else limpiarCampos();
+            cargarGrilla(dgvClientes, oClienteService.recuperarTodos());
+            btnBuscar.Visible = false;
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -249,79 +251,38 @@ namespace LPCFacturas.GUILayer
             this.actualizarCampos(dgvClientes.CurrentRow.Cells[0].Value.ToString());
         }
 
-        private void lblNumero_Click(object sender, EventArgs e)
+        private void btnHabilitarBusqueda_Click(object sender, EventArgs e)
         {
-
+            cargarGrilla(dgvClientes, oClienteService.recuperarTodos());
+            btnBuscar.Visible = true;
+            habilitarCampos(true);
+            txtCuit.Text = "";
+            txtRazonSocial.Text = "";
+            cboContacto.SelectedIndex = -1;
+            cboBarrio.SelectedIndex = -1;
+            txtCalle.Text = "";
+            txtNumero.Text = "";
+            dtpFechaAlta.Value = DateTime.Today;
+            btnGuardar.Enabled = false;
         }
 
-        private void lblContacto_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
+            string contacto, barrio;
 
-        }
+            if (cboBarrio.SelectedIndex == -1)
+                barrio = "-1";
+            else
+                barrio = cboBarrio.SelectedValue.ToString();
+            if (cboContacto.SelectedIndex == -1)
+                contacto = "-1";
+            else
+                contacto = cboContacto.SelectedValue.ToString();
 
-        private void cboBarrio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblBarrio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpFechaAlta_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFechaAlta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNumero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboContacto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCalle_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRazonSocial_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCuit_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCalle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblId_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCuit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRazonSocial_Click(object sender, EventArgs e)
-        {
-
+            cargarGrilla(dgvClientes, oClienteService.recuperarClientesFiltro(txtCuit.Text,txtRazonSocial.Text,contacto,barrio,
+                txtCalle.Text,txtNumero.Text,dtpFechaAlta.Value));
+            dgvClientes.Enabled = true;
+            btnEditar.Enabled = true;
         }
     }
 }
