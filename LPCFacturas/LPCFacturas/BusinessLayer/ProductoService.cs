@@ -51,5 +51,10 @@ namespace LPCFacturas.BusinessLayer
         {
             return oProductoDao.recuperarProductosEstadisticasImporte();
         }
+
+        internal IList<Producto> recuperarProductoNombre(string nomProducto)
+        {
+            return oProductoDao.recuperarProductoNombre(nomProducto);
+        }
     }   
 }

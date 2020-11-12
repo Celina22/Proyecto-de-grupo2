@@ -53,6 +53,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnHabilitarBusqueda = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -263,7 +265,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEliminar.Image = global::LPCFacturas.Properties.Resources.Error_X2;
-            this.btnEliminar.Location = new System.Drawing.Point(183, 410);
+            this.btnEliminar.Location = new System.Drawing.Point(147, 410);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(71, 56);
             this.btnEliminar.TabIndex = 14;
@@ -278,7 +280,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnEditar.Image = global::LPCFacturas.Properties.Resources.Mono_Pen2;
-            this.btnEditar.Location = new System.Drawing.Point(89, 410);
+            this.btnEditar.Location = new System.Drawing.Point(70, 410);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(71, 56);
             this.btnEditar.TabIndex = 13;
@@ -301,12 +303,39 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnHabilitarBusqueda
+            // 
+            this.btnHabilitarBusqueda.FlatAppearance.BorderSize = 0;
+            this.btnHabilitarBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabilitarBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarBusqueda.Image")));
+            this.btnHabilitarBusqueda.Location = new System.Drawing.Point(224, 411);
+            this.btnHabilitarBusqueda.Name = "btnHabilitarBusqueda";
+            this.btnHabilitarBusqueda.Size = new System.Drawing.Size(60, 55);
+            this.btnHabilitarBusqueda.TabIndex = 39;
+            this.btnHabilitarBusqueda.UseVisualStyleBackColor = true;
+            this.btnHabilitarBusqueda.Click += new System.EventHandler(this.btnHabilitarBusqueda_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
+            this.btnBuscar.Location = new System.Drawing.Point(581, 136);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(48, 55);
+            this.btnBuscar.TabIndex = 40;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmABMContactos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(709, 494);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnHabilitarBusqueda);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -362,5 +391,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnHabilitarBusqueda;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

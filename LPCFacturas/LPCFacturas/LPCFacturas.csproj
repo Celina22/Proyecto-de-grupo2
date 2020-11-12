@@ -121,9 +121,7 @@
     <Compile Include="GUILayer\frmABMProducto.Designer.cs">
       <DependentUpon>frmABMProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmABMProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="GUILayer\frmABMProductos.cs" />
     <Compile Include="GUILayer\frmABMProductos.Designer.cs">
       <DependentUpon>frmABMProductos.cs</DependentUpon>
     </Compile>

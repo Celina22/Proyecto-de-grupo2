@@ -110,6 +110,8 @@ namespace LPCFacturas.GUILayer
             if (dgvProducto.Rows.Count != 0)
                 this.actualizarCampos(dgvProducto.CurrentRow.Cells[0].Value.ToString());
             else limpiarCampos();
+            cargarGrilla(dgvProducto, oProductoService.recuperarTodos());
+            btnBuscar.Visible = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -167,6 +169,20 @@ namespace LPCFacturas.GUILayer
 
             }
             habilitarCampos(false);
+        }
+
+        private void btnHabilitarBusqueda_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgvProducto, oProductoService.recuperarTodos());
+            btnBuscar.Visible = true;
+            habilitarCampos(true);
+            txtNombre.Text = "";
+            btnGuardar.Enabled = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgvProducto, oProductoService.recuperarProductoNombre(txtNombre.Text));
         }
     }
 }

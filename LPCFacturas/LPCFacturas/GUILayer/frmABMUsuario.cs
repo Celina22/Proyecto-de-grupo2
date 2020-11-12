@@ -105,6 +105,8 @@ namespace LPCFacturas.GUILayer
             if (dgvUsuario.Rows.Count != 0)
                 this.actualizarCampos(dgvUsuario.CurrentRow.Cells[2].Value.ToString());
             else limpiarCampos();
+            cargarGrilla(dgvUsuario, oUsuarioService.recuperarTodos());
+            btnBuscar.Visible = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -217,6 +219,28 @@ namespace LPCFacturas.GUILayer
         private void dgvUsuario_SelectionChanged_1(object sender, EventArgs e)
         {
             this.actualizarCampos(dgvUsuario.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void btnHabilitarBusqueda_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgvUsuario, oUsuarioService.recuperarTodos());
+            btnBuscar.Visible = true;
+            habilitarCampos(true);
+            txtUsuario.Text = "";
+            txtEmail.Text = "";
+            txtEstado.Text = "";
+            txtPassword.Text = "";
+            cboPerfil.SelectedIndex = -1;
+            btnGuardar.Enabled = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            int cboPerfilSeleccion = -1;
+            if (cboPerfil.SelectedIndex != -1)
+                cboPerfilSeleccion = (int) cboPerfil.SelectedValue;
+
+            cargarGrilla(dgvUsuario, oUsuarioService.recuperarUsuarioConsulta(txtUsuario.Text, txtEmail.Text, txtEstado.Text, cboPerfilSeleccion));
         }
     }
 }

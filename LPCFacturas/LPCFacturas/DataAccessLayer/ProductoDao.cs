@@ -59,6 +59,23 @@ namespace LPCFacturas.DataAccessLayer
             return DataManager.GetInstance().ConsultaSQL(consultaSQL);
         }
 
+        internal IList<Producto> recuperarProductoNombre(string nomProducto)
+        {
+            List<Producto> listadoProducto = new List<Producto>();
+
+            var strSql = " SELECT id_producto, nombre" +
+                         " FROM productos WHERE borrado = 0 AND nombre LIKE '%" + nomProducto + "%'";
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoProducto.Add(MappingProducto(row));
+            }
+
+            return listadoProducto;
+        }
+
         public DataTable recuperarProductosEstadisticas() 
         {
             string consultaSQL = "SELECT p.nombre as id_producto, sum(cantidad) as cantidad " +
