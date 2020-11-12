@@ -103,6 +103,8 @@ namespace LPCFacturas.GUILayer
             if (dgvContactos.Rows.Count != 0)
                 this.actualizarCampos(dgvContactos.CurrentRow.Cells[0].Value.ToString());
             else limpiarCampos();
+            cargarGrilla(dgvContactos, oContactoService.recuperarTodos());
+            btnBuscar.Visible = false;
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -193,6 +195,23 @@ namespace LPCFacturas.GUILayer
         private void dgvContactos_SelectionChanged(object sender, EventArgs e)
         {
             this.actualizarCampos(dgvContactos.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void btnHabilitarBusqueda_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgvContactos, oContactoService.recuperarTodos());
+            btnBuscar.Visible = true;
+            habilitarCampos(true);
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtEmail.Text = "";
+            txtTelefono.Text = "";
+            btnGuardar.Enabled = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgvContactos, oContactoService.recuperarContactoConsulta(txtNombre.Text, txtApellido.Text, txtEmail.Text, txtTelefono.Text));
         }
     }
 }

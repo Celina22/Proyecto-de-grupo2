@@ -48,13 +48,15 @@
             this.version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnHabilitarBusqueda = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,6 +231,41 @@
             this.responsable.Name = "responsable";
             this.responsable.ReadOnly = true;
             // 
+            // txtEstado
+            // 
+            this.txtEstado.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.txtEstado.BackColor = System.Drawing.Color.White;
+            this.txtEstado.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(619, 116);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(342, 31);
+            this.txtEstado.TabIndex = 15;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
+            this.btnBuscar.Location = new System.Drawing.Point(419, 474);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(48, 55);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnHabilitarBusqueda
+            // 
+            this.btnHabilitarBusqueda.FlatAppearance.BorderSize = 0;
+            this.btnHabilitarBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabilitarBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarBusqueda.Image")));
+            this.btnHabilitarBusqueda.Location = new System.Drawing.Point(318, 474);
+            this.btnHabilitarBusqueda.Name = "btnHabilitarBusqueda";
+            this.btnHabilitarBusqueda.Size = new System.Drawing.Size(60, 55);
+            this.btnHabilitarBusqueda.TabIndex = 38;
+            this.btnHabilitarBusqueda.UseVisualStyleBackColor = true;
+            this.btnHabilitarBusqueda.Click += new System.EventHandler(this.btnHabilitarBusqueda_Click);
+            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
@@ -319,22 +356,14 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // txtEstado
-            // 
-            this.txtEstado.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.txtEstado.BackColor = System.Drawing.Color.White;
-            this.txtEstado.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(619, 116);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(342, 31);
-            this.txtEstado.TabIndex = 15;
-            // 
             // frmABMUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(990, 561);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnHabilitarBusqueda);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
@@ -393,5 +422,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn version;
         private System.Windows.Forms.DataGridViewTextBoxColumn responsable;
+        private System.Windows.Forms.Button btnHabilitarBusqueda;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

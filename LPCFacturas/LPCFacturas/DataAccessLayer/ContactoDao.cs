@@ -48,6 +48,26 @@ namespace LPCFacturas.DataAccessLayer
             DataManager.GetInstance().EjecutarSQL(SQLUpdate);
 
         }
+
+        internal List<Contacto> recuperarContactoConsulta(string nombre, string apellido, string email, string telefono)
+        {
+            List<Contacto> listadoContacto = new List<Contacto>();
+
+            var strSql = "SELECT id_contacto, nombre, apellido, email, telefono" +
+                        " from contactos where borrado = 0 AND nombre like '%" + nombre + "%' AND apellido like '%" + apellido + "%' " +
+                        "AND email like '%" + email + "%' AND telefono like '%"+telefono+"%'";
+
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoContacto.Add(MappingContacto(row));
+            }
+
+            return listadoContacto;
+        }
+
         public void eliminarContacto(Contacto contacto)
         {
             string SQLUpdate = "UPDATE Contactos SET borrado=1 WHERE id_contacto=" + contacto.Id_contacto;

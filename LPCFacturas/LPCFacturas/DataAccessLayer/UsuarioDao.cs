@@ -53,6 +53,27 @@ namespace LPCFacturas.DataAccessLayer
             return null;
         }
 
+        internal IList<Usuario> recuperarUsuarioConsulta(string usuario, string mail, string estado, int cboPerfilSeleccion)
+        {
+            List<Usuario> listadoUsuario = new List<Usuario>();
+
+            var strSql = "SELECT id_usuario, id_perfil, usuario, email, estado, password" +
+                        " from Usuarios where borrado = 0 AND usuario like '%" + usuario + "%' AND email like '%" + mail + "%' " +
+                        "AND estado like '%" + estado + "%'";
+
+            if (cboPerfilSeleccion != -1)
+                strSql += " AND id_perfil = " + cboPerfilSeleccion;
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoUsuario.Add(MappingUsuario(row));
+            }
+
+            return listadoUsuario;
+        }
+
         public Usuario GetUserId(string idUsuario)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.

@@ -53,5 +53,10 @@ namespace LPCFacturas.BusinessLayer
         {
             oUsuarioDao.actualizarUsuario(usuario);
         }
+
+        internal IList<Usuario> recuperarUsuarioConsulta(string usuario, string mail, string estado, int cboPerfilSeleccion)
+        {
+            return oUsuarioDao.recuperarUsuarioConsulta(usuario, mail, estado, cboPerfilSeleccion);
+        }
     }
 }
