@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bugsExtendidoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -54,10 +53,7 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "ProyectosFacturados";
-            reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.EstadisticaProyecto.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteGraficoProyecto.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 61);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -119,7 +115,7 @@
             this.lblFechaDesde.TabIndex = 46;
             this.lblFechaDesde.Text = "Fecha desde:";
             // 
-            // frmEstadisticaProyecto
+            // frmEstadisticaGraficoProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,7 +127,7 @@
             this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.lblFechaDesde);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmEstadisticaProyecto";
+            this.Name = "frmEstadisticaGraficoProyecto";
             this.Text = "Estadísticas de Proyectos";
             this.Load += new System.EventHandler(this.frmEstadisticaProyecto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
