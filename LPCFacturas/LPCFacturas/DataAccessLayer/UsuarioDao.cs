@@ -37,9 +37,27 @@ namespace LPCFacturas.DataAccessLayer
         public Usuario GetUser(string pUsuario)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT id_usuario, usuario, email, estado, password, id_perfil ",
-                                                "   FROM Usuarios ",
-                                                "  WHERE borrado=0 and usuario =  '", pUsuario, "'");
+            String consultaSql = string.Concat("SELECT id_usuario, usuario, email, estado, password, id_perfil ",
+                                                "FROM Usuarios ",
+                                                "WHERE borrado=0 and usuario =  '", pUsuario, "'");
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return MappingUsuario(resultado.Rows[0]);
+            }
+
+            return null;
+        }
+
+        internal Usuario GetUserID(string idUsuario)
+        {
+            String consultaSql = string.Concat("SELECT id_usuario, usuario, email, estado, password, id_perfil ",
+                                                "FROM Usuarios ",
+                                                "WHERE borrado=0 and id_usuario = "+idUsuario);
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
             var resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
@@ -77,7 +95,7 @@ namespace LPCFacturas.DataAccessLayer
         public Usuario GetUserId(string idUsuario)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT id_usuario, usuario, email, estado, password, id_perfil ",
+            String consultaSql = string.Concat("SELECT id_usuario, usuario, email, estado, password, id_perfil ",
                                                 "   FROM Usuarios ",
                                                 "  WHERE borrado=0 and id_usuario =  '", idUsuario, "'");
 

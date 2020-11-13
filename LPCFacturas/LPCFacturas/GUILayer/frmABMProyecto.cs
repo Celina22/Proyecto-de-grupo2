@@ -157,7 +157,7 @@ namespace LPCFacturas.GUILayer
                 oProyecto.Descripcion = txtDescripcion.Text;
                 oProyecto.Alcance = txtAlcance.Text;
                 oProyecto.Version = txtVersion.Text;
-                oProyecto.Responsable = oUsuarioService.recuperarUsuario(cboResponsable.SelectedValue.ToString());
+                oProyecto.Responsable = oUsuarioService.recuperarUsuarioID(cboResponsable.SelectedValue.ToString());
                 if(nuevo)
                 {
                     oProyectoService.crearProyecto(oProyecto);

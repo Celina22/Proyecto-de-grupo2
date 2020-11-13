@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuPrincipal = new System.Windows.Forms.MenuStrip();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proyectosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprasClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,36 +72,18 @@
             // 
             this.facturaToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.facturaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.proyectosVendidosToolStripMenuItem,
-            this.comprasClientesToolStripMenuItem,
             this.nuevaFacturaToolStripMenuItem});
             this.facturaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
             this.facturaToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.facturaToolStripMenuItem.Text = "Facturacion";
             // 
-            // proyectosVendidosToolStripMenuItem
-            // 
-            this.proyectosVendidosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
-            this.proyectosVendidosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.proyectosVendidosToolStripMenuItem.Name = "proyectosVendidosToolStripMenuItem";
-            this.proyectosVendidosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.proyectosVendidosToolStripMenuItem.Text = "Proyectos Vendidos";
-            // 
-            // comprasClientesToolStripMenuItem
-            // 
-            this.comprasClientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
-            this.comprasClientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.comprasClientesToolStripMenuItem.Name = "comprasClientesToolStripMenuItem";
-            this.comprasClientesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.comprasClientesToolStripMenuItem.Text = "Compras Clientes";
-            // 
             // nuevaFacturaToolStripMenuItem
             // 
             this.nuevaFacturaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.nuevaFacturaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.nuevaFacturaToolStripMenuItem.Name = "nuevaFacturaToolStripMenuItem";
-            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevaFacturaToolStripMenuItem.Text = "Nueva Factura";
             this.nuevaFacturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaFacturaToolStripMenuItem_Click);
             // 
@@ -316,8 +296,6 @@
         private System.Windows.Forms.ToolStripMenuItem contactosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem proyectosVendidosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comprasClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaFacturaToolStripMenuItem;

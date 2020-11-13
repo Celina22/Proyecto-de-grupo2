@@ -39,6 +39,11 @@ namespace LPCFacturas.BusinessLayer
             return oUsuarioDao.GetUser(nombreUsuario);
         }
 
+        public Usuario recuperarUsuarioID(string idUsuario)
+        {
+            return oUsuarioDao.GetUserID(idUsuario);
+        }
+
         public void eliminarUsuario(Usuario usuario)
         {
             oUsuarioDao.eliminarUsuario(usuario);
