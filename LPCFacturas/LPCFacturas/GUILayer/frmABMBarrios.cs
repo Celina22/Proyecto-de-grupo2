@@ -180,6 +180,8 @@ namespace LPCFacturas.GUILayer
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             cargarGrilla(dgv_barrio, oBarrioService.recuperarBarrioNombre(txt_nombre.Text));
+            dgv_barrio.Enabled = true;
+            btn_editar.Enabled = true;
         }
 
         private void btnHabilitarBusqueda_Click(object sender, EventArgs e)

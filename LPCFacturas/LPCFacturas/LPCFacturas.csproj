@@ -121,10 +121,6 @@
     <Compile Include="GUILayer\frmABMProducto.Designer.cs">
       <DependentUpon>frmABMProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmABMProductos.cs" />
-    <Compile Include="GUILayer\frmABMProductos.Designer.cs">
-      <DependentUpon>frmABMProductos.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUILayer\frmABMProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,9 +220,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmABMProducto.resx">
       <DependentUpon>frmABMProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmABMProductos.resx">
-      <DependentUpon>frmABMProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmABMProyecto.resx">
       <DependentUpon>frmABMProyecto.cs</DependentUpon>

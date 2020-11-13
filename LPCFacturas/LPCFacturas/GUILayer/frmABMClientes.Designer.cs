@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMClientes));
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtCuit = new System.Windows.Forms.TextBox();
@@ -56,6 +57,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnHabilitarBusqueda = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +72,6 @@
             this.lblId.Size = new System.Drawing.Size(32, 23);
             this.lblId.TabIndex = 0;
             this.lblId.Text = "ID:";
-            this.lblId.Click += new System.EventHandler(this.lblId_Click);
             // 
             // txtId
             // 
@@ -88,7 +90,6 @@
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(251, 31);
             this.txtCuit.TabIndex = 3;
-            this.txtCuit.TextChanged += new System.EventHandler(this.txtCuit_TextChanged);
             // 
             // lblCuit
             // 
@@ -100,7 +101,6 @@
             this.lblCuit.Size = new System.Drawing.Size(50, 23);
             this.lblCuit.TabIndex = 2;
             this.lblCuit.Text = "CUIT:";
-            this.lblCuit.Click += new System.EventHandler(this.lblCuit_Click);
             // 
             // txtRazonSocial
             // 
@@ -110,7 +110,6 @@
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(251, 31);
             this.txtRazonSocial.TabIndex = 5;
-            this.txtRazonSocial.TextChanged += new System.EventHandler(this.txtRazonSocial_TextChanged);
             // 
             // lblRazonSocial
             // 
@@ -122,7 +121,6 @@
             this.lblRazonSocial.Size = new System.Drawing.Size(113, 23);
             this.lblRazonSocial.TabIndex = 4;
             this.lblRazonSocial.Text = "Razón Social:";
-            this.lblRazonSocial.Click += new System.EventHandler(this.lblRazonSocial_Click);
             // 
             // txtCalle
             // 
@@ -132,7 +130,6 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(264, 31);
             this.txtCalle.TabIndex = 7;
-            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
             // 
             // lblCalle
             // 
@@ -144,7 +141,6 @@
             this.lblCalle.Size = new System.Drawing.Size(54, 23);
             this.lblCalle.TabIndex = 6;
             this.lblCalle.Text = "Calle:";
-            this.lblCalle.Click += new System.EventHandler(this.lblCalle_Click);
             // 
             // txtNumero
             // 
@@ -154,7 +150,6 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(264, 31);
             this.txtNumero.TabIndex = 9;
-            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // lblNumero
             // 
@@ -166,7 +161,6 @@
             this.lblNumero.Size = new System.Drawing.Size(80, 23);
             this.lblNumero.TabIndex = 8;
             this.lblNumero.Text = "Número:";
-            this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
             // 
             // lblFechaAlta
             // 
@@ -178,7 +172,6 @@
             this.lblFechaAlta.Size = new System.Drawing.Size(119, 23);
             this.lblFechaAlta.TabIndex = 10;
             this.lblFechaAlta.Text = "Fecha de alta:";
-            this.lblFechaAlta.Click += new System.EventHandler(this.lblFechaAlta_Click);
             // 
             // dtpFechaAlta
             // 
@@ -193,7 +186,6 @@
             this.dtpFechaAlta.Name = "dtpFechaAlta";
             this.dtpFechaAlta.Size = new System.Drawing.Size(264, 31);
             this.dtpFechaAlta.TabIndex = 11;
-            this.dtpFechaAlta.ValueChanged += new System.EventHandler(this.dtpFechaAlta_ValueChanged);
             // 
             // lblBarrio
             // 
@@ -205,7 +197,6 @@
             this.lblBarrio.Size = new System.Drawing.Size(64, 23);
             this.lblBarrio.TabIndex = 12;
             this.lblBarrio.Text = "Barrio:";
-            this.lblBarrio.Click += new System.EventHandler(this.lblBarrio_Click);
             // 
             // cboBarrio
             // 
@@ -216,7 +207,6 @@
             this.cboBarrio.Name = "cboBarrio";
             this.cboBarrio.Size = new System.Drawing.Size(264, 31);
             this.cboBarrio.TabIndex = 13;
-            this.cboBarrio.SelectedIndexChanged += new System.EventHandler(this.cboBarrio_SelectedIndexChanged);
             // 
             // cboContacto
             // 
@@ -227,7 +217,6 @@
             this.cboContacto.Name = "cboContacto";
             this.cboContacto.Size = new System.Drawing.Size(251, 31);
             this.cboContacto.TabIndex = 15;
-            this.cboContacto.SelectedIndexChanged += new System.EventHandler(this.cboContacto_SelectedIndexChanged);
             this.cboContacto.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboContactoFormat);
             // 
             // lblContacto
@@ -240,7 +229,6 @@
             this.lblContacto.Size = new System.Drawing.Size(86, 23);
             this.lblContacto.TabIndex = 14;
             this.lblContacto.Text = "Contacto:";
-            this.lblContacto.Click += new System.EventHandler(this.lblContacto_Click);
             // 
             // dgvClientes
             // 
@@ -262,7 +250,6 @@
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(788, 361);
             this.dgvClientes.TabIndex = 16;
-            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
             // id
@@ -384,12 +371,39 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnHabilitarBusqueda
+            // 
+            this.btnHabilitarBusqueda.FlatAppearance.BorderSize = 0;
+            this.btnHabilitarBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabilitarBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarBusqueda.Image")));
+            this.btnHabilitarBusqueda.Location = new System.Drawing.Point(234, 538);
+            this.btnHabilitarBusqueda.Name = "btnHabilitarBusqueda";
+            this.btnHabilitarBusqueda.Size = new System.Drawing.Size(60, 55);
+            this.btnHabilitarBusqueda.TabIndex = 38;
+            this.btnHabilitarBusqueda.UseVisualStyleBackColor = true;
+            this.btnHabilitarBusqueda.Click += new System.EventHandler(this.btnHabilitarBusqueda_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
+            this.btnBuscar.Location = new System.Drawing.Point(360, 537);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(48, 55);
+            this.btnBuscar.TabIndex = 37;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmABMClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(812, 605);
+            this.Controls.Add(this.btnHabilitarBusqueda);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -454,5 +468,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn razonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn calle;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.Button btnHabilitarBusqueda;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
