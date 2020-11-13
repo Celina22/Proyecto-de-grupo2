@@ -25,7 +25,7 @@ namespace LPCFacturas.Reportes
         private void frmReporteListadoCliente_Load(object sender, EventArgs e)
         {
             cargarCombo(cboBarrio, oBarrioService.recuperarTodos(), "Nombre", "Id_barrio");
-            this.reportViewer1.RefreshReport();
+            this.rpvCliente.RefreshReport();
 
         }
 
@@ -65,11 +65,9 @@ namespace LPCFacturas.Reportes
 
             ReportDataSource ds = new ReportDataSource("ListadoClientes", tabla);
 
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(ds);
-            reportViewer1.LocalReport.SetParameters(new ReportParameter[] { new ReportParameter("prmFechaDesde", dtpFechaDesde.Value.ToShortDateString()),
-                                                                            new ReportParameter("prmFechaHasta", dtpFechaHasta.Value.ToShortDateString())});
-            reportViewer1.RefreshReport();
+            rpvCliente.LocalReport.DataSources.Clear();
+            rpvCliente.LocalReport.DataSources.Add(ds);
+            rpvCliente.RefreshReport();
         }
 
         private void frmReporteListadoCliente_FormClosing(object sender, FormClosingEventArgs e)

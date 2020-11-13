@@ -126,7 +126,7 @@ namespace LPCFacturas.GUILayer
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de que quiere eliminar al cliente " + txtRazonSocial + "?", "Borrar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que quiere eliminar al cliente " + txtRazonSocial.Text + "?", "Borrar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Cliente oCliente= new Cliente();
 
