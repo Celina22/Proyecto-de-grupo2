@@ -187,6 +187,7 @@
             this.Controls.Add(this.rvwFacturas);
             this.Name = "frmReporteListadoFactura";
             this.Text = "Listado de Facturas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporteListadoFactura_FormClosing);
             this.Load += new System.EventHandler(this.frmReporteListadoFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();

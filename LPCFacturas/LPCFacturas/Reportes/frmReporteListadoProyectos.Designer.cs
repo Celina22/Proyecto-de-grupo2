@@ -46,11 +46,11 @@
             this.lblAlcance = new System.Windows.Forms.Label();
             this.rvwProyectos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.grbFiltros = new System.Windows.Forms.GroupBox();
-            this.tltReporteProyectos = new System.Windows.Forms.ToolTip(this.components);
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
+            this.tltReporteProyectos = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).BeginInit();
             this.grbFiltros.SuspendLayout();
@@ -226,13 +226,6 @@
             this.grbFiltros.TabStop = false;
             this.grbFiltros.Text = "Filtros de Listado";
             // 
-            // tltReporteProyectos
-            // 
-            this.tltReporteProyectos.AutoPopDelay = 2000;
-            this.tltReporteProyectos.InitialDelay = 250;
-            this.tltReporteProyectos.IsBalloon = true;
-            this.tltReporteProyectos.ReshowDelay = 100;
-            // 
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
@@ -273,6 +266,13 @@
             this.lblFechaDesde.TabIndex = 47;
             this.lblFechaDesde.Text = "FechaDesde: ";
             // 
+            // tltReporteProyectos
+            // 
+            this.tltReporteProyectos.AutoPopDelay = 2000;
+            this.tltReporteProyectos.InitialDelay = 250;
+            this.tltReporteProyectos.IsBalloon = true;
+            this.tltReporteProyectos.ReshowDelay = 100;
+            // 
             // frmReporteListadoProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +285,7 @@
             this.Name = "frmReporteListadoProyectos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Listado de Proyectos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporteListadoProyectos_FormClosing);
             this.Load += new System.EventHandler(this.frmReporteListadoProyectos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();

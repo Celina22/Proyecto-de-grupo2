@@ -167,6 +167,7 @@
             this.Controls.Add(this.rvwProductos);
             this.Name = "frmReporteListadoProducto";
             this.Text = "Listado de Productos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporteListadoProducto_FormClosing);
             this.Load += new System.EventHandler(this.frmReporteListadoProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();

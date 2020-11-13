@@ -114,6 +114,7 @@
             this.Name = "frmEstadisticaGraficoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Estadísticas de Clientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEstadisticaGraficoCliente_FormClosing);
             this.Load += new System.EventHandler(this.frmEstadisticaGraficoCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -58,5 +58,11 @@ namespace LPCFacturas.Reportes
             rvwProductos.LocalReport.Refresh();
             rvwProductos.RefreshReport();
         }
+
+        private void frmReporteListadoProducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Está seguro que quiere salir", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

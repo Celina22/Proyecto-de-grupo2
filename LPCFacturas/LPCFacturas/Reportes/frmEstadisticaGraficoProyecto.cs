@@ -53,5 +53,11 @@ namespace LPCFacturas.Reportes
             reportViewer1.LocalReport.Refresh();
             reportViewer1.RefreshReport();
         }
+
+        private void frmEstadisticaGraficoProyecto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Está seguro que quiere salir", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

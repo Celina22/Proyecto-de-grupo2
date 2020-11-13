@@ -61,7 +61,7 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteListadoCliente.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(7, 81);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1002, 514);
@@ -138,7 +138,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
             this.btnBuscar.Location = new System.Drawing.Point(951, 26);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(40, 34);
             this.btnBuscar.TabIndex = 32;
@@ -159,9 +159,10 @@
             this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.lblFechaDesde);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReporteListadoCliente";
             this.Text = "Listado de Clientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporteListadoCliente_FormClosing);
             this.Load += new System.EventHandler(this.frmReporteListadoCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();

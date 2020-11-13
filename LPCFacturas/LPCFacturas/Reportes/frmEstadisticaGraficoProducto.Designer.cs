@@ -81,6 +81,7 @@
             this.MaximizeBox = false;
             this.Name = "frmEstadisticaGraficoProducto";
             this.Text = "Reporte estadístico de Productos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEstadisticaGraficoProducto_FormClosing);
             this.Load += new System.EventHandler(this.frmEstadisticaGraficoProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();

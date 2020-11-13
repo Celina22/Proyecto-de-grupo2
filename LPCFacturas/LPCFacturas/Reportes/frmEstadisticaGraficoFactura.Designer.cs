@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bugsExtendidoDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bugsExtendidoDataSet = new LPCFacturas.BugsExtendidoDataSet();
             this.bugsExtendidoDataSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -79,15 +79,15 @@
             // 
             // rpvGraficoFacturas
             // 
-            reportDataSource10.Name = "GraficoFacturas";
-            reportDataSource10.Value = this.bugsExtendidoDataSetBindingSource2;
-            reportDataSource11.Name = "GraficoFacturasPorMes";
-            reportDataSource11.Value = this.bugsExtendidoDataSetBindingSource3;
-            reportDataSource12.Name = "GraficoFacturasTotal";
-            reportDataSource12.Value = this.bugsExtendidoDataSetBindingSource4;
-            this.rpvGraficoFacturas.LocalReport.DataSources.Add(reportDataSource10);
-            this.rpvGraficoFacturas.LocalReport.DataSources.Add(reportDataSource11);
-            this.rpvGraficoFacturas.LocalReport.DataSources.Add(reportDataSource12);
+            reportDataSource1.Name = "GraficoFacturas";
+            reportDataSource1.Value = this.bugsExtendidoDataSetBindingSource2;
+            reportDataSource2.Name = "GraficoFacturasPorMes";
+            reportDataSource2.Value = this.bugsExtendidoDataSetBindingSource3;
+            reportDataSource3.Name = "GraficoFacturasTotal";
+            reportDataSource3.Value = this.bugsExtendidoDataSetBindingSource4;
+            this.rpvGraficoFacturas.LocalReport.DataSources.Add(reportDataSource1);
+            this.rpvGraficoFacturas.LocalReport.DataSources.Add(reportDataSource2);
+            this.rpvGraficoFacturas.LocalReport.DataSources.Add(reportDataSource3);
             this.rpvGraficoFacturas.LocalReport.ReportEmbeddedResource = "LPCFacturas.Reportes.ReporteGraficoFactura.rdlc";
             this.rpvGraficoFacturas.Location = new System.Drawing.Point(0, 57);
             this.rpvGraficoFacturas.Name = "rpvGraficoFacturas";
@@ -170,6 +170,7 @@
             this.MinimumSize = new System.Drawing.Size(1112, 726);
             this.Name = "frmEstadisticaGraficoFactura";
             this.Text = "Estadísticas de Facturas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEstadisticaGraficoFactura_FormClosing);
             this.Load += new System.EventHandler(this.frmEstadisticaGraficoFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();

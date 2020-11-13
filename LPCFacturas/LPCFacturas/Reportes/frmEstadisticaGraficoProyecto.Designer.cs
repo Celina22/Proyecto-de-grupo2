@@ -129,6 +129,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmEstadisticaGraficoProyecto";
             this.Text = "Estadísticas de Proyectos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEstadisticaGraficoProyecto_FormClosing);
             this.Load += new System.EventHandler(this.frmEstadisticaProyecto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsExtendidoDataSet)).EndInit();
