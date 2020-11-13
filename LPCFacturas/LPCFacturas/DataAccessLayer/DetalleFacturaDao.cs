@@ -83,7 +83,7 @@ namespace LPCFacturas.DataAccessLayer
             return oDetalleFactura;
         }
 
-        internal void InsertarDetalles(IList<DetalleFactura> detalles)
+        public void insertarDetalles(IList<DetalleFactura> detalles)
         {
             string id_factura = DataManager.GetInstance().ConsultaSQLScalar("SELECT @@IDENTITY").ToString();
             foreach (DetalleFactura detalle in detalles)

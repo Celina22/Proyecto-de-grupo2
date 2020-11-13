@@ -54,7 +54,7 @@ namespace LPCFacturas.DataAccessLayer
             return oFactura;
         }
 
-        public string InsertarFactura(Factura oFactura)
+        public string insertarFactura(Factura oFactura)
         {
             string SQLinsert = "INSERT INTO Facturas(numero_factura, id_cliente, fecha, id_usuario_creador,total, borrado) " +
                                "VALUES ('" + 0 + "', " + oFactura.Cliente.Id_cliente + ", Convert(date,'"
@@ -73,8 +73,8 @@ namespace LPCFacturas.DataAccessLayer
             try
             {
                 DataManager.GetInstance().BeginTransaction();
-                idFactura = InsertarFactura(oFactura);
-                oDetalleFacturaDao.InsertarDetalles(oFactura.Detalles);
+                idFactura = insertarFactura(oFactura);
+                oDetalleFacturaDao.insertarDetalles(oFactura.Detalles);
                 DataManager.GetInstance().Commit();
             }
             catch(Exception ex)
@@ -90,7 +90,7 @@ namespace LPCFacturas.DataAccessLayer
             return idFactura;
         }
 
-        public Factura GetFactura(string numeroFactura)
+        public Factura getFactura(string numeroFactura)
         {
             String consultaSql = string.Concat(" SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador, total",
                                                 "   FROM Facturas",

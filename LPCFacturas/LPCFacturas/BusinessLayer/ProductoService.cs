@@ -24,15 +24,15 @@ namespace LPCFacturas.BusinessLayer
             return oProductoDao.GetProducto(idProducto);
         }
 
-        internal void crearProducto(Producto oProducto)
+        public void crearProducto(Producto oProducto)
         {
             oProductoDao.crearProducto(oProducto);
         }
-        internal void actualizarProducto(Producto oProducto)
+        public void actualizarProducto(Producto oProducto)
         {
             oProductoDao.actualizarProducto(oProducto);
         }
-        internal void eliminarProducto(Producto oProducto)
+        public void eliminarProducto(Producto oProducto)
         {
             oProductoDao.eliminarProducto(oProducto);
         }
@@ -42,14 +42,14 @@ namespace LPCFacturas.BusinessLayer
             return oProductoDao.recuperarProductos(fechaDesde, fechaHasta, nombre);
         }
 
-        public DataTable recuperarProductosEstadisticas()
+        public DataTable recuperarProductosEstadisticas(DateTime fechaDesde, DateTime fechaHasta)
         {
-            return oProductoDao.recuperarProductosEstadisticas();
+            return oProductoDao.recuperarProductosEstadisticas(fechaDesde,fechaHasta);
         }
 
-        public DataTable recuperarProcutosEstadisticasImporte()
+        public DataTable recuperarProcutosEstadisticasImporte(DateTime fechaDesde, DateTime fechaHasta)
         {
-            return oProductoDao.recuperarProductosEstadisticasImporte();
+            return oProductoDao.recuperarProductosEstadisticasImporte(fechaDesde, fechaHasta);
         }
 
         internal IList<Producto> recuperarProductoNombre(string nomProducto)

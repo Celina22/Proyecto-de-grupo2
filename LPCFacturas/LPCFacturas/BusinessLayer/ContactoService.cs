@@ -39,7 +39,7 @@ namespace LPCFacturas.BusinessLayer
             oContactoDao.eliminarContacto(contacto);
         }
 
-        internal IList<Contacto> recuperarContactoConsulta(string nombre, string apellido, string email, string telefono)
+        public IList<Contacto> recuperarContactoConsulta(string nombre, string apellido, string email, string telefono)
         {
             return oContactoDao.recuperarContactoConsulta(nombre,apellido,email,telefono);
         }

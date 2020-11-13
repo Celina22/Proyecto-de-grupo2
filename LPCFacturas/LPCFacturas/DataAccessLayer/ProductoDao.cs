@@ -41,25 +41,14 @@ namespace LPCFacturas.DataAccessLayer
 
         }
 
-        internal void eliminarProducto(Producto producto)
+        public void eliminarProducto(Producto producto)
         {
             string SQLUpdate = "UPDATE productos set borrado = 1 WHERE id_producto = " + producto.Id_producto;
 
             DataManager.GetInstance().EjecutarSQL(SQLUpdate);
         }
 
-        public DataTable recuperarProductosEstadisticasImporte()
-        {
-            string consultaSQL = "SELECT p.nombre as id_producto, sum(cantidad * precio) as cantidad " +
-            "FROM Productos p, FacturasDetalle fd " +
-            "WHERE p.id_producto = fd.id_producto " +
-            "and fd.id_producto is not null " +
-            "Group by p.nombre";
-
-            return DataManager.GetInstance().ConsultaSQL(consultaSQL);
-        }
-
-        internal IList<Producto> recuperarProductoNombre(string nomProducto)
+        public IList<Producto> recuperarProductoNombre(string nomProducto)
         {
             List<Producto> listadoProducto = new List<Producto>();
 
@@ -76,18 +65,33 @@ namespace LPCFacturas.DataAccessLayer
             return listadoProducto;
         }
 
-        public DataTable recuperarProductosEstadisticas() 
+        public DataTable recuperarProductosEstadisticasImporte(DateTime fechaDesde, DateTime fechaHasta)
         {
-            string consultaSQL = "SELECT p.nombre as id_producto, sum(cantidad) as cantidad " +
+            string consultaSQL = "SELECT p.nombre as id_producto, sum(cantidad * precio) as cantidad " +
             "FROM Productos p, FacturasDetalle fd " +
             "WHERE p.id_producto = fd.id_producto " +
-            "and fd.id_producto is not null " +
-            "Group by p.nombre ";
+            "AND fd.id_producto is not null " +
+            "AND p.fecha_alta BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND  CONVERT(datetime,'" + fechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+            "GROUP BY p.nombre";
 
             return DataManager.GetInstance().ConsultaSQL(consultaSQL);
         }
 
-        internal void crearProducto(Producto producto)
+        public DataTable recuperarProductosEstadisticas(DateTime fechaDesde, DateTime fechaHasta) 
+        {
+            string consultaSQL = "SELECT p.nombre as id_producto, sum(cantidad) as cantidad " +
+            "FROM Productos p, FacturasDetalle fd " +
+            "WHERE p.id_producto = fd.id_producto " +
+            "AND fd.id_producto is not null " +
+            "AND p.fecha_alta BETWEEN CONVERT(datetime,'" + fechaDesde.ToString("dd/MM/yyyy") + "',103) " +
+                                            "AND  CONVERT(datetime,'" + fechaHasta.ToString("dd/MM/yyyy") + "',103) " +
+            "GROUP BY p.nombre ";
+
+            return DataManager.GetInstance().ConsultaSQL(consultaSQL);
+        }
+
+        public void crearProducto(Producto producto)
         {
             string SQLInsert = " INSERT INTO Productos(nombre, borrado) " +
                                "VALUES ('" + producto.Nombre + "', 0) ";

@@ -71,74 +71,6 @@ namespace LPCFacturas.GUILayer
             cargarCombo(cboDetalle, oProyectoService.recuperarTodos(), "descripcion", "id_proyecto");
         }
 
-        //private void txtIdCliente_TextChanged(object sender, EventArgs e)
-        //{
-        //    if (txtIdCliente.Text != string.Empty)
-        //    {
-        //        int numero;
-        //        if (Int32.TryParse(txtIdCliente.Text, out numero))
-        //        {
-        //            Cliente oCliente;
-        //            oCliente = oClienteService.recuperarCliente(txtIdCliente.Text);
-        //            if (oCliente != null)
-        //            {
-        //                txtNombreCliente.Text = oCliente.Razon_social;
-        //            }
-        //            else
-        //                MessageBox.Show("Cliente no encontrado...");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Debe ingresar un id de cliente correcto...");
-        //            txtIdCliente.Text = string.Empty;
-        //        }
-
-        //    }    
-        //}
-        //private void txtIdDetalle_Leave(object sender, EventArgs e)
-        //{
-        //    if(flagProducto)
-        //    {
-        //        int numero;
-        //        if (Int32.TryParse(txtIdDetalle.Text, out numero))
-        //        {
-        //            Producto oProducto;
-        //            oProducto = oProductoService.recuperarProducto(txtIdDetalle.Text);
-        //            if (oProducto != null)
-        //            {
-        //                txtDetalle.Text = oProducto.Nombre;
-        //            }
-        //            else
-        //                MessageBox.Show("Producto no encontrado...");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Debe ingresar un id de Producto correcto...");
-        //            txtIdDetalle.Text = string.Empty;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        int numero;
-        //        if (Int32.TryParse(txtIdDetalle.Text, out numero))
-        //        {
-        //            Proyecto oProyecto;
-        //            oProyecto = oProyectoService.recuperarProyecto(txtIdDetalle.Text);
-        //            if (oProyecto != null)
-        //            {
-        //                txtDetalle.Text = oProyecto.Descripcion;
-        //            }
-        //            else
-        //                MessageBox.Show("Proyecto no encontrado...");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Debe ingresar un id de Producto correcto...");
-        //            txtIdDetalle.Text = string.Empty;
-        //        }
-        //    }
-        //}
-
         private void limpiarCampos()
         {
             txtValor.Text = txtProporcion.Text = txtSubtotal.Text = string.Empty;
@@ -379,7 +311,7 @@ namespace LPCFacturas.GUILayer
 
         private void frmFactura_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("¿Está seguro que quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
                 e.Cancel = true;
         }
     }

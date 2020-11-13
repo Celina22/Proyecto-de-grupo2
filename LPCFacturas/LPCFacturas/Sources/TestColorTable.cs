@@ -14,8 +14,8 @@ namespace LPCFacturas.Sources
         {
             get { return Color.Thistle; }
         }
-        Color culoare = Color.FromArgb(20, 20, 20);
-        Color culoare1 = Color.FromArgb(36, 36, 36);
+        Color culoare = Color.Thistle;
+        Color culoare1 = Color.Thistle;
 
         public override Color MenuItemBorder
         {

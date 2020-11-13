@@ -20,7 +20,7 @@ namespace LPCFacturas.BusinessLayer
 
         public Factura GetFactura(string numeroFactura)
         {
-            return oFacturaDao.GetFactura(numeroFactura);
+            return oFacturaDao.getFactura(numeroFactura);
         }
 
         public DataTable recuperarFacturas(DateTime fechaDesde, DateTime fechaHasta, string cliente, string monto)

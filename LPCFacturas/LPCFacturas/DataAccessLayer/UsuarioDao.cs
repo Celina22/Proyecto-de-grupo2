@@ -53,7 +53,7 @@ namespace LPCFacturas.DataAccessLayer
             return null;
         }
 
-        internal IList<Usuario> recuperarUsuarioConsulta(string usuario, string mail, string estado, int cboPerfilSeleccion)
+        public IList<Usuario> recuperarUsuarioConsulta(string usuario, string mail, string estado, int cboPerfilSeleccion)
         {
             List<Usuario> listadoUsuario = new List<Usuario>();
 

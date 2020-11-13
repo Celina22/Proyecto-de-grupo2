@@ -49,7 +49,7 @@ namespace LPCFacturas.DataAccessLayer
 
         }
 
-        internal List<Contacto> recuperarContactoConsulta(string nombre, string apellido, string email, string telefono)
+        public List<Contacto> recuperarContactoConsulta(string nombre, string apellido, string email, string telefono)
         {
             List<Contacto> listadoContacto = new List<Contacto>();
 

@@ -462,7 +462,7 @@
                 </ChartNoDataMessage>
                 <DataSetName>DatosEstadisticosProductosImporte</DataSetName>
                 <Top>0.45571cm</Top>
-                <Left>0.85548cm</Left>
+                <Left>2.09179cm</Left>
                 <Height>9.92633cm</Height>
                 <Width>25.86679cm</Width>
                 <Style>
@@ -476,10 +476,10 @@
               </Chart>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>1.3491cm</Top>
-            <Left>2.49588cm</Left>
+            <Top>1.80481cm</Top>
+            <Left>1.25957cm</Left>
             <Height>11.23125cm</Height>
-            <Width>27.57778cm</Width>
+            <Width>28.81409cm</Width>
             <Style>
               <Border>
                 <Color>#89023e</Color>
@@ -838,7 +838,7 @@
                 </ChartNoDataMessage>
                 <DataSetName>DatosEstadisticosProductos</DataSetName>
                 <Top>0.56444cm</Top>
-                <Left>0.85548cm</Left>
+                <Left>2.09179cm</Left>
                 <Height>10.91905cm</Height>
                 <Width>25.86679cm</Width>
                 <Style>
@@ -853,9 +853,9 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>14.15784cm</Top>
-            <Left>2.49588cm</Left>
+            <Left>1.25957cm</Left>
             <Height>11.96326cm</Height>
-            <Width>27.57778cm</Width>
+            <Width>28.81409cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -865,6 +865,79 @@
               </Border>
             </Style>
           </Rectangle>
+          <Textbox Name="Textbox3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Datos considerados entre fechas </Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!prmFechaDesde.Value</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> y </Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!prmFechaHasta.Value</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>.</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.56536cm</Top>
+            <Left>1.25957cm</Left>
+            <Height>0.9175cm</Height>
+            <Width>28.81409cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>10.63506in</Height>
         <Style />
@@ -1039,10 +1112,32 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="prmFechaDesde">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prmFechaHasta">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>prmFechaDesde</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>prmFechaHasta</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <EmbeddedImages>

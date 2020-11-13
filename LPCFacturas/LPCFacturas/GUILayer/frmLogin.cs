@@ -86,7 +86,7 @@ namespace LPCFacturas.GUILayer
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(!logeado)
-                if (MessageBox.Show("¿Está seguro que quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("¿Está seguro que quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
                     e.Cancel = true;
                 else
                     Environment.Exit(0);
