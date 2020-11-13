@@ -26,7 +26,7 @@ namespace LPCFacturas.GUILayer
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
         }
 
 
@@ -86,7 +86,7 @@ namespace LPCFacturas.GUILayer
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(!logeado)
-                if (MessageBox.Show("Está seguro que quiere salir", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("¿Está seguro que quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                     e.Cancel = true;
                 else
                     Environment.Exit(0);

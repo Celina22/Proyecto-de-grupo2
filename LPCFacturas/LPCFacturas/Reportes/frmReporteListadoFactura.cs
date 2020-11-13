@@ -62,7 +62,7 @@ namespace LPCFacturas.Reportes
 
         private void frmReporteListadoFactura_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Está seguro que quiere salir", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("¿Está seguro que quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
         }
     }
