@@ -160,7 +160,7 @@ namespace LPCFacturas.GUILayer
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de que quiere eliminar el producto?", "Borrar producto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que quiere eliminar el producto "+ txtNombre.Text +" ?", "Borrar producto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Producto oProducto = new Producto();
                 oProducto.Id_producto = Convert.ToInt32(txtId.Text);

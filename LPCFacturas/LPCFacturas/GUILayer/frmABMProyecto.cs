@@ -120,7 +120,7 @@ namespace LPCFacturas.GUILayer
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de que quiere eliminar el proyecto?", "Borrar proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que quiere eliminar el proyecto "+ txtDescripcion.Text +" ?", "Borrar proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Proyecto oProyecto = new Proyecto();
                 oProyecto.Id_proyecto = Convert.ToInt32(txtId.Text);

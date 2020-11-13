@@ -118,6 +118,13 @@ namespace LPCFacturas.GUILayer
                 return false;
             }
 
+            if (!Double.TryParse(txtValor.Text, out double valor))
+            {
+                MessageBox.Show("Datos ingresados no válidos. Debe ingresar un valor correcto del producto o proyecto.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtValor.Focus();
+                return false;
+            }
+
             if (Convert.ToDouble(txtValor.Text) <= 0)
             {
                 MessageBox.Show("Datos ingresados no válidos. Debe ingresar un valor positivo del producto o proyecto.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -129,6 +136,13 @@ namespace LPCFacturas.GUILayer
             {
                 MessageBox.Show("Datos ingresados no válidos. Debe ingresar una cantidad a facturar.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtProporcion.Focus();
+                return false;
+            }
+
+            if (!Double.TryParse(txtProporcion.Text, out double proporcion))
+            {
+                MessageBox.Show("Datos ingresados no válidos. Debe ingresar una cantidad correcta a facturar.", "Datos de factura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtValor.Focus();
                 return false;
             }
 

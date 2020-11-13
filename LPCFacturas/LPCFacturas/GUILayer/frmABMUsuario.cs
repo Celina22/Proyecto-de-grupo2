@@ -118,7 +118,7 @@ namespace LPCFacturas.GUILayer
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de que quiere eliminar el usuario?", "Borrar usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que quiere eliminar el usuario "+ txtUsuario.Text + " ?", "Borrar usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Usuario oUsuario = new Usuario();
                 

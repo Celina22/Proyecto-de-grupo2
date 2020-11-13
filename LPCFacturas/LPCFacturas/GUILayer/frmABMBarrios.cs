@@ -106,7 +106,7 @@ namespace LPCFacturas.GUILayer
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de que quiere eliminar el barrio?", "Borrar barrio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que quiere eliminar el barrio " +txt_nombre.Text+ " ?", "Borrar barrio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Barrio oBarrio = new Barrio();
                 oBarrio.Id_barrio = Convert.ToInt32(txt_id.Text);
