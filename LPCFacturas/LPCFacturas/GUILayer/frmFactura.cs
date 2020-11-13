@@ -39,6 +39,7 @@ namespace LPCFacturas.GUILayer
             dgvDetalles.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgvDetalles.RowHeadersDefaultCellStyle.BackColor = Color.Thistle;
             dgvDetalles.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Thistle;
+            dgvDetalles.ForeColor = Color.Black;
         }
 
         private void cargarCombo(ComboBox combo, Object source, string display, string value)
