@@ -522,6 +522,7 @@
             this.Name = "frmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registrar Factura";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFactura_FormClosing);
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.gbxDetalles.ResumeLayout(false);
             this.gbxDetalles.PerformLayout();

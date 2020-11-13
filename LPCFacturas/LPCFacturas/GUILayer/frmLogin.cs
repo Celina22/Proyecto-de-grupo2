@@ -16,7 +16,7 @@ namespace LPCFacturas.GUILayer
     public partial class frmLogin : Form
     {
         private readonly UsuarioService usuarioService;
-
+        private bool logeado = false;
         public Usuario UsuarioLogueado { get; internal set; }
         public frmLogin()
         {
@@ -53,6 +53,7 @@ namespace LPCFacturas.GUILayer
             {
                 msj = "Login OK. Bienvenido, " + UsuarioLogueado + ".";
                 MessageBox.Show(msj, "Ingreso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                logeado = true;
                 this.Close();
             }
 
@@ -80,6 +81,15 @@ namespace LPCFacturas.GUILayer
             {
                 btnIngresar_Click(this, new EventArgs());
             }
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(!logeado)
+                if (MessageBox.Show("Está seguro que quiere salir", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    e.Cancel = true;
+                else
+                    Environment.Exit(0);
         }
     }
 }

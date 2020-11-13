@@ -50,8 +50,8 @@
             this.graficoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gráficosDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.menuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -264,6 +264,15 @@
             this.gráficosDeToolStripMenuItem.Text = "Gráficos de Proyectos";
             this.gráficosDeToolStripMenuItem.Click += new System.EventHandler(this.gráficosDeToolStripMenuItem_Click);
             // 
+            // gráficosDeProductosToolStripMenuItem
+            // 
+            this.gráficosDeProductosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
+            this.gráficosDeProductosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.gráficosDeProductosToolStripMenuItem.Name = "gráficosDeProductosToolStripMenuItem";
+            this.gráficosDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.gráficosDeProductosToolStripMenuItem.Text = "Gráficos de Productos";
+            this.gráficosDeProductosToolStripMenuItem.Click += new System.EventHandler(this.gráficosDeProductosToolStripMenuItem_Click);
+            // 
             // pbLogo
             // 
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -273,15 +282,6 @@
             this.pbLogo.Size = new System.Drawing.Size(400, 152);
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
-            // 
-            // gráficosDeProductosToolStripMenuItem
-            // 
-            this.gráficosDeProductosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
-            this.gráficosDeProductosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.gráficosDeProductosToolStripMenuItem.Name = "gráficosDeProductosToolStripMenuItem";
-            this.gráficosDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.gráficosDeProductosToolStripMenuItem.Text = "Gráficos de Productos";
-            this.gráficosDeProductosToolStripMenuItem.Click += new System.EventHandler(this.gráficosDeProductosToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -297,6 +297,7 @@
             this.Name = "frmPrincipal";
             this.Text = "Menú Principal - LPC";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();

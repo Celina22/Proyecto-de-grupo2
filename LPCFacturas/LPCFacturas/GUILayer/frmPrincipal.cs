@@ -150,5 +150,11 @@ namespace LPCFacturas.GUILayer
             frmEstadisticaGraficoProducto frmEstadisticaGraficoProducto = new frmEstadisticaGraficoProducto();
             frmEstadisticaGraficoProducto.ShowDialog();
         }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Está seguro que quiere salir", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

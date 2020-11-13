@@ -255,6 +255,7 @@
             this.Name = "frmABMProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmABMProducto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmABMProducto_FormClosing);
             this.Load += new System.EventHandler(this.frmABMProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).EndInit();
             this.ResumeLayout(false);

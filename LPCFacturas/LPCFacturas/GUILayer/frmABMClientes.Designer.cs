@@ -431,6 +431,7 @@
             this.Name = "frmABMClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Clientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmABMClientes_FormClosing);
             this.Load += new System.EventHandler(this.frmABMClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);

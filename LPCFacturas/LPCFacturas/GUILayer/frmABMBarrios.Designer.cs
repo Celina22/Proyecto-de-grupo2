@@ -258,6 +258,7 @@
             this.Name = "frmABMBarrios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Barrios";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmABMBarrios_FormClosing);
             this.Load += new System.EventHandler(this.frmABMBarrios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_barrio)).EndInit();
             this.ResumeLayout(false);

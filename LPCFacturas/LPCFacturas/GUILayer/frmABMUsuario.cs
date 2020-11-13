@@ -242,5 +242,11 @@ namespace LPCFacturas.GUILayer
 
             cargarGrilla(dgvUsuario, oUsuarioService.recuperarUsuarioConsulta(txtUsuario.Text, txtEmail.Text, txtEstado.Text, cboPerfilSeleccion));
         }
+
+        private void frmABMUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Está seguro que quiere salir", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

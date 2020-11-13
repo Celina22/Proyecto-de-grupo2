@@ -359,6 +359,7 @@
             this.Name = "frmABMContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Contactos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmABMContactos_FormClosing);
             this.Load += new System.EventHandler(this.frmABMContactos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             this.ResumeLayout(false);

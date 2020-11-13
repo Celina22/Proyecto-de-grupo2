@@ -359,6 +359,7 @@
             this.Name = "frmABMProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A B M Proyecto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmABMProyecto_FormClosing);
             this.Load += new System.EventHandler(this.frmABMProyecto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyecto)).EndInit();
             this.ResumeLayout(false);
