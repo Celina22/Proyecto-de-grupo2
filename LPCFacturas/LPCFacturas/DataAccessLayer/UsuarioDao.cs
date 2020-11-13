@@ -22,7 +22,7 @@ namespace LPCFacturas.DataAccessLayer
         {
             List<Usuario> listadoUsuarios = new List<Usuario>();
 
-            var strSql = "SELECT id_usuario, id_perfil, usuario, email, estado, password from Usuarios where borrado=0";
+            var strSql = "SELECT id_usuario, id_perfil, usuario, email, estado, password FROM Usuarios WHERE borrado=0";
 
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
 

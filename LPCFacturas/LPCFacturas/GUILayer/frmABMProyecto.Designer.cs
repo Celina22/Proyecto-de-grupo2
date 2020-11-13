@@ -55,6 +55,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnHabilitarBusqueda = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyecto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -329,12 +331,39 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnHabilitarBusqueda
+            // 
+            this.btnHabilitarBusqueda.FlatAppearance.BorderSize = 0;
+            this.btnHabilitarBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabilitarBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarBusqueda.Image")));
+            this.btnHabilitarBusqueda.Location = new System.Drawing.Point(370, 494);
+            this.btnHabilitarBusqueda.Name = "btnHabilitarBusqueda";
+            this.btnHabilitarBusqueda.Size = new System.Drawing.Size(60, 55);
+            this.btnHabilitarBusqueda.TabIndex = 40;
+            this.btnHabilitarBusqueda.UseVisualStyleBackColor = true;
+            this.btnHabilitarBusqueda.Click += new System.EventHandler(this.btnHabilitarBusqueda_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::LPCFacturas.Properties.Resources.Search;
+            this.btnBuscar.Location = new System.Drawing.Point(496, 493);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(48, 55);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmABMProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(2)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1063, 561);
+            this.Controls.Add(this.btnHabilitarBusqueda);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -394,5 +423,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn responsable;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnHabilitarBusqueda;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

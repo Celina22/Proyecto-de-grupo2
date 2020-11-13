@@ -31,7 +31,7 @@ namespace LPCFacturas.DataAccessLayer
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoBugs.Add(MappingBug(row));
+                listadoBugs.Add(MappingProyecto(row));
             }
 
             return listadoBugs;
@@ -50,13 +50,40 @@ namespace LPCFacturas.DataAccessLayer
             // Validamos que el resultado tenga al menos una fila.
             if (resultado.Rows.Count > 0)
             {
-                return MappingBug(resultado.Rows[0]);
+                return MappingProyecto(resultado.Rows[0]);
             }
 
             return null;
         }
 
-        internal DataTable recuperarProyectosPorResponsables(DateTime desde, DateTime hasta)
+        public IList<Proyecto> recuperarProyectosFiltro(string producto, string descripcion, string version, string alcance, string responsable)
+        {
+            List<Proyecto> listadoProyectos = new List<Proyecto>();
+
+            var SQLquery = "SELECT p.id_proyecto, p.id_producto, p.descripcion, p.version, p.alcance, u.usuario" +
+                            " FROM Proyectos p JOIN usuarios u ON p.id_responsable = u.id_usuario" +
+                            " WHERE p.borrado=0";
+
+            if (descripcion != "")
+                SQLquery += " AND p.descripcion LIKE '%" + descripcion + "%'";
+            if (producto != "-1")
+                SQLquery += " AND p.id_producto=" + producto;
+            if (responsable != "-1")
+                SQLquery += " AND p.id_responsable=" + responsable;
+            if (alcance != "")
+                SQLquery += " AND p.alcance LIKE '%" + alcance + "%'";
+            if (version != "")
+                SQLquery += " AND p.version LIKE '%" + version + "%'";
+
+            DataTable tabla = DataManager.GetInstance().ConsultaSQL(SQLquery);
+
+            foreach (DataRow row in tabla.Rows)
+                listadoProyectos.Add(MappingProyecto(row));
+
+            return listadoProyectos;
+        }
+
+        public DataTable recuperarProyectosPorResponsables(DateTime desde, DateTime hasta)
         {
             string consultaSQL = "SELECT u.usuario as id_responsable, p.id_proyecto " +
                                  "FROM proyectos p JOIN usuarios u on (p.id_responsable = u.id_usuario) " +
@@ -90,7 +117,7 @@ namespace LPCFacturas.DataAccessLayer
             return tabla;
         }
 
-        private Proyecto MappingBug(DataRow row)
+        private Proyecto MappingProyecto(DataRow row)
         {
             Proyecto oProyecto = new Proyecto
             {

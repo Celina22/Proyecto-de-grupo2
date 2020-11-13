@@ -32,7 +32,7 @@ namespace LPCFacturas.GUILayer
         private void frmABMProyecto_Load(object sender, EventArgs e)
         {            
             cargarCombo(cboProducto, oProductoService.recuperarTodos(), "Nombre", "Id_producto");
-            cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "NombreUsuario");
+            cargarCombo(cboResponsable, oUsuarioService.recuperarTodos(), "NombreUsuario", "IdUsuario");
             cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
             habilitarCampos(false);
             dgvProyecto.ForeColor = Color.Black;
@@ -107,6 +107,8 @@ namespace LPCFacturas.GUILayer
             if (dgvProyecto.Rows.Count != 0)
                 this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
             else limpiarCampos();
+            cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
+            btnBuscar.Visible = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -220,10 +222,45 @@ namespace LPCFacturas.GUILayer
             this.actualizarCampos(dgvProyecto.CurrentRow.Cells[0].Value.ToString());
         }
 
+<<<<<<< Updated upstream
         private void frmABMProyecto_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
+=======
+        private void btnHabilitarBusqueda_Click(object sender, EventArgs e)
+        {
+            cargarGrilla(dgvProyecto, oProyectoService.recuperarTodos());
+            btnBuscar.Visible = true;
+            habilitarCampos(true);
+            txtDescripcion.Text = "";
+            txtAlcance.Text = "";
+            txtVersion.Text = "";
+            cboProducto.SelectedIndex = -1;
+            cboResponsable.SelectedIndex = -1;
+
+            btnGuardar.Enabled = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string producto, responsable;
+
+            if (cboProducto.SelectedIndex == -1)
+                producto = "-1";
+            else
+                producto = cboProducto.SelectedValue.ToString();
+            if (cboResponsable.SelectedIndex == -1)
+                responsable = "-1";
+            else
+                responsable = cboResponsable.SelectedValue.ToString();
+
+            cargarGrilla(dgvProyecto, oProyectoService.recuperarProyectosFiltro(producto,txtDescripcion.Text, txtVersion.Text, 
+                txtAlcance.Text,responsable));
+
+            dgvProyecto.Enabled = true;
+            btnEditar.Enabled = true;
+>>>>>>> Stashed changes
         }
     }
 }

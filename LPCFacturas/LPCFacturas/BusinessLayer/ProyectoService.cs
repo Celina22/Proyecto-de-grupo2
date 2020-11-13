@@ -53,5 +53,10 @@ namespace LPCFacturas.BusinessLayer
         {
             return oProyectoDao.recuperarProyectosFacturadosEstadistica(desde, hasta);
         }
+
+        public IList<Proyecto> recuperarProyectosFiltro(string producto, string descripcion, string version, string alcance, string responsable)
+        {
+            return oProyectoDao.recuperarProyectosFiltro(producto, descripcion, version, alcance, responsable);
+        }
     }
 }
